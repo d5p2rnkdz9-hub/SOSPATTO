@@ -1,0 +1,24 @@
+<!-- Navigation Component -->
+<div class="nav-wrapper">
+  <ul class="nav-menu" id="nav-menu">
+    {% assign navData = nav[lang] | default: nav.it %}
+    {% for dropdown in navData.dropdowns %}
+    {% if dropdown.items.size > 0 %}
+    <li class="nav-item has-dropdown">
+      <a href="{% if dropdown.external %}{{ dropdown.href }}{% else %}{{ dropdown.href | url }}{% endif %}" class="nav-link" aria-haspopup="true" aria-expanded="false"{% if dropdown.external %} target="_blank"{% endif %}>{{ dropdown.label }}{% if dropdown.badge %} <span class="nav-badge">{{ dropdown.badge }}</span>{% endif %}</a>
+      <ul class="nav-dropdown" role="menu">
+        {% for item in dropdown.items %}
+        <li role="none">
+          <a href="{% if item.external %}{{ item.href }}{% else %}{{ item.href | url }}{% endif %}" class="dropdown-link" role="menuitem"{% if item.external %} target="_blank"{% endif %}>{{ item.label }}{% if item.badge %} <span class="nav-badge">{{ item.badge }}</span>{% endif %}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a href="{% if dropdown.external %}{{ dropdown.href }}{% else %}{{ dropdown.href | url }}{% endif %}" class="nav-link"{% if dropdown.external %} target="_blank"{% endif %}>{{ dropdown.label }}{% if dropdown.badge %} <span class="nav-badge">{{ dropdown.badge }}</span>{% endif %}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

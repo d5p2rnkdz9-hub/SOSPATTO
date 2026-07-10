@@ -1,0 +1,47 @@
+---
+layout: layouts/base.liquid
+title: "Giurisprudenza — SOS Patto"
+lang: it
+description: "Le decisioni dei giudici italiani ed europei sul Patto UE su migrazione e asilo e sulle norme italiane di adeguamento, collegate agli articoli dei testi interattivi."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Giurisprudenza</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      Le prime decisioni su Patto e norme di attuazione. Ogni scheda riporta la massima
+      e i collegamenti agli articoli nei <a href="/testi.html">testi interattivi</a>.
+      La raccolta è appena nata: <a href="mailto:{{ site.email }}">segnalaci una decisione</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.giurisprudenza %}
+    {% if schede.size > 0 %}
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <a href="{{ scheda.url | url }}" class="archivio-card">
+        {% if scheda.data.esempio %}<span class="scheda-esempio">Scheda di esempio</span>{% endif %}
+        <p class="scheda-kicker">{{ scheda.data.tipo }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
+        <h3>{{ scheda.data.corte }}, {{ scheda.date | dataIt }}</h3>
+        {% if scheda.data.massima %}<p>{{ scheda.data.massima | truncate: 180 }}</p>{% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<span class="scheda-tema">{{ tema }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">⚖️</p>
+      <p>La raccolta è in costruzione: le prime schede arriveranno presto.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

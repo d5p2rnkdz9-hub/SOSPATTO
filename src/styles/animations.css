@@ -1,0 +1,489 @@
+/* ===============================================
+   SOS PERMESSO - ANIMATIONS
+   Cartoon-style animations & effects
+   =============================================== */
+
+/* ===============================================
+   SCROLL ANIMATIONS
+   =============================================== */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn var(--transition-slow) ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ===============================================
+   BOUNCE EFFECTS (Cartoon-style)
+   =============================================== */
+
+.bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce-hover {
+  transition: transform var(--transition-base);
+}
+
+.bounce-hover:hover {
+  animation: bounceHover 0.5s ease-in-out;
+}
+
+@keyframes bounceHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ===============================================
+   SQUEEZE EFFECT (for buttons)
+   =============================================== */
+
+.squeeze-click {
+  transition: transform var(--transition-fast);
+}
+
+.squeeze-click:active {
+  animation: squeeze 0.3s ease-in-out;
+}
+
+@keyframes squeeze {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92) scaleY(1.08);
+  }
+}
+
+/* ===============================================
+   SHAKE ANIMATION
+   =============================================== */
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* ===============================================
+   WIGGLE (for icons)
+   =============================================== */
+
+.wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* ===============================================
+   PULSE ANIMATIONS
+   =============================================== */
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-shadow {
+  animation: pulseShadow 2s ease-in-out infinite;
+}
+
+@keyframes pulseShadow {
+  0%, 100% {
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* ===============================================
+   FLOATING ANIMATION
+   =============================================== */
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===============================================
+   SPIN ANIMATIONS
+   =============================================== */
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 4s linear infinite;
+}
+
+/* ===============================================
+   CONFETTI EFFECT (for success states)
+   =============================================== */
+
+.confetti {
+  position: relative;
+  overflow: visible;
+}
+
+.confetti::before,
+.confetti::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1.5rem;
+  animation: confettiPop 1s ease-out;
+}
+
+.confetti::before {
+  top: -10px;
+  left: -10px;
+}
+
+.confetti::after {
+  top: -10px;
+  right: -10px;
+  animation-delay: 0.2s;
+}
+
+@keyframes confettiPop {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.5);
+  }
+}
+
+/* ===============================================
+   CARD FLIP ANIMATION
+   =============================================== */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* ===============================================
+   LOADING ANIMATIONS
+   =============================================== */
+
+.loading-dots::after {
+  content: '';
+  animation: loadingDots 1.5s steps(4, end) infinite;
+}
+
+@keyframes loadingDots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--gray-light);
+  border-top-color: var(--taxi-yellow);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ===============================================
+   PROGRESS BAR ANIMATION
+   =============================================== */
+
+.progress-bar {
+  height: 4px;
+  background-color: var(--gray-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--taxi-yellow), var(--lighthouse-red));
+  border-radius: var(--radius-full);
+  animation: progressFill 2s ease-in-out;
+}
+
+@keyframes progressFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===============================================
+   EMOJI ANIMATIONS (Cartoon Effects)
+   =============================================== */
+
+.emoji-bounce {
+  display: inline-block;
+  animation: emojiBounce 1s ease-in-out infinite;
+}
+
+@keyframes emojiBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(5deg);
+  }
+}
+
+.emoji-spin {
+  display: inline-block;
+  animation: emojiSpin 3s linear infinite;
+}
+
+@keyframes emojiSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===============================================
+   TEXT ANIMATIONS
+   =============================================== */
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--taxi-yellow) 0%,
+    var(--lighthouse-red) 50%,
+    var(--taxi-yellow) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 3s linear infinite;
+}
+
+@keyframes textShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--black);
+  white-space: nowrap;
+  animation: typing 3s steps(40) 1s both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ===============================================
+   HOVER EFFECTS FOR CARDS
+   =============================================== */
+
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.hover-glow {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.hover-glow::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(45deg, var(--taxi-yellow), var(--lighthouse-red));
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-base);
+}
+
+.hover-glow:hover::before {
+  opacity: 0.7;
+  animation: glow-rotate 2s linear infinite;
+}
+
+@keyframes glow-rotate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ===============================================
+   REDUCE MOTION (Accessibility)
+   =============================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,52 @@
+---
+layout: layouts/base.liquid
+---
+<section class="bg-off-white" style="padding: 2rem 0 1rem;">
+  <div class="container" style="max-width: 820px;">
+    <a href="{{ '/circolari.html' | url }}" class="scheda-back">← Tutte le circolari</a>
+    <div class="scheda-head">
+      {% if esempio %}<span class="scheda-esempio">Scheda di esempio</span>{% endif %}
+      <p class="scheda-kicker">{{ tipo | default: "Circolare" }}{% if numero %} · {{ numero }}{% endif %}</p>
+      <h1 class="scheda-title">{{ ente }}, {{ page.date | dataIt }}</h1>
+      {% if temi %}
+      <div class="scheda-temi">
+        {% for tema in temi %}<span class="scheda-tema">{{ tema }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 1.5rem;">
+  <div class="container" style="max-width: 820px;">
+
+    {% if oggetto %}
+    <div class="scheda-massima">
+      <p class="scheda-massima-label">Oggetto</p>
+      <p>{{ oggetto }}</p>
+    </div>
+    {% endif %}
+
+    <div class="scheda-body">
+      {{ content }}
+    </div>
+
+    {% if norme %}
+    <div class="scheda-norme">
+      <p class="scheda-norme-label">Norme collegate</p>
+      <ul>
+        {% for n in norme %}
+        <li><a href="{{ n.href | url }}">{{ n.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if pdf %}
+    <p style="margin-top: 2rem;">
+      <a href="{{ pdf | url }}" class="scheda-pdf-btn" target="_blank" rel="noopener">📄 Scarica la circolare (PDF)</a>
+    </p>
+    {% endif %}
+
+  </div>
+</section>

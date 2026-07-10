@@ -1,0 +1,133 @@
+---
+layout: layouts/base.liquid
+title: "Testi normativi — SOS Patto"
+lang: it
+description: "Tutti i testi del Patto UE su migrazione e asilo in versione interattiva: i 10 atti europei del 2024 e le norme italiane coordinate con il d.l. 100/2026."
+extraStyles: |
+  <style>
+    .testi-head { text-align: center; max-width: 760px; margin: 0 auto; }
+    .testi-head h1 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 2.1rem; font-weight: 800; margin: 0 0 0.75rem;
+    }
+    .testi-head p { color: var(--gray-dark); line-height: 1.6; margin: 0 0 1rem; }
+    .testi-verifica {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--taxi-yellow-light);
+      border: 2px solid var(--black); border-radius: 999px;
+      font-size: 0.85rem; font-weight: 700; padding: 6px 16px;
+    }
+    .testi-sezione {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 1.3rem; font-weight: 800; margin: 0 0 1.25rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .testo-card {
+      display: flex; flex-direction: column;
+      background: var(--white);
+      border: 2.5px solid var(--black); border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 1.3rem 1.4rem;
+      text-decoration: none; color: var(--black);
+      transition: all 0.12s ease;
+    }
+    .testo-card:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
+    .testo-card-top { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.6rem; }
+    .testo-card-icon { font-size: 1.6rem; }
+    .testo-tag {
+      display: inline-block; background: var(--black); color: var(--taxi-yellow);
+      font-size: 0.62rem; font-weight: 800; padding: 3px 8px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .testo-card h3 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 1.02rem; font-weight: 800; margin: 0 0 0.35rem; line-height: 1.3;
+    }
+    .testo-card p { font-size: 0.85rem; color: var(--gray-dark); line-height: 1.45; margin: 0 0 0.75rem; }
+    .testo-card .testo-go { margin-top: auto; font-weight: 800; font-size: 0.85rem; }
+    .testo-coord {
+      font-size: 0.75rem; font-weight: 700;
+      background: var(--taxi-yellow-light);
+      border: 1.5px solid var(--black); border-radius: 8px;
+      padding: 4px 8px; margin: 0 0 0.75rem; display: inline-block;
+    }
+    .testi-hub-strip {
+      background: var(--taxi-yellow);
+      border: 2.5px solid var(--black); border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 1.5rem; text-align: center;
+      margin: 0 0 3rem;
+    }
+    .testi-hub-strip p { font-weight: 700; margin: 0 0 0.9rem; }
+    .testi-hub-btn {
+      display: inline-block; background: var(--black); color: var(--white);
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif; font-weight: 800;
+      padding: 0.75rem 1.75rem; border-radius: 12px; text-decoration: none;
+      border: 2.5px solid var(--black); transition: all 0.15s;
+    }
+    .testi-hub-btn:hover { background: var(--gray-dark); transform: translateY(-2px); }
+  </style>
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container">
+    <div class="testi-head">
+      <h1>I testi normativi</h1>
+      <p>
+        Tutti i testi del Patto europeo su migrazione e asilo in versione <strong>interattiva</strong>:
+        ogni rinvio normativo è cliccabile e porta all'articolo richiamato, anche fra un testo e l'altro.
+      </p>
+      <span class="testi-verifica">✓ Testi verificati su EUR-Lex e Normattiva — {{ testi.aggiornamento }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2.5rem;">
+  <div class="container">
+
+    <div class="testi-hub-strip">
+      <p>Preferisci partire dall'indice generale? L'hub raccoglie tutti i testi collegati fra loro.</p>
+      <a href="/patto-interattivo/index.html" class="testi-hub-btn">🧭 Apri la consultazione interattiva →</a>
+    </div>
+
+    <h2 class="testi-sezione" id="testi-ue">🇪🇺 Gli atti del Patto (2024)</h2>
+    <div class="testi-grid" style="margin-bottom: 3rem;">
+      {% for t in testi.ue %}
+      <a href="/patto-interattivo/{{ t.num }}.html" class="testo-card">
+        <div class="testo-card-top">
+          <span class="testo-card-icon">{{ t.icon }}</span>
+          <span class="testo-tag">{{ t.tipo }} {{ t.numero }}</span>
+        </div>
+        <h3>{{ t.titolo }}</h3>
+        <p>{{ t.desc }}</p>
+        <span class="testo-go">Consulta →</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <h2 class="testi-sezione" id="norme-italiane">🇮🇹 Le norme italiane</h2>
+    <p style="max-width: 720px; color: var(--gray-dark); margin: -0.5rem 0 1.5rem;">
+      Le norme nazionali toccate dall'adeguamento al Patto (d.l. 100/2026): nei testi coordinati le
+      <strong style="color: #c1121f;">modifiche sono evidenziate</strong> — inserimenti in rosso, soppressioni barrate.
+    </p>
+    <div class="testi-grid">
+      {% for t in testi.it %}
+      <a href="/patto-interattivo/{{ t.slug }}/index.html" class="testo-card">
+        <div class="testo-card-top">
+          <span class="testo-card-icon">{{ t.icon }}</span>
+          <span class="testo-tag">{{ t.titolo }}</span>
+        </div>
+        <h3>{{ t.sotto }}</h3>
+        <span class="testo-coord">{{ t.coord }}</span>
+        <span class="testo-go">Consulta →</span>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

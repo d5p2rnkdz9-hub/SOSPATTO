@@ -1,0 +1,18 @@
+{
+  "name": "sospatto",
+  "version": "1.0.0",
+  "description": "SOS Patto — il Patto UE su migrazione e asilo, spiegato: testi interattivi, diagrammi, giurisprudenza e circolari.",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "retheme": "python3 scripts/retheme_blue.py"
+  },
+  "license": "CC-BY-4.0",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.1"
+  }
+}

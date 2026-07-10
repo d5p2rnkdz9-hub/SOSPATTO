@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default: 'it' }}" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description | default: site.defaultDescription }}">
+  <title>{{ title | default: site.name }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/IMAGES/favicon-32x32.png' | url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/IMAGES/favicon-16x16.png' | url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/IMAGES/favicon-32x32.png' | url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/IMAGES/apple-touch-icon.png' | url }}">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ title | default: site.name }}">
+  <meta property="og:description" content="{{ description | default: site.defaultDescription }}">
+  <meta property="og:image" content="{{ site.url }}/IMAGES/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SOS Patto — Il Patto UE su migrazione e asilo, spiegato">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default: site.name }}">
+  <meta name="twitter:description" content="{{ description | default: site.defaultDescription }}">
+  <meta name="twitter:image" content="{{ site.url }}/IMAGES/og-image.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Structured data: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}/",
+        "description": "{{ site.defaultDescription }}"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}/",
+        "inLanguage": "{{ lang | default: 'it' }}",
+        "publisher": { "@id": "{{ site.url }}/#organization" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts: caricati async (trucco media="print") per non bloccare il primo paint;
+       i fallback metric-adjusted in main.css rendono lo swap senza reflow. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- assign latinFontsUrl = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" -%}
+  <link href="{{ latinFontsUrl }}" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="{{ latinFontsUrl }}" rel="stylesheet"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/src/styles/main.css' | url }}?v={{ site.assetVersion }}">
+  <link rel="stylesheet" href="{{ '/src/styles/components.css' | url }}?v={{ site.assetVersion }}">
+  <link rel="stylesheet" href="{{ '/src/styles/animations.css' | url }}?v={{ site.assetVersion }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ '/src/styles/mobile.css' | url }}?v={{ site.assetVersion }}">
+  <link rel="stylesheet" href="{{ '/src/styles/mobile-fix.css' | url }}?v={{ site.assetVersion }}">
+
+  {% if extraStyles %}{{ extraStyles }}{% endif %}
+</head>
+<body>
+
+  {% include "components/header.liquid" %}
+
+  {{ content }}
+
+  {% include "components/footer.liquid" %}
+
+  <!-- Scripts -->
+  <script src="{{ '/src/scripts/app.js' | url }}?v={{ site.assetVersion }}" defer></script>
+  <script src="{{ '/src/scripts/mobile.js' | url }}?v={{ site.assetVersion }}" defer></script>
+
+  {% if extraScripts %}{{ extraScripts }}{% endif %}
+
+</body>
+</html>

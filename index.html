@@ -1,0 +1,473 @@
+---
+layout: layouts/base.liquid
+title: "SOS Patto — Il Patto UE su migrazione e asilo, spiegato"
+lang: it
+description: "Testi normativi interattivi, diagrammi delle procedure, giurisprudenza e circolari sul Patto europeo su migrazione e asilo. Gratuito, per operatori legali, avvocati e persone migranti."
+extraStyles: |
+  <style>
+    /* ── HOMEPAGE — stili scoped (clone blu della home sospermesso) ── */
+
+    .home-refresh {
+      --hr-blue: #33B1FF;
+      --hr-blue-light: #E8F5FF;
+      --hr-blue-bright: #5BC5FF;
+      --hr-black: #1A1A1A;
+      --hr-gray-dark: #2D2D2D;
+      --hr-gray-medium: #757575;
+      --hr-gray-light: #F5F5F5;
+      --hr-white: #FFFFFF;
+    }
+
+    /* ── HERO ── */
+    .hr-hero {
+      padding: 4.5rem 0 3.5rem;
+      background: var(--hr-white);
+    }
+
+    .hr-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hr-hero h1 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--hr-black);
+      margin-bottom: 1rem;
+    }
+
+    .hr-hero .hr-highlight {
+      background: linear-gradient(180deg, transparent 50%, var(--hr-blue) 50%);
+      padding: 0 4px;
+    }
+
+    .hr-hero p {
+      font-family: 'Inter', 'Inter Fallback', -apple-system, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--hr-gray-dark);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+    }
+
+    .hr-hero-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hr-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--hr-gray-medium);
+    }
+
+    .hr-badge-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--hr-blue-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .hr-hero-art {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* ── SECTION BASE ── */
+    .hr-section { padding: 4rem 0; }
+    .hr-section-alt { background: var(--hr-gray-light); }
+
+    .hr-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hr-section-title {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--hr-black);
+      margin-bottom: 2rem;
+    }
+
+    /* ── CARD SYSTEM ── */
+    .hr-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hr-ucard {
+      background: var(--hr-white);
+      border: 2.5px solid var(--hr-black);
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
+      text-decoration: none;
+      color: var(--hr-black);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.12s ease;
+      box-shadow: 4px 4px 0 var(--hr-black);
+      cursor: pointer;
+    }
+
+    .hr-ucard:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--hr-black);
+    }
+
+    .hr-ucard:active {
+      transform: translate(3px, 3px);
+      box-shadow: 1px 1px 0 var(--hr-black);
+    }
+
+    .hr-ucard--blue { background: var(--hr-blue); }
+
+    .hr-ucard-icon { font-size: 1.75rem; flex-shrink: 0; }
+
+    .hr-ucard h3 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      margin: 0 0 0.25rem;
+      line-height: 1.3;
+    }
+
+    .hr-ucard p {
+      font-size: 0.82rem;
+      color: var(--hr-gray-dark);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .hr-tag {
+      display: inline-block;
+      background: var(--hr-black);
+      color: var(--hr-blue);
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.35rem;
+    }
+
+    .hr-ucard-arrow {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-left: auto;
+      flex-shrink: 0;
+      color: var(--hr-black);
+    }
+
+    /* ── BOTTONI BRUTALIST ── */
+    .hr-btn {
+      display: inline-block;
+      background: var(--hr-blue);
+      color: var(--hr-black);
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 0.9rem 2.25rem;
+      border-radius: 14px;
+      text-decoration: none;
+      border: 2.5px solid var(--hr-black);
+      transition: all 0.12s ease;
+      box-shadow: 4px 4px 0 var(--hr-black);
+    }
+
+    .hr-btn--main {
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .hr-btn-sub {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-top: 0.2rem;
+    }
+
+    .hr-btn--secondary { background: #FFFFFF; }
+
+    .hr-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--hr-black);
+    }
+
+    .hr-btn:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0px 0px 0 var(--hr-black);
+    }
+
+    .hr-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hr-badge-soon {
+      position: absolute;
+      top: 12px;
+      right: -30px;
+      background: var(--hr-black);
+      color: var(--hr-blue);
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── CTA STRIP ── */
+    .hr-cta {
+      background: var(--hr-blue);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+
+    .hr-cta p {
+      font-family: 'Inter', 'Inter Fallback', -apple-system, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--hr-black);
+      margin: 0 0 1rem;
+    }
+
+    .hr-btn-dark {
+      display: inline-block;
+      background: var(--hr-black);
+      color: var(--hr-white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid var(--hr-black);
+      transition: all 0.15s;
+    }
+
+    .hr-btn-dark:hover {
+      background: var(--hr-gray-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hr-hero { padding: 3rem 0 2.5rem; }
+      .hr-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hr-hero h1 { font-size: 1.9rem; }
+      .hr-hero p { margin: 0 auto 1.5rem; }
+      .hr-hero-badges { justify-content: center; }
+      .hr-hero-art { max-width: 240px; order: -1; }
+      .hr-cards-grid { grid-template-columns: 1fr; }
+      .hr-btn { width: 100%; text-align: center; }
+      .hr-ucard-arrow { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hr-hero h1 { font-size: 1.6rem; }
+      .hr-ucard { padding: 1.1rem 1.25rem; }
+    }
+  </style>
+---
+
+<div class="home-refresh">
+
+  <!-- HERO -->
+  <section class="hr-hero">
+    <div class="hr-hero-grid">
+      <div>
+        <h1>
+          Il Patto europeo su<br>
+          migrazione e asilo.<br>
+          <span class="hr-highlight" style="font-weight: 400;">Spiegato.</span>
+        </h1>
+        <p>
+          Testi normativi interattivi, diagrammi e strumenti pratici per operatori legali, avvocati e persone migranti.
+        </p>
+        <div class="hr-btn-group">
+          <a href="patto-interattivo/index.html" class="hr-btn hr-btn--main">Consulta i testi interattivi<span class="hr-btn-sub">(REGOLAMENTI UE + NORME ITALIANE) →</span></a>
+          <a href="diagramma.html" class="hr-btn hr-btn--secondary">Diagramma delle procedure →</a>
+        </div>
+        <div class="hr-hero-badges">
+          <div class="hr-badge">
+            <span class="hr-badge-icon">📚</span>
+            <span>14 testi interattivi</span>
+          </div>
+          <div class="hr-badge">
+            <span class="hr-badge-icon">✓</span>
+            <span>Verificati su EUR-Lex e Normattiva — {{ testi.aggiornamento }}</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- illustrazione: bandiera UE stilizzata + documento, stile neo-brutalista -->
+        <svg class="hr-hero-art" viewBox="0 0 440 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Documento normativo con le stelle dell'Unione europea">
+          <!-- pannello blu -->
+          <rect x="20" y="24" width="280" height="200" rx="18" fill="#33B1FF" stroke="#1A1A1A" stroke-width="4"/>
+          <rect x="12" y="16" width="280" height="200" rx="18" fill="#5BC5FF" stroke="#1A1A1A" stroke-width="4"/>
+          <!-- cerchio di stelle -->
+          <g fill="#FFFFFF" stroke="#1A1A1A" stroke-width="2">
+            <circle cx="152" cy="46" r="7"/>
+            <circle cx="187" cy="55.4" r="7"/>
+            <circle cx="212.6" cy="81" r="7"/>
+            <circle cx="222" cy="116" r="7"/>
+            <circle cx="212.6" cy="151" r="7"/>
+            <circle cx="187" cy="176.6" r="7"/>
+            <circle cx="152" cy="186" r="7"/>
+            <circle cx="117" cy="176.6" r="7"/>
+            <circle cx="91.4" cy="151" r="7"/>
+            <circle cx="82" cy="116" r="7"/>
+            <circle cx="91.4" cy="81" r="7"/>
+            <circle cx="117" cy="55.4" r="7"/>
+          </g>
+          <!-- documento in primo piano -->
+          <g>
+            <rect x="240" y="96" width="168" height="204" rx="14" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="4"/>
+            <rect x="258" y="120" width="88" height="12" rx="6" fill="#1A1A1A"/>
+            <rect x="258" y="146" width="130" height="8" rx="4" fill="#B9BDC4"/>
+            <rect x="258" y="164" width="130" height="8" rx="4" fill="#B9BDC4"/>
+            <rect x="258" y="182" width="102" height="8" rx="4" fill="#B9BDC4"/>
+            <rect x="258" y="206" width="130" height="8" rx="4" fill="#33B1FF"/>
+            <rect x="258" y="224" width="112" height="8" rx="4" fill="#33B1FF"/>
+            <rect x="258" y="248" width="130" height="8" rx="4" fill="#B9BDC4"/>
+            <rect x="258" y="266" width="76" height="8" rx="4" fill="#B9BDC4"/>
+          </g>
+          <!-- ombra brutalista del documento -->
+          <rect x="248" y="104" width="168" height="204" rx="14" fill="none" stroke="#1A1A1A" stroke-width="4" opacity="0.18"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTI NORMATIVI -->
+  <section class="hr-section" id="testi">
+    <div class="hr-container">
+      <h2 class="hr-section-title"><span class="hr-tag" style="font-size: 0.75rem; padding: 5px 12px; letter-spacing: 2px;">Testi normativi</span></h2>
+      <div class="hr-cards-grid">
+
+        <a href="testi.html" class="hr-ucard">
+          <span class="hr-ucard-icon">🇪🇺</span>
+          <div>
+            <h3>I 10 testi UE del Patto</h3>
+            <p>Regolamenti e direttiva del Patto 2024, articolo per articolo, con rinvii navigabili</p>
+          </div>
+        </a>
+
+        <a href="testi.html#norme-italiane" class="hr-ucard">
+          <span class="hr-ucard-icon">🇮🇹</span>
+          <div>
+            <h3>Le norme italiane novellate</h3>
+            <p>D.Lgs. 25/2008, 142/2015, 286/1998 e 251/2007 coordinati con il d.l. 100/2026, modifiche evidenziate</p>
+          </div>
+        </a>
+
+        <a href="patto-interattivo/index.html" class="hr-ucard hr-ucard--blue">
+          <span class="hr-ucard-icon">🧭</span>
+          <div>
+            <h3>Consultazione interattiva</h3>
+            <p>Tutti i testi collegati fra loro: clicca un rinvio e salta all'articolo richiamato</p>
+          </div>
+          <span class="hr-ucard-arrow">→</span>
+        </a>
+
+        <a href="diagramma.html" class="hr-ucard hr-ucard--blue">
+          <span class="hr-ucard-icon">🗺️</span>
+          <div>
+            <h3>Diagramma delle procedure</h3>
+            <p>Screening e procedure di protezione internazionale in un flowchart interattivo</p>
+          </div>
+          <span class="hr-ucard-arrow">→</span>
+        </a>
+
+        <a href="giurisprudenza.html" class="hr-ucard" style="overflow: hidden; position: relative;">
+          <span class="hr-badge-soon">In arrivo</span>
+          <span class="hr-ucard-icon">⚖️</span>
+          <div>
+            <h3>Giurisprudenza</h3>
+            <p>Le prime decisioni su Patto e norme di attuazione, collegate agli articoli</p>
+          </div>
+        </a>
+
+        <a href="circolari.html" class="hr-ucard" style="overflow: hidden; position: relative;">
+          <span class="hr-badge-soon">In arrivo</span>
+          <span class="hr-ucard-icon">📄</span>
+          <div>
+            <h3>Circolari e prassi</h3>
+            <p>Circolari ministeriali e prassi applicative, con le norme di riferimento</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUMENTI (in arrivo) -->
+  <section id="strumenti" class="hr-section hr-section-alt">
+    <div class="hr-container">
+      <h2 class="hr-section-title"><span class="hr-tag" style="font-size: 0.75rem; padding: 5px 12px; letter-spacing: 2px;">Strumenti interattivi</span></h2>
+      <div class="hr-cards-grid">
+
+        <a href="diagramma.html" class="hr-ucard hr-ucard--blue">
+          <span class="hr-ucard-icon">🗺️</span>
+          <div>
+            <h3>Diagramma delle procedure</h3>
+            <p>Naviga screening, procedura di frontiera e rimpatrio: ogni nodo spiega la norma</p>
+          </div>
+          <span class="hr-ucard-arrow">→</span>
+        </a>
+
+        <div class="hr-ucard" style="overflow: hidden; position: relative; cursor: default;">
+          <span class="hr-badge-soon">In arrivo</span>
+          <span class="hr-ucard-icon">🧪</span>
+          <div>
+            <h3>Quiz e percorsi guidati</h3>
+            <p>Test su diritti, procedure e termini di ricorso per operatori e avvocati</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hr-cta">
+    <div class="hr-container">
+      <p>SOS Patto è un progetto gratuito e senza fini di lucro. Hai trovato un errore o vuoi proporre contenuti?</p>
+      <a href="mailto:{{ site.email }}" class="hr-btn-dark">Scrivici →</a>
+    </div>
+  </section>
+
+</div>

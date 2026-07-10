@@ -1,0 +1,48 @@
+---
+layout: layouts/base.liquid
+title: "Circolari e prassi — SOS Patto"
+lang: it
+description: "Circolari ministeriali e prassi applicative sul Patto UE su migrazione e asilo e sulle norme italiane di adeguamento, collegate agli articoli dei testi interattivi."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Circolari e prassi</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      Circolari ministeriali, note e prassi applicative sull'attuazione del Patto.
+      Ogni scheda riporta l'oggetto, il PDF originale e i collegamenti alle norme nei
+      <a href="/testi.html">testi interattivi</a>.
+      Hai una circolare da segnalare? <a href="mailto:{{ site.email }}">Scrivici</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.circolari %}
+    {% if schede.size > 0 %}
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <a href="{{ scheda.url | url }}" class="archivio-card">
+        {% if scheda.data.esempio %}<span class="scheda-esempio">Scheda di esempio</span>{% endif %}
+        <p class="scheda-kicker">{{ scheda.data.tipo | default: "Circolare" }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
+        <h3>{{ scheda.data.ente }}, {{ scheda.date | dataIt }}</h3>
+        {% if scheda.data.oggetto %}<p>{{ scheda.data.oggetto | truncate: 180 }}</p>{% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<span class="scheda-tema">{{ tema }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">📄</p>
+      <p>La raccolta è in costruzione: le prime schede arriveranno presto.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

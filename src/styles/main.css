@@ -1,0 +1,464 @@
+/* ===============================================
+   SOS PERMESSO - MAIN STYLESHEET
+   Color Palette: Taxi Yellow, Red, White, Black
+   =============================================== */
+
+/* Metric-adjusted local fallbacks for the async-loaded webfonts:
+   text first paints in Arial scaled to Inter/Poppins metrics, so the
+   swap to the real font doesn't reflow the page (CLS ≈ 0). */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90.20%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+  size-adjust: 107.40%;
+}
+
+@font-face {
+  font-family: 'Poppins Fallback';
+  src: local('Arial');
+  ascent-override: 93.77%;
+  descent-override: 31.26%;
+  line-gap-override: 8.93%;
+  size-adjust: 112.16%;
+}
+
+:root {
+  /* Primary Colors - BRIGHTER & MORE VIBRANT */
+  --taxi-yellow: #33B1FF;
+  --taxi-yellow-light: #A8DDFF;
+  --taxi-yellow-dark: #1E9BE9;
+  --taxi-yellow-bright: #5BC5FF;
+
+  /* Lighthouse Red - MORE VIBRANT */
+  --lighthouse-red: #FF5252;
+  --lighthouse-red-dark: #E02B2B;
+  --lighthouse-red-bright: #FF6B6B;
+
+  /* Neutrals */
+  --black: #1A1A1A;
+  --gray-dark: #2D2D2D;
+  --gray-medium: #757575;
+  --gray-light: #F5F5F5;
+  --white: #FFFFFF;
+  --off-white: #FAFAFA;
+
+  /* Accent Colors - BRIGHT & COLORFUL PALETTE */
+  --accent-blue: #42A5F5;
+  --accent-blue-bright: #64B5F6;
+  --accent-teal: #26A69A;
+  --accent-teal-bright: #4DB6AC;
+  --accent-orange: #FF9800;
+  --accent-orange-bright: #FFB74D;
+  --accent-purple: #AB47BC;
+  --accent-purple-bright: #BA68C8;
+  --accent-pink: #EC407A;
+  --accent-pink-bright: #F06292;
+  --accent-green: #66BB6A;
+  --accent-green-bright: #81C784;
+
+  /* Warm Palette Additions */
+  --accent-teal-light: #80CBC4;
+  --accent-coral: #FF7F7F;
+  --accent-coral-light: #FFA5A5;
+  --accent-mint: #A5D6A7;
+
+  /* Semantic Colors - BRIGHTER */
+  --success: #66BB6A;
+  --success-bright: #81C784;
+  --warning: #FFA726;
+  --warning-bright: #FFB74D;
+  --error: #EF5350;
+  --error-bright: #E57373;
+  --info: #42A5F5;
+  --info-bright: #64B5F6;
+
+  /* Spacing System */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Typography */
+  --font-primary: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Poppins', 'Poppins Fallback', var(--font-primary);
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.18);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  /* Z-index layers */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1040;
+  --z-tooltip: 1050;
+
+  /* RTL Support */
+  --text-x-direction: 1; /* 1 for LTR, -1 for RTL (set by rtl.css) */
+}
+
+/* ===============================================
+   RESET & BASE STYLES
+   =============================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anchor offset for sticky header (~130px tall) */
+:target {
+  scroll-margin-top: 140px;
+}
+
+/* Specific sections that are anchor targets */
+section[id],
+.dictionary-term[id],
+.dictionary-letter[id] {
+  scroll-margin-top: 140px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===============================================
+   TYPOGRAPHY
+   =============================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--black);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--taxi-yellow-dark);
+}
+
+/* Content links - visible teal color with underline */
+.card a:not(.card-link):not(.btn),
+.alert a,
+p a,
+li a,
+.content a {
+  color: #1565C0;
+  text-decoration: underline;
+  text-decoration-color: rgba(21, 101, 192, 0.3);
+  text-underline-offset: 2px;
+}
+
+.card a:not(.card-link):not(.btn):hover,
+.alert a:hover,
+p a:hover,
+li a:hover,
+.content a:hover {
+  color: var(--taxi-yellow-dark);
+  text-decoration-color: var(--taxi-yellow-dark);
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--spacing-sm);
+  padding-inline-start: var(--spacing-lg);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+}
+
+li::marker {
+  color: var(--taxi-yellow-dark);
+  font-weight: 600;
+}
+
+/* Nested lists */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+  padding-inline-start: var(--spacing-md);
+}
+
+/* List inside cards - Triangle bullets */
+.card ul {
+  list-style: none;
+  margin-top: var(--spacing-sm);
+  padding-inline-start: var(--spacing-lg);
+}
+
+.card ol {
+  margin-top: var(--spacing-sm);
+  padding-inline-start: var(--spacing-lg);
+}
+
+.card li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 0;
+}
+
+.card ul li::before {
+  content: '\25B8';
+  position: absolute;
+  inset-inline-start: -1.25rem;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Nested lists in cards */
+.card ul ul {
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.card ul ul li::before {
+  content: '\25B9';
+  font-size: 0.75rem;
+}
+
+/* ===============================================
+   LAYOUT UTILITIES
+   =============================================== */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-lg {
+  padding: calc(var(--spacing-xxl) * 1.5) 0;
+}
+
+/* ===============================================
+   GRID SYSTEM
+   =============================================== */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* ===============================================
+   FLEX UTILITIES
+   =============================================== */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* ===============================================
+   SPACING UTILITIES
+   =============================================== */
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.pt-sm { padding-top: var(--spacing-sm); }
+.pt-md { padding-top: var(--spacing-md); }
+.pt-lg { padding-top: var(--spacing-lg); }
+
+.pb-sm { padding-bottom: var(--spacing-sm); }
+.pb-md { padding-bottom: var(--spacing-md); }
+.pb-lg { padding-bottom: var(--spacing-lg); }
+
+/* ===============================================
+   TEXT UTILITIES
+   =============================================== */
+
+.text-center { text-align: center; }
+.text-left { text-align: start; } /* Backwards compatible - now uses logical property */
+.text-right { text-align: end; } /* Backwards compatible - now uses logical property */
+.text-start { text-align: start; } /* New alias */
+.text-end { text-align: end; } /* New alias */
+
+.text-sm { font-size: var(--font-size-sm); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+
+/* ===============================================
+   COLOR UTILITIES
+   =============================================== */
+
+.bg-yellow { background-color: var(--taxi-yellow); }
+.bg-red { background-color: var(--lighthouse-red); }
+.bg-white { background-color: var(--white); }
+.bg-gray-light { background-color: var(--gray-light); }
+.bg-off-white { background-color: var(--off-white); }
+
+.text-yellow { color: var(--taxi-yellow); }
+.text-red { color: var(--lighthouse-red); }
+.text-black { color: var(--black); }
+.text-gray { color: var(--gray-medium); }
+
+/* ===============================================
+   RESPONSIVE BREAKPOINTS
+   =============================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.5rem;
+    --spacing-xxl: 3rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.5rem;
+    --spacing-xxl: 2rem;
+  }
+}

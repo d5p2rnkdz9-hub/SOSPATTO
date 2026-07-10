@@ -1,0 +1,65 @@
+# Netlify build configuration — SOS Patto (Eleventy)
+
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_ENV = "production"
+
+# ── FAVICON ──
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/IMAGES/favicon-32x32.png"
+  status = 200
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/IMAGES/apple-touch-icon.png"
+  status = 200
+
+[[redirects]]
+  from = "/apple-touch-icon-precomposed.png"
+  to = "/IMAGES/apple-touch-icon.png"
+  status = 200
+
+# ── HOMEPAGE CANONICAL ──
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# ── SECURITY HEADERS ──
+# Nota: X-Frame-Options SAMEORIGIN (non DENY) perche' il diagramma
+# e' incorporato via iframe dalla pagina /diagramma.html
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# ── ASSET CACHING ──
+# CSS/JS del sito hanno ?v=<hash> nel link -> cache lunga sicura
+[[headers]]
+  for = "/src/styles/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/src/scripts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/IMAGES/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"
+
+# I testi interattivi vengono aggiornati in blocco: cache breve
+[[headers]]
+  for = "/patto-interattivo/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"

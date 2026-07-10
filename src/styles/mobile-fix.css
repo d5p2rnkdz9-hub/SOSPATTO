@@ -1,0 +1,531 @@
+/* ===============================================
+   MOBILE CRITICAL FIXES - PRIORITY
+   Load this AFTER mobile.css
+   =============================================== */
+
+/* ===============================================
+   CRITICAL: FIX INVISIBLE CONTENT ON MOBILE
+   The JS sets opacity:0 for scroll animations,
+   but on mobile we want content always visible
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Force visibility of all content that JS hides for animations */
+  .card,
+  .section-header,
+  .alert,
+  .slide-up,
+  .slide-in-left,
+  .slide-in-right {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* ===============================================
+   PREVENT OVERFLOW & LAYOUT ISSUES
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Critical: Prevent horizontal scroll */
+  /* Note: overflow on html breaks sticky, so only apply to body */
+  html {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  body {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  /* Container mobile adjustments */
+  .container,
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Section backgrounds full width */
+  .section {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ===============================================
+     HEADER MOBILE FIX
+     =============================================== */
+
+  .header {
+    width: 100%;
+    padding: 0.5rem 0;
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    background: #FFFFFF !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* SOS Patto: la parola "Patto" resta visibile anche su mobile */
+  .logo span:last-child {
+    display: inline;
+  }
+
+  .logo-icon {
+    font-size: 1.75rem;
+  }
+
+  /* Logo image on mobile */
+  .logo-image {
+    height: 90px !important;
+  }
+
+  /* Menu toggle - clean minimal style */
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    background: transparent;
+    border: 1.5px solid var(--black);
+    border-radius: 8px;
+    color: var(--black);
+    cursor: pointer;
+    z-index: 1050;
+    order: 3;
+  }
+
+  .menu-toggle:active {
+    background: var(--gray-light);
+  }
+
+  /* Nav wrapper - fullscreen overlay on mobile */
+  .nav-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    bottom: 0;
+    background: var(--white);
+    z-index: 1040;
+    padding: 5rem 1.5rem 2rem;
+    flex-direction: column;
+  }
+
+  .nav-wrapper.active {
+    display: flex !important;
+  }
+
+  /* Nav menu in mobile overlay */
+  .nav-wrapper .nav-menu {
+    position: static;
+    transform: none !important;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Mobile menu links - larger touch targets */
+  .nav-menu .nav-link {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 12px;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .nav-menu .nav-link:active {
+    background: var(--gray-light);
+  }
+
+  .nav-menu li {
+    margin-bottom: 0.25rem !important;
+    width: 100%;
+  }
+
+  /* Hide hero decorations on mobile - they overlap with text */
+  .hero-decorations,
+  .decoration {
+    display: none !important;
+  }
+
+  /* The header language switcher (styled inline in components/language-switcher.liquid)
+     replaces the in-hamburger language item on mobile, so hide the latter. */
+  .nav-language {
+    display: none !important;
+  }
+
+  /* ===============================================
+     HERO SECTION MOBILE
+     =============================================== */
+
+  .hero,
+  .hero-new {
+    padding: 1.5rem 0;
+    min-height: auto;
+  }
+
+  .hero-title,
+  .hero-main-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* Update notice ("Aggiornato alla Legge...") - smaller on mobile */
+  .hero-content > div > span {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* ===============================================
+     LIGHTHOUSE MOBILE PRIORITY FIX
+     =============================================== */
+
+  .lighthouse-container {
+    max-width: 260px !important;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  #lighthouse-svg {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+  }
+
+  /* ===============================================
+     GRID MOBILE FIX
+     =============================================== */
+
+  .grid,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  /* ===============================================
+     CARD MOBILE FIX - VERTICAL STACKED LAYOUT
+     =============================================== */
+
+  .card.card-link,
+  a.card-link {
+    width: 100%;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    box-sizing: border-box;
+    /* Force vertical stacked layout - override any inline-flex */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Content cards (not card-links) should be start-aligned */
+  .card:not(.card-link):not(a) {
+    width: 100%;
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    box-sizing: border-box;
+    text-align: start;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+    flex-shrink: 0;
+    order: 1;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    order: 2;
+    /* Prevent ugly word breaks in titles */
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    white-space: normal;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    order: 3;
+  }
+
+  /* Button inside card - centered, not full width */
+  .card .btn {
+    margin-top: auto;
+    width: auto !important;
+    min-width: 160px;
+    order: 4;
+  }
+
+  /* ===============================================
+     BUTTON MOBILE FIX
+     =============================================== */
+
+  /* Standalone buttons are full width */
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* But buttons inside cards stay centered and auto-width */
+  .card .btn,
+  .card-link .btn {
+    width: auto !important;
+    display: inline-flex !important;
+    min-width: 150px;
+    margin-top: 0.5rem;
+  }
+
+  .btn-sm {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  /* ===============================================
+     HOMEPAGE CARDS - COMPACT HORIZONTAL LAYOUT
+     =============================================== */
+
+  #test .card-link,
+  #database .card-link,
+  #guide .card-link,
+  #resources .card-link {
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: start !important;
+    padding: 1rem !important;
+    gap: 1rem;
+  }
+
+  #test .card-icon,
+  #database .card-icon,
+  #guide .card-icon,
+  #resources .card-icon {
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  #test .card-title,
+  #database .card-title,
+  #guide .card-title,
+  #resources .card-title {
+    font-size: 0.95rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  #test .card-description,
+  #database .card-description,
+  #guide .card-description,
+  #resources .card-description {
+    display: none !important;
+  }
+
+  #test .card .btn,
+  #test .card-link .btn,
+  #database .card .btn,
+  #guide .card .btn,
+  #resources .card .btn {
+    display: none !important;
+  }
+
+  /* ===============================================
+     ALERT MOBILE FIX
+     =============================================== */
+
+  .alert {
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .alert-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .alert .btn {
+    margin-top: 0.75rem;
+    margin-inline-start: 0 !important;
+  }
+
+  /* ===============================================
+     SECTION TITLE MOBILE
+     =============================================== */
+
+  .section-title {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .section-title::after {
+    width: 40%;
+  }
+
+  /* ===============================================
+     FOOTER MOBILE
+     =============================================== */
+
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .footer-project-link {
+    font-size: 0.8rem;
+  }
+
+  .footer-separator {
+    display: none;
+  }
+
+  .footer-copyright {
+    font-size: 0.7rem;
+    width: 100%;
+    margin-top: 0.5rem !important;
+  }
+
+  /* ===============================================
+     TEXT UTILITIES MOBILE
+     =============================================== */
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ===============================================
+     PAGE HEADER MOBILE
+     =============================================== */
+
+  .page-header {
+    padding: 1rem 0;
+  }
+
+  .page-icon {
+    font-size: 3rem !important;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===============================================
+   SMALL MOBILE (< 480px) EXTRA FIXES
+   =============================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.25rem !important;
+  }
+
+  .lighthouse-container {
+    max-width: 220px !important;
+  }
+
+  .section-title {
+    font-size: 1.25rem !important;
+  }
+
+  .card {
+    padding: 0.875rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* ===============================================
+   LANDSCAPE MOBILE FIX
+   =============================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .lighthouse-container {
+    max-width: 180px !important;
+  }
+
+  .hero {
+    padding: 1rem 0;
+  }
+
+  .section {
+    padding: 1.5rem 0;
+  }
+}

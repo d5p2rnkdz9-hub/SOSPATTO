@@ -1,0 +1,578 @@
+/* ===============================================
+   SOS PERMESSO - MOBILE OPTIMIZATIONS
+   Enhanced mobile experience
+   =============================================== */
+
+/* ===============================================
+   MOBILE-FIRST IMPROVEMENTS
+   =============================================== */
+
+/* Touch-friendly tap targets (min 44x44px) */
+@media (max-width: 768px) {
+  .btn,
+  .nav-link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Card links should NOT be inline-flex - they need vertical layout */
+  .card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Larger touch areas for buttons */
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .btn-sm {
+    padding: var(--spacing-sm) var(--spacing-md);
+    min-height: 40px;
+  }
+}
+
+/* ===============================================
+   MOBILE NAVIGATION ENHANCEMENTS
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Header - styles in mobile-fix.css take priority */
+  .header {
+    padding: 0.5rem 0 !important;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  /* Logo smaller on mobile */
+  .logo {
+    position: relative;
+    inset-inline-start: 0;
+    margin-inline-start: 0;
+  }
+
+  /* Mobile Logo - Icon only (Phase 5) */
+  .logo-text {
+    display: none;
+  }
+
+  .logo-icon-wrapper {
+    margin-inline-end: 0;
+  }
+
+  .logo-icon-img {
+    height: 44px;
+  }
+
+  /* Mobile menu - handled by mobile-fix.css */
+
+  .nav-link:active {
+    background-color: var(--gray-light);
+  }
+
+  /* Mobile dropdown - hide dropdown items, show only categories */
+  .nav-item {
+    position: static;
+  }
+
+  .has-dropdown .nav-link::after {
+    display: none;
+  }
+
+  /* Hide dropdown items completely on mobile - only show main categories */
+  .nav-dropdown {
+    display: none !important;
+  }
+
+  /* Make category links go to their main pages */
+  .has-dropdown .nav-link {
+    pointer-events: auto;
+  }
+}
+
+/* ===============================================
+   MOBILE-OPTIMIZED CARDS
+   =============================================== */
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .card-icon {
+    font-size: var(--font-size-3xl);
+  }
+
+  .card-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .card-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+  }
+
+  /* Reduce hover lift on mobile (use active instead) */
+  .card:hover {
+    transform: none;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  /* Better spacing for card grids */
+  .grid {
+    gap: var(--spacing-sm);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Aiuto Legale Card - Mobile */
+@media (max-width: 768px) {
+  .aiuto-legale-card {
+    max-width: 100%;
+    padding: var(--spacing-lg);
+  }
+
+  .aiuto-legale-card .card-icon {
+    font-size: 3rem;
+  }
+
+  .aiuto-legale-card .card-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .aiuto-legale-card .card-description {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ===============================================
+   MOBILE TYPOGRAPHY
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Optimized font sizes */
+  .hero-title {
+    font-size: var(--font-size-3xl);
+    line-height: 1.2;
+  }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Better line height for readability */
+  p {
+    line-height: 1.7;
+  }
+
+  /* Mobile-optimized lists */
+  ul, ol {
+    padding-inline-start: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .card ul, .card ol {
+    padding-inline-start: var(--spacing-lg);
+  }
+
+  li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+  }
+
+  /* Prevent text overflow */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* ===============================================
+   MOBILE LIGHTHOUSE OPTIMIZATION
+   =============================================== */
+
+@media (max-width: 768px) {
+  .lighthouse-container {
+    max-width: 280px;
+    margin: var(--spacing-lg) auto;
+  }
+
+  /* Simplify animations on mobile for performance */
+  .rotating-beam {
+    animation-duration: 6s;
+  }
+
+  .wave {
+    animation-duration: 5s;
+  }
+}
+
+@media (max-width: 480px) {
+  .lighthouse-container {
+    max-width: 240px;
+  }
+
+  /* Further reduce animations on small screens */
+  @media (prefers-reduced-motion: no-preference) {
+    .rotating-beam {
+      animation: none;
+      opacity: 0.4;
+    }
+  }
+}
+
+/* ===============================================
+   MOBILE ALERTS & CALLOUTS
+   =============================================== */
+
+@media (max-width: 768px) {
+  .alert {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+
+  .alert-icon {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .alert .btn {
+    margin: var(--spacing-sm) 0 0 0 !important;
+    width: 100%;
+  }
+}
+
+/* ===============================================
+   MOBILE LANGUAGE SWITCHER IN NAV
+   =============================================== */
+
+@media (max-width: 768px) {
+  .nav-language {
+    order: -1;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .nav-language .nav-link {
+    display: none;
+  }
+
+  .nav-language .nav-dropdown {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4rem;
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding: 0.5rem 0 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    min-width: unset;
+  }
+
+  /* Hide full language name, show only flag + code on mobile */
+  .nav-language .dropdown-link .lang-name {
+    display: none;
+  }
+
+  .nav-language .dropdown-link .lang-code {
+    display: inline;
+  }
+
+  .nav-language .dropdown-link {
+    padding: 0.4rem 0.5rem;
+    border-radius: 12px;
+    background: var(--gray-light);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .nav-language .dropdown-link.active-lang {
+    background: var(--taxi-yellow-light);
+    font-weight: 600;
+  }
+}
+
+/* ===============================================
+   MOBILE FOOTER
+   =============================================== */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+  }
+}
+
+/* ===============================================
+   MOBILE SECTION SPACING
+   =============================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero {
+    padding: var(--spacing-md) 0;
+  }
+
+  /* Ensure full width on mobile */
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===============================================
+   MOBILE PERFORMANCE - REDUCE ANIMATIONS
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Disable expensive animations on mobile devices */
+  /* This fixes the issue where content stays invisible due to opacity:0 set by JS */
+  .slide-up,
+  .slide-in-left,
+  .slide-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Ensure cards, section headers, and alerts are always visible on mobile */
+  .card,
+  .section-header,
+  .alert {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Keep only simple transitions */
+  .card,
+  .btn {
+    transition: background-color var(--transition-fast);
+  }
+}
+
+/* ===============================================
+   MOBILE SCROLL BEHAVIOR
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Smooth scrolling with offset for fixed header (60px logo + padding) */
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better scroll snapping for sections */
+  .section {
+    scroll-margin-top: 80px;
+  }
+
+  /* Anchor targets on mobile */
+  section[id],
+  .dictionary-term[id],
+  .dictionary-letter[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+/* ===============================================
+   MOBILE TOUCH FEEDBACK
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Add touch feedback */
+  .btn:active,
+  .card:active,
+  .nav-link:active {
+    opacity: 0.8;
+  }
+
+  /* Prevent text selection on tap targets */
+  .btn,
+  .card-link,
+  .nav-link,
+  .menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+
+  /* Allow text selection in content areas */
+  .card-description,
+  p,
+  li {
+    user-select: text;
+  }
+}
+
+/* ===============================================
+   MOBILE INPUT & FORMS
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus (iOS) */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Better mobile form spacing */
+  input,
+  select,
+  textarea,
+  button {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* ===============================================
+   MOBILE SAFE AREAS (for notch devices)
+   =============================================== */
+
+@supports (padding: env(safe-area-inset-top)) {
+  .header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .nav-menu {
+    padding-bottom: calc(var(--spacing-lg) + env(safe-area-inset-bottom));
+  }
+}
+
+/* ===============================================
+   MOBILE LANDSCAPE MODE
+   =============================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: var(--spacing-md) 0;
+  }
+
+  .lighthouse-container {
+    max-width: 200px;
+  }
+
+  .nav-menu {
+    top: 60px;
+  }
+}
+
+/* ===============================================
+   MOBILE ACCESSIBILITY
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Larger focus indicators for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid var(--taxi-yellow);
+    outline-offset: 2px;
+  }
+
+  /* Skip to content link for screen readers */
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    inset-inline-start: 0;
+    background: var(--taxi-yellow);
+    color: var(--black);
+    padding: var(--spacing-sm);
+    z-index: 999;
+  }
+
+  .skip-to-content:focus {
+    top: 0;
+  }
+}
+
+/* ===============================================
+   MOBILE LOADING STATES
+   =============================================== */
+
+@media (max-width: 768px) {
+  /* Skeleton loading for better perceived performance */
+  .card.loading {
+    background: linear-gradient(
+      90deg,
+      var(--gray-light) 25%,
+      var(--white) 50%,
+      var(--gray-light) 75%
+    );
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+  }
+
+  @keyframes loading-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
+
+/* ===============================================
+   MOBILE PRINT STYLES
+   =============================================== */
+
+@media print {
+  .header,
+  .footer,
+  .nav-menu,
+  .menu-toggle,
+  .nav-language,
+  .btn {
+    display: none !important;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid var(--gray-light);
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patto UE migrazione e asilo — testi interattivi</title>
+<link rel="stylesheet" href="assets/style.css?v=4604e303">
+<style>
+/* ---------- barra di navigazione hub (home) ---------- */
+.idxnav { gap: 20px; }
+.idxmenu { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.idxmenu-link {
+  color: var(--muted); text-decoration: none; font-weight: 600;
+  padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+}
+.idxmenu-link:hover { color: var(--blue); background: var(--bg); }
+.nav-menu { position: relative; }
+.nav-menu > summary {
+  list-style: none; cursor: pointer; color: var(--muted); font-weight: 600;
+  padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+}
+.nav-menu > summary::-webkit-details-marker { display: none; }
+.nav-menu > summary::after { content: "\25BE"; font-size: 10px; margin-left: 4px; }
+.nav-menu[open] > summary, .nav-menu > summary:hover { color: var(--blue); background: var(--bg); }
+.nav-drop {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  min-width: 290px; max-width: calc(100vw - 24px);
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  padding: 6px; display: flex; flex-direction: column; gap: 2px; z-index: 60;
+}
+.nav-drop-item { display: block; text-decoration: none; color: var(--ink); padding: 8px 10px; border-radius: 7px; }
+.nav-drop-item:hover { background: var(--bg); }
+.nav-drop-num { display: block; font-weight: 700; color: var(--blue); font-size: 13px; }
+.nav-drop-sub { display: block; color: var(--muted); font-size: 11.5px; line-height: 1.35; margin-top: 2px; }
+.nav-soon { padding: 7px 10px 5px; color: var(--muted); font-size: 11.5px; font-style: italic; }
+/* ---------- sezioni della home ---------- */
+#top, #patto, #interna { scroll-margin-top: 56px; }
+.idx-section { margin-top: 48px; padding-top: 36px; border-top: 1px solid var(--line); }
+.idx-h2 { font-size: 24px; margin: 0 0 6px; }
+.idx-soon { color: var(--muted); font-size: 13px; font-family: var(--sans); margin-top: 14px; }
+</style>
+</head>
+<body class="index">
+<header class="topbar idxnav">
+  <a class="home" href="#top">&#8962; Patto UE — testi interattivi</a>
+  <nav class="idxmenu">
+    <a class="idxmenu-link" href="#patto">Patto UE</a>
+    <details class="nav-menu">
+      <summary>Legislazione interna</summary>
+      <div class="nav-drop">
+        <a class="nav-drop-item" href="dlgs-25-2008/index.html">
+          <span class="nav-drop-num">D.Lgs. 25/2008</span>
+          <span class="nav-drop-sub">Procedure di protezione internazionale — testo coordinato con il d.l. 100/2026</span>
+        </a>
+        <a class="nav-drop-item" href="dlgs-142-2015/index.html">
+          <span class="nav-drop-num">D.Lgs. 142/2015</span>
+          <span class="nav-drop-sub">Accoglienza dei richiedenti protezione internazionale — testo coordinato con il d.l. 100/2026</span>
+        </a>
+        <a class="nav-drop-item" href="dlgs-286-1998/index.html">
+          <span class="nav-drop-num">D.Lgs. 286/1998</span>
+          <span class="nav-drop-sub">Testo Unico Immigrazione — testo coordinato con il d.l. 100/2026</span>
+        </a>
+        <a class="nav-drop-item" href="dlgs-251-2007/index.html">
+          <span class="nav-drop-num">D.Lgs. 251/2007</span>
+          <span class="nav-drop-sub">Qualifiche per la protezione internazionale — testo vigente (non modificato dal d.l. 100/2026)</span>
+        </a>
+        <span class="nav-soon">Altre norme in arrivo</span>
+      </div>
+    </details>
+  </nav>
+</header>
+<main class="idx" id="top">
+<section id="patto">
+<h1>Patto UE migrazione e asilo</h1>
+<p class="idx-sub">I nove regolamenti e la direttiva del Patto in versione interattiva: ogni rinvio normativo è
+un collegamento. Passa il mouse su un rinvio per leggere la disposizione citata; clic per aprirla in un
+pannello laterale senza perdere il punto di lettura.</p>
+<div class="cards">
+<a class="card" href="1346.html">
+  <div class="card-num">Direttiva (UE) 2024/1346</div>
+  <div class="card-name">Direttiva accoglienza</div>
+  <div class="card-sub">recante norme relative all'accoglienza dei richiedenti protezione internazionale (rifusione)</div>
+  <div class="card-meta">38 articoli</div>
+</a><a class="card" href="1347.html">
+  <div class="card-num">Regolamento (UE) 2024/1347</div>
+  <div class="card-name">Regolamento qualifiche</div>
+  <div class="card-sub">recante norme sull'attribuzione a cittadini di paesi terzi o apolidi della qualifica di beneficiario di protezione internazionale, su uno status uniforme per i rifugiati o per le persone aventi titolo a beneficiare della…</div>
+  <div class="card-meta">42 articoli</div>
+</a><a class="card" href="1348.html">
+  <div class="card-num">Regolamento (UE) 2024/1348</div>
+  <div class="card-name">Regolamento procedure</div>
+  <div class="card-sub">che stabilisce una procedura comune di protezione internazionale nell'Unione e abroga la direttiva 2013/32/UE</div>
+  <div class="card-meta">79 articoli</div>
+</a><a class="card" href="1349.html">
+  <div class="card-num">Regolamento (UE) 2024/1349</div>
+  <div class="card-name">Regolamento rimpatrio alla frontiera</div>
+  <div class="card-sub">che stabilisce una procedura di rimpatrio alla frontiera e che modifica il regolamento (UE) 2021/1148</div>
+  <div class="card-meta">14 articoli</div>
+</a><a class="card" href="1350.html">
+  <div class="card-num">Regolamento (UE) 2024/1350</div>
+  <div class="card-name">Regolamento reinsediamento e ammissione umanitaria</div>
+  <div class="card-sub">che istituisce un quadro dell’Unione per il reinsediamento e l’ammissione umanitaria e modifica il regolamento (UE) 2021/1147</div>
+  <div class="card-meta">16 articoli</div>
+</a><a class="card" href="1351.html">
+  <div class="card-num">Regolamento (UE) 2024/1351</div>
+  <div class="card-name">Regolamento gestione asilo e migrazione (RAMM)</div>
+  <div class="card-sub">che modifica i regolamenti (UE) 2021/1147 e (UE) 2021/1060 e che abroga il regolamento (UE) n. 604/2013</div>
+  <div class="card-meta">85 articoli</div>
+</a><a class="card" href="1352.html">
+  <div class="card-num">Regolamento (UE) 2024/1352</div>
+  <div class="card-name">Regolamento modifiche ECRIS-TCN</div>
+  <div class="card-sub">recante modifica dei regolamenti (UE) 2019/816 e (UE) 2019/818, allo scopo di introdurre accertamenti nei confronti dei cittadini di paesi terzi alle frontiere esterne</div>
+  <div class="card-meta">3 articoli</div>
+</a><a class="card" href="1356.html">
+  <div class="card-num">Regolamento (UE) 2024/1356</div>
+  <div class="card-name">Regolamento screening</div>
+  <div class="card-sub">che introduce accertamenti nei confronti dei cittadini di paesi terzi alle frontiere esterne e modifica i regolamenti (CE) n. 767/2008, (UE) 2017/2226, (UE) 2018/1240 e (UE) 2019/817</div>
+  <div class="card-meta">25 articoli</div>
+</a><a class="card" href="1358.html">
+  <div class="card-num">Regolamento (UE) 2024/1358</div>
+  <div class="card-name">Regolamento Eurodac</div>
+  <div class="card-sub">che istituisce l'«Eurodac» per il confronto dei dati biometrici ai fini dell'applicazione efficace dei regolamenti (UE) 2024/1351 e (UE) 2024/1350 o del Parlamento europeo e del Consiglio e della direttiva 2001/55/CE del…</div>
+  <div class="card-meta">63 articoli</div>
+</a><a class="card" href="1359.html">
+  <div class="card-num">Regolamento (UE) 2024/1359</div>
+  <div class="card-name">Regolamento crisi e forza maggiore</div>
+  <div class="card-sub">che modifica il regolamento (UE) 2021/1147</div>
+  <div class="card-meta">20 articoli</div>
+</a>
+</div>
+<details class="ext-list"><summary>Atti esterni collegati (82) — testi consultabili nei pannelli e nelle pagine dedicate</summary><ul><li><a href="ext-reg-2021-2303.html">Reg. 2021/2303</a> <span>REGOLAMENTO (UE) 2021/2303 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2018-1240.html">Reg. 2018/1240</a> <span>REGOLAMENTO (UE) 2018/1240 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-11-18</span></li><li><a href="ext-reg-2016-399.html">Reg. 2016/399</a> <span>REGOLAMENTO (UE) 2016/399 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-10-12</span></li><li><a href="ext-reg-2019-818.html">Reg. 2019/818</a> <span>REGOLAMENTO (UE) 2019/818 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-01-28</span></li><li><a href="ext-reg-2016-679.html">Reg. 2016/679</a> <span>REGOLAMENTO (UE) 2016/679 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2016-05-04</span></li><li><a href="ext-dir-2008-115.html">Dir. 115/2008</a> <span>DIRETTIVA 2008/115/CE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2008-767.html">Reg. 767/2008</a> <span>REGOLAMENTO (CE) N. 767/2008 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-10-12</span></li><li><a href="ext-reg-2021-1147.html">Reg. 2021/1147</a> <span>REGOLAMENTO (UE) 2021/1147 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2026-07-01</span></li><li><a href="ext-reg-2019-817.html">Reg. 2019/817</a> <span>REGOLAMENTO (UE) 2019/817 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-01-28</span></li><li><a href="ext-reg-2019-816.html">Reg. 2019/816</a> <span>REGOLAMENTO (UE) 2019/816 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2026-06-12</span></li><li><a href="ext-reg-2017-2226.html">Reg. 2017/2226</a> <span>REGOLAMENTO (UE) 2017/2226 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2021-08-03</span></li><li><a href="ext-reg-2019-1896.html">Reg. 2019/1896</a> <span>REGOLAMENTO (UE) 2019/1896 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2016-794.html">Reg. 2016/794</a> <span>REGOLAMENTO (UE) 2016/794 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2026-01-11</span></li><li><a href="ext-reg-2018-1862.html">Reg. 2018/1862</a> <span>REGOLAMENTO (UE) 2018/1862 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2022-08-01</span></li><li><a href="ext-dir-2016-680.html">Dir. 2016/680</a> <span>DIRETTIVA (UE) 2016/680 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2016-05-04</span></li><li><a href="ext-reg-2011-182.html">Reg. 182/2011</a> <span>REGOLAMENTO (UE) N. 182/2011 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2021-1060.html">Reg. 2021/1060</a> <span>REGOLAMENTO (UE) 2021/1060 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2026-07-01</span></li><li><a href="ext-reg-2013-604.html">Reg. 604/2013</a> <span>REGOLAMENTO (UE) N. 604/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2013-06-29</span></li><li><a href="ext-reg-2018-1725.html">Reg. 2018/1725</a> <span>REGOLAMENTO (UE) 2018/1725 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2018-11-21</span></li><li><a href="ext-dir-2003-109.html">Dir. 109/2003</a> <span>DIRETTIVA 2003/109/CE DEL CONSIGLIO — consolidato 2011-05-20</span></li><li><a href="ext-dec_framw-2002-584.html">Dec. quadro 584/2002</a> <span>DECISIONE QUADRO DEL CONSIGLIO — consolidato 2009-03-28</span></li><li><a href="ext-dir-2013-32.html">Dir. 32/2013</a> <span>DIRETTIVA 2013/32/UE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2013-06-29</span></li><li><a href="ext-reg-2021-1148.html">Reg. 2021/1148</a> <span>REGOLAMENTO (UE) 2021/1148 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2026-06-12</span></li><li><a href="ext-reg-2003-1560.html">Reg. 1560/2003</a> <span>REGOLAMENTO (CE) N. 1560/2003 DELLA COMMISSIONE — consolidato 2014-02-09</span></li><li><a href="ext-dir-2011-95.html">Dir. 95/2011</a> <span>DIRETTIVA 2011/95/UE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2011-12-20</span></li><li><a href="ext-dir-2017-541.html">Dir. 2017/541</a> <span>DIRETTIVA (UE) 2017/541 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2017-03-31</span></li><li><a href="ext-reg-2018-1726.html">Reg. 2018/1726</a> <span>REGOLAMENTO (UE) 2018/1726 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-01-28</span></li><li><a href="ext-reg-2011-1077.html">Reg. 1077/2011</a> <span>REGOLAMENTO (UE) N. 1077/2011 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2018-1861.html">Reg. 2018/1861</a> <span>REGOLAMENTO (UE) 2018/1861 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2021-08-03</span></li><li><a href="ext-reg-2009-810.html">Reg. 810/2009</a> <span>REGOLAMENTO (CE) N. 810/2009 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2024-06-28</span></li><li><a href="ext-reg-2013-603.html">Reg. 603/2013</a> <span>REGOLAMENTO (UE) N. 603/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2010-439.html">Reg. 439/2010</a> <span>REGOLAMENTO (UE) N. 439/2010 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2016-1624.html">Reg. 2016/1624</a> <span>REGOLAMENTO (UE) 2016/1624 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2004-883.html">Reg. 883/2004</a> <span>REGOLAMENTO (CE) N. 883/2004 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2019-07-31</span></li><li><a href="ext-dir-2005-36.html">Dir. 36/2005</a> <span>DIRETTIVA 2005/36/CE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-10-29</span></li><li><a href="ext-dec-2008-615.html">Dec. 615/2008</a> <span>DECISIONE 2008/615/GAI DEL CONSIGLIO — consolidato 2024-04-25</span></li><li><a href="ext-dir-2004-38.html">Dir. 38/2004</a> <span>DIRETTIVA 2004/38/CE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2011-06-16</span></li><li><a href="ext-reg-2022-922.html">Reg. 2022/922</a> <span>REGOLAMENTO (UE) 2022/922 DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dir-2011-36.html">Dir. 36/2011</a> <span>DIRETTIVA 2011/36/UE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2024-07-14</span></li><li><a href="ext-dec_impl-2022-382.html">Dec. esec. 2022/382</a> <span>DECISIONE DI ESECUZIONE (UE) 2022/382 DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2008-633.html">Dec. 633/2008</a> <span>DECISIONE 2008/633/GAI DEL CONSIGLIO — consolidato 2019-06-11</span></li><li><a href="ext-dec-2004-512.html">Dec. 512/2004</a> <span>DECISIONE DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2011-350.html">Dec. 350/2011</a> <span>DECISIONE DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2004-2252.html">Reg. 2252/2004</a> <span>REGOLAMENTO (CE) N. 2252/2004 DEL CONSIGLIO — consolidato 2009-06-26</span></li><li><a href="ext-reg-2013-1052.html">Reg. 1052/2013</a> <span>REGOLAMENTO (UE) N. 1052/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2018-1860.html">Reg. 2018/1860</a> <span>REGOLAMENTO (UE) 2018/1860 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2021-08-03</span></li><li><a href="ext-reg-2004-866.html">Reg. 866/2004</a> <span>REGOLAMENTO (CE) N. 866/2004 DEL CONSIGLIO — consolidato 2015-08-31</span></li><li><a href="ext-reg-2014-515.html">Reg. 515/2014</a> <span>REGOLAMENTO (UE) N. 515/2014 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2020-03-28</span></li><li><a href="ext-reg-2018-1806.html">Reg. 2018/1806</a> <span>REGOLAMENTO (UE) 2018/1806 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2025-12-30</span></li><li><a href="ext-dir-2005-85.html">Dir. 85/2005</a> <span>DIRETTIVA 2005/85/CE DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2002-1030.html">Reg. 1030/2002</a> <span>REGOLAMENTO (CE) N. 1030/2002 DEL CONSIGLIO — consolidato 2017-11-21</span></li><li><a href="ext-dir-2013-33.html">Dir. 33/2013</a> <span>DIRETTIVA 2013/33/UE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2007-533.html">Dec. 533/2007</a> <span>DECISIONE 2007/533/GAI DEL CONSIGLIO — consolidato 2020-12-28</span></li><li><a href="ext-reg-2018-1046.html">Reg. 2018/1046</a> <span>REGOLAMENTO (UE, Euratom) 2018/1046 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2022-12-14</span></li><li><a href="ext-reg-2007-862.html">Reg. 862/2007</a> <span>REGOLAMENTO (CE) N. 862/2007 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2021-07-01</span></li><li><a href="ext-dir-2004-83.html">Dir. 83/2004</a> <span>DIRETTIVA 2004/83/CE DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2010-1231.html">Reg. 1231/2010</a> <span>REGOLAMENTO (UE) N. 1231/2010 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec_framw-2002-475.html">Dec. quadro 475/2002</a> <span>DECISIONE QUADRO DEL CONSIGLIO — consolidato 2008-12-09</span></li><li><a href="ext-dec-2005-671.html">Dec. 671/2005</a> <span>DECISIONE 2005/671/GAI DEL CONSIGLIO — consolidato 2023-10-31</span></li><li><a href="ext-reg-2006-1987.html">Reg. 1987/2006</a> <span>REGOLAMENTO (CE) n. 1987/2006 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2020-12-28</span></li><li><a href="ext-reg-2006-1986.html">Reg. 1986/2006</a> <span>REGOLAMENTO (CE) N. 1986/2006 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2010-261.html">Dec. 261/2010</a> <span>DECISIONE DELLA COMMISSIONE — originale GU</span></li><li><a href="ext-dec_framw-2008-977.html">Dec. quadro 977/2008</a> <span>DECISIONE QUADRO 2008/977/GAI DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dir-2009-52.html">Dir. 52/2009</a> <span>DIRETTIVA 2009/52/CE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2009-07-20</span></li><li><a href="ext-reg-2021-836.html">Reg. 2021/836</a> <span>REGOLAMENTO (UE) 2021/836 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec_impl-2018-1993.html">Dec. esec. 2018/1993</a> <span>DECISIONE DI ESECUZIONE (UE) 2018/1993 DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2013-488.html">Dec. 488/2013</a> <span>DECISIONE DEL CONSIGLIO — consolidato 2025-08-14</span></li><li><a href="ext-reg-2013-1053.html">Reg. 1053/2013</a> <span>REGOLAMENTO (UE) N. 1053/2013 DEL CONSIGLIO — consolidato 2013-11-26</span></li><li><a href="ext-reg-2007-168.html">Reg. 168/2007</a> <span>REGOLAMENTO (CE) N. 168/2007 DEL CONSIGLIO — consolidato 2022-04-27</span></li><li><a href="ext-reg-2021-1160.html">Reg. 2021/1160</a> <span>REGOLAMENTO DELEGATO (UE) 2021/1160 DELLA COMMISSIONE — originale GU</span></li><li><a href="ext-dec-2013-1313.html">Dec. 1313/2013</a> <span>DECISIONE N. 1313/2013/UE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2023-12-18</span></li><li><a href="ext-reg-2013-1296.html">Reg. 1296/2013</a> <span>REGOLAMENTO (UE) N. 1296/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2013-1301.html">Reg. 1301/2013</a> <span>REGOLAMENTO (UE) N. 1301/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2020-04-24</span></li><li><a href="ext-reg-2013-1303.html">Reg. 1303/2013</a> <span>REGOLAMENTO (UE) N. 1303/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2024-03-01</span></li><li><a href="ext-reg-2013-1304.html">Reg. 1304/2013</a> <span>REGOLAMENTO (UE) N. 1304/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2018-08-02</span></li><li><a href="ext-reg-2013-1309.html">Reg. 1309/2013</a> <span>REGOLAMENTO (UE) N. 1309/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2013-1316.html">Reg. 1316/2013</a> <span>REGOLAMENTO (UE) N. 1316/2013 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2014-223.html">Reg. 223/2014</a> <span>REGOLAMENTO (UE) N. 223/2014 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2024-03-01</span></li><li><a href="ext-reg-2014-283.html">Reg. 283/2014</a> <span>REGOLAMENTO (UE) N. 283/2014 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-dec-2014-541.html">Dec. 541/2014</a> <span>DECISIONE N. 541/2014/UE DEL PARLAMENTO E DEL CONSIGLIO — originale GU</span></li><li><a href="ext-reg-2012-966.html">Reg. 966/2012</a> <span>REGOLAMENTO (UE, EURATOM) N. 966/2012 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2017-01-01</span></li><li><a href="ext-reg-2009-987.html">Reg. 987/2009</a> <span>REGOLAMENTO (CE) N. 987/2009 DEL PARLAMENTO EUROPEO E DEL CONSIGLIO — consolidato 2018-01-01</span></li></ul></details>
+</section>
+<section id="interna" class="idx-section">
+<h2 class="idx-h2">Legislazione interna</h2>
+<p class="idx-sub">Normativa nazionale italiana in versione interattiva: parti novellate evidenziate e rinvii normativi navigabili.</p>
+<div class="cards">
+<a class="card" href="dlgs-25-2008/index.html">
+  <div class="card-num">D.Lgs. 28 gennaio 2008, n. 25</div>
+  <div class="card-name">Procedure di riconoscimento della protezione internazionale</div>
+  <div class="card-sub">Testo coordinato con le modifiche introdotte dall'art. 11 del d.l. 12 giugno 2026, n. 100 — parti novellate evidenziate, rinvii normativi navigabili</div>
+  <div class="card-meta">52 articoli · testo coordinato</div>
+</a>
+<a class="card" href="dlgs-142-2015/index.html">
+  <div class="card-num">D.Lgs. 18 agosto 2015, n. 142</div>
+  <div class="card-name">Accoglienza dei richiedenti protezione internazionale</div>
+  <div class="card-sub">Testo coordinato con le modifiche introdotte dall'art. 10 del d.l. 12 giugno 2026, n. 100 (recepimento della direttiva (UE) 2024/1346) — parti novellate evidenziate, rinvii al d.lgs. 25/2008 e agli atti del Patto navigabili</div>
+  <div class="card-meta">40 articoli · testo coordinato</div>
+</a>
+<a class="card" href="dlgs-286-1998/index.html">
+  <div class="card-num">D.Lgs. 25 luglio 1998, n. 286</div>
+  <div class="card-name">Testo Unico delle disposizioni sull'immigrazione</div>
+  <div class="card-sub">Testo coordinato con le modifiche introdotte dall'art. 12, comma 2, del d.l. 12 giugno 2026, n. 100 (attuazione dei regolamenti (UE) 2024/1356 e 2024/1349) — parti novellate evidenziate, rinvii al d.lgs. 25/2008, al d.lgs. 142/2015 e agli atti del Patto navigabili</div>
+  <div class="card-meta">78 articoli · testo coordinato</div>
+</a>
+<a class="card" href="dlgs-251-2007/index.html">
+  <div class="card-num">D.Lgs. 19 novembre 2007, n. 251</div>
+  <div class="card-name">Qualifiche per la protezione internazionale</div>
+  <div class="card-sub">Testo vigente consolidato (non modificato dal d.l. 100/2026) — versione interattiva, ogni rinvio normativo navigabile, collegamenti agli altri testi interni e agli atti del Patto</div>
+  <div class="card-meta">34 articoli · testo vigente</div>
+</a>
+</div>
+<p class="idx-soon">Altre norme nazionali in arrivo.</p>
+</section>
+<p class="disclaimer">Versione di lavoro generata dai testi EUR-Lex (GU UE). Fa fede unicamente il testo pubblicato nella Gazzetta ufficiale.</p>
+</main>
+</body>
+</html>
