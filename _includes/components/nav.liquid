@@ -5,7 +5,7 @@
     {% for dropdown in navData.dropdowns %}
     {% if dropdown.items.size > 0 %}
     <li class="nav-item has-dropdown">
-      <a href="{% if dropdown.external %}{{ dropdown.href }}{% else %}{{ dropdown.href | url }}{% endif %}" class="nav-link" aria-haspopup="true" aria-expanded="false"{% if dropdown.external %} target="_blank"{% endif %}>{{ dropdown.label }}{% if dropdown.badge %} <span class="nav-badge">{{ dropdown.badge }}</span>{% endif %}</a>
+      <span class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false">{{ dropdown.label }}{% if dropdown.badge %} <span class="nav-badge">{{ dropdown.badge }}</span>{% endif %}</span>
       <ul class="nav-dropdown" role="menu">
         {% for item in dropdown.items %}
         <li role="none">
