@@ -1389,14 +1389,14 @@
 
 .logo-sospatto-img {
   display: block;
-  height: 64px;
+  height: 96px;
   width: auto;
 }
 
 .logo-sospatto:hover { transform: none; }
 
 @media (max-width: 768px) {
-  .logo-sospatto-img { height: 48px; }
+  .logo-sospatto-img { height: 72px; }
 }
 
 /* ── Schede giurisprudenza / circolari (pagina di dettaglio) ── */
