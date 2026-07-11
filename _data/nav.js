@@ -7,12 +7,8 @@ module.exports = {
         label: 'Testi normativi',
         href: '/testi.html',
         items: [
-          { label: 'Tutti i testi', href: '/testi.html' },
-          { label: 'Consultazione interattiva', href: '/patto-interattivo/index.html' },
-          { label: 'Regolamento procedure', href: '/patto-interattivo/1348.html' },
-          { label: 'Regolamento RAMM (Dublino)', href: '/patto-interattivo/1351.html' },
-          { label: 'Regolamento screening', href: '/patto-interattivo/1356.html' },
-          { label: 'Norme italiane novellate', href: '/testi.html#norme-italiane' },
+          { label: 'Normativa UE', href: '/testi.html' },
+          { label: 'Normativa italiana', href: '/norme-italiane.html' },
         ],
       },
       {

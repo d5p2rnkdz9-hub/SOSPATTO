@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.liquid
-title: "Normativa UE — SOS Patto"
+title: "Normativa italiana — SOS Patto"
 lang: it
-description: "I 10 atti del Patto UE su migrazione e asilo del 2024 in versione interattiva: ogni rinvio normativo è cliccabile."
+description: "Le norme italiane coordinate con il d.l. 100/2026 di adeguamento al Patto UE: testi interattivi con le modifiche evidenziate."
 extraStyles: |
   <style>
     .testi-head { text-align: center; max-width: 760px; margin: 0 auto; }
@@ -50,18 +50,25 @@ extraStyles: |
     }
     .testo-card p { font-size: 0.85rem; color: var(--gray-dark); line-height: 1.45; margin: 0 0 0.75rem; }
     .testo-card .testo-go { margin-top: auto; font-weight: 800; font-size: 0.85rem; }
+    .testo-coord {
+      font-size: 0.75rem; font-weight: 700;
+      background: var(--taxi-yellow-light);
+      border: 1.5px solid var(--black); border-radius: 8px;
+      padding: 4px 8px; margin: 0 0 0.75rem; display: inline-block;
+    }
   </style>
 ---
 
 <section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
   <div class="container">
     <div class="testi-head">
-      <h1>La normativa europea</h1>
+      <h1>La normativa italiana</h1>
       <p>
-        I 10 atti del Patto europeo su migrazione e asilo (2024) in versione <strong>interattiva</strong>:
-        ogni rinvio normativo è cliccabile e porta all'articolo richiamato, anche fra un testo e l'altro.
+        Le norme nazionali toccate dall'adeguamento al Patto (d.l. 100/2026): nei testi coordinati le
+        <strong style="color: #c1121f;">modifiche sono evidenziate</strong> — inserimenti in rosso,
+        soppressioni barrate.
       </p>
-      <span class="testi-verifica">✓ Testi verificati su EUR-Lex — {{ testi.aggiornamento }}</span>
+      <span class="testi-verifica">✓ Testi verificati su Normattiva — {{ testi.aggiornamento }}</span>
     </div>
   </div>
 </section>
@@ -69,15 +76,15 @@ extraStyles: |
 <section class="section" style="padding-top: 2.5rem;">
   <div class="container">
 
-    <h2 class="testi-sezione" id="testi-ue">🇪🇺 Gli atti del Patto (2024)</h2>
+    <h2 class="testi-sezione" id="norme-italiane">🇮🇹 Le norme italiane</h2>
     <div class="testi-grid">
-      {% for t in testi.ue %}
-      <a href="/patto-interattivo/{{ t.num }}.html" class="testo-card">
+      {% for t in testi.it %}
+      <a href="/patto-interattivo/{{ t.slug }}/index.html" class="testo-card">
         <div class="testo-card-top">
-          <span class="testo-tag">{{ t.tipo }} {{ t.numero }}</span>
+          <span class="testo-tag">{{ t.titolo }}</span>
         </div>
-        <h3>{{ t.titolo }}</h3>
-        <p>{{ t.desc }}</p>
+        <h3>{{ t.sotto }}</h3>
+        <span class="testo-coord">{{ t.coord }}</span>
         <span class="testo-go">Consulta →</span>
       </a>
       {% endfor %}

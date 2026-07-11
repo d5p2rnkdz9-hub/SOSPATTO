@@ -12,7 +12,7 @@ module.exports = {
       tipo: 'Direttiva',
       numero: 'UE 2024/1346',
       titolo: 'Direttiva accoglienza',
-      desc: "Norme sull'accoglienza dei richiedenti protezione internazionale.",
+      desc: "Norme sull'accoglienza e sul trattenimento dei richiedenti protezione internazionale.",
       icon: '🏠',
     },
     {
