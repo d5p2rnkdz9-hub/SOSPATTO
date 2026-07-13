@@ -1,18 +1,8 @@
 <!-- Footer Component -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-content">
-      {% assign footerData = footer[lang] | default: footer.it %}
-      {% for link in footerData.links %}
-      {% if link.external %}
-      <a href="{{ link.href }}" class="footer-project-link" target="_blank">{{ link.label }}</a>
-      {% else %}
-      <a href="{{ link.href | url }}" class="footer-project-link">{{ link.label }}</a>
-      {% endif %}
-      {% unless forloop.last %}<span class="footer-separator">|</span>{% endunless %}
-      {% endfor %}
-      <span class="footer-separator">|</span>
-      <p class="footer-copyright">&copy; {{ site.year }} {{ site.name }} — contenuti CC BY 4.0</p>
-    </div>
+    <p class="footer-cta-text">SOS Patto è un progetto gratuito e senza fini di lucro. Hai trovato un errore o vuoi proporre contenuti?</p>
+    <a href="mailto:{{ site.email }}" class="footer-cta-btn">Scrivici →</a>
+    <p class="footer-copyright">&copy; {{ site.year }} {{ site.name }} — contenuti CC BY 4.0 · <a href="{{ '/privacy-policy.html' | url }}">Privacy</a></p>
   </div>
 </footer>

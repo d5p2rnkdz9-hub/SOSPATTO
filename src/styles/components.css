@@ -892,7 +892,7 @@
 .footer {
   background-color: var(--taxi-yellow);
   color: var(--black);
-  padding: 1.25rem 0;
+  padding: 2.5rem 0 1.75rem;
   text-align: center;
 }
 
@@ -900,53 +900,44 @@
   display: block;
 }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-md);
-  flex-wrap: wrap;
+.footer-cta-text {
+  font-family: 'Inter', 'Inter Fallback', -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--black);
+  max-width: 720px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.45;
 }
 
-.footer-link {
+.footer-cta-btn {
+  display: inline-block;
+  background: var(--black);
   color: var(--white);
-  transition: color var(--transition-fast);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid var(--black);
+  transition: all 0.15s;
 }
 
-.footer-link:hover {
-  color: var(--taxi-yellow);
-}
-
-.footer-content {
-  display: block;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.footer-project-link {
-  color: var(--black);
-  font-weight: 600;
-  transition: color var(--transition-fast);
-  display: inline;
-}
-
-.footer-project-link:hover {
-  color: var(--accent-teal);
-}
-
-.footer-separator {
-  color: var(--black);
-  opacity: 0.5;
-  margin: 0 0.5rem;
+.footer-cta-btn:hover {
+  background: var(--gray-dark);
+  transform: translateY(-2px);
 }
 
 .footer-copyright {
   font-size: var(--font-size-sm);
   color: var(--black);
-  opacity: 0.6;
-  margin: 0 !important;
-  padding: 0;
-  display: inline;
+  opacity: 0.65;
+  margin: 2rem 0 0;
+}
+
+.footer-copyright a {
+  color: var(--black);
+  text-decoration: underline;
 }
 
 /* ===============================================

@@ -4,32 +4,45 @@ module.exports = {
   it: {
     dropdowns: [
       {
-        label: 'Testi normativi',
+        label: 'Normativa',
         href: '/testi.html',
         items: [
-          { label: 'Normativa UE', href: '/testi.html' },
-          { label: 'Normativa italiana', href: '/norme-italiane.html' },
+          { label: 'Regolamenti e Direttive UE', href: '/testi.html' },
+          { label: 'Leggi italiane', href: '/norme-italiane.html' },
+          { label: 'Circolari e SOP', href: '/circolari.html' },
         ],
-      },
-      {
-        label: 'Diagramma',
-        href: '/diagramma.html',
-        items: [],
       },
       {
         label: 'Giurisprudenza',
         href: '/giurisprudenza.html',
-        items: [],
+        items: [
+          { label: 'Italiana', href: '/giurisprudenza.html#italiana' },
+          { label: 'Europea', href: '/giurisprudenza.html#europea' },
+        ],
       },
       {
-        label: 'Circolari',
-        href: '/circolari.html',
-        items: [],
+        label: 'Strumenti interattivi',
+        href: '/diagramma.html',
+        items: [
+          { label: 'Diagramma procedure', href: '/diagramma.html' },
+          { label: 'Test interattivi', href: '/#strumenti' },
+        ],
       },
       {
-        label: 'Il progetto',
+        label: 'Siti partner',
+        href: 'https://www.sospermesso.it',
+        items: [
+          { label: 'SOS Permesso', href: 'https://www.sospermesso.it', external: true },
+          { label: 'Studio Legale Oltre', href: 'https://studiolegaleoltre.org', external: true },
+        ],
+      },
+      {
+        label: 'Contatti',
         href: '/il-progetto.html',
-        items: [],
+        items: [
+          { label: 'Il progetto', href: '/il-progetto.html' },
+          { label: 'Scrivici', href: 'mailto:alberto.pasquero@studiolegaleoltre.org', external: true },
+        ],
       },
     ],
   },
