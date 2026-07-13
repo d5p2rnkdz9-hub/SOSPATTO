@@ -44,8 +44,19 @@ layout: layouts/base.liquid
 
     {% if pdf %}
     <p style="margin-top: 2rem;">
-      <a href="{{ pdf | url }}" class="scheda-pdf-btn" target="_blank" rel="noopener">📄 Scarica la circolare (PDF)</a>
+      <a href="{{ pdf | url }}" class="scheda-pdf-btn" target="_blank" rel="noopener">📄 {{ pdfLabel | default: "Scarica il documento (PDF)" }}</a>
     </p>
+    {% endif %}
+
+    {% if allegati %}
+    <div class="scheda-allegati">
+      <p class="scheda-norme-label">Allegati</p>
+      <ul>
+        {% for a in allegati %}
+        <li><a href="{{ a.href | url }}" target="_blank" rel="noopener">📎 {{ a.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endif %}
 
   </div>

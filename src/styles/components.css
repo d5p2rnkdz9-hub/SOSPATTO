@@ -1480,6 +1480,17 @@
 .scheda-norme li { margin-bottom: 0.3rem; }
 .scheda-norme a { color: var(--black); font-weight: 700; }
 
+.scheda-allegati {
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin-top: 1.5rem;
+}
+.scheda-allegati ul { margin: 0; padding: 0; list-style: none; }
+.scheda-allegati li { margin-bottom: 0.45rem; }
+.scheda-allegati li:last-child { margin-bottom: 0; }
+.scheda-allegati a { color: #1565C0; font-weight: 600; }
+
 .scheda-pdf-btn {
   display: inline-block;
   background: var(--taxi-yellow);
