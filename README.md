@@ -24,6 +24,7 @@ public/           copiato tale e quale alla radice del sito:
   diagramma/           Diagrammone (flowchart screening/procedure, file unico)
   allegati/            PDF di giurisprudenza e circolari
 scripts/          retheme_blue.py — ritinta in blu i CSS (sito + bundle)
+                  seo_bundle.py — inietta canonical/description/OG nel bundle
 ```
 
 ## Come aggiungere una DECISIONE (giurisprudenza)
@@ -57,9 +58,15 @@ bundle (progetto "PATTO UE", `assemble_deploy.py`):
 # 1. copia il bundle nuovo (dalla staging di sospermesso o dal deploy/ del progetto)
 # 2. ritinta i CSS in blu:
 npm run retheme
+# 3. reinietta i meta SEO (canonical, description, Open Graph):
+npm run seo
 ```
 
 `scripts/retheme_blue.py` è idempotente e verifica che non restino token gialli/teal.
+`scripts/seo_bundle.py` è anch'esso idempotente: aggiunge nel `<head>` di ogni pagina
+del bundle canonical, meta description e tag Open Graph (blocco `<!-- seo:begin -->`);
+`index.html` e `audit.html` ricevono solo `noindex`. Va rilanciato dopo OGNI ricopia
+del bundle, insieme a retheme.
 Il ROSSO delle novelle (inserimenti/soppressioni) è convenzione giuridica e non si tocca.
 Aggiorna anche la data in `_data/testi.js` (`aggiornamento`).
 

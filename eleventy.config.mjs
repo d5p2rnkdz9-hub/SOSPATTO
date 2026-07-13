@@ -50,7 +50,8 @@ export default function (eleventyConfig) {
       output: '_site',
       includes: '_includes',
     },
-    templateFormats: ['html', 'liquid', 'md'],
+    // '11ty.js' serve solo per sitemap.11ty.js (genera /sitemap.xml)
+    templateFormats: ['html', 'liquid', 'md', '11ty.js'],
     htmlTemplateEngine: 'liquid',
   };
 }
