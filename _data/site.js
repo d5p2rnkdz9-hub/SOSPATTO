@@ -29,7 +29,7 @@ module.exports = {
   name: 'SOS Patto',
   // TODO: confermare il dominio esatto (registrato ma non ancora collegato)
   url: 'https://www.sospatto.it',
-  email: 'alberto.pasquero@studiolegaleoltre.org',
+  email: 'info@studiolegaleoltre.org',
   year: new Date().getFullYear(),
   defaultDescription:
     'SOS Patto — il Patto europeo su migrazione e asilo, spiegato: testi normativi interattivi, ' +

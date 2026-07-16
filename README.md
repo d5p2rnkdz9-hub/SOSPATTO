@@ -60,6 +60,8 @@ bundle (progetto "PATTO UE", `assemble_deploy.py`):
 npm run retheme
 # 3. reinietta i meta SEO (canonical, description, Open Graph):
 npm run seo
+# 4. rimette il logo del sito nella topbar "torna alla home":
+npm run logo
 ```
 
 `scripts/retheme_blue.py` è idempotente e verifica che non restino token gialli/teal.
@@ -67,6 +69,9 @@ npm run seo
 del bundle canonical, meta description e tag Open Graph (blocco `<!-- seo:begin -->`);
 `index.html` e `audit.html` ricevono solo `noindex`. Va rilanciato dopo OGNI ricopia
 del bundle, insieme a retheme.
+`scripts/inject_bundle_logo.py` è idempotente: sostituisce nella topbar il link
+testuale "⌂ SOS Patto" con il logo reale (`IMAGES/logo-header.png`) cliccabile
+verso la home, e aggiunge la regola `.topbar-logo` ai 5 `style.css` del bundle.
 Il ROSSO delle novelle (inserimenti/soppressioni) è convenzione giuridica e non si tocca.
 Aggiorna anche la data in `_data/testi.js` (`aggiornamento`).
 

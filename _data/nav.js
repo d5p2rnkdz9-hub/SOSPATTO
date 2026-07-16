@@ -25,7 +25,7 @@ module.exports = {
         href: '/diagramma.html',
         items: [
           { label: 'Diagramma procedure', href: '/diagramma.html' },
-          { label: 'Test interattivi', href: '/#strumenti' },
+          { label: 'Test interattivi', href: 'https://app.sospatto.it', external: true },
         ],
       },
       {
@@ -41,7 +41,7 @@ module.exports = {
         href: '/il-progetto.html',
         items: [
           { label: 'Il progetto', href: '/il-progetto.html' },
-          { label: 'Scrivici', href: 'mailto:alberto.pasquero@studiolegaleoltre.org', external: true },
+          { label: 'Scrivici', href: 'mailto:info@studiolegaleoltre.org', external: true },
         ],
       },
     ],
