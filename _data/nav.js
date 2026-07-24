@@ -13,11 +13,12 @@ module.exports = {
         ],
       },
       {
-        label: 'Giurisprudenza',
+        label: 'Giurisprudenza e dottrina',
         href: '/giurisprudenza.html',
         items: [
           { label: 'Italiana', href: '/giurisprudenza.html#italiana' },
           { label: 'Europea', href: '/giurisprudenza.html#europea' },
+          { label: 'Commenti e dottrina', href: '/dottrina.html' },
         ],
       },
       {
