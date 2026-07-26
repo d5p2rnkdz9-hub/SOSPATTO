@@ -1145,8 +1145,9 @@ const BENCH_NOTE = 'Riferimenti di settore (fonti linkate in fondo alla pagina):
 function loadJSON(k, fb){ try{ const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === 'object' ? v : fb; }catch(e){ return fb; } }
 let setup = Object.assign({}, DEFAULTS, loadJSON(LS.setup, {}));
 let checks = loadJSON(LS.check, {});
-const saveSetup = () => localStorage.setItem(LS.setup, JSON.stringify(setup));
-const saveChecks = () => localStorage.setItem(LS.check, JSON.stringify(checks));
+function lsSet(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
+const saveSetup = () => lsSet(LS.setup, JSON.stringify(setup));
+const saveChecks = () => lsSet(LS.check, JSON.stringify(checks));
 
 const $ = (s, el=document) => el.querySelector(s);
 const $$ = (s, el=document) => [...el.querySelectorAll(s)];
@@ -1158,14 +1159,14 @@ const fmtE = n => n.toLocaleString('it-IT') + ' €';
    TEMA
 ================================================================= */
 (function initTheme(){
-  const saved = localStorage.getItem(LS.theme);
+  let saved = null; try{ saved = localStorage.getItem(LS.theme); }catch(e){}
   if(saved) document.documentElement.dataset.theme = saved;
   $('#themeBtn').addEventListener('click', () => {
     const cur = document.documentElement.dataset.theme ||
       (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    localStorage.setItem(LS.theme, next);
+    lsSet(LS.theme, next);
   });
 })();
 
