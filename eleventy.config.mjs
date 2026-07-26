@@ -17,6 +17,8 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add('public/**');
   // documentazione a livello root, non contenuto del sito
   eleventyConfig.ignores.add('*.md');
+  // progetto autonomo (piano promozione incontri di mitologia): non fa parte del sito
+  eleventyConfig.ignores.add('piano-marketing-mitologia/**');
 
   // ---- filtri -----------------------------------------------------------
   eleventyConfig.addFilter('md', (str) => mdRenderer.render(str || ''));

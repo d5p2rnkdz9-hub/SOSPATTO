@@ -1,0 +1,1730 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mito &amp; Psiche — Piano di promozione interattivo</title>
+<style>
+/* ============ tokens ============ */
+:root{
+  color-scheme: light;
+  --page:#f9f9f7; --surface:#fcfcfb;
+  --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  --accent:#2a78d6; --good:#006300;
+  --ord1:#86b6ef; --ord2:#3987e5; --ord3:#1c5cab; --ord4:#0d366b;
+  --wash:rgba(42,120,214,.08);
+  --shadow:0 1px 2px rgba(11,11,11,.05), 0 4px 16px rgba(11,11,11,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19;
+    --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+    --accent:#3987e5; --good:#0ca30c;
+    --ord1:#184f95; --ord2:#2a78d6; --ord3:#6da7ec; --ord4:#b7d3f6;
+    --wash:rgba(57,135,229,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0d0d0d; --surface:#1a1a19;
+  --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  --accent:#3987e5; --good:#0ca30c;
+  --ord1:#184f95; --ord2:#2a78d6; --ord3:#6da7ec; --ord4:#b7d3f6;
+  --wash:rgba(57,135,229,.14);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.35);
+}
+
+/* ============ base ============ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--page); color:var(--ink);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+h1,h2,h3,.serif{font-family:Georgia,'Iowan Old Style','Times New Roman',serif; font-weight:600; line-height:1.25; letter-spacing:.01em}
+h2{font-size:clamp(24px,3.4vw,32px); margin:0 0 6px}
+h3{font-size:19px; margin:0 0 8px}
+p{margin:.4em 0 .9em}
+a{color:var(--accent)}
+.kicker{font:600 12px/1 system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 10px}
+.lead{font-size:17px; color:var(--ink2); max-width:70ch}
+.muted{color:var(--muted)} .small{font-size:13px}
+section{max-width:1060px; margin:0 auto; padding:56px 20px 8px}
+.card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px 24px; box-shadow:var(--shadow)}
+.grid{display:grid; gap:14px}
+@media(min-width:760px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(4,1fr)}}
+button{font:inherit; color:inherit; cursor:pointer}
+.btn{background:var(--surface); border:1px solid var(--border); border-radius:9px; padding:7px 14px; font-size:14px; box-shadow:var(--shadow)}
+.btn:hover{border-color:var(--axis)}
+.btn.primary{background:var(--accent); border-color:transparent; color:#fff}
+.btn.ghost{box-shadow:none; background:transparent}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+
+/* ============ header & nav ============ */
+header.top{
+  position:sticky; top:0; z-index:50; background:var(--page);
+  border-bottom:1px solid var(--border);
+}
+.top-in{max-width:1060px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; gap:14px}
+.wordmark{font-family:Georgia,serif; font-style:italic; font-size:19px; white-space:nowrap}
+.top-in .spacer{flex:1}
+.progress-pill{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink2); white-space:nowrap}
+.pbar{width:90px; height:6px; border-radius:3px; background:var(--grid); overflow:hidden}
+.pbar>i{display:block; height:100%; width:0%; background:var(--accent); border-radius:3px; transition:width .3s}
+@media(max-width:640px){
+  .top-in{gap:8px; padding:10px 12px}
+  .top-in .muted.small{display:none}
+  #ptxtTop{display:none}
+  .pbar{width:44px}
+  .top-in .btn{padding:6px 10px; font-size:13px}
+}
+nav.secnav{position:sticky; top:49px; z-index:49; background:var(--page); border-bottom:1px solid var(--border)}
+.secnav-in{max-width:1060px; margin:0 auto; padding:8px 14px; display:flex; gap:6px; overflow-x:auto; scrollbar-width:none}
+.secnav-in::-webkit-scrollbar{display:none}
+.pill{border:1px solid transparent; background:transparent; border-radius:999px; padding:5px 12px; font-size:13.5px; color:var(--ink2); white-space:nowrap; text-decoration:none}
+.pill:hover{background:var(--wash)}
+.pill.active{background:var(--wash); color:var(--accent); border-color:transparent; font-weight:600}
+
+/* ============ hero ============ */
+.hero{padding-top:44px}
+.hero h1{font-size:clamp(30px,5vw,46px); margin:6px 0 10px}
+.hero .sub{font-size:18px; color:var(--ink2); max-width:72ch}
+.tiles{display:grid; gap:12px; grid-template-columns:repeat(2,1fr); margin-top:24px}
+@media(min-width:760px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; box-shadow:var(--shadow)}
+.tile .lbl{font-size:12.5px; color:var(--ink2)}
+.tile .val{font-size:30px; font-weight:600; line-height:1.15; margin-top:2px}
+.tile .cap{font-size:12px; color:var(--muted); margin-top:2px}
+
+/* ============ setup ============ */
+.setup-grid{display:grid; gap:14px 18px}
+@media(min-width:700px){.setup-grid{grid-template-columns:repeat(3,1fr)}}
+.field label{display:block; font-size:12.5px; font-weight:600; color:var(--ink2); margin-bottom:4px}
+.field input,.field select{
+  width:100%; padding:8px 10px; font:inherit; font-size:14.5px; color:var(--ink);
+  background:var(--page); border:1px solid var(--axis); border-radius:8px;
+}
+.field input:focus,.field select:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:transparent}
+.seg{display:flex; gap:0; border:1px solid var(--axis); border-radius:8px; overflow:hidden}
+.seg button{flex:1; border:0; background:var(--page); padding:8px 4px; font-size:13.5px; color:var(--ink2)}
+.seg button+button{border-left:1px solid var(--axis)}
+.seg button[aria-pressed="true"]{background:var(--accent); color:#fff; font-weight:600}
+
+/* ============ liste & varie ============ */
+.check-ul{list-style:none; margin:8px 0 0; padding:0}
+.check-ul li{padding:3px 0 3px 26px; position:relative}
+.check-ul li::before{content:"→"; position:absolute; left:4px; color:var(--accent)}
+.tag{display:inline-block; font-size:11.5px; font-weight:600; letter-spacing:.04em; padding:2px 9px; border-radius:999px; background:var(--wash); color:var(--accent); margin-right:6px}
+.numbered{counter-reset:n; list-style:none; margin:14px 0 0; padding:0; display:grid; gap:10px}
+.numbered>li{counter-increment:n; position:relative; padding-left:46px}
+.numbered>li::before{
+  content:counter(n); position:absolute; left:0; top:1px; width:30px; height:30px;
+  border-radius:50%; background:var(--wash); color:var(--accent);
+  font:600 15px/30px system-ui,sans-serif; text-align:center;
+}
+
+/* segment cards (pubblici) */
+.aud .who{font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:600}
+.aud h3{margin-top:2px}
+.aud dl{margin:10px 0 0; font-size:14.5px}
+.aud dt{font-weight:600; color:var(--ink2); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; margin-top:10px}
+.aud dd{margin:2px 0 0}
+
+/* mercato */
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 14px}
+.chip{border:1px solid var(--axis); background:var(--surface); border-radius:999px; padding:5px 13px; font-size:13.5px; color:var(--ink2)}
+.chip[aria-pressed="true"]{background:var(--accent); color:#fff; border-color:transparent; font-weight:600}
+.comp .fmt{font-size:13.5px; color:var(--ink2); margin:2px 0 8px}
+.comp .steal{background:var(--wash); border-radius:9px; padding:9px 12px; font-size:14px; margin-top:10px}
+.comp .steal b{color:var(--accent)}
+.comp .meta{font-size:12.5px; color:var(--muted); margin-top:10px}
+.comp .meta a{color:var(--muted)}
+
+/* canali */
+.chart-card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 18px 10px; box-shadow:var(--shadow)}
+.chart-head{display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding:0 4px 6px}
+.chart-head h3{margin:0; flex:1}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:13px; color:var(--ink2); padding:4px 4px 8px}
+.legend .key{display:inline-flex; align-items:center; gap:7px}
+.legend .sw{width:11px; height:11px; border-radius:3px}
+svg text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.dot-lbl{font-size:11px; fill:var(--ink2)}
+.axis-lbl{font-size:11.5px; fill:var(--muted)}
+.quad-lbl{font-size:11px; fill:var(--muted); font-style:italic}
+.matrix-dot{cursor:pointer}
+.matrix-dot .halo{fill:transparent}
+.matrix-dot circle.pt{stroke:var(--surface); stroke-width:2}
+.matrix-dot.dim{opacity:.22}
+.matrix-dot:focus-visible{outline:none}
+.matrix-dot:focus-visible circle.pt{stroke:var(--accent); stroke-width:3}
+.tooltip{
+  position:fixed; z-index:99; pointer-events:none; max-width:260px;
+  background:var(--surface); color:var(--ink); border:1px solid var(--border);
+  border-radius:10px; padding:9px 12px; font-size:13px; line-height:1.45; box-shadow:var(--shadow);
+  opacity:0; transition:opacity .12s;
+}
+.tooltip b{font-size:14px}
+.tooltip .tt-line{display:flex; gap:8px; align-items:center}
+.tooltip .tt-key{width:12px; height:3px; border-radius:2px; display:inline-block}
+table.tbl{width:100%; border-collapse:collapse; font-size:13.5px; margin-top:6px}
+table.tbl th{
+  text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+  color:var(--muted); font-weight:600; padding:7px 10px; border-bottom:1px solid var(--axis);
+}
+table.tbl td{padding:7px 10px; border-bottom:1px solid var(--grid); vertical-align:top}
+table.tbl td.num{text-align:right; font-variant-numeric:tabular-nums}
+.tbl-wrap{overflow-x:auto}
+
+.chan{border-left:3px solid var(--grid)}
+.chan.g1{border-left-color:var(--s1)} .chan.g2{border-left-color:var(--s2)} .chan.g3{border-left-color:var(--s3)}
+.chan .hdr{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.chan .hdr h3{margin:0}
+.chan .stats{font-size:12.5px; color:var(--muted)}
+.chan.offtopic{opacity:.55}
+.chan .why{margin:6px 0 4px}
+.flash{animation:flash 1.6s ease-out 1}
+@keyframes flash{0%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:var(--shadow)}}
+
+/* piano operativo */
+details.week{background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow); margin-bottom:12px; overflow:hidden}
+details.week summary{
+  list-style:none; cursor:pointer; padding:15px 18px; display:flex; align-items:center; gap:12px;
+}
+details.week summary::-webkit-details-marker{display:none}
+details.week summary .arrow{transition:transform .2s; color:var(--muted); flex:none}
+details.week[open] summary .arrow{transform:rotate(90deg)}
+.week-t{flex:1; min-width:0}
+.week-t b{font-size:16.5px}
+.week-t .when{font-size:12.5px; color:var(--muted)}
+.week-prog{font-size:12.5px; color:var(--ink2); white-space:nowrap; display:flex; align-items:center; gap:8px}
+.wbar{width:64px; height:5px; background:var(--grid); border-radius:3px; overflow:hidden}
+.wbar>i{display:block; height:100%; background:var(--accent); width:0}
+.week-body{padding:2px 18px 16px; border-top:1px solid var(--grid)}
+.task{display:flex; gap:11px; padding:8px 0; border-bottom:1px solid var(--grid); align-items:flex-start}
+.task:last-child{border-bottom:0}
+.task input{width:18px; height:18px; margin-top:3px; accent-color:var(--accent); flex:none}
+.task label{cursor:pointer}
+.task .note{display:block; font-size:13px; color:var(--muted)}
+.task input:checked+label{color:var(--muted); text-decoration:line-through; text-decoration-color:var(--axis)}
+.task input:checked+label .note{text-decoration:none}
+
+/* kit contenuti */
+.tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+.tab{border:1px solid var(--axis); background:var(--surface); border-radius:9px; padding:6px 13px; font-size:13.5px; color:var(--ink2)}
+.tab[aria-selected="true"]{background:var(--accent); border-color:transparent; color:#fff; font-weight:600}
+.tpl{position:relative}
+.tpl .hint{font-size:13.5px; color:var(--ink2); margin:0 0 10px}
+.tpl pre{
+  white-space:pre-wrap; word-wrap:break-word; background:var(--page); border:1px solid var(--grid);
+  border-radius:10px; padding:16px 16px; font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  margin:0; max-height:440px; overflow:auto;
+}
+.copy-row{display:flex; gap:8px; margin-top:10px; align-items:center}
+.copied{color:var(--good); font-size:13px; font-weight:600; opacity:0; transition:opacity .2s}
+.copied.on{opacity:1}
+
+/* budget */
+.scen-cards .tot{font-size:26px; font-weight:600}
+.bbar{display:flex; height:20px; border-radius:4px; overflow:hidden; margin:12px 0 4px; background:var(--grid)}
+.bbar>i{display:block; height:100%}
+.bbar>i+i{border-left:2px solid var(--surface)}
+.blegend{list-style:none; margin:10px 0 0; padding:0; font-size:13.5px}
+.blegend li{display:flex; align-items:center; gap:8px; padding:3px 0}
+.blegend .sw{width:11px; height:11px; border-radius:3px; flex:none}
+.blegend .v{margin-left:auto; font-variant-numeric:tabular-nums; color:var(--ink2)}
+
+/* kpi */
+.funnel{display:grid; gap:10px; margin-top:16px}
+@media(min-width:760px){.funnel{grid-template-columns:repeat(4,1fr)}}
+.stage{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:13px 15px; box-shadow:var(--shadow); border-top:4px solid var(--grid); position:relative}
+.stage .lbl{font-size:12.5px; color:var(--ink2)}
+.stage .val{font-size:28px; font-weight:600; margin-top:2px}
+.stage .conv{font-size:12px; color:var(--muted); margin-top:4px}
+.assump{display:grid; gap:12px; margin-top:14px}
+@media(min-width:700px){.assump{grid-template-columns:repeat(3,1fr)}}
+.assump .field input{max-width:110px}
+
+/* errori */
+.err li{margin-bottom:10px}
+.err b{display:block}
+
+/* fonti */
+.fonti ul{margin:6px 0 0; padding-left:20px; font-size:14px}
+.fonti li{margin:4px 0}
+.fonti a{word-break:break-all}
+
+footer{max-width:1060px; margin:40px auto 0; padding:26px 20px 40px; color:var(--muted); font-size:13px; border-top:1px solid var(--border)}
+
+/* print */
+@media print{
+  header.top,nav.secnav,.btn,.chips,.seg,.copy-row,.tabs,#resetChecks{display:none !important}
+  body{background:#fff; color:#000}
+  .card,.tile,details.week,.chart-card,.stage{box-shadow:none; border-color:#ccc}
+  section{padding:22px 0 0; max-width:none}
+  details.week{page-break-inside:avoid}
+  .tpl pre{max-height:none}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <span class="wordmark">Mito &amp; Psiche</span>
+    <span class="muted small" style="white-space:nowrap">piano di promozione</span>
+    <span class="spacer"></span>
+    <span class="progress-pill" title="Avanzamento della checklist operativa">
+      <span class="pbar"><i id="pbarTop"></i></span>
+      <span id="ptxtTop">0%</span>
+    </span>
+    <button class="btn ghost" id="themeBtn" aria-label="Cambia tema chiaro/scuro">◐</button>
+    <button class="btn ghost" onclick="window.print()" aria-label="Stampa il piano">Stampa</button>
+  </div>
+</header>
+
+<nav class="secnav" aria-label="Sezioni del piano">
+  <div class="secnav-in" id="secnav"></div>
+</nav>
+
+<section class="hero" id="inizio">
+  <p class="kicker">Piano interattivo · aggiornato a luglio 2026</p>
+  <h1 id="heroTitle">Ciclo di incontri sulla mitologia</h1>
+  <p class="sub">Come portare il ciclo davanti al maggior numero possibile di persone giuste — psicoterapeuti, allieve e allievi delle scuole di specializzazione, e chiunque senta che i miti parlano anche di sé. Un piano concreto in 8 settimane, costruito su un’analisi del mercato italiano e delle pratiche che funzionano davvero.</p>
+  <div class="tiles">
+    <div class="tile"><div class="lbl">Giorni al primo incontro</div><div class="val" id="tDays">—</div><div class="cap" id="tDaysCap">imposta la data qui sotto</div></div>
+    <div class="tile"><div class="lbl">Obiettivo iscrizioni</div><div class="val" id="tGoal">25</div><div class="cap">modificabile nel setup</div></div>
+    <div class="tile"><div class="lbl">Piano completato</div><div class="val" id="tProg">0%</div><div class="cap" id="tProgCap">0 attività su 0</div></div>
+    <div class="tile"><div class="lbl">Scenario budget</div><div class="val" id="tBudget">0 €</div><div class="cap">cambialo nel setup</div></div>
+  </div>
+</section>
+
+<section id="setup">
+  <p class="kicker">Setup</p>
+  <h2>Il tuo ciclo</h2>
+  <p class="lead">Compila (o cambia) questi campi: il piano si adatta — scadenze calcolate a ritroso, obiettivi, testi pronti con i tuoi dati. Tutto resta salvato solo nel tuo browser.</p>
+  <div class="card">
+    <div class="setup-grid">
+      <div class="field" style="grid-column:1/-1"><label for="fNome">Nome del ciclo</label><input id="fNome" data-k="nome" placeholder="Es. La lingua degli dèi — sei miti per leggere la psiche"></div>
+      <div class="field"><label for="fRelatrice">Chi conduce (nome e titolo)</label><input id="fRelatrice" data-k="relatrice" placeholder="Es. Dott.ssa Maria Rossi, psicoterapeuta"></div>
+      <div class="field"><label for="fCitta">Città (se in presenza)</label><input id="fCitta" data-k="citta" placeholder="Es. Torino"></div>
+      <div class="field"><label>Formato</label>
+        <div class="seg" id="fFormato" role="group" aria-label="Formato del ciclo">
+          <button type="button" data-v="online">Online</button>
+          <button type="button" data-v="presenza">In presenza</button>
+          <button type="button" data-v="ibrido">Ibrido</button>
+        </div>
+      </div>
+      <div class="field"><label for="fData">Data del primo incontro</label><input id="fData" data-k="data" type="date"></div>
+      <div class="field"><label for="fIncontri">Numero di incontri</label><input id="fIncontri" data-k="incontri" type="number" min="1" max="20" placeholder="6"></div>
+      <div class="field"><label for="fPrezzo">Prezzo intero ciclo (€)</label><input id="fPrezzo" data-k="prezzo" type="number" min="0" step="5" placeholder="120"></div>
+      <div class="field"><label for="fObiettivo">Obiettivo iscrizioni</label><input id="fObiettivo" data-k="obiettivo" type="number" min="1" placeholder="25"></div>
+      <div class="field"><label for="fLink">Link di iscrizione (quando c’è)</label><input id="fLink" data-k="link" placeholder="https://…"></div>
+      <div class="field"><label>Scenario di budget</label>
+        <div class="seg" id="fScenario" role="group" aria-label="Scenario di budget">
+          <button type="button" data-v="0">0 €</button>
+          <button type="button" data-v="1">~150 €</button>
+          <button type="button" data-v="2">~500 €</button>
+        </div>
+      </div>
+    </div>
+    <p class="small muted" style="margin:14px 0 0">I dati restano nel <code>localStorage</code> del browser: niente viene inviato da nessuna parte. <button class="btn ghost small" id="resetSetup" style="padding:2px 8px">Azzera i campi</button></p>
+  </div>
+</section>
+
+<section id="sintesi">
+  <p class="kicker">La strategia</p>
+  <h2>La strategia in cinque mosse</h2>
+  <p class="lead">Tutto il piano sta in queste cinque decisioni. Il resto della pagina le trasforma in azioni, testi e scadenze.</p>
+  <div class="card">
+    <ol class="numbered">
+      <li><b>Un ciclo, due promesse.</b> Ai clinici prometti uno strumento di lavoro («il mito come mappa dei processi psichici che incontri in seduta»); al pubblico colto prometti senso e meraviglia («storie di tremila anni per capire qualcosa di sé»). Stesso contenuto, due messaggi distinti — mai un messaggio «medio» che non parla a nessuno.</li>
+      <li><b>Prima le relazioni, poi i social.</b> Per un pubblico professionale il canale più potente è il passaparola organizzato: colleghi-ambasciatori, scuole di specializzazione, associazioni, Ordine. I social amplificano, non sostituiscono. Le prime 2 settimane del piano servono a costruire alleanze, non post.</li>
+      <li><b>Un’anteprima gratuita che costruisce la lista.</b> Un incontro aperto di 45–60 minuti circa un mese prima del via: è il «primo capitolo gratis». Chi si iscrive lascia l’email — e l’email è il canale che converte più di tutti. (Ai webinar gratuiti si presenta circa metà degli iscritti: è normale, e intanto la lista cresce.)</li>
+      <li><b>Otto settimane, scadenze vere.</b> Calendario a ritroso dal primo incontro, con un prezzo early bird che scade davvero. L’urgenza onesta muove le iscrizioni; quella finta brucia la fiducia.</li>
+      <li><b>Misura da dove arrivano.</b> Un campo «come mi hai conosciuto?» nel modulo, link tracciati, codici per canale. Il primo ciclo è anche un esperimento: il secondo costerà metà della fatica.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="pubblici">
+  <p class="kicker">A chi parliamo</p>
+  <h2>I quattro pubblici</h2>
+  <p class="lead">«Espandere la platea» non significa parlare a tutti: significa parlare bene a quattro gruppi precisi, ciascuno nel posto dove già si trova.</p>
+  <div class="grid c2" id="audGrid"></div>
+</section>
+
+<section id="messaggio">
+  <p class="kicker">Cosa diciamo</p>
+  <h2>Posizionamento e messaggi</h2>
+  <div class="grid c2">
+    <div class="card">
+      <h3>La promessa centrale</h3>
+      <p class="serif" style="font-size:20px; font-style:italic; color:var(--ink)">«I miti non sono reperti da museo: sono mappe della psiche. Un ciclo di incontri per attraversarli con lo sguardo della psicologia del profondo.»</p>
+      <p class="small" style="color:var(--ink2)">Da declinare poi in due registri: <b>clinico</b> (strumenti, casi, immagini archetipiche nel lavoro terapeutico) e <b>culturale</b> (nessun gergo, storie raccontate bene, ciò che dicono di noi).</p>
+    </div>
+    <div class="card">
+      <h3>Il titolo giusto</h3>
+      <p>Nome evocativo + sottotitolo concreto che dice <em>per chi</em> e <em>che cosa</em>. I nomi propri vendono più dei concetti: ogni incontro dedicato a una figura precisa.</p>
+      <ul class="check-ul">
+        <li>«La lingua degli dèi — sei miti per leggere la psiche»</li>
+        <li>«Il filo di Arianna — figure del mito per chi lavora con l’anima»</li>
+        <li>«Discese e ritorni — Persefone, Orfeo, Ulisse e gli altri»</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Prova sociale (da costruire subito)</h3>
+      <ul class="check-ul">
+        <li>Bio breve con credenziali cliniche e passione per il mito (3 righe, in prima persona).</li>
+        <li>Un video di 60–90 secondi in cui racconti <em>un</em> mito e cosa rivela: è il trailer del ciclo.</li>
+        <li>2–3 testimonianze raccolte all’anteprima gratuita (o da ex pazienti di formazione/supervisione, mai di terapia).</li>
+        <li>Attestato di partecipazione per i professionisti: costa zero e pesa nella decisione.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Una sola chiamata all’azione</h3>
+      <p>Ovunque, la stessa: <b>«Iscriviti al ciclo — early bird fino al [data]»</b>. Un solo link, una sola pagina di destinazione. Ogni canale (post, email, locandina, podcast) finisce lì.</p>
+      <p class="small muted">Regola pratica: se un contenuto non porta al link, deve almeno portare all’anteprima gratuita — che poi porta al link.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mercato">
+  <p class="kicker">Analisi della concorrenza</p>
+  <h2>Cosa fa il mercato</h2>
+  <p class="lead" id="mercatoLead">Offerte comparabili censite in Italia (più alcuni riferimenti internazionali): cosa propongono, a che prezzo, su quali canali — e cosa vale la pena copiare.</p>
+  <div class="chips" id="compChips" role="group" aria-label="Filtra per tipo"></div>
+  <div class="grid c2" id="compGrid"></div>
+  <div class="card" style="margin-top:14px" id="patternCard">
+    <h3>Pattern del mercato → la tua opportunità</h3>
+    <div id="patternBody"></div>
+  </div>
+</section>
+
+<section id="canali">
+  <p class="kicker">Dove promuovere</p>
+  <h2>I canali, ordinati per resa</h2>
+  <p class="lead">Quattordici canali valutati per sforzo e impatto atteso sul <em>tuo</em> caso (organizzatrice singola, pubblico professionale + colto, budget piccolo). Clicca un punto per andare alla scheda del canale.</p>
+
+  <div class="chart-card">
+    <div class="chart-head">
+      <h3>Matrice sforzo / impatto</h3>
+      <button class="btn small" id="tblToggle" aria-expanded="false">Vedi come tabella</button>
+    </div>
+    <div class="legend" id="matrixLegend"></div>
+    <div id="matrixWrap" style="overflow-x:auto"><svg id="matrix" role="img" aria-label="Matrice sforzo impatto dei canali promozionali" style="width:100%; min-width:640px; display:block"></svg></div>
+    <p class="small muted" style="padding:0 4px 10px">I canali fuori dallo scenario di budget scelto sono attenuati. In alto a sinistra le vittorie rapide: inizia da lì.</p>
+    <div class="tbl-wrap" id="chanTblWrap" hidden></div>
+  </div>
+
+  <div class="grid" id="chanCards" style="margin-top:16px"></div>
+</section>
+
+<section id="piano">
+  <p class="kicker">Quando fare cosa</p>
+  <h2>Piano operativo: 8 settimane + il durante e il dopo</h2>
+  <p class="lead" id="pianoLead">Ogni settimana ha poche attività concrete. Spunta quello che fai: l’avanzamento resta salvato nel browser. Otto settimane sono il minimo: se ne hai dieci o dodici, meglio ancora — patrocini, scuole e podcast hanno tempi da 30–45 giorni.</p>
+  <div id="weeks"></div>
+  <p class="small muted"><button class="btn ghost small" id="resetChecks" style="padding:2px 8px">Azzera tutte le spunte</button></p>
+</section>
+
+<section id="kit">
+  <p class="kicker">Testi pronti</p>
+  <h2>Kit di contenuti</h2>
+  <p class="lead">Testi pronti da copiare e adattare. I segnaposto tra parentesi quadre si compilano da soli con i dati del setup; quelli rimasti, li completi tu.</p>
+  <div class="tabs" role="tablist" id="tplTabs"></div>
+  <div class="card tpl">
+    <h3 id="tplTitle"></h3>
+    <p class="hint" id="tplHint"></p>
+    <pre id="tplBody" tabindex="0"></pre>
+    <div class="copy-row">
+      <button class="btn primary" id="copyBtn">Copia il testo</button>
+      <span class="copied" id="copiedMsg">Copiato ✓</span>
+    </div>
+  </div>
+</section>
+
+<section id="budget">
+  <p class="kicker">Quanto investire</p>
+  <h2>Tre scenari di budget</h2>
+  <p class="lead">Il piano funziona anche a costo zero: il budget compra amplificazione, non sostituisce le relazioni. Scegli lo scenario nel setup; qui vedi dove vanno i soldi.</p>
+  <div class="grid c3 scen-cards" id="scenGrid"></div>
+</section>
+
+<section id="kpi">
+  <p class="kicker">Obiettivi e misurazione</p>
+  <h2>Il funnel, a ritroso dall’obiettivo</h2>
+  <p class="lead">Partendo dall’obiettivo iscrizioni, ecco quante persone devi raggiungere a ogni passaggio. Le percentuali sono ipotesi prudenti di settore: modificale e i numeri si ricalcolano.</p>
+  <div class="funnel" id="funnel"></div>
+  <div class="card" style="margin-top:14px">
+    <h3>Le tre ipotesi (modificabili)</h3>
+    <div class="assump">
+      <div class="field"><label for="aCtr">Da raggiunti a visite pagina (%)</label><input id="aCtr" type="number" min="1" max="100" step="0.5"></div>
+      <div class="field"><label for="aLead">Da visita a contatto/lead (%)</label><input id="aLead" type="number" min="1" max="100" step="0.5"></div>
+      <div class="field"><label for="aPay">Da contatto a iscrizione pagata (%)</label><input id="aPay" type="number" min="1" max="100" step="0.5"></div>
+    </div>
+    <p class="small muted" id="benchNote" style="margin-top:10px"></p>
+  </div>
+  <div class="grid c2" style="margin-top:14px">
+    <div class="card">
+      <h3>Come tracciare (a costo zero)</h3>
+      <ul class="check-ul">
+        <li>Nel modulo di iscrizione: campo obbligatorio «Come hai saputo del ciclo?» con opzioni chiuse (collega, Instagram, gruppo Facebook, scuola, newsletter, altro).</li>
+        <li>Un link leggermente diverso per canale (o parametri <code>?utm_source=…</code> se la piattaforma li registra).</li>
+        <li>Codici sconto parlanti: <code>COLLEGA10</code>, <code>SCUOLA10</code> — dicono da dove arriva l’iscrizione e incentivano il canale.</li>
+        <li>Un foglio di calcolo con una riga a settimana: visite, lead, iscritti, canale. Dieci minuti il venerdì.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>KPI settimanali da guardare</h3>
+      <ul class="check-ul">
+        <li><b>Lista email</b>: nuovi contatti a settimana (il predittore migliore delle iscrizioni finali).</li>
+        <li><b>Tasso di apertura</b> delle email e clic sul link di iscrizione.</li>
+        <li><b>Iscritti all’anteprima</b> gratuita e presenti effettivi.</li>
+        <li><b>Conversione early bird</b> nei 3 giorni prima della scadenza (lì si concentra fino a metà delle vendite).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="errori">
+  <p class="kicker">Trappole note</p>
+  <h2>Gli errori da evitare</h2>
+  <div class="card">
+    <ol class="numbered err" id="errList"></ol>
+  </div>
+</section>
+
+<section id="fonti" class="fonti">
+  <p class="kicker">Da dove vengono i dati</p>
+  <h2>Fonti</h2>
+  <p class="lead small">La ricerca è stata condotta a luglio 2026 su fonti pubbliche. Prezzi, commissioni e benchmark cambiano: prima di decidere in base a un numero, verifica sul link.</p>
+  <div id="fontiBody" class="grid c2"></div>
+</section>
+
+<footer>
+  Piano preparato a luglio 2026 · pagina autonoma senza dipendenze esterne: funziona offline, i progressi restano nel browser.<br>
+  I benchmark citati sono ordini di grandezza di settore, non promesse; le fonti sono linkate nella sezione dedicata.
+</footer>
+
+<div class="tooltip" id="tooltip" role="status" aria-hidden="true"></div>
+
+<script>
+'use strict';
+/* =================================================================
+   DATI
+================================================================= */
+const LS = { setup:'mp.setup.v1', check:'mp.check.v1', theme:'mp.theme' };
+
+const DEFAULTS = {
+  nome:'', relatrice:'', citta:'', formato:'ibrido', data:'', incontri:6,
+  prezzo:120, obiettivo:25, link:'', scenario:1,
+  ctr:8, lead:12, pay:20
+};
+
+const PUBBLICI = [
+  { who:'Il cuore del pubblico', nome:'Psicoterapeute e psicoterapeuti', chi:'Clinici di ogni orientamento, con un debole per quello psicodinamico e junghiano; cercano formazione colta che nutra la pratica.',
+    cercano:'Strumenti per la clinica: il mito come lessico per ciò che vedono in seduta. E una comunità di colleghi con cui pensare.',
+    dove:'Passaparola tra colleghi, gruppi Facebook professionali, associazioni e istituti (junghiani e non), newsletter di settore, LinkedIn.',
+    leva:'Attestato di partecipazione, sconto «porta un collega», taglio clinico esplicito di almeno una parte di ogni incontro.' },
+  { who:'Il moltiplicatore', nome:'Allieve/i delle scuole di specializzazione', chi:'Specializzandi in psicoterapia e laureandi in psicologia: budget corto, fame di formazione, molto attivi online.',
+    cercano:'Contenuti che le scuole non danno, a un prezzo studente. Occasioni per costruirsi un’identità professionale.',
+    dove:'Le scuole stesse (segreterie, docenti, rappresentanti), Instagram, gruppi di studenti e specializzandi.',
+    leva:'Prezzo ridotto dedicato (−30/40%), convenzione con la scuola, attestato. Sono il pubblico che più condivide.' },
+  { who:'Il ponte', nome:'Professioni contigue', chi:'Counselor, arteterapeuti, filosofi pratici, educatori, insegnanti di lettere e filosofia, operatori del sociale.',
+    cercano:'Un tema che unisce la loro materia e la dimensione psicologica; formazione accessibile senza gergo clinico.',
+    dove:'Associazioni di categoria, circoli culturali, biblioteche, passaparola nelle reti professionali locali.',
+    leva:'Messaggio «non serve essere terapeuti»: il mito è di tutti. Formato serale e registrazioni disponibili.' },
+  { who:'La platea larga', nome:'Il pubblico colto del mito', chi:'Chi legge Hillman, Campbell, la Atwood di Penelope; chi affolla i festival di filosofia e le lezioni di storia dell’arte.',
+    cercano:'Bellezza e senso: storie raccontate bene che parlino della loro vita. Nessun prerequisito.',
+    dove:'Librerie e circoli di lettura, biblioteche, festival, Instagram/TikTok di divulgazione, stampa culturale locale.',
+    leva:'Il primo incontro aperto a tutti, linguaggio senza tecnicismi, possibilità di pagare il singolo incontro.' }
+];
+
+/* gruppi canali: 1 Relazioni & partnership · 2 Contenuti & community · 3 Piattaforme, media & paid */
+const GRUPPI = { 1:'Relazioni & partnership', 2:'Contenuti & community', 3:'Piattaforme, media & paid' };
+
+const CANALI = [
+  { id:'passaparola', g:1, nome:'Passaparola strutturato', sforzo:1.2, impatto:4.8, costo:'0 €', quando:'T-8 → sempre', scen:[0,1,2],
+    desc:'Il canale n. 1 per un pubblico professionale: nei benchmark il referral pesa fino a ~un quinto delle vendite, e su piccoli numeri il contatto personale è il canale a più alta conversione in assoluto. Non «spero che se ne parli», ma una lista scritta di 20–30 persone contattate una a una.',
+    azioni:['Scrivi la lista dei 30 contatti caldi (colleghi, ex compagni di specializzazione, supervisori, docenti).','Messaggi personali, non broadcast: 3 righe su misura + il link.','Chiedi esplicitamente: «se conosci qualcuno a cui può interessare, giraglielo».','Doppio incentivo: codice COLLEGA10 che sconta sia chi porta sia chi arriva — e ti dice da dove arrivano le iscrizioni.'] },
+  { id:'scuole', g:1, nome:'Scuole di specializzazione', sforzo:3.0, impatto:4.9, costo:'0 € (sconto ceduto)', quando:'T-8 → T-5', scen:[0,1,2],
+    desc:'Il moltiplicatore più concentrato che esista per questo tema: centinaia di allievi già selezionati per interesse. Le scuole usano abitualmente convenzioni e sconti riservati (girano il 20–30%): si entra con una proposta di valore per loro, non chiedendo pubblicità.',
+    azioni:['Mappa 5–10 scuole della tua area (o nazionali, se online), partendo da quelle psicodinamiche/junghiane.','Scrivi alla segreteria/direzione: sconto allievi −30/40% + eventuale anteprima gratuita riservata.','Chiedi l’inoltro nella mailing list interna o in bacheca allievi — per loro è un beneficio da offrire, non un favore.','Parti prestissimo: le segreterie hanno tempi lunghi. Coltiva 1–2 docenti come sponsor interni.'] },
+  { id:'ordine', g:1, nome:'Ordine degli Psicologi', sforzo:2.0, impatto:4.0, costo:'0 €', quando:'T-8 (30–45 gg di anticipo)', scen:[0,1,2], anchor:'end', lx:-11,
+    desc:'Gli Ordini regionali concedono il patrocinio non oneroso a iniziative di rilevanza psicologica dei propri iscritti (domanda con 30–45+ giorni di anticipo, regolamenti variabili) e molti hanno sezioni o newsletter dove pubblicizzare eventi e corsi — l’OPL ad esempio ha un modulo dedicato. Credibilità istituzionale + visibilità sul target, gratis.',
+    azioni:['Leggi il regolamento patrocini del TUO Ordine (alcuni escludono i corsi a pagamento: in quel caso usa il canale «segnalazione eventi»).','Prepara una scheda evento sobria: titolo, programma, docente, destinatari, rilevanza psicologica.','Invia con 30–45 giorni di anticipo; se ottieni il patrocinio, logo su locandina e pagina evento.','Nota ECM: niente crediti senza provider accreditato — dichiara «evento culturale, non ECM» e offri l’attestato di partecipazione.'] },
+  { id:'associazioni', g:1, nome:'Associazioni professionali', sforzo:2.4, impatto:3.9, costo:'0 €', quando:'T-7 → T-4', scen:[0,1,2],
+    desc:'Associazioni junghiane e psicodinamiche, società di psicoterapia, gruppi locali: pubblici piccoli ma perfettamente in target, spesso felici di segnalare ai soci iniziative affini (è il modello che usano CIPA e AIPA per riempire i propri seminari).',
+    azioni:['Lista di 6–8 realtà affini, locali e nazionali.','Proponi uno scambio: segnalazione ai soci ↔ sconto soci dedicato.','Offri un intervento breve gratuito a un loro evento: ti presenti al pubblico giusto.'] },
+  { id:'librerie', g:1, nome:'Librerie e circoli', sforzo:3.2, impatto:3.1, costo:'0 €', quando:'contatto T-8, serata T-3', scen:[0,1,2], presenza:true, anchor:'end', lx:-11, ly:8,
+    desc:'Per la platea colta non professionale: una serata-assaggio gratuita in libreria («I miti greci sul lettino») intercetta chi non vedrà mai un post per psicologi. La libreria ci guadagna vendendo la bibliografia del ciclo; biblioteche e associazioni culturali hanno calendari e newsletter propri.',
+    azioni:['Proponi a 2–3 librerie indipendenti una serata gratuita di 45 minuti, contattandole ~un mese e mezzo prima.','Porta un QR code alla pagina evento + foglio contatti email.','Chiedi a biblioteche e circoli di inserire l’evento nei loro calendari; ai comuni piccoli si può chiedere il patrocinio (v. Villa Bernasconi).'] },
+  { id:'podcast', g:1, nome:'Podcast e interviste', sforzo:3.4, impatto:4.2, costo:'0 €', quando:'pitch T-8, uscite T-5→T-2', scen:[0,1,2],
+    desc:'Andare ospiti è pubblicità gratuita presso un pubblico già selezionato, con un’ora per dimostrare quanto vali. In Italia lo spazio c’è davvero: «Sigmund» del Post ospita psicoterapeuti ogni settimana; «Rivista di Psicoanalisi» e «Psicoanalisi Pop» intervistano analisti; esistono podcast dedicati alla mitologia (es. quello di Alessandro Gelain).',
+    azioni:['Lista di 8–10 show: dai grandi (Sigmund, Fatti di Mente, PSINEL) ai piccoli tematici su psicoanalisi e mito — i piccoli dicono sì più spesso.','Pitch di 5 righe: chi sei + 2–3 titoli di puntata concreti (modello nel Kit).','Manda i pitch subito: i podcast pubblicano con settimane di coda.','In puntata: cita il ciclo una volta sola, bene, e offri l’anteprima gratuita come passo successivo.'] },
+
+  { id:'email', g:2, nome:'Email e lista contatti', sforzo:2.2, impatto:5.0, costo:'0 €', quando:'T-8 → sempre', scen:[0,1,2], anchor:'end', lx:-11, ly:-2,
+    desc:'L’asset che converte più di tutto: nel settore formazione le email vengono aperte dal ~35–40% dei destinatari — nessun social ti dà quella copertura sui TUOI contatti. Tutto il piano lavora per far crescere questa lista; la lista riempie questo ciclo e venderà metà del prossimo.',
+    azioni:['Apri un account su una piattaforma email gratuita (le principali non costano nulla fino a qualche centinaio di contatti).','Modulo iscrizione con consenso + campo «come mi hai conosciuto?».','Sequenza collaudata: annuncio (T-6) → invito anteprima (T-4) → replay+offerta (T-3) → scadenza early bird (T-2) → ultima chiamata (T-1).','Ogni email: una storia breve + UNA sola call to action. Mai email fatte di una sola immagine-locandina (finiscono in spam).'] },
+  { id:'anteprima', g:2, nome:'Anteprima gratuita', sforzo:3.1, impatto:4.6, costo:'0 €', quando:'T-4', scen:[0,1,2],
+    desc:'È il lead magnet classico della formazione (lo usa sistematicamente anche il Minotauro coi webinar serali gratuiti): una lezione vera di 45–60 minuti, con l’offerta solo negli ultimi 5. Metti in conto i no-show: ai webinar gratuiti si presenta ~metà degli iscritti — e va benissimo così, perché intanto hai le email di tutti.',
+    azioni:['Scegli un mito forte e autoconclusivo per l’assaggio.','Iscrizione con email obbligatoria (è così che cresce la lista).','Promemoria a 48 ore e a 1 ora dall’inizio: alzano la presenza dal ~50 verso il 70%.','Chiudi con l’offerta: early bird riservato ai presenti per 72 ore. Registra tutto: il replay lavora fino all’ultimo giorno.','Se temi la sala vuota, un prezzo simbolico (5 €) dimezza i no-show — ma riduce gli iscritti: per la prima edizione meglio gratuito.'] },
+  { id:'instagram', g:2, nome:'Instagram organico', sforzo:4.2, impatto:3.2, costo:'0 €', quando:'T-8 → T0, continuativo', scen:[0,1,2],
+    desc:'Il canale dove il mito rende meglio visivamente, e dove la psicologia italiana ha un pubblico enorme (i grandi divulgatori psi vanno dai 100 ai 400mila follower). Il mix documentato che funziona per i professionisti: reel brevi per farsi scoprire, caroselli per spiegare e farsi salvare. Richiede costanza: 1–3 contenuti a settimana, impatto sul medio periodo.',
+    azioni:['Formato fisso replicabile: carosello di 6–8 slide «un mito, una dinamica psichica» → ultima slide con invito.','1 reel a settimana: tu che racconti un mito in 60–90 secondi (è il formato che espande la portata).','Una diretta con un collega ospite (T-5 o T-2): vi esponete a vicenda ai rispettivi pubblici.','Commenta con sostanza i profili di divulgazione su mito e psicologia (in Italia esistono creator da 100k+ follower sulla mitologia): visibilità presso il pubblico giusto.','Link in bio sempre alla pagina evento.'] },
+  { id:'gruppifb', g:2, nome:'Gruppi Facebook', sforzo:1.8, impatto:3.8, costo:'0 €', quando:'entra T-8, posta T-6 e T-2', scen:[0,1,2], anchor:'end', lx:-11,
+    desc:'I gruppi e le pagine di psicologi italiani contano decine di migliaia di iscritti (le pagine maggiori superano i 40.000 like; esistono anche gruppi sul mito, es. «Mitologia greca»). Gratis e in target. La differenza tra visibilità e spam è una: portare valore prima di chiedere attenzione.',
+    azioni:['Individua 4–6 gruppi attivi (professionali + 1–2 sul mito per la platea colta); leggi le regole di ciascuno.','Mossa che quasi nessuno fa: scrivi agli admin chiedendo se e come è gradita la segnalazione — spesso ti indicano il giorno giusto.','Post «valore prima»: una riflessione clinica su un mito + solo in coda il rimando (modello nel Kit).','Rispondi a ogni commento; massimo 2 passaggi per gruppo (lancio e scadenza early bird).'] },
+  { id:'linkedin', g:2, nome:'LinkedIn personale', sforzo:1.6, impatto:2.4, costo:'0 €', quando:'T-6 → T-1', scen:[0,1,2],
+    desc:'Non decisivo ma quasi gratis: è il canale più preciso per raggiungere professioni per ruolo. Crea anche l’Evento LinkedIn nativo (gratuito) e invita le connessioni a blocchi; i post personali («perché una psicoterapeuta studia i miti») battono le locandine.',
+    azioni:['Post di lancio in prima persona: la storia del perché.','Crea l’Evento LinkedIn e invita le connessioni pertinenti a blocchi.','Ripubblica gli annunci chiave (anteprima, early bird) adattando il tono; DM solo a contatti reali.'] },
+
+  { id:'biglietteria', g:3, nome:'Biglietteria / pagina evento', sforzo:1.4, impatto:2.9, costo:'gratuiti 0 €; ~3,5–5,5% sui paganti', quando:'T-8', scen:[0,1,2],
+    desc:'L’infrastruttura di tutto: raccoglie iscrizioni, manda reminder automatici, e i marketplace portano un po’ di pubblico da soli. Costi verificati (2026): Eventbrite Essentials 3,5% + 0,49 € a biglietto (Pro 5,5% + 0,99 €), Billetto 3,9% + 0,90 € — su entrambi gli eventi gratuiti non costano nulla e la commissione è ribaltabile sull’acquirente.',
+    azioni:['Crea la pagina con: promessa, programma, bio, foto vera, prezzi e FAQ (struttura nel Kit).','Imposta l’early bird come tariffa con scadenza automatica; commissione a carico dell’acquirente.','Compila bene categoria e tag: la ricerca interna del marketplace è traffico gratis.','Alternativa a zero commissioni: modulo (Google/Tally) + pagamento diretto — più lavoro manuale, nessuna vetrina.'] },
+  { id:'ads', g:3, nome:'Meta Ads (micro-budget)', sforzo:2.8, impatto:3.6, costo:'80–300 €', quando:'T-5 → T-1', scen:[1,2],
+    desc:'In Italia il clic costa ~0,30–0,90 € e mille visualizzazioni ~10 € (2024–25): con 5 € al giorno si testa davvero. Col micro-budget la strategia giusta è promuovere l’anteprima gratuita (soglia d’ingresso bassa), poi ricontattare chi ha interagito con la scadenza early bird.',
+    azioni:['Campagna 1 (T-5→T-4): anteprima gratuita. Pubblico 100–500k per interessi (psicologia, Jung, mitologia…), geolocalizzato se in presenza.','Test: 2 creatività per 3–5 giorni, poi tutto sulla vincente. La creatività migliore è il tuo reel, non una locandina.','Campagna 2 (T-2→T-1): retargeting su chi ha visitato la pagina o interagito + lookalike dalla lista email.','Evita fine novembre–dicembre: i costi salgono del 40–60%.'] },
+  { id:'portali', g:3, nome:'Portali e newsletter di settore', sforzo:1.5, impatto:3.3, costo:'0 € (le segnalazioni base)', quando:'T-6 → T-4', scen:[0,1,2], ly:-6,
+    desc:'In Italia esistono e funzionano: Psiconline ha un calendario eventi a segnalazione gratuita (previa registrazione); l’OPL pubblicizza eventi e corsi sul proprio sito via modulo; State of Mind vende promozione eventi ma è anche una testata a cui proporre un articolo; OPsOnline e PsyEventi aggregano corsi ed eventi psi.',
+    azioni:['Segnala l’evento su Psiconline (gratis) e sul portale del tuo Ordine se previsto.','Manda il comunicato di 10 righe (nel Kit) alle agende eventi della tua città/regione.','Proponi a una testata di settore un articolo-saggio («Cosa dice Persefone a chi fa terapia») con firma e rimando al ciclo: vale più di un banner.'] }
+];
+
+/* Settimane operative */
+const SETTIMANE = [
+  { id:'t8', t:'T-8 · Fondamenta', off:8, note:'Due mesi prima. Nessun annuncio: questa settimana si costruisce la macchina.',
+    items:[
+      ['Definisci titolo + sottotitolo (uno evocativo, uno che spiega), date e prezzo con early bird (−20/25% fino a T-3).','Il Kit contiene tre proposte di titolo.'],
+      ['Scrivi la pagina evento completa e pubblicala (anche se provvisoria).','Struttura pronta nel Kit → «Pagina evento».'],
+      ['Prepara bio breve + una foto ritratto decente + il video-trailer da 60–90 secondi.',''],
+      ['Apri/gestisci lo strumento email e crea il modulo di iscrizione con il campo «come mi hai conosciuto?».',''],
+      ['Scrivi la lista dei 30 contatti caldi per il passaparola.',''],
+      ['Imposta il tracciamento: codici sconto per canale, link distinti.','']
+    ]},
+  { id:'t7', t:'T-7 · Alleanze', off:7, note:'La settimana più importante e la più sottovalutata: si semina dove il pubblico già esiste.',
+    items:[
+      ['Scrivi a 5–10 scuole di specializzazione: sconto allievi + eventuale anteprima dedicata.','Bozza pronta nel Kit → «Partner & podcast».'],
+      ['Avvia la richiesta di patrocinio/segnalazione all’Ordine regionale.','I tempi sono lunghi: parti ora.'],
+      ['Contatta 6–8 associazioni e realtà affini con proposta di scambio.',''],
+      ['Manda il pitch a 8–10 podcast in tema.','Modello nel Kit.'],
+      ['Se in presenza: proponi l’incontro-assaggio a 2–3 librerie.','']
+    ]},
+  { id:'t6', t:'T-6 · Lancio', off:6, note:'Da oggi il ciclo è pubblico. Tutto punta alla pagina evento; l’early bird è aperto.',
+    items:[
+      ['Email di annuncio alla tua lista e messaggi personali ai 30 contatti caldi.','Kit → «Email 1» e «WhatsApp colleghi».'],
+      ['Post di lancio: Instagram (carosello + reel trailer), LinkedIn, pagina Facebook.',''],
+      ['Primo passaggio nei gruppi Facebook professionali (rispettando le regole di ciascuno).','Kit → «Post per gruppi».'],
+      ['Invia la segnalazione a portali di settore e agende eventi locali.','Kit → «Comunicato/segnalazione».'],
+      ['Pubblica l’evento sul marketplace scelto con categoria e tag curati.','']
+    ]},
+  { id:'t5', t:'T-5 · Dimostrare valore', off:5, note:'Chi ha visto l’annuncio ora deve pensare «questa persona sa di cosa parla».',
+    items:[
+      ['Pubblica il primo contenuto di sostanza: carosello o mini-saggio su un mito del ciclo.',''],
+      ['Un reel da 60–90 secondi: racconta un mito, chiudi sull’anteprima.',''],
+      ['Se scenario ≥ ~150 €: avvia la campagna Meta sull’anteprima gratuita.',''],
+      ['Sollecita con gentilezza scuole/associazioni che non hanno risposto.',''],
+      ['Annuncia l’anteprima gratuita su tutti i canali.','']
+    ]},
+  { id:'t4', t:'T-4 · Anteprima aperta', off:4, note:'L’evento che riempie la lista. Una lezione vera: la vendita sta solo negli ultimi 5 minuti.',
+    items:[
+      ['Email di invito all’anteprima a tutta la lista.','Kit → «Email 2».'],
+      ['Promemoria agli iscritti: email a 48 ore e a 1 ora, social il giorno stesso.','Ai webinar gratuiti si presenta ~metà degli iscritti: i promemoria alzano la quota verso il 70%.'],
+      ['Tieni l’anteprima (45–60 min) e registrala.',''],
+      ['Chiudi con l’offerta chiara: early bird dedicato per 72 ore.',''],
+      ['Entro 24 ore: email ai presenti con replay, link e scadenza.','']
+    ]},
+  { id:'t3', t:'T-3 · Conversione', off:3, note:'La settimana in cui l’interesse diventa iscrizione. Qui scade l’early bird «pubblico».',
+    items:[
+      ['Email con la registrazione dell’anteprima a chi non c’era.',''],
+      ['Pubblica 2–3 testimonianze raccolte all’anteprima (screenshot/citazioni con permesso).',''],
+      ['Post + stories con countdown reale alla scadenza early bird.',''],
+      ['Rispondi personalmente a chi ha fatto domande senza iscriversi.',''],
+      ['Aggiorna il foglio KPI: da dove stanno arrivando gli iscritti?','']
+    ]},
+  { id:'t2', t:'T-2 · Spinta finale', off:2, note:'Fino a metà delle iscrizioni arriva nelle ultime due settimane: è normale, ma va accompagnata.',
+    items:[
+      ['Email «l’early bird scade tra 72 ore» (la più efficace della sequenza).','Kit → «Email 3».'],
+      ['Secondo e ultimo passaggio nei gruppi Facebook.',''],
+      ['Se scenario ≥ ~150 €: retargeting sugli interessati con la scadenza.',''],
+      ['Chiedi ai primi iscritti di girare l’invito a un collega (codice dedicato).',''],
+      ['Verifica la logistica: sala/piattaforma, ricevute, materiali.','']
+    ]},
+  { id:'t1', t:'T-1 · Ultima chiamata', off:1, note:'Ultimi posti e cura di chi si è già iscritto: l’esperienza inizia prima del primo incontro.',
+    items:[
+      ['Email «si parte tra una settimana» con ultimi posti a prezzo pieno.',''],
+      ['DM personali agli indecisi rimasti (pochi, scelti, gentili).',''],
+      ['Email di benvenuto agli iscritti: orari, accessi, una lettura breve per iniziare.',''],
+      ['Stories dietro le quinte: la preparazione del primo incontro.','']
+    ]},
+  { id:'t0', t:'Durante il ciclo', off:0, note:'Ogni incontro è marketing del successivo (e del prossimo ciclo).',
+    items:[
+      ['Apri le iscrizioni «a singolo incontro» se hai ancora posti.',''],
+      ['Dopo ogni incontro: una citazione/immagine forte come contenuto social.',''],
+      ['Chiedi feedback a metà ciclo con 3 domande semplici.',''],
+      ['Raccogli testimonianze scritte e (con permesso) brevi video.','']
+    ]},
+  { id:'post', t:'Dopo · Il prossimo ciclo inizia qui', off:-1, note:'Il secondo ciclo si vende con la lista e le prove raccolte dal primo: a metà della fatica.',
+    items:[
+      ['Sondaggio finale: cosa è piaciuto, cosa manca, quale tema vorrebbero dopo.',''],
+      ['Attestati di partecipazione + email di ringraziamento con «porta un collega» per la prossima edizione.',''],
+      ['Pubblica il bilancio umano del ciclo (numeri, momenti, citazioni) su tutti i canali.',''],
+      ['Annuncia in anteprima alla lista il tema successivo con prevendita riservata.',''],
+      ['Aggiorna il foglio KPI: quale canale ha portato più iscritti? Il piano del prossimo ciclo parte da lì.','']
+    ]}
+];
+
+/* Kit contenuti */
+const TEMPLATES = [
+  { id:'pagina', tab:'Pagina evento', titolo:'La pagina evento (struttura completa)',
+    hint:'La pagina a cui punta tutto. Ordine collaudato: promessa → per chi → programma → chi conduce → dettagli → prezzi → FAQ.',
+    body:`[NOME CICLO]
+[SOTTOTITOLO: es. «Sei incontri per leggere la psiche attraverso i miti»]
+
+── LA PROMESSA (3-4 righe) ──
+I miti non sono reperti da museo: sono mappe della psiche.
+In ogni incontro attraverseremo una figura del mito — le sue immagini,
+le sue trappole, la sua sapienza — con lo sguardo della psicologia
+del profondo. Per chi lavora con l’anima e per chi, semplicemente,
+vuole capirsi di più.
+
+── PER CHI È ──
+• Psicoterapeuti, psicologi e specializzandi che cercano un lessico
+  simbolico per la clinica (attestato di partecipazione incluso).
+• Counselor, educatori, insegnanti, professioni della relazione.
+• Chiunque ami il mito: non serve alcuna formazione psicologica.
+
+── IL PROGRAMMA ──
+Incontro 1 · [DATA PRIMO INCONTRO] — [Figura mitica]: [sottotitolo]
+Incontro 2 · [data] — [Figura]: [sottotitolo]
+[…un rigo per incontro: figura precisa + promessa precisa…]
+Ogni incontro: [durata, es. 90 minuti] — [FORMATO/CITTÀ][, con registrazione disponibile per gli iscritti]
+
+── CHI CONDUCE ──
+[CHI CONDUCE]. [2-3 righe: credenziali cliniche + da dove nasce
+il lavoro sul mito + una riga personale che si ricordi.]
+
+── COME FUNZIONA ──
+Dove: [FORMATO/CITTÀ + piattaforma o indirizzo]
+Quando: [giorno della settimana e orario], dal [DATA PRIMO INCONTRO]
+Quanto: [PREZZO] € il ciclo completo ([N] incontri)
+        → Early bird: [prezzo scontato] € fino al [data scadenza]
+        → Allievi delle scuole di specializzazione e studenti: [prezzo] €
+        → Singolo incontro (se disponibile): [prezzo] €
+
+[BOTTONE: Iscriviti ora → [LINK]]
+
+── DOMANDE FREQUENTI ──
+Serve una formazione psicologica? No: il ciclo è pensato su due
+livelli, e chi non è del mestiere si troverà a casa.
+Gli incontri sono registrati? [Sì/No + condizioni.]
+Dà crediti ECM? No: è un percorso culturale, non un evento ECM
+accreditato. Viene rilasciato un attestato di partecipazione con
+ore e programma a chi segue almeno [X] incontri.
+Posso recuperare un incontro perso? [Politica registrazioni.]`},
+  { id:'ig', tab:'Instagram', titolo:'Post di lancio — carosello + caption',
+    hint:'Carosello di 7 slide: le prime 6 raccontano, l’ultima invita. Il reel-trailer usa lo stesso testo detto a voce.',
+    body:`IDEA VISIVA (7 slide):
+1. Titolo grande: «Cosa c’entra Persefone con la tua vita?»
+2. «I miti non sono storie di tremila anni fa.»
+3. «Sono mappe: dicono dove siamo, da dove veniamo, cosa ci aspetta al varco.»
+4. «Persefone e le discese. Ulisse e i ritorni. Narciso e lo specchio.»
+5. «[NOME CICLO]: [N] incontri per leggere la psiche attraverso il mito.»
+6. «Per psicoterapeuti, professioni della relazione — e per chiunque voglia capirsi di più.»
+7. «Si parte il [DATA PRIMO INCONTRO] · [FORMATO/CITTÀ] · early bird fino al [data] → link in bio»
+
+CAPTION:
+C’è un motivo se, dopo tremila anni, chiamiamo ancora «narcisismo»
+una ferita e «odissea» un certo modo di tornare a casa.
+
+I miti sono la lingua madre della psiche: la parlano i sogni,
+la parlano i sintomi, la parla chiunque provi a raccontarsi.
+
+Con [NOME CICLO] attraverseremo [N] figure del mito con lo sguardo
+della psicologia del profondo: [elenco 3-4 figure].
+
+→ Per chi lavora con l’anima: un lessico simbolico per la clinica
+   (con attestato).
+→ Per tutti gli altri: storie raccontate bene, che parlano di noi.
+
+📅 Dal [DATA PRIMO INCONTRO] · [FORMATO/CITTÀ]
+🎟 Early bird fino al [data]: link in bio.
+
+#mitologia #psicologia #psicoterapia #jung #psicologiadelprofondo
+#mito #archetipi #formazionepsicologi [+ 3-4 hashtag locali se in presenza]`},
+  { id:'fb', tab:'Gruppi FB', titolo:'Post per gruppi professionali (valore prima)',
+    hint:'Da adattare a ogni gruppo dopo averne letto le regole. La struttura: riflessione clinica vera → solo in coda il rimando.',
+    body:`Colleghe e colleghi, una riflessione (e in fondo un invito).
+
+Mi capita sempre più spesso, in seduta, di pensare ai miti.
+Una paziente che non riesce a «risalire» da una perdita: Persefone.
+Un uomo che ha vinto tutto e non sa tornare: Ulisse.
+Il mito non spiega — ma dà forma. E quando una storia ha forma,
+in terapia, qualcosa si muove.
+
+[2-3 righe personali: un micro-caso anonimo o una domanda aperta
+al gruppo: «Vi capita di usare immagini mitiche nel lavoro clinico?»]
+
+---
+Per chi vuole approfondire: dal [DATA PRIMO INCONTRO] terrò
+[NOME CICLO], [N] incontri sulla mitologia in chiave psicodinamica
+([FORMATO/CITTÀ], attestato di partecipazione, sconto per
+specializzandi). Info e programma: [LINK]
+(Chiedo scusa ai moderatori se ho interpretato male le regole
+del gruppo: nel caso, rimuovo il post volentieri.)`},
+  { id:'email1', tab:'Email 1 · Annuncio', titolo:'Email di annuncio alla lista e ai contatti',
+    hint:'T-6, il giorno del lancio. Oggetto breve e curioso; una storia, una promessa, una sola call to action.',
+    body:`OGGETTO: Ho una cosa da dirti (c’entrano i miti)
+
+Ciao [nome],
+
+ti scrivo perché sta per partire un progetto a cui tengo molto,
+e ho pensato che potesse interessarti.
+
+Da [anni] lavoro come psicoterapeuta, e da sempre i miti mi
+accompagnano nel lavoro clinico: sono mappe, più che storie.
+Ho deciso di farne un ciclo di incontri.
+
+[NOME CICLO]
+[N] incontri, dal [DATA PRIMO INCONTRO] — [FORMATO/CITTÀ]
+Una figura del mito a incontro: [3-4 figure], lette con lo
+sguardo della psicologia del profondo.
+
+È pensato per chi fa il nostro mestiere (c’è l’attestato, e uno
+sconto per gli specializzandi) ma è aperto a chiunque ami il mito:
+niente gergo, storie raccontate bene.
+
+→ Programma completo e iscrizioni: [LINK]
+   Early bird fino al [data]: [prezzo scontato] € invece di [PREZZO] €.
+
+Se conosci qualcuno a cui potrebbe interessare, girargli questa
+email è il regalo più utile che puoi farmi.
+
+A presto,
+[CHI CONDUCE]`},
+  { id:'email2', tab:'Email 2 · Anteprima', titolo:'Invito all’anteprima gratuita',
+    hint:'T-4. L’obiettivo non è vendere il ciclo: è portare persone all’anteprima. Sarà lei a vendere.',
+    body:`OGGETTO: Un’ora sul mito, gratis — [data anteprima]
+
+Ciao [nome],
+
+prima che parta [NOME CICLO], ho voluto tenere un incontro
+aperto e gratuito: una lezione vera, non una presentazione.
+
+«[TITOLO ANTEPRIMA: es. Persefone, o dell’arte di scendere]»
+[data anteprima], ore [ora] — [online su Zoom / luogo]
+Gratuito, con iscrizione: [LINK ANTEPRIMA]
+
+In 45 minuti attraverseremo un mito intero: cosa racconta,
+dove ci riguarda, come parla anche al lavoro clinico.
+Alla fine, per chi vorrà, due parole sul ciclo — e un’offerta
+riservata a chi c’era.
+
+I posti [se online: «non sono un problema»; se in presenza: «sono N»],
+ma l’iscrizione serve: [LINK ANTEPRIMA]
+
+A presto,
+[CHI CONDUCE]
+
+P.S. Se non puoi esserci, iscriviti lo stesso: ti mando io la
+registrazione.`},
+  { id:'email3', tab:'Email 3 · Scadenza', titolo:'Ultima chiamata early bird',
+    hint:'T-2, tre giorni prima della scadenza. La email che converte di più: breve, onesta, con la data esatta.',
+    body:`OGGETTO: L’early bird scade [giorno], poi il prezzo sale
+
+Ciao [nome],
+
+promesso: è l’ultima email sul prezzo.
+
+[Giorno, es. giovedì] a mezzanotte scade la tariffa early bird
+di [NOME CICLO]: fino ad allora il ciclo completo di [N] incontri
+costa [prezzo scontato] € invece di [PREZZO] €.
+
+Poi si parte: primo incontro il [DATA PRIMO INCONTRO],
+[FORMATO/CITTÀ].
+
+→ Iscrizioni: [LINK]
+
+Due cose che mi hanno chiesto in tanti:
+• Non serve essere terapeuti: il ciclo è costruito su due livelli.
+• Gli incontri [sono registrati / non sono registrati]: [dettaglio].
+
+Se sei indeciso, rispondi a questa email con la tua domanda:
+leggo e rispondo io.
+
+[CHI CONDUCE]`},
+  { id:'wa', tab:'WhatsApp colleghi', titolo:'Messaggio personale per il passaparola',
+    hint:'Per i 30 contatti caldi, uno a uno. Personalizza la prima riga: è quella che fa la differenza tra un invito e uno spam.',
+    body:`Ciao [nome]! [Riga personale: «come sta andando con…», «pensavo
+a te perché…»]
+
+Ti scrivo perché a [mese] parte una cosa a cui tengo: [NOME CICLO],
+un ciclo di [N] incontri sulla mitologia letta in chiave
+psicologica ([FORMATO/CITTÀ]).
+
+Ho pensato subito a te [motivo: «per come usi le immagini in
+seduta», «per la tua passione per Hillman», …].
+
+Qui c’è tutto: [LINK]
+(fino al [data] c’è l’early bird — e se vieni con un collega
+c’è il codice COLLEGA10)
+
+Se ti va di girarlo a qualcuno a cui può interessare,
+mi fai un regalo enorme. Un abbraccio!`},
+  { id:'partner', tab:'Partner & podcast', titolo:'Per scuole, associazioni, newsletter — e il pitch podcast',
+    hint:'Il primo testo è in terza persona, pronto per essere incollato in una newsletter altrui. Sotto, il pitch per i podcast.',
+    body:`── SEGNALAZIONE PER NEWSLETTER / SITI PARTNER ──
+
+MITO E PSICHE: AL VIA [NOME CICLO]
+
+Dal [DATA PRIMO INCONTRO] [CHI CONDUCE] terrà [NOME CICLO]:
+[N] incontri sulla mitologia in chiave psicodinamica, rivolti a
+psicoterapeuti, psicologi e professioni della relazione, ma aperti
+anche al pubblico non specialista ([FORMATO/CITTÀ]).
+
+Ogni incontro attraversa una figura del mito — [3-4 figure] —
+come mappa dei processi psichici: dalle immagini archetipiche
+alla loro risonanza nel lavoro clinico e nella vita quotidiana.
+
+Attestato di partecipazione; tariffa ridotta per allievi delle
+scuole di specializzazione [e per i soci/allievi di QUESTA REALTÀ:
+codice dedicato]. Programma e iscrizioni: [LINK]
+
+── PROPOSTA PER LE SCUOLE DI SPECIALIZZAZIONE ──
+
+Oggetto: Proposta per i vostri allievi — ciclo su mito e psiche
+
+Gentile [Direzione/Segreteria],
+sono [CHI CONDUCE]. Dal [DATA PRIMO INCONTRO] terrò [NOME CICLO],
+[N] incontri sulla mitologia in chiave psicodinamica ([FORMATO]).
+Vorrei proporre ai vostri allievi:
+1) una tariffa dedicata ([sconto 30-40%]),
+2) se di interesse, un incontro gratuito di anteprima riservato
+   alla scuola, in data da concordare.
+Chiedo solo, se lo ritenete, l’inoltro della segnalazione ai
+vostri allievi. Allego programma completo. Grazie del tempo,
+[CHI CONDUCE] — [contatti]
+
+── PITCH PER PODCAST (5 righe) ──
+
+Oggetto: Ospite: il mito come strumento clinico
+
+Ciao [nome], seguo [podcast] da [dettaglio vero che dimostri
+che lo ascolti]. Sono [CHI CONDUCE]: lavoro da [anni] in clinica e
+mi occupo del rapporto tra mitologia e psicoterapia. Tre puntate
+che potrei offrirti: (1) Perché i sintomi parlano in miti;
+(2) Persefone in seduta: le discese dei pazienti; (3) Narciso non
+era vanitoso: cosa dice davvero il mito. Formato e durata come
+preferisci. Ti va di parlarne?`}
+];
+
+/* Budget */
+const VOCI_BUDGET = [
+  { id:'ads', nome:'Pubblicità (Meta Ads)', cls:'v-ads' },
+  { id:'graf', nome:'Grafica & visual', cls:'v-graf' },
+  { id:'strum', nome:'Strumenti & piattaforme', cls:'v-strum' },
+  { id:'ris', nome:'Riserva / imprevisti', cls:'v-ris' }
+];
+const SCENARI = [
+  { tot:0, nome:'Scenario 0 €', sub:'Solo tempo: 5–6 ore a settimana',
+    righe:{ads:0, graf:0, strum:0, ris:0},
+    note:'Tutto il piano regge anche così: passaparola, partnership, gruppi, email e anteprima sono gratuiti. Il "costo" è la tua costanza: bloccala in agenda come fosse un paziente.' },
+  { tot:150, nome:'Scenario ~150 €', sub:'Il minimo che compra amplificazione',
+    righe:{ads:80, graf:25, strum:30, ris:15},
+    note:'Gli 80 € di ads promuovono l\'anteprima gratuita (obiettivo: contatti in lista, non vendite dirette). Strumenti: piano email/modulo pro per un paio di mesi. Grafica: un mese di editor pro per il kit visivo.' },
+  { tot:500, nome:'Scenario ~500 €', sub:'Per spingere davvero la platea larga',
+    righe:{ads:280, graf:100, strum:60, ris:60},
+    note:'Ads in due ondate (anteprima + retargeting sulla scadenza early bird). Grafica professionale una tantum: kit coerente riutilizzabile per i prossimi cicli. Con 25 iscritti a ~120 €, l\'investimento è il 15-17% dei ricavi: sano.' }
+];
+
+/* Errori da evitare */
+const ERRORI = [
+  ['Annunciare tardi.','Due settimane non bastano a nessuno: la decisione di iscriversi a un ciclo matura in 3–6 settimane, e patrocini e scuole hanno tempi da 30–45 giorni. In media gli organizzatori mettono l’80% dell’energia sulla logistica e il 20% sulla promozione: la proporzione va invertita.'],
+  ['Descrivere il programma invece della trasformazione.','«Sei incontri sulla mitologia greca» dice cosa farai tu; «un lessico simbolico per la clinica» e «storie che parlano di te» dicono cosa ci guadagnano loro.'],
+  ['Un messaggio medio per due pubblici.','Se parli a tutti allo stesso modo, i clinici ti trovano generica e i curiosi ti trovano tecnica. Due registri, sempre.'],
+  ['Spam nei gruppi.','Il post copia-incolla con solo il link brucia il canale e la reputazione. Valore prima, richiesta poi — e mai più di due passaggi.'],
+  ['Contare solo sui social.','L\'algoritmo mostra i tuoi post a una frazione dei follower. La lista email è tua per sempre: ogni azione deve farla crescere.'],
+  ['Scadenze finte.','Early bird che slitta = fiducia che scende. Meglio uno sconto più piccolo ma con una scadenza vera.'],
+  ['Non chiedere il passaparola.','Il passaparola spontaneo esiste, quello chiesto esplicitamente («conosci qualcuno? giraglielo») rende il triplo. Chiedilo a ogni contatto felice.'],
+  ['Non misurare i canali.','Se non sai da dove arrivano gli iscritti, il prossimo ciclo ripartirà da zero. Un campo nel modulo e un foglio di calcolo bastano.'],
+  ['Aspettare i materiali perfetti.','La pagina evento "abbastanza buona" pubblicata a T-8 batte quella perfetta pubblicata a T-3. Si migliora in corsa.'],
+  ['Trascurare chi si è già iscritto.','Sono i tuoi ambasciatori: benvenuto curato, contenuti in anteprima, codice per portare un collega. Il prossimo ciclo si riempie da lì.']
+];
+
+/* Concorrenza e comparabili — ricerca web, luglio 2026 (URL nelle schede e in Fonti) */
+const CONCORRENZA = [
+  { cat:'Istituti e scuole', nome:'Istituto James Hillman (Firenze + online)',
+    fmt:'Scuola annuale ott.–giu., venerdì 16:30–19:30, aperta a tutti, ibrida (sottotitoli EN)',
+    prezzo:'1.400–1.500 € l’anno', target:'pubblico colto + professionisti psi',
+    canali:'sito, adesioni/soci con sconti, rete di partner',
+    lezione:'La fascia oraria fissa «venerdì pomeriggio» compatibile col lavoro clinico, e l’ibrido presenza+online che allarga la platea oltre Firenze.',
+    url:'https://www.istitutojameshillman.org/it/?page_id=5784' },
+  { cat:'Istituti e scuole', nome:'Philo – Pratiche filosofiche (Milano)',
+    fmt:'Scuola Mitobiografica biennale + seminari gratuiti con Milano-Bicocca + webinar Zoom (anche su Hillman)',
+    prezzo:'n.d.', target:'pubblico colto, counselor, analisti biografici',
+    canali:'sito con calendario, Facebook, partnership universitaria, BookCity',
+    lezione:'Il seminario gratuito «istituzionale» come porta d’ingresso, e un concetto-brand riconoscibile («mitobiografia»).',
+    url:'https://www.scuolaphilo.it/biennio22-24/' },
+  { cat:'Istituti e scuole', nome:'AIPA (Roma)',
+    fmt:'Seminario aperto «Fiabe e Miti nella Psicologia Analitica Junghiana», anche da remoto',
+    prezzo:'n.d.', target:'analisti, allievi, interessati',
+    canali:'sito (sezione eventi), comunicazioni interne',
+    lezione:'Il collegamento remoto allarga la platea nazionale; ma l’iscrizione «modulo + bonifico» è un attrito da NON copiare: carta e due clic.',
+    url:'https://www.aipa.info/2023/08/30/fiabe-e-miti-nella-psicologia-analitica-junghiana/' },
+  { cat:'Istituti e scuole', nome:'CIPA (Milano, Roma, Meridionale)',
+    fmt:'Seminari e giornate di studio aperti al pubblico, formato ibrido, con archivio di registrazioni',
+    prezzo:'n.d.', target:'psicoterapeuti e allievi, aperture al pubblico',
+    canali:'siti degli istituti, pagine eventi, circuito ECM',
+    lezione:'L’archivio di registrazioni fruibili dopo l’evento: ogni incontro continua a lavorare. La rete territoriale moltiplica la promozione.',
+    url:'https://www.milano.cipajung.it/eventi-e-news/' },
+  { cat:'Istituti e scuole', nome:'IRPA (Milano)',
+    fmt:'«La psicoanalisi e il libro»: ciclo online, venerdì 18:30–20:30, formula autore + discussant',
+    prezzo:'n.d.', target:'psicoanalisti, allievi, pubblico colto',
+    canali:'sito eventi, notorietà dei relatori (Recalcati)',
+    lezione:'Il formato serale breve, replicabile a costi minimi; ogni incontro ha un «pretesto» concreto (un libro) che dà appigli di comunicazione.',
+    url:'https://www.istitutoirpa.it/eventi/la-psicoanalisi-e-il-libro-2026' },
+  { cat:'Istituti e scuole', nome:'Istituto Minotauro (Milano)',
+    fmt:'Webinar serali gratuiti di 60 minuti (19:00–20:00) + cicli di dialoghi; iscrizioni su Eventbrite',
+    prezzo:'molti eventi gratuiti', target:'genitori, insegnanti, clinici',
+    canali:'Eventbrite, Instagram, LinkedIn, YouTube, Facebook',
+    lezione:'Il webinar gratuito di un’ora in orario serale usato in modo sistematico per allargare la platea — esattamente il ruolo della tua anteprima.',
+    url:'https://www.eventbrite.com/o/istituto-minotauro-32366467339' },
+  { cat:'Cicli indipendenti', nome:'«Archetipi e Consapevolezza» – M. Bottino (via PsyEventi)',
+    fmt:'Seminari su singoli archetipi (Viaggio dell’Eroe, La Madre…), in presenza e online',
+    prezzo:'40 € a incontro · giornata 80 € · «La Madre» 56 € (46 € professionisti)',
+    target:'aperti a tutti + professionisti',
+    canali:'portale PsyEventi (scheda + listing eventi)',
+    lezione:'Il doppio prezzo pubblico/professionisti e l’uso dei portali di settore come vetrina gratuita: replicabili da subito.',
+    url:'https://www.psyeventi.it/seminari-psicologia/archetipi-il-viaggio-dell-eroe-c1934.html' },
+  { cat:'Cicli indipendenti', nome:'«Il cerchio della luna» – Villa Bernasconi (Cernobbio)',
+    fmt:'9 incontri mensili sulle dee/archetipi femminili (matrice Bolen), in un museo, col patrocinio del Comune',
+    prezzo:'n.d. (prenotazione via email)', target:'donne, pubblico non specialista',
+    canali:'sito del museo, canali del Comune, portali eventi locali',
+    lezione:'La partnership con un luogo istituzionale dà cornice, credibilità e promozione gratuita; la cadenza mensile fidelizza per 9 mesi.',
+    url:'https://www.villabernasconi.eu/il-cerchio-della-luna-le-dee-dentro-la-donna/' },
+  { cat:'Cultura e festival', nome:'«Tra Psiche e Mito» – Teatro di Roma (Argentina)',
+    fmt:'Rassegna di psicoanalisi e filosofia: 5 incontri la domenica alle 11, con moderatori giornalisti',
+    prezzo:'10 € a incontro · 5 incontri a 35 €', target:'grande pubblico colto',
+    canali:'sito del teatro, biglietteria online, stampa',
+    lezione:'Il «rito» della domenica mattina, il prezzo simbolico col mini-abbonamento, e un conduttore che rende accessibile il contenuto: mito+psiche riempie i teatri.',
+    url:'https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/tra-psiche-e-mito-dialoghi-sullessere-2026/' },
+  { cat:'Cultura e festival', nome:'Festival (festivalfilosofia «Psyché» 2024; Festival del Classico)',
+    fmt:'Lezioni magistrali sul mito per platee enormi (es. Guidorizzi a Modena)',
+    prezzo:'gratuiti / ingresso festival', target:'grande pubblico',
+    canali:'stampa nazionale, programmi cartacei, social dei festival',
+    lezione:'La domanda esiste ed è grande. Proporsi come relatrice o evento collaterale nei festival della tua zona è acquisizione a costo zero.',
+    url:'https://www.festivalfilosofia.it/2024/lezioni+magistrali/Psych%C3%A9/Giulio+Guidorizzi' },
+  { cat:'Online e consumer', nome:'Feltrinelli Education',
+    fmt:'Corsi live e on demand con grandi nomi (Recalcati, Galimberti), con attestato',
+    prezzo:'~80 € corso on demand', target:'grande pubblico professionale',
+    canali:'piattaforma propria, newsletter, brand librario, cofanetti regalo',
+    lezione:'Registrazioni on demand con attestato, e il corso pensato come «oggetto regalabile» (Natale, ricorrenze): allarga la platea oltre l’interessato diretto.',
+    url:'https://www.feltrinellieducation.it/corsi-on-demand/soft-skills/il-dizionario-del-cambiamento-di-umberto-galimberti' },
+  { cat:'Online e consumer', nome:'Krillbooks – «Materiali mitologici»',
+    fmt:'Corso online di teoria del mito (scia di Furio Jesi) in una scuola di letteratura',
+    prezzo:'n.d.', target:'pubblico colto/letterario',
+    canali:'sito, materiali gratuiti',
+    lezione:'La «lezione zero» scaricabile in PDF come strumento di acquisizione contatti: economica e perfettamente in tono col pubblico colto.',
+    url:'https://krillbooks.com/corsi/corso-materiali-mitologici/' },
+  { cat:'Online e consumer', nome:'Piattaforme low cost (Life Learning, Udemy…)',
+    fmt:'Corsi registrati con certificato, spesso in promozione sotto i 20–30 €',
+    prezzo:'~19–30 €', target:'curiosi generalisti',
+    canali:'marketplace, promozioni continue',
+    lezione:'Fascia affollata e indifferenziata: NON competere sul prezzo. Il tuo terreno è rigore, relazione e il doppio registro clinico/culturale.',
+    url:'https://lifelearning.it/' },
+  { cat:'Internazionali', nome:'Pacifica Graduate Institute – Extension (USA)',
+    fmt:'Certificato «Applied Mythology»: 3 mesi su Zoom, sessioni registrate per tutti, crediti CEC, pagamento a rate',
+    prezzo:'ed. 2019: 695–1.095 $ (2026 n.d.)', target:'professionisti e appassionati, mondiale',
+    canali:'webinar di orientamento gratuiti, email, brand accademico',
+    lezione:'Registrazioni sempre incluse + webinar gratuito di orientamento + crediti formativi: il pacchetto che rassicura chi compra formazione seria.',
+    url:'https://extension.pacifica.edu/applied-mythology-graduate-certificate-2026/' },
+  { cat:'Internazionali', nome:'This Jungian Life – Dream School (USA)',
+    fmt:'Programma annuale online alimentato da un podcast molto seguito; «taster» gratuito e iscrizione-regalo',
+    prezzo:'530 $ l’anno (−15% in unica soluzione)', target:'appassionati di Jung, mondiale',
+    canali:'podcast → corso → community',
+    lezione:'Il funnel «contenuto gratuito continuativo → corso → community che ricompra»: la versione in piccolo è il tuo ciclo + anteprima + lista email.',
+    url:'https://thisjungianlife.com/join-dream-school/' },
+  { cat:'Internazionali', nome:'C.G. Jung Foundation of New York (USA)',
+    fmt:'Corsi Zoom di 5 settimane, cataloghi stagionali (Fall/Spring/Summer), crediti CE per i clinici',
+    prezzo:'175 $ (150 $ soci) per 5 settimane', target:'clinici + pubblico colto',
+    canali:'catalogo stagionale, newsletter',
+    lezione:'Prezzo pubblico/soci e calendario stagionale ricorrente: chi ha fatto l’autunno si aspetta la primavera — pensa già il ciclo come «stagioni».',
+    url:'https://cgjungny.org/continuing-education-fall-2025/' },
+  { cat:'Internazionali', nome:'Centre for Applied Jungian Studies (Sudafrica)',
+    fmt:'Academy online: corsi da 5 settimane a un anno, self-study accreditati CPD',
+    prezzo:'540 $ una tantum o 26,50 $/mese', target:'pubblico globale',
+    canali:'email marketing, contenuti gratuiti',
+    lezione:'La rateizzazione micro-mensile abbassa la soglia d’ingresso: anche in piccolo, «2 rate senza costi» toglie un’obiezione.',
+    url:'https://appliedjung.com/program/the-applied-jungian-academy-full-programme' },
+  { cat:'Internazionali', nome:'Eranos Foundation (Ascona, CH)',
+    fmt:'Conferenze e «Eranos-Jung Lectures» anche in italiano; il 2025 ha celebrato i 150 anni di Jung',
+    prezzo:'n.d.', target:'accademici + pubblico colto',
+    canali:'prestigio storico del luogo, programmi annuali',
+    lezione:'Gli anniversari e le ricorrenze come pretesto editoriale: una data «mitica» dà alla stampa un motivo per parlare di te.',
+    url:'https://www.eranosfoundation.org/page.php?page=12&pagename=lectures' }
+];
+
+const PATTERN_HTML = `
+<ul class="check-ul">
+  <li><b>Formati ricorrenti:</b> cicli brevi di 3–9 incontri serali infrasettimanali (18:30–20:30) o mezze giornate nel weekend; la domenica mattina funziona per il grande pubblico. L’online è lo standard, l’ibrido cresce.</li>
+  <li><b>Prezzi tipici:</b> gratuito (esche e festival) → ~10 € a incontro divulgativo → 40–80 € a seminario professionale → 80–175 € per corso multi-lezione online → 500 €+ per programmi annuali con community.</li>
+  <li><b>Canali dominanti:</b> sito + newsletter ovunque; Facebook per il mondo junghiano istituzionale, Instagram per la crescita personale; il vero acceleratore in Italia sono le <b>partnership con luoghi terzi</b> (teatri, musei, università, librerie, comuni).</li>
+  <li><b>Mercato polarizzato:</b> da un lato il polo clinico-istituzionale, autorevole ma macchinoso (prezzi non pubblicati, iscrizione «modulo + bonifico»); dall’altro il polo olistico, bravo a vendere ma con rigore percepito basso.</li>
+  <li><b>Registrazioni e doppio prezzo</b> (pubblico/professionisti): standard all’estero, ancora rari in Italia — un vantaggio immediato a costo quasi zero.</li>
+</ul>
+<p style="margin-top:12px"><b>L’opportunità di posizionamento:</b> lo spazio «rigoroso ma accessibile» su mito e psiche in Italia è quasi vuoto. Occupalo con: prezzo trasparente nella fascia poco presidiata (ciclo di 5–8 incontri a 80–150 €), iscrizione con carta in due clic, registrazioni incluse, attestato di partecipazione, e il doppio registro clinico/culturale dichiarato fin dal sottotitolo.</p>`;
+
+const FONTI = [
+  { titolo:'Concorrenza e mercato', voci:[
+    { label:'Istituto James Hillman — Scuola', url:'https://www.istitutojameshillman.org/it/?page_id=5784' },
+    { label:'Philo Milano — Scuola Mitobiografica', url:'https://www.scuolaphilo.it/biennio22-24/' },
+    { label:'AIPA — seminario «Fiabe e Miti»', url:'https://www.aipa.info/2023/08/30/fiabe-e-miti-nella-psicologia-analitica-junghiana/' },
+    { label:'CIPA Milano — eventi', url:'https://www.milano.cipajung.it/eventi-e-news/' },
+    { label:'IRPA — «La psicoanalisi e il libro 2026»', url:'https://www.istitutoirpa.it/eventi/la-psicoanalisi-e-il-libro-2026' },
+    { label:'Istituto Minotauro su Eventbrite', url:'https://www.eventbrite.com/o/istituto-minotauro-32366467339' },
+    { label:'Teatro di Roma — «Tra Psiche e Mito»', url:'https://www.teatrodiroma.net/spettacoli/stagione-2025-2026/teatro-argentina/tra-psiche-e-mito-dialoghi-sullessere-2026/', nota:'10 € a incontro, 5 a 35 €' },
+    { label:'Villa Bernasconi — «Il cerchio della luna»', url:'https://www.villabernasconi.eu/il-cerchio-della-luna-le-dee-dentro-la-donna/' },
+    { label:'PsyEventi — ciclo «Archetipi» (prezzi)', url:'https://www.psyeventi.it/seminari-psicologia/archetipi-il-viaggio-dell-eroe-c1934.html' },
+    { label:'Feltrinelli Education — corso Galimberti', url:'https://www.feltrinellieducation.it/corsi-on-demand/soft-skills/il-dizionario-del-cambiamento-di-umberto-galimberti' },
+    { label:'festivalfilosofia 2024 «Psyché»', url:'https://www.festivalfilosofia.it/2024/lezioni+magistrali/Psych%C3%A9/Giulio+Guidorizzi' },
+    { label:'Pacifica Extension — Applied Mythology', url:'https://extension.pacifica.edu/applied-mythology-graduate-certificate-2026/' },
+    { label:'This Jungian Life — Dream School', url:'https://thisjungianlife.com/join-dream-school/', nota:'530 $/anno' },
+    { label:'C.G. Jung Foundation NY — corsi', url:'https://cgjungny.org/continuing-education-fall-2025/', nota:'175 $/5 settimane' },
+    { label:'Applied Jungian Academy', url:'https://appliedjung.com/program/the-applied-jungian-academy-full-programme', nota:'540 $ o 26,50 $/mese' },
+    { label:'Eranos Foundation — lectures', url:'https://www.eranosfoundation.org/page.php?page=12&pagename=lectures' }
+  ]},
+  { titolo:'Best practice di promozione', voci:[
+    { label:'Mailchimp — Event email marketing', url:'https://mailchimp.com/resources/event-email-marketing/', nota:'sequenza invito → reminder → last call' },
+    { label:'MailerLite — benchmark email 2025', url:'https://www.mailerlite.com/blog/compare-your-email-performance-metrics-industry-benchmarks', nota:'apertura settore education ~35–39%' },
+    { label:'Livestorm — webinar metrics', url:'https://livestorm.co/webinar-glossary/webinar-metrics', nota:'presenza media ~48% dei registrati' },
+    { label:'Glue Up — ridurre i no-show', url:'https://www.glueup.com/blog/fix-high-event-rsvp-no-show-rate', nota:'gratuiti: 40–60% di assenze; a pagamento ~10%' },
+    { label:'Engineerica — early bird pricing', url:'https://www.engineerica.com/conferences-and-events/post/early-bird-pricing/' },
+    { label:'Ticket Fairy — prezzi a scaglioni e bundle', url:'https://www.ticketfairy.com/blog/tiered-pricing-and-early-bird-strategies-for-festivals' },
+    { label:'GetResponse — vendere un corso online (lead magnet)', url:'https://www.getresponse.com/it/blog/come-vendere-un-corso-online' },
+    { label:'FAQ ECM — Ordine Psicologi Emilia-Romagna', url:'https://www.ordinepsicologier.it/it/faq-ecm', nota:'crediti solo da provider accreditati' },
+    { label:'Guida pratica ECM — Ordine Veneto (PDF)', url:'https://www.ordinepsicologiveneto.it/wp-content/uploads/2022/03/GUIDA-PRATICA-SISTEMA-ECM.pdf', nota:'autoformazione fino al 20%' },
+    { label:'Regolamento patrocinio — Ordine Piemonte (PDF)', url:'https://ordinepsicologi.piemonte.it/wp-content/uploads/2021/06/REGOLAMENTOPERLACONCESSIONEDELPATROCINIODELL1.pdf', nota:'domanda ≥30 giorni prima' },
+    { label:'OPL — pubblicizzazione eventi e corsi sul sito', url:'https://www.opl.it/2799/come-fare-per/Pubblicizzazione-Eventi-Corsi-e-Master-sul-sito-dell-OPL' },
+    { label:'Bee Social — usare i gruppi Facebook senza spam', url:'https://www.bee-social.it/gruppi-facebook-arma-marketing/' },
+    { label:'Agenzia Spada — promuovere un evento prima del lancio', url:'https://www.agenziaspada.com/2026/05/promuovere-un-evento-prima-del-lancio-guida-pratica/' }
+  ]},
+  { titolo:'Canali e benchmark (Italia)', voci:[
+    { label:'Eventbrite — commissioni Italia', url:'https://www.eventbrite.it/help/it/articles/755615/quanto-costa-agli-organizzatori-utilizzare-eventbrite/', nota:'Essentials 3,5% + 0,49 €; Pro 5,5% + 0,99 €; gratuiti senza costi' },
+    { label:'Billetto — commissioni', url:'https://support.billetto.com/hc/articles/115001201325', nota:'3,9% + 0,90 € a biglietto, ribaltabile' },
+    { label:'Meetup — costi organizer', url:'https://help.meetup.com/hc/en-us/articles/28677808413197-Organizer-Subscription-prices-overview', nota:'~15–20 $/mese' },
+    { label:'Psiconline — calendario eventi (segnalazione gratuita)', url:'https://www.psiconline.it/area-professionale/convegni-congressi/calendario-eventi.html' },
+    { label:'State of Mind — spazi ADV e promozione eventi', url:'https://www.stateofmind.it/pubblicita-promozione/' },
+    { label:'OPsOnline — community storica di psicologi', url:'https://opsonline.it/' },
+    { label:'Il Post — podcast «Sigmund» (ospita psicoterapeuti)', url:'https://www.ilpost.it/podcasts/sigmund/' },
+    { label:'Psicoanalisi Pop — podcast con interviste', url:'https://www.psicoanalisipop.com/podcast/' },
+    { label:'Feedspot — migliori podcast italiani di psicologia', url:'https://podcast.feedspot.com/italiani_psicologia_podcasts/' },
+    { label:'Salutementale.net — psicologi su Instagram (follower)', url:'https://www.salutementale.net/la-psicologia-trova-il-suo-spazio-anche-su-instagram-una-nostra-analisi-e-i-documenti-del-cnop/' },
+    { label:'Influenxer — divulgatori di storia e mito', url:'https://www.influenxer.it/influencer/history-influencer-creator-italiani/' },
+    { label:'Shopify IT — costi Facebook Ads', url:'https://www.shopify.com/it/blog/costo-facebook-ads', nota:'CPC ~0,30–0,90 €' },
+    { label:'SuperAds — CPM Italia', url:'https://www.superads.ai/facebook-ads-costs/cpc-cost-per-click/italy', nota:'CPM ~10 €' },
+    { label:'Unbounce — conversione media landing', url:'https://unbounce.com/average-conversion-rates-landing-pages/', nota:'6,6% media generale' },
+    { label:'Foundry CRO — benchmark 2026 settore eventi', url:'https://foundrycro.com/blog/landing-page-conversion-rate-benchmarks-2026/', nota:'mediana 12,3%' }
+  ]}
+];
+
+const BENCH_NOTE = 'Riferimenti di settore (fonti linkate in fondo alla pagina): conversione di una pagina evento in contatti/registrazioni: media 6,6%, mediana del settore eventi 12,3% (Unbounce 2024, Foundry 2026) — il 12% predefinito sta lì in mezzo. Da contatto a cliente pagante: dipende quasi tutto da email e anteprima; il 20% è una stima prudente per liste «calde». Ricorda: ai webinar gratuiti si presenta ~48% degli iscritti (Livestorm 2025); gli eventi a pagamento hanno no-show ~10%.';
+
+/* =================================================================
+   STATO
+================================================================= */
+function loadJSON(k, fb){ try{ const v = JSON.parse(localStorage.getItem(k)); return v && typeof v === 'object' ? v : fb; }catch(e){ return fb; } }
+let setup = Object.assign({}, DEFAULTS, loadJSON(LS.setup, {}));
+let checks = loadJSON(LS.check, {});
+const saveSetup = () => localStorage.setItem(LS.setup, JSON.stringify(setup));
+const saveChecks = () => localStorage.setItem(LS.check, JSON.stringify(checks));
+
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if(cls) n.className = cls; if(txt !== undefined) n.textContent = txt; return n; };
+const fmtN = n => n.toLocaleString('it-IT');
+const fmtE = n => n.toLocaleString('it-IT') + ' €';
+
+/* =================================================================
+   TEMA
+================================================================= */
+(function initTheme(){
+  const saved = localStorage.getItem(LS.theme);
+  if(saved) document.documentElement.dataset.theme = saved;
+  $('#themeBtn').addEventListener('click', () => {
+    const cur = document.documentElement.dataset.theme ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem(LS.theme, next);
+  });
+})();
+
+/* =================================================================
+   NAV
+================================================================= */
+const SEZIONI = [
+  ['setup','Setup'],['sintesi','Sintesi'],['pubblici','Pubblici'],['messaggio','Messaggio'],
+  ['mercato','Mercato'],['canali','Canali'],['piano','Piano operativo'],['kit','Kit contenuti'],
+  ['budget','Budget'],['kpi','KPI'],['errori','Errori'],['fonti','Fonti']
+];
+(function buildNav(){
+  const nav = $('#secnav');
+  SEZIONI.forEach(([id,label]) => {
+    const a = el('a','pill',label); a.href = '#'+id; a.dataset.sec = id; nav.appendChild(a);
+  });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        $$('#secnav .pill').forEach(p => p.classList.toggle('active', p.dataset.sec === e.target.id));
+      }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px'});
+  SEZIONI.forEach(([id]) => { const s = document.getElementById(id); if(s) obs.observe(s); });
+})();
+
+/* =================================================================
+   SETUP (form ↔ stato)
+================================================================= */
+function bindSetup(){
+  $$('#setup input[data-k]').forEach(inp => {
+    const k = inp.dataset.k;
+    inp.value = setup[k] ?? '';
+    inp.addEventListener('input', () => {
+      setup[k] = inp.type === 'number' ? (inp.value === '' ? '' : +inp.value) : inp.value;
+      saveSetup(); refresh();
+    });
+  });
+  const segInit = (id, key) => {
+    const seg = document.getElementById(id);
+    const paint = () => $$('button', seg).forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v) === String(setup[key])));
+    $$('button', seg).forEach(b => b.addEventListener('click', () => {
+      setup[key] = id === 'fScenario' ? +b.dataset.v : b.dataset.v;
+      saveSetup(); paint(); refresh();
+    }));
+    paint();
+  };
+  segInit('fFormato','formato');
+  segInit('fScenario','scenario');
+  $('#resetSetup').addEventListener('click', () => {
+    if(!confirm('Riportare tutti i campi del setup ai valori iniziali?')) return;
+    setup = Object.assign({}, DEFAULTS); saveSetup(); bindSetupValues(); refresh();
+  });
+}
+function bindSetupValues(){
+  $$('#setup input[data-k]').forEach(inp => { inp.value = setup[inp.dataset.k] ?? ''; });
+  $$('#fFormato button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v) === String(setup.formato)));
+  $$('#fScenario button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v) === String(setup.scenario)));
+}
+
+/* =================================================================
+   PUBBLICI
+================================================================= */
+(function buildAud(){
+  const g = $('#audGrid');
+  PUBBLICI.forEach(p => {
+    const c = el('div','card aud');
+    c.appendChild(el('div','who', p.who));
+    c.appendChild(el('h3', null, p.nome));
+    c.appendChild(el('p','small', p.chi)).style.color = 'var(--ink2)';
+    const dl = el('dl');
+    [['Cosa cercano', p.cercano],['Dove trovarli', p.dove],['La leva giusta', p.leva]].forEach(([t,d]) => {
+      dl.appendChild(el('dt', null, t)); dl.appendChild(el('dd', null, d));
+    });
+    c.appendChild(dl); g.appendChild(c);
+  });
+})();
+
+/* =================================================================
+   MERCATO / CONCORRENZA
+================================================================= */
+function buildMercato(){
+  const grid = $('#compGrid'), chipsBox = $('#compChips');
+  chipsBox.textContent = ''; grid.textContent = '';
+  if(!CONCORRENZA.length){
+    const c = el('div','card', 'Sezione in aggiornamento con i risultati della ricerca.');
+    grid.appendChild(c); $('#patternCard').hidden = true; return;
+  }
+  $('#patternCard').hidden = false;
+  const cats = ['Tutte', ...new Set(CONCORRENZA.map(c => c.cat))];
+  let active = 'Tutte';
+  const paint = () => {
+    $$('button', chipsBox).forEach(b => b.setAttribute('aria-pressed', b.textContent === active));
+    grid.textContent = '';
+    CONCORRENZA.filter(c => active === 'Tutte' || c.cat === active).forEach(c => {
+      const card = el('div','card comp');
+      const tag = el('span','tag', c.cat); card.appendChild(tag);
+      card.appendChild(el('h3', null, c.nome));
+      card.appendChild(el('div','fmt', c.fmt));
+      const rows = el('dl'); rows.className = 'small'; rows.style.margin = '8px 0 0';
+      [['Prezzo', c.prezzo],['Pubblico', c.target],['Canali visibili', c.canali]].forEach(([t,d]) => {
+        if(!d) return;
+        const dt = el('dt', null, t); dt.style.cssText = 'font-weight:600;color:var(--ink2);display:inline';
+        const dd = el('dd', null, ' ' + d); dd.style.cssText = 'display:inline;margin:0';
+        const p = el('div'); p.style.margin = '3px 0'; p.appendChild(dt); p.append(': '); p.appendChild(dd); rows.appendChild(p);
+      });
+      card.appendChild(rows);
+      const steal = el('div','steal'); const b = el('b', null, 'Da copiare: '); steal.appendChild(b); steal.append(c.lezione);
+      card.appendChild(steal);
+      if(c.url){
+        const m = el('div','meta'); const a = el('a', null, c.urlLabel || new URL(c.url).hostname);
+        a.href = c.url; a.target = '_blank'; a.rel = 'noopener';
+        m.append('Fonte: '); m.appendChild(a); card.appendChild(m);
+      }
+      grid.appendChild(card);
+    });
+  };
+  cats.forEach(cat => {
+    const b = el('button','chip', cat);
+    b.addEventListener('click', () => { active = cat; paint(); });
+    chipsBox.appendChild(b);
+  });
+  paint();
+  if(PATTERN_HTML) $('#patternBody').innerHTML = PATTERN_HTML; /* contenuto statico interno, non input utente */
+}
+
+/* =================================================================
+   MATRICE CANALI (SVG)
+================================================================= */
+const GCOL = {1:'var(--s1)', 2:'var(--s2)', 3:'var(--s3)'};
+function scenarioOk(c){ return c.scen.includes(+setup.scenario); }
+function formatoOk(c){ return !(c.presenza && setup.formato === 'online'); }
+
+function buildLegend(){
+  const box = $('#matrixLegend'); box.textContent = '';
+  Object.entries(GRUPPI).forEach(([g, nome]) => {
+    const k = el('span','key'); const sw = el('span','sw'); sw.style.background = GCOL[g];
+    k.appendChild(sw); k.append(nome); box.appendChild(k);
+  });
+}
+
+function buildMatrix(){
+  const svg = $('#matrix');
+  const W = 720, H = 470, m = {t:26, r:24, b:56, l:64};
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.textContent = '';
+  const X = v => m.l + (v - 0.5) / 5 * (W - m.l - m.r);
+  const Y = v => H - m.b - (v - 0.5) / 5 * (H - m.t - m.b);
+  const NS = 'http://www.w3.org/2000/svg';
+  const mk = (t, at) => { const n = document.createElementNS(NS, t); for(const k in at) n.setAttribute(k, at[k]); return n; };
+
+  /* gridlines hairline */
+  for(let v = 1; v <= 5; v++){
+    svg.appendChild(mk('line',{x1:X(v), y1:Y(0.5), x2:X(v), y2:Y(5.5), stroke:'var(--grid)','stroke-width':1}));
+    svg.appendChild(mk('line',{x1:X(0.5), y1:Y(v), x2:X(5.5), y2:Y(v), stroke:'var(--grid)','stroke-width':1}));
+  }
+  /* assi */
+  svg.appendChild(mk('line',{x1:X(0.5), y1:Y(0.5), x2:X(5.5), y2:Y(0.5), stroke:'var(--axis)','stroke-width':1}));
+  svg.appendChild(mk('line',{x1:X(0.5), y1:Y(0.5), x2:X(0.5), y2:Y(5.5), stroke:'var(--axis)','stroke-width':1}));
+  const t1 = mk('text',{x:(X(0.5)+X(5.5))/2, y:H-14, 'text-anchor':'middle', class:'axis-lbl'}); t1.textContent = 'Sforzo richiesto →'; svg.appendChild(t1);
+  const t2 = mk('text',{x:18, y:(Y(0.5)+Y(5.5))/2, 'text-anchor':'middle', class:'axis-lbl', transform:`rotate(-90 18 ${(Y(0.5)+Y(5.5))/2})`}); t2.textContent = 'Impatto atteso →'; svg.appendChild(t2);
+  [['basso',1],['medio',3],['alto',5]].forEach(([lab,v]) => {
+    const tx = mk('text',{x:X(v), y:H-m.b+18, 'text-anchor':'middle', class:'axis-lbl'}); tx.textContent = lab; svg.appendChild(tx);
+    const ty = mk('text',{x:m.l-10, y:Y(v)+4, 'text-anchor':'end', class:'axis-lbl'}); ty.textContent = lab; svg.appendChild(ty);
+  });
+  /* quadranti */
+  const q = [
+    [X(1.6), Y(5.32), 'vittorie rapide: parti da qui'],
+    [X(4.35), Y(5.32), 'progetti che ripagano'],
+    [X(1.6), Y(0.78), 'se avanza tempo'],
+    [X(4.35), Y(0.78), 'lascia perdere']
+  ];
+  q.forEach(([x,y,lab]) => { const t = mk('text',{x, y, 'text-anchor':'middle', class:'quad-lbl'}); t.textContent = lab; svg.appendChild(t); });
+
+  /* punti */
+  CANALI.forEach(c => {
+    const g = mk('g',{class:'matrix-dot', tabindex:0, role:'img'});
+    g.setAttribute('aria-label', `${c.nome}: sforzo ${c.sforzo} su 5, impatto ${c.impatto} su 5`);
+    const cx = X(c.sforzo), cy = Y(c.impatto);
+    g.appendChild(mk('circle',{class:'halo', cx, cy, r:17}));
+    const pt = mk('circle',{class:'pt', cx, cy, r:6.5, fill:GCOL[c.g]});
+    g.appendChild(pt);
+    const lbl = mk('text',{class:'dot-lbl', x:cx + (c.lx ?? 11), y:cy + (c.ly ?? 4),
+      'text-anchor': c.anchor || 'start'});
+    lbl.textContent = c.nome;
+    g.appendChild(lbl);
+    const dim = !scenarioOk(c) || !formatoOk(c);
+    if(dim) g.classList.add('dim');
+    g.addEventListener('pointerenter', ev => showTip(ev, c));
+    g.addEventListener('pointermove', ev => moveTip(ev));
+    g.addEventListener('pointerleave', hideTip);
+    g.addEventListener('focus', () => { const r = g.getBoundingClientRect(); showTipAt(r.left + r.width/2, r.top, c); });
+    g.addEventListener('blur', hideTip);
+    const go = () => { hideTip(); const card = document.getElementById('chan-'+c.id);
+      if(card){ card.scrollIntoView({behavior:'smooth', block:'center'}); card.classList.remove('flash'); void card.offsetWidth; card.classList.add('flash'); } };
+    g.addEventListener('click', go);
+    g.addEventListener('keydown', ev => { if(ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); go(); } });
+    svg.appendChild(g);
+  });
+}
+
+/* tooltip */
+const tip = $('#tooltip');
+function tipContent(c){
+  tip.textContent = '';
+  const b = el('b', null, c.nome); tip.appendChild(b);
+  const l1 = el('div','tt-line'); const k = el('span','tt-key'); k.style.background = GCOL[c.g];
+  l1.appendChild(k); l1.append(GRUPPI[c.g]); tip.appendChild(l1);
+  const info = el('div', 'small');
+  info.textContent = `Sforzo ${c.sforzo}/5 · impatto ${c.impatto}/5 · ${c.costo} · ${c.quando}`;
+  tip.appendChild(info);
+  const extra = [];
+  if(!scenarioOk(c)) extra.push('fuori dallo scenario di budget scelto');
+  if(!formatoOk(c)) extra.push('pensato per il formato in presenza');
+  if(extra.length){ const w = el('div','small'); w.style.color = 'var(--muted)'; w.textContent = '(' + extra.join('; ') + ')'; tip.appendChild(w); }
+  const hint = el('div','small'); hint.style.color = 'var(--muted)'; hint.textContent = 'Clic: vai alla scheda';
+  tip.appendChild(hint);
+}
+function showTip(ev, c){ tipContent(c); tip.style.opacity = 1; tip.setAttribute('aria-hidden','false'); moveTip(ev); }
+function showTipAt(x, y, c){ tipContent(c); tip.style.opacity = 1; tip.setAttribute('aria-hidden','false'); place(x, y); }
+function moveTip(ev){ place(ev.clientX, ev.clientY); }
+function place(x, y){
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y - r.height - 12;
+  if(left + r.width > innerWidth - 8) left = x - r.width - 14;
+  if(top < 8) top = y + 16;
+  tip.style.left = left + 'px'; tip.style.top = top + 'px';
+}
+function hideTip(){ tip.style.opacity = 0; tip.setAttribute('aria-hidden','true'); }
+
+/* tabella canali (vista accessibile) */
+function buildChanTable(){
+  const wrap = $('#chanTblWrap'); wrap.textContent = '';
+  const t = el('table','tbl');
+  const thead = el('thead'); const trh = el('tr');
+  ['Canale','Gruppo','Sforzo /5','Impatto /5','Costo','Quando'].forEach((h,i) => { const th = el('th', null, h); if(i>=2&&i<=3) th.style.textAlign='right'; trh.appendChild(th); });
+  thead.appendChild(trh); t.appendChild(thead);
+  const tb = el('tbody');
+  [...CANALI].sort((a,b) => b.impatto - a.impatto || a.sforzo - b.sforzo).forEach(c => {
+    const tr = el('tr');
+    tr.appendChild(el('td', null, c.nome));
+    tr.appendChild(el('td', null, GRUPPI[c.g]));
+    const s = el('td','num', String(c.sforzo)); tr.appendChild(s);
+    const i = el('td','num', String(c.impatto)); tr.appendChild(i);
+    tr.appendChild(el('td', null, c.costo));
+    tr.appendChild(el('td', null, c.quando));
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb); wrap.appendChild(t);
+}
+$('#tblToggle').addEventListener('click', () => {
+  const w = $('#chanTblWrap'); const btn = $('#tblToggle');
+  w.hidden = !w.hidden; btn.setAttribute('aria-expanded', String(!w.hidden));
+  btn.textContent = w.hidden ? 'Vedi come tabella' : 'Nascondi la tabella';
+});
+
+/* schede canali */
+function buildChanCards(){
+  const box = $('#chanCards'); box.textContent = '';
+  const order = [...CANALI].sort((a,b) => b.impatto - a.impatto || a.sforzo - b.sforzo);
+  order.forEach(c => {
+    const card = el('div', 'card chan g'+c.g); card.id = 'chan-'+c.id;
+    const hdr = el('div','hdr');
+    hdr.appendChild(el('h3', null, c.nome));
+    hdr.appendChild(el('span','stats', `${GRUPPI[c.g]} · sforzo ${c.sforzo}/5 · impatto ${c.impatto}/5 · ${c.costo} · ${c.quando}`));
+    card.appendChild(hdr);
+    if(c.presenza){ const t = el('span','tag','per il formato in presenza'); card.appendChild(t); }
+    card.appendChild(el('p','why', c.desc));
+    const ul = el('ul','check-ul');
+    c.azioni.forEach(a => ul.appendChild(el('li', null, a)));
+    card.appendChild(ul);
+    const dim = !scenarioOk(c) || !formatoOk(c);
+    card.classList.toggle('offtopic', dim);
+    if(dim){
+      const n = el('p','small muted', !formatoOk(c)
+        ? 'Con il formato «online» questo canale perde peso: tienilo per un\'eventuale tappa dal vivo.'
+        : 'Fuori dallo scenario di budget scelto: diventa rilevante alzando il budget nel setup.');
+      card.appendChild(n);
+    }
+    box.appendChild(card);
+  });
+}
+
+/* =================================================================
+   PIANO OPERATIVO
+================================================================= */
+function dateOfWeek(off){
+  if(!setup.data) return null;
+  const d = new Date(setup.data + 'T12:00:00');
+  if(isNaN(d)) return null;
+  if(off < 0) return null;
+  const start = new Date(d); start.setDate(d.getDate() - off*7);
+  return start;
+}
+const MESI_IT = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+function fmtD(d){ return `${d.getDate()} ${MESI_IT[d.getMonth()]}`; }
+
+function buildWeeks(){
+  const box = $('#weeks');
+  const prev = $$('details.week', box);
+  const wasOpen = new Set(prev.filter(d => d.open).map(d => d.id));
+  const hadAny = prev.length > 0;
+  box.textContent = '';
+  SETTIMANE.forEach((w, wi) => {
+    const det = document.createElement('details'); det.className = 'week'; det.id = 'week-'+w.id;
+    det.open = hadAny ? wasOpen.has('week-'+w.id) : wi === 0;
+    const sum = el('summary');
+    const arrow = el('span','arrow','▸'); sum.appendChild(arrow);
+    const tt = el('div','week-t');
+    const b = el('b', null, w.t); tt.appendChild(b);
+    const when = el('div','when');
+    const ds = dateOfWeek(w.off);
+    when.textContent = ds ? `settimana del ${fmtD(ds)}` : (w.off > 0 ? `${w.off} settimane prima del via` : (w.off === 0 ? 'dal primo incontro in poi' : 'a ciclo concluso'));
+    tt.appendChild(when); sum.appendChild(tt);
+    const prog = el('div','week-prog');
+    const bar = el('span','wbar'); const fill = el('i'); bar.appendChild(fill);
+    const cnt = el('span', null, '');
+    prog.appendChild(bar); prog.appendChild(cnt); sum.appendChild(prog);
+    det.appendChild(sum);
+    const body = el('div','week-body');
+    if(w.note) body.appendChild(el('p','small', w.note)).style.color = 'var(--ink2)';
+    w.items.forEach((it, ii) => {
+      const id = `ck-${w.id}-${ii}`;
+      const row = el('div','task');
+      const cb = document.createElement('input'); cb.type = 'checkbox'; cb.id = id; cb.checked = !!checks[id];
+      cb.addEventListener('change', () => { checks[id] = cb.checked; if(!cb.checked) delete checks[id]; saveChecks(); updateProgress(); });
+      const lab = document.createElement('label'); lab.htmlFor = id; lab.textContent = it[0];
+      if(it[1]){ const n = el('span','note', it[1]); lab.appendChild(n); }
+      row.appendChild(cb); row.appendChild(lab); body.appendChild(row);
+    });
+    det.appendChild(body);
+    det._prog = {fill, cnt};
+    box.appendChild(det);
+  });
+}
+function updateProgress(){
+  let tot = 0, done = 0;
+  SETTIMANE.forEach(w => {
+    const ids = w.items.map((_, ii) => `ck-${w.id}-${ii}`);
+    const d = ids.filter(id => checks[id]).length;
+    tot += ids.length; done += d;
+    const det = document.getElementById('week-'+w.id);
+    if(det && det._prog){
+      det._prog.fill.style.width = (ids.length ? d/ids.length*100 : 0) + '%';
+      det._prog.cnt.textContent = `${d}/${ids.length}`;
+    }
+  });
+  const pct = tot ? Math.round(done/tot*100) : 0;
+  $('#pbarTop').style.width = pct + '%';
+  $('#ptxtTop').textContent = pct + '%';
+  $('#tProg').textContent = pct + '%';
+  $('#tProgCap').textContent = `${done} attività su ${tot}`;
+}
+$('#resetChecks').addEventListener('click', () => {
+  if(!confirm('Azzerare tutte le spunte del piano operativo?')) return;
+  checks = {}; saveChecks(); buildWeeks(); updateProgress();
+});
+
+/* =================================================================
+   KIT CONTENUTI
+================================================================= */
+let tplActive = TEMPLATES[0].id;
+function fillPlaceholders(text){
+  const d = setup.data ? new Date(setup.data + 'T12:00:00') : null;
+  const dataStr = d && !isNaN(d) ? `${d.getDate()} ${MESI_IT[d.getMonth()]} ${d.getFullYear()}` : '[DATA PRIMO INCONTRO]';
+  const luogo = setup.formato === 'online' ? 'online'
+    : setup.formato === 'presenza' ? (setup.citta ? `in presenza a ${setup.citta}` : 'in presenza')
+    : (setup.citta ? `a ${setup.citta} e online` : 'in presenza e online');
+  const map = {
+    '[NOME CICLO]': setup.nome || '[NOME CICLO]',
+    '[CHI CONDUCE]': setup.relatrice || '[CHI CONDUCE]',
+    '[DATA PRIMO INCONTRO]': dataStr,
+    '[FORMATO/CITTÀ]': luogo,
+    '[N]': setup.incontri ? String(setup.incontri) : '[N]',
+    '[PREZZO]': setup.prezzo ? String(setup.prezzo) : '[PREZZO]',
+    '[LINK]': setup.link || '[LINK]'
+  };
+  let out = text;
+  for(const k in map) out = out.split(k).join(map[k]);
+  return out;
+}
+function buildTabs(){
+  const tabs = $('#tplTabs'); tabs.textContent = '';
+  TEMPLATES.forEach(t => {
+    const b = el('button','tab', t.tab);
+    b.setAttribute('role','tab'); b.setAttribute('aria-selected', String(t.id === tplActive));
+    b.addEventListener('click', () => { tplActive = t.id; buildTabs(); renderTpl(); });
+    tabs.appendChild(b);
+  });
+}
+function renderTpl(){
+  const t = TEMPLATES.find(x => x.id === tplActive);
+  $('#tplTitle').textContent = t.titolo;
+  $('#tplHint').textContent = t.hint;
+  $('#tplBody').textContent = fillPlaceholders(t.body);
+}
+$('#copyBtn').addEventListener('click', async () => {
+  const txt = $('#tplBody').textContent;
+  let ok = false;
+  try{ await navigator.clipboard.writeText(txt); ok = true; }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try{ ok = document.execCommand('copy'); }catch(_){}
+    ta.remove();
+  }
+  const m = $('#copiedMsg');
+  m.textContent = ok ? 'Copiato ✓' : 'Copia manuale: seleziona il testo';
+  m.classList.add('on'); setTimeout(() => m.classList.remove('on'), 1800);
+});
+
+/* =================================================================
+   BUDGET
+================================================================= */
+const VCOL = {ads:'var(--s1)', graf:'var(--s2)', strum:'var(--s3)', ris:'var(--s4)'};
+function buildBudget(){
+  const g = $('#scenGrid'); g.textContent = '';
+  SCENARI.forEach((s, i) => {
+    const c = el('div','card');
+    if(i === +setup.scenario){ c.style.borderColor = 'var(--accent)'; const t = el('span','tag','scenario scelto'); c.appendChild(t); }
+    c.appendChild(el('h3', null, s.nome));
+    c.appendChild(el('div','tot', s.tot ? '~'+fmtE(s.tot) : '0 €'));
+    c.appendChild(el('div','small muted', s.sub));
+    if(s.tot > 0){
+      const bar = el('div','bbar');
+      VOCI_BUDGET.forEach(v => {
+        const val = s.righe[v.id]; if(!val) return;
+        const seg = el('i'); seg.style.width = (val/s.tot*100) + '%'; seg.style.background = VCOL[v.id];
+        seg.title = `${v.nome}: ${fmtE(val)}`;
+        bar.appendChild(seg);
+      });
+      c.appendChild(bar);
+      const leg = el('ul','blegend');
+      VOCI_BUDGET.forEach(v => {
+        const val = s.righe[v.id]; if(!val) return;
+        const li = el('li'); const sw = el('span','sw'); sw.style.background = VCOL[v.id];
+        li.appendChild(sw); li.append(v.nome);
+        li.appendChild(el('span','v', fmtE(val)));
+        leg.appendChild(li);
+      });
+      c.appendChild(leg);
+    }
+    c.appendChild(el('p','small', s.note)).style.color = 'var(--ink2)';
+    g.appendChild(c);
+  });
+}
+
+/* =================================================================
+   KPI / FUNNEL
+================================================================= */
+function buildFunnel(){
+  const goal = Math.max(1, +setup.obiettivo || DEFAULTS.obiettivo);
+  const pay = Math.min(100, Math.max(1, +setup.pay || DEFAULTS.pay)) / 100;
+  const lead = Math.min(100, Math.max(1, +setup.lead || DEFAULTS.lead)) / 100;
+  const ctr = Math.min(100, Math.max(1, +setup.ctr || DEFAULTS.ctr)) / 100;
+  const nLead = Math.ceil(goal / pay);
+  const nVis = Math.ceil(nLead / lead);
+  const nReach = Math.ceil(nVis / ctr);
+  const stages = [
+    ['Persone raggiunte', nReach, 'post visti, menzioni, passaparola', 'var(--ord1)', null],
+    ['Visite alla pagina', nVis, 'clic sul link evento', 'var(--ord2)', `${Math.round(ctr*100)}% dei raggiunti`],
+    ['Contatti / lead', nLead, 'lista email + anteprima', 'var(--ord3)', `${Math.round(lead*100)}% delle visite`],
+    ['Iscrizioni pagate', goal, 'il tuo obiettivo', 'var(--ord4)', `${Math.round(pay*100)}% dei contatti`]
+  ];
+  const f = $('#funnel'); f.textContent = '';
+  stages.forEach(([lbl, val, cap, col, conv]) => {
+    const s = el('div','stage'); s.style.borderTopColor = col;
+    s.appendChild(el('div','lbl', lbl));
+    s.appendChild(el('div','val', '~' + fmtN(val)));
+    s.appendChild(el('div','conv', conv ? conv + ' · ' + cap : cap));
+    f.appendChild(s);
+  });
+  $('#tGoal').textContent = fmtN(goal);
+}
+function bindAssump(){
+  [['aCtr','ctr'],['aLead','lead'],['aPay','pay']].forEach(([id, k]) => {
+    const inp = document.getElementById(id);
+    inp.value = setup[k];
+    inp.addEventListener('input', () => {
+      const v = +inp.value;
+      if(v >= 1 && v <= 100){ setup[k] = v; saveSetup(); buildFunnel(); }
+    });
+  });
+  $('#benchNote').textContent = BENCH_NOTE;
+}
+
+/* =================================================================
+   ERRORI · FONTI · HERO
+================================================================= */
+(function buildErr(){
+  const ol = $('#errList');
+  ERRORI.forEach(([t, d]) => {
+    const li = el('li'); li.appendChild(el('b', null, t)); li.append(d); ol.appendChild(li);
+  });
+})();
+
+function buildFonti(){
+  const box = $('#fontiBody'); box.textContent = '';
+  if(!FONTI.length){
+    box.appendChild(el('div','card small muted','Le fonti della ricerca compariranno qui.'));
+    return;
+  }
+  FONTI.forEach(gr => {
+    const c = el('div','card');
+    c.appendChild(el('h3', null, gr.titolo));
+    const ul = el('ul');
+    gr.voci.forEach(v => {
+      const li = el('li');
+      if(v.url){ const a = el('a', null, v.label); a.href = v.url; a.target = '_blank'; a.rel = 'noopener'; li.appendChild(a); }
+      else li.textContent = v.label;
+      if(v.nota){ li.append(' — '); const s = el('span','muted', v.nota); li.appendChild(s); }
+      ul.appendChild(li);
+    });
+    c.appendChild(ul); box.appendChild(c);
+  });
+}
+
+function refreshHero(){
+  $('#heroTitle').textContent = setup.nome || 'Ciclo di incontri sulla mitologia';
+  const d = setup.data ? new Date(setup.data + 'T12:00:00') : null;
+  if(d && !isNaN(d)){
+    const days = Math.ceil((d - new Date()) / 86400000);
+    $('#tDays').textContent = days >= 0 ? fmtN(days) : '—';
+    $('#tDaysCap').textContent = days >= 0 ? `primo incontro il ${fmtD(d)} ${d.getFullYear()}` : 'data già passata: aggiorna il setup';
+  } else {
+    $('#tDays').textContent = '—';
+    $('#tDaysCap').textContent = 'imposta la data qui sotto';
+  }
+  $('#tBudget').textContent = SCENARI[+setup.scenario] ? (SCENARI[+setup.scenario].tot ? '~'+fmtE(SCENARI[+setup.scenario].tot) : '0 €') : '0 €';
+}
+
+/* =================================================================
+   REFRESH GLOBALE
+================================================================= */
+let lastWeeksKey = null;
+function refresh(){
+  refreshHero();
+  buildMatrix();
+  buildChanCards();
+  if(setup.data !== lastWeeksKey){ lastWeeksKey = setup.data; buildWeeks(); }
+  updateProgress();
+  renderTpl();
+  buildBudget();
+  buildFunnel();
+}
+
+/* init */
+bindSetup();
+buildLegend();
+buildChanTable();
+buildTabs();
+buildMercato();
+buildFonti();
+bindAssump();
+refresh();
+
+/* stampa: apri tutte le settimane */
+addEventListener('beforeprint', () => $$('details.week').forEach(d => d.open = true));
+</script>
+</body>
+</html>
