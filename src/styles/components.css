@@ -1557,3 +1557,193 @@
   color: var(--gray-medium);
   font-weight: 600;
 }
+
+/* ===============================================
+   ULTIMI AGGIORNAMENTI - nastro scorrevole sotto il menu
+   =============================================== */
+
+.updates-bar {
+  background: #D4ECFF;
+  border-bottom: 2px solid var(--taxi-yellow);
+  font-size: var(--font-size-sm);
+  color: var(--gray-dark);
+}
+
+.updates-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.updates-bar__label {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--taxi-yellow-dark);
+  border-inline-end: 1px solid rgba(30, 155, 233, 0.35);
+  padding-inline-end: 0.75rem;
+}
+
+/* Finestra ferma: il nastro scorre dentro, il resto della barra non si muove */
+.updates-bar__viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  /* le due copie del gruppo restano su una riga sola */
+  mask-image: linear-gradient(to right, transparent 0, #000 1.5rem, #000 calc(100% - 1.5rem), transparent 100%);
+}
+
+.updates-bar__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: updates-scroll var(--updates-duration, 45s) linear infinite;
+}
+
+/* Niente flex-shrink e nessun tetto di larghezza in tutta la catena: i gruppi
+   devono restare alla loro larghezza naturale, altrimenti il nastro non ha nulla
+   da far scorrere. Il `max-width: none` serve contro `* { max-width: 100% }` di
+   mobile-fix.css, che sotto i 768px comprimerebbe il nastro nella finestra. */
+.updates-bar__track,
+.updates-bar__group,
+.updates-bar__item,
+.updates-bar__sep {
+  max-width: none;
+}
+
+.updates-bar__group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.updates-bar__item,
+.updates-bar__sep {
+  flex: 0 0 auto;
+}
+
+/* --updates-shift = larghezza di un gruppo, misurata in JS. Il fallback 50%
+   vale quando il JS non gira: il markup rende due copie, metà nastro = un gruppo. */
+@keyframes updates-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-1 * var(--updates-shift, 50%))); }
+}
+
+.updates-bar:hover .updates-bar__track,
+.updates-bar:focus-within .updates-bar__track,
+.updates-bar.is-paused .updates-bar__track {
+  animation-play-state: paused;
+}
+
+.updates-bar__item {
+  /* esplicito: le regole globali sui blocchi di testo vincerebbero sull'ereditarietà */
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+.updates-bar__date {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.updates-bar__date::after {
+  content: '\00a0—';
+}
+
+.updates-bar__link {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--taxi-yellow-dark);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  margin-inline-start: 0.35rem;
+}
+
+.updates-bar__link:hover,
+.updates-bar__link:focus-visible {
+  text-decoration-color: var(--black);
+}
+
+.updates-bar__sep {
+  color: rgba(0, 0, 0, 0.35);
+  padding: 0 1.75rem;
+}
+
+.updates-bar__pause {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--gray-dark);
+  cursor: pointer;
+  font-size: 0.6rem;
+  line-height: 1;
+  padding: 0.4rem 0.55rem;
+  width: auto;
+  transition: background-color var(--transition-fast);
+}
+
+.updates-bar__pause:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 768px) {
+  .updates-bar,
+  .updates-bar__item {
+    font-size: var(--font-size-xs);
+  }
+
+  .updates-bar__sep {
+    padding: 0 1.25rem;
+  }
+
+  /* Il pulsante resta piccolo (la barra non deve diventare una fascia alta),
+     ma l'area toccabile arriva a ~44x44 con un'estensione invisibile. */
+  .updates-bar__pause {
+    position: relative;
+  }
+
+  .updates-bar__pause::before {
+    content: '';
+    position: absolute;
+    inset: -0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Su schermi stretti l'etichetta ruberebbe metà riga al nastro */
+  .updates-bar__label {
+    display: none;
+  }
+}
+
+/* Nessun movimento: il nastro diventa testo normale che va a capo,
+   la copia di servizio e il pulsante di pausa spariscono. */
+@media (prefers-reduced-motion: reduce) {
+  .updates-bar__viewport {
+    overflow: visible;
+    mask-image: none;
+  }
+
+  .updates-bar__track {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .updates-bar__group {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .updates-bar__group + .updates-bar__group,
+  .updates-bar__group > .updates-bar__sep:last-child,
+  .updates-bar__pause {
+    display: none;
+  }
+}

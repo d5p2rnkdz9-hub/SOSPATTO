@@ -1,0 +1,89 @@
+<!-- Ultimi aggiornamenti — banner scorrevole sotto il menu (dati: _data/updates.js) -->
+{%- assign updatesData = updates[lang] | default: updates.it -%}
+{%- if updatesData.items.size > 0 -%}
+<aside class="updates-bar" aria-label="{{ updatesData.label }}">
+  <div class="container updates-bar__inner">
+    <span class="updates-bar__label">{{ updatesData.label }}</span>
+    <div class="updates-bar__viewport">
+      {%- comment -%} Il track contiene due copie identiche del gruppo: l'animazione
+          trasla del 50% e il ciclo si chiude senza stacchi. La seconda copia è
+          fuori dall'albero di accessibilità e non è raggiungibile da tastiera. {%- endcomment -%}
+      <div class="updates-bar__track">
+        {%- for pass in (1..2) %}
+        <div class="updates-bar__group"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+          {%- for item in updatesData.items %}
+          <span class="updates-bar__item">
+            <span class="updates-bar__date">{{ item.date }}</span>
+            <span class="updates-bar__text">{{ item.text }}</span>
+            <a class="updates-bar__link" href="{% if item.external %}{{ item.href }}{% else %}{{ item.href | url }}{% endif %}"{% if item.external %} target="_blank" rel="noopener"{% endif %}{% if item.linkLang %} hreflang="{{ item.linkLang }}"{% endif %}{% if pass == 2 %} tabindex="-1"{% endif %}>{{ item.cta }}</a>
+          </span>
+          <span class="updates-bar__sep" aria-hidden="true">•</span>
+          {%- endfor %}
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+    <button type="button" class="updates-bar__pause" aria-pressed="false" aria-label="{{ updatesData.pauseLabel }}" title="{{ updatesData.pauseLabel }}">❙❙</button>
+  </div>
+</aside>
+<script>
+(function () {
+  var bar = document.querySelector('.updates-bar');
+  if (!bar) return;
+  var viewport = bar.querySelector('.updates-bar__viewport');
+  var track = bar.querySelector('.updates-bar__track');
+  var group = bar.querySelector('.updates-bar__group');
+  if (!viewport || !track || !group) return;
+
+  // Velocità costante (px/s) invece di durata fissa: aggiungere una novità
+  // allunga il nastro, non accelera lo scorrimento.
+  var SPEED = 60;
+
+  function silence(el) {
+    el.setAttribute('aria-hidden', 'true');
+    var links = el.querySelectorAll('a');
+    for (var i = 0; i < links.length; i++) links[i].setAttribute('tabindex', '-1');
+  }
+
+  function layout() {
+    var groupW = group.getBoundingClientRect().width;
+    var viewW = viewport.getBoundingClientRect().width;
+    if (!groupW || !viewW) return;
+
+    // Il salto a fine ciclo è invisibile solo se dopo il primo gruppo ce n'è
+    // sempre abbastanza da coprire la finestra: con novità corte o schermi
+    // larghi servono più di due copie.
+    var needed = Math.max(2, Math.ceil((viewW + groupW) / groupW));
+    for (var i = track.children.length; i < needed; i++) {
+      var copy = group.cloneNode(true);
+      silence(copy);
+      track.appendChild(copy);
+    }
+
+    track.style.setProperty('--updates-shift', groupW + 'px');
+    track.style.setProperty('--updates-duration', Math.max(8, groupW / SPEED).toFixed(1) + 's');
+  }
+
+  layout();
+  // I webfont arrivano async e cambiano la larghezza del nastro
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 200);
+  });
+
+  // WCAG 2.2.2: lo scorrimento deve essere fermabile. Hover e focus da tastiera
+  // sono gestiti in CSS; qui il pulsante, che è la pausa persistente.
+  var toggle = bar.querySelector('.updates-bar__pause');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var paused = bar.classList.toggle('is-paused');
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.textContent = paused ? '▸' : '❙❙';
+    });
+  }
+})();
+</script>
+{%- endif -%}
