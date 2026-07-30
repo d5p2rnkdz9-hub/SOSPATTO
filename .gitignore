@@ -4,3 +4,6 @@ _site/
 ._*
 *.log
 .env
+
+# Anteprime di verifica oscuramento PDF (scripts/oscura_pdf.py --verifica)
+*_verifica/

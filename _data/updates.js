@@ -21,6 +21,12 @@ module.exports = {
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
       {
+        date: '27 luglio 2026',
+        text: 'Trib. Caltanissetta: autorizzato a permanere per compressione del diritto di difesa in frontiera',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-caltanissetta-1137-2026-07-27.html',
+      },
+      {
         date: '25 luglio 2026',
         text: 'Trib. Palermo: revocata l’autorizzazione a risiedere in frontiera (art. 5-quinquies)',
         cta: 'Leggi la scheda',

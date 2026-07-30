@@ -36,9 +36,28 @@ scripts/          retheme_blue.py — ritinta in blu i CSS (sito + bundle)
    es. `/patto-interattivo/1348.html` o `/patto-interattivo/dlgs-25-2008/index.html#art_32`).
    Togli `esempio: true`.
 3. (Facoltativo) PDF del provvedimento **anonimizzato** in `public/allegati/giurisprudenza/`
-   e percorso nel campo `pdf`.
+   e percorso nel campo `pdf`. **NON basta disegnare un rettangolo nero**: se è
+   semitrasparente o lascia sotto testo/immagine, il dato resta leggibile. Usa lo
+   script che fa redaction VERA e irreversibile (rimuove pixel e testo):
+
+   ```bash
+   # scansione con box semitrasparenti già presenti + sweep OCR su nomi/date:
+   python3 scripts/oscura_pdf.py SORGENTE.pdf \
+       public/allegati/giurisprudenza/<nomefile>.pdf \
+       --riscura --ocr --nomi "COGNOME Nome" "Luogo di nascita" --verifica
+   ```
+
+   ⚠️ **Verifica sempre**: `--verifica` genera le anteprime in
+   `<out>.pdf_verifica/` e azzera il testo estraibile, ma l'auto-rilevamento non
+   garantisce da solo (un dato mai coperto — es. un anno di nascita nudo fuori dai
+   box — può restare visibile). Guarda le anteprime e, per ogni residuo, aggiungi
+   `--box PAGINA:x0,y0,x1,y1` (coordinate in punti). La cartella `_verifica/` è
+   solo di lavoro: non committarla.
 4. Il corpo del file è il commento libero in Markdown.
 5. `git add … && git commit && git push` → Netlify ricostruisce e pubblica da solo.
+
+> Le bozze non ancora pronte (es. PDF da rioscurare) usano l'estensione
+> `.md.bozza`: Eleventy le ignora finché non le rinomini in `.md`.
 
 La scheda appare automaticamente in `/giurisprudenza.html` (ordinata per data
 decrescente) e ha la sua pagina `/giurisprudenza/<nomefile>.html`.
