@@ -1,0 +1,74 @@
+# ⚠️ BOZZA — NON PUBBLICATA: manca il provvedimento
+#
+# Segnalata da Alessandro Praticò in ASGI gruppo Diritto di asilo il 03.08.2026
+# ("Sospensiva 35 bis c. 4 - d.l. 100/26 - Tribunale To"). La mail annuncia
+# "invio la sospensiva" ma NON HA ALLEGATI: il thread ha un solo messaggio e il
+# PDF non è mai arrivato.
+#
+# Di conseguenza NON sono verificabili sul provvedimento: sezione, giudice,
+# numero di R.G., data della decisione e il testo integrale della motivazione.
+# Il contenuto qui sotto viene interamente dalla mail di segnalazione, ed è per
+# questo che la scheda resta .md.bozza: pubblicarla ora significherebbe citare
+# una decisione senza averla letta.
+#
+# Per pubblicare:
+#   1. ottenere il PDF (chiedere a Praticò il rinvio dell'allegato);
+#   2. verificare sul documento corte/sezione/giudice/R.G./data e le norme
+#      citate, e correggere frontmatter e testo di conseguenza;
+#   3. controllare l'anonimizzazione pagina per pagina; oscurare se serve
+#      (scripts/oscura_pdf.py) e copiare in
+#      public/allegati/giurisprudenza/;
+#   4. rinominare questo file in .md, aggiungere il campo `pdf:` e inserire la
+#      voce nel nastro in _data/updates.js (max 4 voci, si toglie l'ultima).
+#
+---
+corte: "Tribunale di Torino, Sez. specializzata immigrazione"
+tipo: "Decreto (istanza di autorizzazione a rimanere, art. 35-bis, comma 4, d.lgs. 25/2008)"
+numero: "DA VERIFICARE — R.G. non noto"
+date: 2026-08-03
+temi: [paesi di origine sicuri, procedura accelerata, paesi con riconoscimento ≤ 20%, Eurostat, autorizzazione a rimanere, categorie di persone]
+massima: "Nel primo ricorso proposto a Torino sotto il regime del Reg. (UE) 2024/1348 e del d.l. 100/2026, il Tribunale autorizza il richiedente a rimanere: occorre approfondire la possibile appartenenza a una categoria di soggetti «le cui esigenze di protezione impediscono di considerare rappresentativa una percentuale di riconoscimento pari o inferiore al 20%», previsione derogatoria rispetto alla scelta amministrativa di trattare la domanda con procedura accelerata ai sensi dell'art. 42, par. 1, lett. j), Reg. (UE) 2024/1348. Il rilievo era corroborato dalla relazione del Governo al Parlamento sui paesi cosiddetti sicuri."
+norme:
+  - { label: "Art. 42, par. 1, lett. j) Reg. (UE) 2024/1348 (procedura accelerata; tasso di riconoscimento ≤ 20%)", href: "/patto-interattivo/1348.html#art_42" }
+  - { label: "Art. 68, par. 3 Reg. (UE) 2024/1348 (deroghe all'effetto sospensivo del ricorso)", href: "/patto-interattivo/1348.html#art_68" }
+  - { label: "Art. 35-bis, comma 4, d.lgs. 25/2008 (istanza di autorizzazione a rimanere)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_35-bis" }
+---
+
+Il Tribunale di Torino ha concesso l'autorizzazione a rimanere nel **primo ricorso presentato dal
+difensore sotto il nuovo regime** del Reg. (UE) 2024/1348 e del d.l. 100/2026. Il ricorrente,
+cittadino del **Perù**, aveva dedotto di essere un imprenditore vittima di estorsioni da parte di un
+gruppo malavitoso.
+
+L'amministrazione aveva trattato la domanda con **procedura accelerata** sul presupposto dell'art.
+42, par. 1, lett. *j*), Reg. (UE) 2024/1348 — cittadinanza di un paese terzo con tasso medio annuale
+Eurostat di riconoscimento pari o inferiore al 20%. Il Tribunale ha accolto il rilievo difensivo
+secondo cui il richiedente apparteneva a una **categoria non al sicuro nel paese di origine**,
+circostanza riscontrata anche dalla **relazione del Governo al Parlamento sui paesi cosiddetti
+sicuri**, e ha affermato che
+
+> «appare necessario approfondire il dato relativo alla possibile appartenenza del richiedente ad
+> una categoria di soggetti "le cui esigenze di protezione impediscono di considerare
+> rappresentativa una percentuale di riconoscimento pari o inferiore al 20%", […] previsione
+> derogatoria alla scelta amministrativa di provvedere alla trattazione della domanda con procedura
+> accelerata, giusto art. 42 comma lettera j) Regolamento 1348/2024».
+
+## Perché conta
+
+È la **seconda clausola di salvaguardia** dell'art. 42, par. 1, lett. *j*) a essere valorizzata, e
+in un contesto diverso da quello siciliano. I decreti del Tribunale di Palermo
+([R.G. 9739/2026 e gemelli](/giurisprudenza/trib-palermo-9739-2026-07-25.html)) hanno affermato che
+il dato Eurostat ha valore soltanto indiziario e che l'autorità procedente deve esplicitare perché
+il richiedente non rientri in categorie esposte a specifici rischi: là il vizio era il **difetto di
+motivazione della determina**. Qui il giudice va oltre e ritiene necessario **approfondire nel
+merito** l'appartenenza a una di quelle categorie, sulla base di un elemento istruttorio esterno —
+la relazione governativa sui paesi sicuri.
+
+Il caso mostra anche come le due discipline si sovrappongano: il Perù rileva sia come **paese di
+origine designato sicuro** sia come paese con tasso di riconoscimento ≤ 20%, e la deroga per
+categoria opera su entrambi i piani. Sul rito, la richiesta è stata proposta come **istanza di
+autorizzazione a rimanere ex art. 35-*bis*, comma 4**, d.lgs. 25/2008, che il d.l. 100/2026 riserva
+ai casi dell'art. 68, par. 3, del regolamento — a differenza dei casi di frontiera, che seguono
+l'art. 35-*ter*.
+
+> Nota: sezione, giudice, numero di R.G. e data della decisione non sono ancora verificati sul
+> provvedimento, che non è stato allegato alla segnalazione.

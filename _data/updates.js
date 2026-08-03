@@ -13,7 +13,9 @@
  *   href      → destinazione (interna: passa da `| url`; esterna: usa external)
  *   external  → apre in una nuova scheda (per link fuori dal sito)
  *
- * Per aggiungere una novità: nuovo item in cima all'array `it.items`.
+ * REGOLA: massimo 4 voci, in ordine di data del provvedimento decrescente, con
+ * una sola voce per filone (se due decisioni gemelle dicono la stessa cosa, ne
+ * entra una). Aggiungendo una novità si toglie la voce in fondo.
  */
 module.exports = {
   it: {
@@ -28,12 +30,6 @@ module.exports = {
       },
       {
         date: '25 luglio 2026',
-        text: 'Trib. Palermo: revocata l’autorizzazione a risiedere in frontiera (art. 5-quinquies)',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-palermo-8694-2026-07-25.html',
-      },
-      {
-        date: '25 luglio 2026',
         text: 'Trib. Palermo: non basta un modulo con QR code a informare chi è in procedura di frontiera',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-palermo-8695-2026-07-25.html',
@@ -45,28 +41,10 @@ module.exports = {
         href: '/giurisprudenza/trib-palermo-9739-2026-07-25.html',
       },
       {
-        date: '23 luglio 2026',
-        text: 'Trib. Bologna: decide nel merito il reclamo sull’autorizzazione a risiedere in luogo specifico',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-bologna-10979-2026-07-23.html',
-      },
-      {
-        date: '22 luglio 2026',
-        text: 'Trib. Messina: il Patto non si applica a chi ha manifestato la volontà prima del 12 giugno 2026',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-messina-2614-2026-07-22.html',
-      },
-      {
         date: '20 luglio 2026',
         text: 'T.A.R. Lombardia: istruttoria sulla class action ASGI-NAGA per i ritardi nell’accesso alla procedura d’asilo a Milano',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/tar-lombardia-3818-2026-07-20.html',
-      },
-      {
-        date: '16 luglio 2026',
-        text: 'Trib. Bologna: senza colloquio non si dichiara inammissibile la domanda reiterata, il nuovo art. 29 confligge col regolamento',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-bologna-11250-2026-07-16.html',
       },
     ],
   },
