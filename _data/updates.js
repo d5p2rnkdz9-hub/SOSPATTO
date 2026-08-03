@@ -50,6 +50,12 @@ module.exports = {
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-messina-2614-2026-07-22.html',
       },
+      {
+        date: '20 luglio 2026',
+        text: 'T.A.R. Lombardia: istruttoria sulla class action ASGI-NAGA per i ritardi nell’accesso alla procedura d’asilo a Milano',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/tar-lombardia-3818-2026-07-20.html',
+      },
     ],
   },
 };

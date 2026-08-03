@@ -1,0 +1,57 @@
+# ⚠️ BOZZA — NON PUBBLICATA
+#
+# Estensione `.md.bozza`: Eleventy non la processa. Per pubblicare:
+#   1. ri-oscurare il PDF. Nome e cognome sono coperti (restano visibili solo
+#      frammenti di lettere ai bordi dei rettangoli), MA sono in chiaro:
+#      la data di nascita (minore, nato nel 2007) nella colonna italiana del modulo di
+#      screening e, in intestazione/piè di pagina di ogni foglio, l'URL del
+#      gestionale con l'id del record
+#      (sia-gestionale.dcft.interno.gov.it/screening/stampe/printForm.php?id=…).
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             dossier-agrigento-modulo-screening-2026-07-05.pdf"
+#   2. copiarlo in public/allegati/circolari/modulo-screening-agrigento-2026-07-05.pdf
+#   3. rinominare questo file in `modulo-screening-agrigento-2026-07-05.md`
+#
+---
+ente: "Questura di Agrigento — Ufficio Immigrazione"
+tipo: "Atto di prassi — modulo di screening"
+numero: "modello «Modulo di screening — Form», stampa del gestionale SIA"
+date: 2026-07-05
+temi: [screening, accertamenti, minori, vulnerabilità, attestazione di manifestazione, CAS]
+oggetto: "Il modulo di screening generato dal gestionale del Ministero dell'interno, bilingue italiano-somalo, con i campi anagrafici, l'età, il flag «minore», nazionalità e luogo di nascita, unito all'attestazione di manifestazione rilasciata dalla Questura di Agrigento a un giovane somalo poi collocato in CAS."
+norme:
+  - { label: "Reg. (UE) 2024/1356 (accertamenti — screening)", href: "/patto-interattivo/1356.html" }
+  - { label: "Art. 8 Reg. (UE) 2024/1356 (controlli preliminari di salute e vulnerabilità)", href: "/patto-interattivo/1356.html#art_8" }
+  - { label: "Art. 17 Reg. (UE) 2024/1356 (modulo consultivo all'esito degli accertamenti)", href: "/patto-interattivo/1356.html#art_17" }
+  - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
+  - { label: "Art. 28 Reg. (UE) 2024/1348 (formalizzazione della domanda)", href: "/patto-interattivo/1348.html#art_28" }
+pdf: /allegati/circolari/modulo-screening-agrigento-2026-07-05.pdf
+pdfLabel: "Scarica il modulo (PDF, oscurato)"
+---
+
+Documentazione condivisa nello scambio ASGI sulle prime applicazioni della nuova procedura, relativa
+a un giovane cittadino somalo passato dalla Questura di Agrigento e poi collocato in CAS. Contiene due
+atti.
+
+Il primo è l'**attestazione di manifestazione protezione internazionale** della Questura di Agrigento
+del 6 luglio 2026, nello stesso modello già visto a [Trento](/circolari/attestazione-manifestazione-trento-2026-06.html)
+e in uso anche a Firenze: attesta la registrazione della
+domanda ai sensi dell'art. 27 Reg. (UE) 2024/1348, assegna 21 giorni per la formalizzazione ex art. 28
+ed è valida fino al rilascio del documento ex art. 29, par. 3.
+
+Il secondo — di maggiore interesse, perché finora poco documentato — è il **«Modulo di screening —
+Form»** stampato dal gestionale del Ministero dell'interno (`sia-gestionale.dcft.interno.gov.it`),
+redatto in **italiano e somalo** su due colonne. La struttura del modulo:
+
+- *Informazioni generali*: data di inizio e data di fine degli accertamenti (nel caso in esame **la stessa
+  data**, 5 luglio 2026), ID gestionale;
+- *Informazioni personali*: cognome, nome, sesso, data di nascita, **età**, il campo **«minore»**
+  (valorizzato «no»), nazionalità e luogo di nascita.
+
+Il documento è utile per due ragioni. Consente di verificare quali informazioni il sistema raccoglie
+formalmente in fase di screening — e quali no: il modulo non registra i motivi della domanda di
+protezione, elemento su cui si sono appuntate le censure ricostruite nel [fascicolo di
+Agrigento](/circolari/prassi-frontiera-sikania-2026-06.html) e nelle decisioni del Tribunale di Palermo.
+E mostra che la determinazione dell'età è affidata a un campo binario compilato nel medesimo giorno
+di avvio e chiusura degli accertamenti, in un caso in cui l'interessato risultava avere appena compiuto
+diciotto anni.

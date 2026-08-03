@@ -24,6 +24,21 @@
   to = "/IMAGES/apple-touch-icon.png"
   status = 200
 
+# ── SCHEDE ACCORPATE ──
+# Il reclamo R.G. 8694/2026 (Trib. Palermo) aveva due schede, cautelare e merito:
+# ora sono una sola, datata alla decisione definitiva.
+[[redirects]]
+  from = "/giurisprudenza/trib-palermo-8694-2026-06-29.html"
+  to = "/giurisprudenza/trib-palermo-8694-2026-07-25.html"
+  status = 301
+
+# Idem per il reclamo gemello R.G. 8695/2026: la scheda del decreto cautelare
+# (27.06.2026) e' stata accorpata nella scheda dell'ordinanza definitiva.
+[[redirects]]
+  from = "/giurisprudenza/trib-palermo-8695-2026-06-27.html"
+  to = "/giurisprudenza/trib-palermo-8695-2026-07-25.html"
+  status = 301
+
 # ── HOMEPAGE CANONICAL ──
 [[redirects]]
   from = "/index.html"

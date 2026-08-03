@@ -1,0 +1,53 @@
+# ⚠️ BOZZA — NON PUBBLICATA (ritirata il 03.08.2026)
+#
+# Il 29.07 questa scheda era stata data per pronta, segnalando solo un frammento
+# ("Abdul…") che sporgeva da un rettangolo. Al ricontrollo del 03.08 il difetto e'
+# piu' grave: nella riga in FRANCESE il rettangolo e' semitrasparente e si legge
+# il NOME E COGNOME COMPLETI del richiedente, piu' parte della data di nascita.
+# Anche la cittadinanza traspare nelle righe spagnola e tedesca.
+#
+# Per pubblicare:
+#   1. ri-oscurare il PDF con rettangoli OPACHI su tutte e cinque le righe
+#      multilingua (italiano, inglese, francese, spagnolo, tedesco) e su CUI,
+#      ID manifestazione, C.F. e foto in testa; verificare riga per riga a 300 dpi.
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             DA-RIOSCURARE-attestazione-firenze-2026-07.pdf"
+#   2. copiarlo in public/allegati/circolari/attestazione-manifestazione-firenze-2026-07.pdf
+#   3. rinominare questo file in `attestazione-manifestazione-firenze-2026-07.md`
+#   4. ripristinare i rinvii rimossi in attestazione-manifestazione-trento-2026-06.md
+#      e in modulo-screening-agrigento-2026-07-05.md.bozza
+#
+---
+ente: "Questura di Firenze — Ufficio Immigrazione"
+tipo: "Atto di prassi — nuovo documento del richiedente"
+numero: "modello «Attestazione di manifestazione protezione internazionale»"
+date: 2026-07-13
+temi: [attestazione di manifestazione, registrazione, formalizzazione, regime transitorio]
+oggetto: "L'attestazione rilasciata dalla Questura di Firenze: è il modello destinato al regime definitivo, già in uso nella fase transitoria fino al 31 ottobre 2026, nella quale però — secondo quanto riferito dalle Questure di Firenze e Arezzo — non seguirà alcuna formalizzazione, esaurendosi la procedura con la registrazione."
+norme:
+  - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
+  - { label: "Art. 28 Reg. (UE) 2024/1348 (formalizzazione della domanda; termine di 21 giorni)", href: "/patto-interattivo/1348.html#art_28" }
+  - { label: "Art. 29, par. 3 Reg. (UE) 2024/1348 (documento rilasciato al richiedente)", href: "/patto-interattivo/1348.html#art_29" }
+  - { label: "Art. 79 Reg. (UE) 2024/1348 (disposizioni transitorie)", href: "/patto-interattivo/1348.html#art_79" }
+pdf: /allegati/circolari/attestazione-manifestazione-firenze-2026-07.pdf
+pdfLabel: "Scarica l'attestazione (PDF, oscurato)"
+---
+
+Scansione oscurata dell'**attestazione di manifestazione protezione internazionale** rilasciata dalla
+Questura di Firenze, condivisa nello scambio ASGI sulle prassi operative del nuovo sistema. Il
+documento è strutturalmente identico a quello della [Questura di
+Trento](/circolari/attestazione-manifestazione-trento-2026-06.html) e a quello contenuto nel
+[fascicolo di Agrigento](/circolari/prassi-frontiera-sikania-2026-06.html): CUI, ID manifestazione,
+codice fiscale, foto e testo in cinque lingue, con l'attestazione della registrazione ex art. 27 Reg.
+(UE) 2024/1348 e il termine di 21 giorni per la formalizzazione ex art. 28.
+
+Il dato di prassi rilevante è quello segnalato dalla collega che lo ha condiviso: si tratterebbe del
+modello **destinato al regime definitivo**, già utilizzato nella fase transitoria; e tanto la Questura di
+Firenze quanto quella di Arezzo confermerebbero che, pur essendo in regime transitorio fino al **31
+ottobre 2026**, «non seguirà la formalizzazione, ma la procedura si esaurirà con questo» documento.
+
+Ne discendono le prime difficoltà operative segnalate dagli sportelli nei rapporti con gli uffici
+pubblici — anagrafe e anagrafe sanitaria in primo luogo — chiamati a riconoscere un titolo nuovo, di
+cui non è pacifico se abbia la valenza del «documento» previsto dal regolamento e dal d.l. 100/2026.
+Sul regime transitorio si veda anche la [nota del Tribunale di Firenze sull'iscrizione a
+ruolo](/circolari/nota-trib-firenze-iscrizione-ruolo-2026-07-07.html).

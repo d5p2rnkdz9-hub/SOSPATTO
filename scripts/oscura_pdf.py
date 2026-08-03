@@ -63,13 +63,19 @@ def _redigi(page, rects):
     return len(rects)
 
 
-def _rileva_testo(page, nomi):
-    """Aree da oscurare su una pagina con testo selezionabile."""
+def _rileva_testo(page, nomi, solo_nomi=False):
+    """Aree da oscurare su una pagina con testo selezionabile.
+
+    Con solo_nomi=True si oscurano soltanto i termini passati in --nomi: serve per i
+    provvedimenti nativi digitali, dove l'unico dato personale è il nome della parte e
+    le date sono processuali (data della decisione, data di pubblicazione, date delle
+    norme citate) e devono restare leggibili."""
     rects, dettagli = [], []
     testo = page.get_text()
     termini = list(nomi)
-    for nome, patt in PATTERNS.items():
-        termini += [m.group() for m in re.finditer(patt, testo)]
+    if not solo_nomi:
+        for nome, patt in PATTERNS.items():
+            termini += [m.group() for m in re.finditer(patt, testo)]
     for termine in termini:
         if not termine.strip():
             continue
@@ -140,7 +146,8 @@ def _rileva_box(page, dpi=200):
     ]
 
 
-def oscura(src, out, nomi=None, riscura=False, ocr=False, box_manuali=None, verbose=True):
+def oscura(src, out, nomi=None, riscura=False, ocr=False, box_manuali=None,
+           solo_nomi=False, verbose=True):
     nomi = nomi or []
     box_manuali = box_manuali or {}
     doc = fitz.open(src)
@@ -148,7 +155,7 @@ def oscura(src, out, nomi=None, riscura=False, ocr=False, box_manuali=None, verb
     for i, page in enumerate(doc):
         rects = []
         if page.get_text().strip():
-            r, det = _rileva_testo(page, nomi)
+            r, det = _rileva_testo(page, nomi, solo_nomi=solo_nomi)
             rects += r
             if verbose and det:
                 print(f"  pag {i+1}: testo → {', '.join(det)}")
@@ -211,10 +218,12 @@ def main(argv=None):
                     help="PDF scansionato: OCR (ita) e oscura --nomi + date/CF/email/tel ovunque")
     ap.add_argument("--box", nargs="*", default=[],
                     help="Box manuali 'pagina:x0,y0,x1,y1' (punti, pagina 1-indexed)")
+    ap.add_argument("--solo-nomi", action="store_true",
+                    help="PDF nativo digitale: oscura SOLO i --nomi, lascia leggibili le date processuali")
     ap.add_argument("--verifica", action="store_true", help="Controllo automatico dopo l'oscuramento")
     a = ap.parse_args(argv)
     oscura(a.src, a.out, nomi=a.nomi, riscura=a.riscura, ocr=a.ocr,
-           box_manuali=_parse_box(a.box))
+           box_manuali=_parse_box(a.box), solo_nomi=a.solo_nomi)
     if a.verifica:
         verifica(a.out)
 

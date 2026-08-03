@@ -1,0 +1,64 @@
+# ⚠️ BOZZA — NON PUBBLICATA
+#
+# Estensione `.md.bozza`: Eleventy non la processa. Per pubblicare:
+#   1. ri-oscurare il PDF. I nomi sono coperti, MA restano in chiaro:
+#      il C.U.I., l'ID della manifestazione di volontà, la data di nascita, la
+#      cittadinanza, il numero indicato dopo "domiciliato in" e — annotato a mano
+#      in alto a pag. 1 — quello che sembra un codice fiscale. La sagoma della foto
+#      resta visibile.
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             dossier-trieste-2026-06-29.pdf"
+#   2. copiarlo in public/allegati/circolari/prassi-frontiera-trieste-2026-06.pdf
+#   3. rinominare questo file in `prassi-frontiera-trieste-2026-06.md`
+#
+---
+ente: "Questura di Trieste e Commissione territoriale di Trieste"
+tipo: "Atti di prassi — prima applicazione della procedura di frontiera"
+numero: "documentazione ICS / In Limine (ASGI)"
+date: 2026-06-29
+temi: [procedura di frontiera, screening, registrazione, modulo consultivo, rotta balcanica, accoglienza]
+oggetto: "Fascicolo di uno dei primi casi di procedura accelerata di frontiera applicata a Trieste, su un richiedente giunto dalla rotta balcanica: attestazione di manifestazione del 29/06/2026, informative su screening ed Eurodac, determinazione della procedura accelerata di frontiera e convocazione per l'audizione a quattro giorni. Documenta l'assenza del modulo consultivo e la mancanza di ogni traccia della formalizzazione."
+norme:
+  - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
+  - { label: "Art. 28 Reg. (UE) 2024/1348 (formalizzazione della domanda)", href: "/patto-interattivo/1348.html#art_28" }
+  - { label: "Art. 43 Reg. (UE) 2024/1348 (procedura di frontiera)", href: "/patto-interattivo/1348.html#art_43" }
+  - { label: "Art. 54 Reg. (UE) 2024/1348 (determinazione delle zone di frontiera)", href: "/patto-interattivo/1348.html#art_54" }
+  - { label: "Reg. (UE) 2024/1356 (accertamenti — screening)", href: "/patto-interattivo/1356.html" }
+  - { label: "Art. 17 Reg. (UE) 2024/1356 (modulo consultivo all'esito degli accertamenti)", href: "/patto-interattivo/1356.html#art_17" }
+  - { label: "Art. 28, commi 1 e 1-bis, d.lgs. 25/2008 (determinazione della procedura; zone di frontiera e transito)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_28" }
+pdf: /allegati/circolari/prassi-frontiera-trieste-2026-06.pdf
+pdfLabel: "Scarica il fascicolo degli atti (PDF, oscurato)"
+---
+
+Fascicolo condiviso da Gianfranco Schiavone (ICS / ASGI) su uno dei primi casi di **procedura
+accelerata di frontiera applicata a Trieste** a un richiedente giunto dalla rotta balcanica — caso
+ritenuto illegittimo e discusso nella riunione del gruppo In Limine del 6 luglio 2026. È il contraltare
+continentale del [fascicolo di Agrigento](/circolari/prassi-frontiera-sikania-2026-06.html): mostra
+l'applicazione del dispositivo di frontiera fuori da un contesto di sbarco.
+
+La cronologia documentata dagli atti:
+
+1. il richiedente resta **in strada per alcune settimane**, senza registrazione della manifestazione di
+   volontà e quindi senza accesso alle misure di accoglienza;
+2. il 16 giugno 2026 riceve un invito a presentarsi in Questura il 26 giugno; l'invito **non specifica la
+   ragione della convocazione**, pur trattandosi di una «procedura» che si applica ai soli richiedenti
+   asilo — di fatto una registrazione senza riconoscimento dei diritti connessi;
+3. il 26 giugno è sottoposto a **screening** negli uffici della Questura: in atti vi è soltanto
+   l'informativa sullo screening e su Eurodac, **non vi è alcun modulo consultivo**;
+4. dopo lo screening è nuovamente lasciato in strada e invitato — a voce — a ripresentarsi lunedì 29
+   giugno, data in cui viene effettuata l'intera **registrazione della domanda**, denominata nel
+   documento «manifestazione protezione internazionale», senza che sia mai stata registrata una
+   precedente manifestazione di volontà con invito a formalizzare entro 21 giorni;
+5. **lo stesso giorno**, e senza alcuna formalizzazione della domanda, il presidente della
+   Commissione territoriale determina la procedura applicabile, individuandola nella procedura
+   accelerata di frontiera con rinvio all'art. 28, comma 1, d.lgs. 25/2008 e al comma 1-*bis* sulle zone
+   di frontiera e transito; la qualificazione è ribadita nel verbale dell'audizione;
+6. la Questura notifica, prima dell'ingresso in accoglienza, la **convocazione dinanzi alla
+   Commissione territoriale fissata quattro giorni dopo**.
+
+Il fascicolo è documentalmente rilevante su tre punti che ritornano nella giurisprudenza: l'assenza
+del modulo consultivo all'esito dello screening (che, nelle prassi siciliane, viene invece rilasciato ma
+riporta solo le vulnerabilità e non i motivi della domanda); la **mancanza di ogni traccia della
+formalizzazione** — forse sul presupposto che nel regime transitorio la domanda si intenda
+formalizzata con la registrazione, con la conseguenza però che nessuna valutazione individuale
+precede la scelta della procedura; e la compressione dei tempi di preparazione dell'audizione.

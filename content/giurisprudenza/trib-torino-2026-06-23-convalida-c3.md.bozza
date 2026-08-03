@@ -1,0 +1,60 @@
+# ⚠️ BOZZA — NON PUBBLICATA
+#
+# Estensione `.md.bozza`: Eleventy non la processa. Per pubblicare:
+#   1. anonimizzare il PDF: NON è oscurato — a pag. 1 compare in chiaro il nome
+#      e cognome del trattenuto ("...la convalida del trattenimento di NOME
+#      COGNOME presso il CPR di Torino-Brunelleschi"), oltre a frammenti di C.U.I.
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             DA-OSCURARE-trib-torino-2026-06-23-convalida-c3.pdf"
+#   2. copiarlo in public/allegati/giurisprudenza/trib-torino-2026-06-23-convalida-c3.pdf
+#   3. rinominare questo file in `trib-torino-2026-06-23-convalida-c3.md`
+#
+# Nota di merito: la decisione applica il quadro previgente (art. 6 d.lgs. 142/2015)
+# e non il Patto; è stata inclusa perché il nodo — se la domanda possa dirsi
+# «presentata» prima della verbalizzazione — è lo stesso che il Patto ridisegna con
+# la sequenza manifestazione / registrazione / formalizzazione. Valuta tu se
+# tenerla o scartarla.
+#
+---
+corte: "Tribunale di Torino, Sez. IX civile — specializzata immigrazione"
+tipo: "Decreto (procedimento di convalida del trattenimento)"
+numero: "udienza del 23/06/2026"
+date: 2026-06-23
+temi: [trattenimento, formalizzazione della domanda, modello C3, necessità e proporzionalità, rischio di fuga]
+massima: "Non può essere convalidato il trattenimento disposto ai sensi dell'art. 6, comma 2, lett. d), d.lgs. 142/2015 quando la domanda di protezione internazionale non è stata formalizzata mediante compilazione del modello C3: la mancata verbalizzazione impedisce di verificare in concreto i presupposti sostanziali della misura — necessità e proporzionalità del trattenimento, misura eccezionale di ultima istanza — e soprattutto la sussistenza degli elementi su cui si basa la domanda che non potrebbero essere acquisiti senza il trattenimento."
+norme:
+  - { label: "Art. 6, comma 2, lett. d) d.lgs. 142/2015 (trattenimento del richiedente)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_6" }
+  - { label: "Art. 9 Dir. (UE) 2024/1346 (residenza e libertà di circolazione)", href: "/patto-interattivo/1346.html#art_9" }
+pdf: /allegati/giurisprudenza/trib-torino-2026-06-23-convalida-c3.pdf
+---
+
+Il Tribunale di Torino, Sezione IX civile — specializzata in materia di immigrazione, protezione
+internazionale e libera circolazione dei cittadini UE (giudice dott. Valerio Brecciaroli), **non ha
+convalidato** il trattenimento di un cittadino turco presso il CPR di Torino-Brunelleschi, disposto
+dalla Questura di Imperia ai sensi dell'art. 6, comma 2, lett. *d*), d.lgs. 142/2015 sul presupposto del
+rischio di fuga, dopo che l'interessato — destinatario di decreto di espulsione e di ordine di
+accompagnamento convalidati dal Giudice di pace — aveva manifestato in udienza l'intenzione di
+chiedere protezione internazionale.
+
+Il punto decisivo è che **la domanda non era stata formalizzata** mediante compilazione del
+modello C3. Per il Tribunale ciò impedisce di convalidare la misura: la Cassazione ha chiarito che,
+sebbene lo straniero acquisti la qualità di richiedente asilo nel momento in cui manifesta la volontà
+di chiedere protezione, «non si può procedere all'esame della sua domanda se non viene prima
+soddisfatto l'onere di specifica allegazione dei fatti rilevanti, con una compiuta verbalizzazione delle
+sue dichiarazioni ai sensi dell'art. 26, comma 2, d.lgs. 25/2008» (Cass. pen. sez. I, 14/05/2025, n.
+18274). La mancata verbalizzazione impedisce quindi di verificare in concreto i presupposti
+sostanziali della misura, con particolare riguardo alla **necessità e proporzionalità** del
+trattenimento — misura eccezionale, cui ricorrere esclusivamente in ultima istanza — e soprattutto
+alla valutazione, richiesta dalla lett. *d*), circa la sussistenza degli elementi su cui si basa la domanda
+e che non potrebbero essere acquisiti senza il trattenimento.
+
+Il decreto si allinea espressamente a **Trib. Palermo, decreto del 19 giugno 2026** e a **Corte
+d'appello di Milano, decreto del 27 maggio 2026**, richiamando i principi di necessità,
+proporzionalità, tutela giurisdizionale effettiva e obbligo di motivazione desumibili dall'art. 8, par.
+2, dir. 2013/33/UE, dall'art. 10, par. 2, dir. (UE) 2024/1346, dall'art. 5, par. 4, CEDU e dalla
+giurisprudenza della Corte di giustizia (*J.N.*, C-601/15 PPU, punto 63; cause riunite C-924/19 PPU
+e C-925/19 PPU, punto 253). L'inerzia della Questura, «ingiustificata in assenza di alcuna
+specificazione sul punto da parte della Pubblica Amministrazione», non consente alcuna valutazione
+sugli elementi fattuali relativi alla posizione individuale, «determinando una compressione delle
+garanzie procedurali stabilite a tutela del richiedente la protezione internazionale, destinata
+inevitabilmente a riverberarsi sulla stessa base legale del trattenimento».

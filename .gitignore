@@ -7,3 +7,13 @@ _site/
 
 # Anteprime di verifica oscuramento PDF (scripts/oscura_pdf.py --verifica)
 *_verifica/
+
+# Materiale sorgente scaricato dalle liste: contiene PDF NON oscurati (nomi,
+# date di nascita, C.U.I.). Il repo e' pubblico: non deve finirci dentro.
+Materiali da caricare SOSPATTO/
+
+# Report di revisione pre-pubblicazione: note di lavoro interne
+REVISIONE-*.md
+
+# Progetto Next.js di prova, estraneo al sito
+test_SOSPatto/
