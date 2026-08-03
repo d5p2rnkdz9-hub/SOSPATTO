@@ -23,6 +23,12 @@ module.exports = {
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
       {
+        date: '31 luglio 2026',
+        text: 'Trib. Torino: va approfondito se il richiedente appartenga a una categoria per cui la percentuale ≤ 20% non è rappresentativa',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-torino-14577-2026-07-31.html',
+      },
+      {
         date: '27 luglio 2026',
         text: 'Trib. Caltanissetta: autorizzato a permanere per compressione del diritto di difesa in frontiera',
         cta: 'Leggi la scheda',
@@ -33,12 +39,6 @@ module.exports = {
         text: 'Trib. Palermo: non basta un modulo con QR code a informare chi è in procedura di frontiera',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-palermo-8695-2026-07-25.html',
-      },
-      {
-        date: '25 luglio 2026',
-        text: 'Trib. Palermo: il tasso Eurostat ≤ 20% è solo indiziario, non basta per la procedura di frontiera',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-palermo-9739-2026-07-25.html',
       },
       {
         date: '20 luglio 2026',
