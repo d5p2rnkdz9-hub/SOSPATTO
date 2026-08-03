@@ -34,6 +34,12 @@ module.exports = {
       },
       {
         date: '25 luglio 2026',
+        text: 'Trib. Palermo: non basta un modulo con QR code a informare chi è in procedura di frontiera',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-palermo-8695-2026-07-25.html',
+      },
+      {
+        date: '25 luglio 2026',
         text: 'Trib. Palermo: il tasso Eurostat ≤ 20% è solo indiziario, non basta per la procedura di frontiera',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-palermo-9739-2026-07-25.html',
@@ -55,6 +61,12 @@ module.exports = {
         text: 'T.A.R. Lombardia: istruttoria sulla class action ASGI-NAGA per i ritardi nell’accesso alla procedura d’asilo a Milano',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/tar-lombardia-3818-2026-07-20.html',
+      },
+      {
+        date: '16 luglio 2026',
+        text: 'Trib. Bologna: senza colloquio non si dichiara inammissibile la domanda reiterata, il nuovo art. 29 confligge col regolamento',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-bologna-11250-2026-07-16.html',
       },
     ],
   },
