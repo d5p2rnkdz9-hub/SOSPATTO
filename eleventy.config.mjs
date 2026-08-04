@@ -4,6 +4,9 @@ const require = createRequire(import.meta.url);
 
 const mdRenderer = markdownIt({ html: true, linkify: true, typographer: true });
 
+const vocabolarioTemi = require('./_data/vocabolarioTemi.js');
+const slugPerTema = Object.fromEntries(vocabolarioTemi.map((t) => [t.label, t.slug]));
+
 const MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno',
   'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
 
@@ -20,6 +23,9 @@ export default function (eleventyConfig) {
 
   // ---- filtri -----------------------------------------------------------
   eleventyConfig.addFilter('md', (str) => mdRenderer.render(str || ''));
+
+  // label del macro-tema -> slug (per URL e data-temi); vedi _data/vocabolarioTemi.js
+  eleventyConfig.addFilter('temaSlug', (label) => slugPerTema[label] || '');
 
   // 2026-05-12 -> "12 maggio 2026"
   eleventyConfig.addFilter('dataIt', (d) => {

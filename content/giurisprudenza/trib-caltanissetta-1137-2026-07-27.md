@@ -3,7 +3,7 @@ corte: "Tribunale di Caltanissetta, Sez. feriale — immigrazione"
 tipo: "Decreto (istanza di autorizzazione a permanere, art. 35-ter d.lgs. 25/2008)"
 numero: "N. 1137/2026 R.G."
 date: 2026-07-27
-temi: [procedura di frontiera, diritto di difesa, credibilità, vulnerabilità, videoregistrazione, autorizzazione a rimanere]
+temi: [Procedura di frontiera, Garanzie procedurali, Vulnerabilità, Rimedi giurisdizionali]
 massima: "In un giudizio ex art. 35-ter d.lgs. 25/2008 novellato dal d.l. 100/2026, il Tribunale autorizza il richiedente a permanere sul territorio nazionale: la condizione di precarietà in cui egli si trovava al momento del colloquio — derivata in primis dall'eccessiva compressione del diritto di difesa, dal condizionamento psicologico post-viaggio e post-permanenza forzata in Libia, dall'assenza di difensore e di supporto informativo adeguato — può aver inciso sul tenore delle dichiarazioni, sicché le aporie del narrato non fondano un giudizio di complessiva inattendibilità; rileva altresì la mancata videoregistrazione del colloquio personale."
 norme:
   - { label: "Art. 42, par. 1, lett. b) Reg. (UE) 2024/1348 (circostanze di accelerazione)", href: "/patto-interattivo/1348.html#art_42" }

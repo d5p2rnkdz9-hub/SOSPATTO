@@ -3,7 +3,7 @@ ente: "Ministero dell'Interno"
 tipo: "Piano operativo"
 numero: "2026"
 date: 2026-06-11
-temi: [screening, organizzazione, frontiera]
+temi: [Screening, Procedura di frontiera]
 oggetto: "Piano nazionale per l'attuazione dello screening dei cittadini di paesi terzi alle frontiere esterne (Reg. 2024/1356): organizzazione, punti di screening e flussi operativi."
 norme:
   - { label: "Reg. (UE) 2024/1356 (screening)", href: "/patto-interattivo/1356.html" }

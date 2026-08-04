@@ -3,7 +3,7 @@ ente: "Questura di Agrigento e Commissione territoriale di Palermo — Sez. Agri
 tipo: "Atti di prassi — prima applicazione della procedura di frontiera"
 numero: "documentazione raccolta dal progetto In Limine (ASGI)"
 date: 2026-06-18
-temi: [procedura di frontiera, screening, attestazione di manifestazione, determina, hotspot, Villa Sikania]
+temi: [Procedura di frontiera, Screening, Accesso alla procedura]
 oggetto: "Fascicolo completo degli atti consegnati a un richiedente sottoposto a procedura accelerata di frontiera dopo lo sbarco a Porto Empedocle: attestazione di manifestazione ex art. 27 Reg. 2024/1348, verbale di presa in carico del passaporto, modulo di screening, informativa, determinazione della procedura accelerata di frontiera, convocazione per l'audizione e provvedimento prefettizio di permanenza presso il Centro Sikania."
 norme:
   - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }

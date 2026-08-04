@@ -3,7 +3,7 @@ ente: "Questura di Trento — Ufficio Immigrazione"
 tipo: "Atto di prassi — nuovo documento del richiedente"
 numero: "modello «Attestazione di manifestazione protezione internazionale»"
 date: 2026-06-30
-temi: [attestazione di manifestazione, registrazione, formalizzazione, regime transitorio, accesso ai diritti]
+temi: [Accesso alla procedura, Regime transitorio]
 oggetto: "Il nuovo documento rilasciato dalla Questura ai richiedenti dopo il 12 giugno 2026: un foglio A4 fronte-retro, in cinque lingue, con CUI, ID manifestazione, foto e codice fiscale, che attesta la registrazione della domanda ex art. 27 Reg. 2024/1348, assegna 21 giorni per la formalizzazione ed è valido fino al rilascio del documento ex art. 29, par. 3."
 norme:
   - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }

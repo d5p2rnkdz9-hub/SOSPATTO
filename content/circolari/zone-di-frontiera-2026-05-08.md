@@ -3,7 +3,7 @@ ente: "Ministero dell'Interno — Dip. Libertà Civili e Immigrazione"
 tipo: "Circolare"
 numero: "prot. 0004639 del 08/05/2026"
 date: 2026-05-08
-temi: [zone di frontiera, procedura di frontiera, hotspot, trattenimento]
+temi: [Procedura di frontiera, Trattenimento]
 oggetto: "Attuazione del Patto UE: individuazione delle zone di frontiera ex art. 54 Reg. 2024/1348, con la rete nazionale di hotspot (anche mobili) e i centri deputati al trattenimento."
 norme:
   - { label: "Art. 54 Reg. (UE) 2024/1348 (determinazione delle zone di frontiera)", href: "/patto-interattivo/1348.html#art_54" }

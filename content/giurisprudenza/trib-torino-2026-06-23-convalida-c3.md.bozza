@@ -20,7 +20,7 @@ corte: "Tribunale di Torino, Sez. IX civile — specializzata immigrazione"
 tipo: "Decreto (procedimento di convalida del trattenimento)"
 numero: "udienza del 23/06/2026"
 date: 2026-06-23
-temi: [trattenimento, formalizzazione della domanda, modello C3, necessità e proporzionalità, rischio di fuga]
+temi: [Trattenimento, Accesso alla procedura]
 massima: "Non può essere convalidato il trattenimento disposto ai sensi dell'art. 6, comma 2, lett. d), d.lgs. 142/2015 quando la domanda di protezione internazionale non è stata formalizzata mediante compilazione del modello C3: la mancata verbalizzazione impedisce di verificare in concreto i presupposti sostanziali della misura — necessità e proporzionalità del trattenimento, misura eccezionale di ultima istanza — e soprattutto la sussistenza degli elementi su cui si basa la domanda che non potrebbero essere acquisiti senza il trattenimento."
 norme:
   - { label: "Art. 6, comma 2, lett. d) d.lgs. 142/2015 (trattenimento del richiedente)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_6" }

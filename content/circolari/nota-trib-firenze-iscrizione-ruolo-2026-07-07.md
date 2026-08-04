@@ -3,7 +3,7 @@ ente: "Tribunale di Firenze — Presidenza"
 tipo: "Nota organizzativa"
 numero: "prot. 0004906.U del 07/07/2026"
 date: 2026-07-07
-temi: [processo, iscrizione a ruolo, ufficio per il processo, procedura di frontiera]
+temi: [Rimedi giurisdizionali, Procedura di frontiera]
 oggetto: "Prime indicazioni ai Consigli dell'ordine del distretto toscano sulle modalità di iscrizione a ruolo dei ricorsi soggetti alla nuova disciplina del Patto UE, in attesa dei codici oggetto ministeriali."
 norme:
   - { label: "Reg. (UE) 2024/1348 (procedure di protezione internazionale)", href: "/patto-interattivo/1348.html" }

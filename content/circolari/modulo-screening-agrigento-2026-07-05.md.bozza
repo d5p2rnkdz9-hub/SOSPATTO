@@ -17,7 +17,7 @@ ente: "Questura di Agrigento — Ufficio Immigrazione"
 tipo: "Atto di prassi — modulo di screening"
 numero: "modello «Modulo di screening — Form», stampa del gestionale SIA"
 date: 2026-07-05
-temi: [screening, accertamenti, minori, vulnerabilità, attestazione di manifestazione, CAS]
+temi: [Screening, Vulnerabilità, Accesso alla procedura, Accoglienza]
 oggetto: "Il modulo di screening generato dal gestionale del Ministero dell'interno, bilingue italiano-somalo, con i campi anagrafici, l'età, il flag «minore», nazionalità e luogo di nascita, unito all'attestazione di manifestazione rilasciata dalla Questura di Agrigento a un giovane somalo poi collocato in CAS."
 norme:
   - { label: "Reg. (UE) 2024/1356 (accertamenti — screening)", href: "/patto-interattivo/1356.html" }

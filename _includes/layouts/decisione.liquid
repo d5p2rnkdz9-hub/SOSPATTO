@@ -35,7 +35,7 @@ layout: layouts/base.liquid
       <h1 class="scheda-title">{{ corte }}, {{ page.date | dataIt }}</h1>
       {% if temi %}
       <div class="scheda-temi">
-        {% for tema in temi %}<span class="scheda-tema">{{ tema }}</span>{% endfor %}
+        {% for tema in temi %}<a class="scheda-tema" href="{{ '/giurisprudenza.html' | url }}?tema={{ tema | temaSlug }}">{{ tema }}</a>{% endfor %}
       </div>
       {% endif %}
     </div>

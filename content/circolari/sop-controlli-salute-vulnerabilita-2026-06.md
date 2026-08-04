@@ -3,7 +3,7 @@ ente: "Ministero dell'Interno"
 tipo: "Procedure operative standard (SOP)"
 numero: "giugno 2026 — circolare 12/06/2026"
 date: 2026-06-12
-temi: [screening, controlli di salute, vulnerabilità, tratta]
+temi: [Screening, Vulnerabilità]
 oggetto: "Procedure operative standard sui controlli preliminari di salute e sulle vulnerabilità nell'ambito dello screening (Reg. 2024/1356), con la circolare di adozione e gli otto allegati tecnici."
 norme:
   - { label: "Reg. (UE) 2024/1356 (screening)", href: "/patto-interattivo/1356.html" }

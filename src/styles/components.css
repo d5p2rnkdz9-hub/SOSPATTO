@@ -1443,6 +1443,49 @@
   padding: 3px 12px;
 }
 
+a.scheda-tema {
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.12s ease;
+}
+a.scheda-tema:hover {
+  background: var(--taxi-yellow);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+/* ── Filtro per macro-temi (pagine elenco) ── */
+.temi-filtro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+.temi-filtro-btn {
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--black);
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.temi-filtro-btn:hover { background: var(--taxi-yellow-light); }
+.temi-filtro-btn.temi-filtro-attivo {
+  background: var(--taxi-yellow);
+  box-shadow: 2px 2px 0 var(--black);
+}
+.temi-filtro-n {
+  font-weight: 800;
+  opacity: 0.55;
+  margin-left: 2px;
+}
+
+/* le card filtrate: [hidden] deve vincere sul display:block della card */
+.archivio-card[hidden] { display: none; }
+
 .scheda-massima {
   background: var(--white);
   border: 2.5px solid var(--black);

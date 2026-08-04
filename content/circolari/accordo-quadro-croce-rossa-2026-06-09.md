@@ -3,7 +3,7 @@ ente: "Ministero dell'Interno — Croce Rossa Italiana"
 tipo: "Accordo quadro"
 numero: "prot. 2026/13073 del 09/06/2026"
 date: 2026-06-09
-temi: [accoglienza, arrivi, gestione della migrazione]
+temi: [Accoglienza, Screening]
 oggetto: "Accordo quadro tra il Dipartimento per le Libertà Civili e l'Immigrazione e la Croce Rossa Italiana per le attività connesse all'accoglienza delle persone migranti a seguito di arrivi sul territorio nazionale."
 norme:
   - { label: "Reg. (UE) 2024/1351 (RAMM)", href: "/patto-interattivo/1351.html" }

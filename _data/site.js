@@ -8,6 +8,7 @@ function assetVersion() {
   const files = [
     'src/scripts/app.js',
     'src/scripts/mobile.js',
+    'src/scripts/filtro-temi.js',
     'src/styles/main.css',
     'src/styles/components.css',
     'src/styles/mobile.css',

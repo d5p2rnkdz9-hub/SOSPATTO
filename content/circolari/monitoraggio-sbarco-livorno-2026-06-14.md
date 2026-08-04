@@ -3,7 +3,7 @@ ente: "ASGI — monitoraggio in Toscana"
 tipo: "Nota di monitoraggio"
 numero: "sbarco del 14/06/2026 (ONG Solidaire)"
 date: 2026-06-14
-temi: [screening, sbarco, vulnerabilità, obblighi informativi, procedure accelerate]
+temi: [Screening, Vulnerabilità, Garanzie procedurali, Procedure accelerate]
 oggetto: "Ricostruzione passo per passo delle operazioni di screening applicate alle 34 persone sbarcate al porto di Livorno il 14 giugno 2026, due giorni dopo l'entrata in vigore del Reg. (UE) 2024/1356."
 norme:
   - { label: "Art. 5 Reg. (UE) 2024/1356 (accertamenti alla frontiera esterna)", href: "/patto-interattivo/1356.html#art_5" }

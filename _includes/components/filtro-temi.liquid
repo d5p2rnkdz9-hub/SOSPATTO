@@ -1,0 +1,15 @@
+{%- comment -%}
+  Barra di filtro per macro-temi (vocabolario: _data/vocabolarioTemi.js).
+  Richiede nel contesto la variabile `schede` (collezione della pagina).
+  Nascosta senza JavaScript: la mostra src/scripts/filtro-temi.js.
+{%- endcomment -%}
+<div class="temi-filtro" id="temi-filtro" hidden>
+  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-tema="">Tutti <span class="temi-filtro-n">{{ schede.size }}</span></button>
+  {%- for tema in vocabolarioTemi %}
+    {%- assign n = 0 %}
+    {%- for scheda in schede %}{% if scheda.data.temi contains tema.label %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+    {%- if n > 0 %}
+  <button type="button" class="temi-filtro-btn" data-tema="{{ tema.slug }}">{{ tema.label }} <span class="temi-filtro-n">{{ n }}</span></button>
+    {%- endif %}
+  {%- endfor %}
+</div>

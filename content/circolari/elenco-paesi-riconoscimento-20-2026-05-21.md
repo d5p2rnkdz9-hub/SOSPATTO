@@ -3,7 +3,7 @@ ente: "Commissione europea — Eurostat"
 tipo: "Elenco statistico"
 numero: "dati estratti il 21/05/2026 (anno di riferimento 2025)"
 date: 2026-05-21
-temi: [procedure accelerate, procedura di frontiera, paesi di origine, tasso di riconoscimento]
+temi: [Procedure accelerate, Procedura di frontiera, Paesi sicuri e soglia del 20%]
 oggetto: "Elenco delle cittadinanze con un tasso di riconoscimento della protezione internazionale in primo grado pari o inferiore al 20%, compilato ai soli fini dell'art. 42, par. 1, lett. j) Reg. (UE) 2024/1348."
 norme:
   - { label: "Art. 42, par. 1, lett. j) Reg. (UE) 2024/1348 (motivo di esame accelerato)", href: "/patto-interattivo/1348.html#art_42" }

@@ -3,7 +3,7 @@ ente: "Prefettura — Ufficio territoriale del Governo di Napoli, Area IV Immigr
 tipo: "Nota istruttoria"
 numero: "prot. uscita n. 0285953 del 10/07/2026"
 date: 2026-07-10
-temi: [accoglienza, CAS, termine di 90 giorni, ritardo nella manifestazione, vulnerabilità]
+temi: [Accoglienza, Accesso alla procedura, Vulnerabilità]
 oggetto: "Riscontro a una richiesta di inserimento in C.A.S. per un richiedente che ha manifestato la volontà di chiedere protezione circa un mese dopo l'ingresso: la Prefettura chiede di comunicare la data di effettivo ingresso e, qualora la manifestazione sia avvenuta oltre novanta giorni da essa, gli elementi utili a rappresentare il giustificato motivo del ritardo ai sensi dell'art. 1, comma 2-bis, d.lgs. 142/2015, nonché la documentazione su eventuali condizioni di vulnerabilità ex art. 17."
 norme:
   - { label: "Art. 1, comma 2-bis, d.lgs. 142/2015 (termine per la manifestazione della volontà e giustificato motivo del ritardo)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_1" }

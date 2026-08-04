@@ -3,7 +3,7 @@ ente: "Questura di Livorno — Ufficio Immigrazione"
 tipo: "Risposta a PEC"
 numero: "PEC del 08/07/2026"
 date: 2026-07-08
-temi: [accesso alla procedura, manifestazione di volontà, fotosegnalamento, appuntamenti, categorie fragili]
+temi: [Accesso alla procedura, Vulnerabilità]
 oggetto: "Modalità di accesso alla procedura di asilo a Livorno: chi vuole manifestare la volontà di chiedere asilo deve presentarsi di persona lunedì e giovedì dalle 7:00 davanti alla Caserma Labate per il fotosegnalamento, ricevendo solo in un secondo momento l'appuntamento per la formalizzazione; la richiesta di appuntamento via PEC resta riservata alle sole «categorie fragili»."
 norme:
   - { label: "Art. 26 Reg. (UE) 2024/1348 (manifestazione della volontà di chiedere protezione)", href: "/patto-interattivo/1348.html#art_26" }

@@ -3,7 +3,7 @@ ente: "Ministero dell'Interno — Commissione nazionale per il diritto d'asilo"
 tipo: "Circolare"
 numero: "prot. 0005867 del 10/06/2026"
 date: 2026-06-10
-temi: [accesso alla procedura, disciplina transitoria, raccordo operativo]
+temi: [Accesso alla procedura, Regime transitorio]
 oggetto: "Prima attuazione del Patto UE: indicazioni alle Commissioni territoriali su accesso alla procedura, disciplina transitoria e adempimenti conseguenti al decreto-legge di adeguamento."
 norme:
   - { label: "Reg. (UE) 2024/1348 (procedure)", href: "/patto-interattivo/1348.html" }
