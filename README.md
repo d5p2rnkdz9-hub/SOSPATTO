@@ -18,7 +18,7 @@ _data/            dati: site.js (nome/URL/email), nav.js (menu), testi.js (catal
 _includes/        layout base + header/nav/footer + layout schede (decisione, circolare)
 src/pages/        pagine del sito (escono alla radice: /testi.html, /diagramma.html, ...)
 src/styles/       tema clonato da sospermesso e ritinto in blu (+ appendice SOS Patto in components.css)
-content/          giurisprudenza/ e circolari/ — UNA scheda = UN file .md
+content/          giurisprudenza/, circolari/ e dottrina/ — UNA scheda = UN file .md
 public/           copiato tale e quale alla radice del sito:
   patto-interattivo/   bundle dei testi interattivi (10 atti UE + 4 leggi italiane)
   diagramma/           Diagrammone (flowchart screening/procedure, file unico)
@@ -66,6 +66,26 @@ decrescente) e ha la sua pagina `/giurisprudenza/<nomefile>.html`.
 
 Identico, in `content/circolari/` (campi: `ente`, `tipo`, `numero`, `date`, `temi`,
 `oggetto`, `norme`, `pdf`). PDF in `public/allegati/circolari/`.
+
+## Come aggiungere un contributo di DOTTRINA
+
+Un file .md in `content/dottrina/` (nome parlante: `autore-argomento-AAAA-MM.md`).
+Campi del frontmatter: `fonte` (rivista/occasione, appare come kicker), `titolo`,
+`autori`, `date` (AAAA-MM-GG, serve solo per l'ordinamento), `temi` (stesse label
+canoniche di `_data/vocabolarioTemi.js`, su UNA riga: `temi: [Tema uno, Tema due]`),
+`sommario` (2-5 righe) e `links` (uno o più pulsanti; `interna: true` per i link
+interni al sito, che non aprono una nuova scheda):
+
+```yaml
+links:
+  - { label: "↗ Leggi l'articolo", href: "https://..." }
+  - { label: "📄 Scarica il contributo (PDF)", href: "/allegati/circolari/... .pdf" }
+```
+
+Le schede non hanno pagina di dettaglio (`permalink: false`): compaiono solo
+nell'elenco `/dottrina.html`, filtrabile per tema come giurisprudenza e circolari.
+I temi sulla card rimandano alla giurisprudenza sullo stesso tema
+(`/giurisprudenza.html?tema=<slug>`). `npm run temi-check` verifica anche queste.
 
 ## Come aggiornare i TESTI INTERATTIVI
 

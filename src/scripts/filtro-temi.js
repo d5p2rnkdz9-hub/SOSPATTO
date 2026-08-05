@@ -1,4 +1,4 @@
-// Filtro per macro-temi sulle pagine elenco (giurisprudenza, circolari).
+// Filtro per macro-temi sulle pagine elenco (giurisprudenza, circolari, dottrina).
 // Le card portano data-temi="slug1 slug2"; lo stato vive in ?tema=<slug>.
 (function () {
   const barra = document.getElementById('temi-filtro');

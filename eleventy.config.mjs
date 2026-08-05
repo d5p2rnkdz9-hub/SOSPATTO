@@ -40,6 +40,8 @@ export default function (eleventyConfig) {
     api.getFilteredByGlob('content/giurisprudenza/*.md').sort((a, b) => b.date - a.date));
   eleventyConfig.addCollection('circolari', (api) =>
     api.getFilteredByGlob('content/circolari/*.md').sort((a, b) => b.date - a.date));
+  eleventyConfig.addCollection('dottrina', (api) =>
+    api.getFilteredByGlob('content/dottrina/*.md').sort((a, b) => b.date - a.date));
 
   // ---- copie statiche -----------------------------------------------------
   eleventyConfig.addPassthroughCopy('src/styles');

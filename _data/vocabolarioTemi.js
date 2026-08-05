@@ -1,4 +1,4 @@
-// Vocabolario controllato dei macro-temi per giurisprudenza, circolari (e dottrina).
+// Vocabolario controllato dei macro-temi per giurisprudenza, circolari e dottrina.
 // Ogni scheda usa in `temi:` SOLO le label qui elencate (verifica: npm run temi-check).
 // `aliases` tiene traccia dei vecchi tag assorbiti, per riferimento e per il check.
 module.exports = [
@@ -76,5 +76,20 @@ module.exports = [
     slug: 'regime-transitorio',
     label: 'Regime transitorio',
     aliases: ['disciplina transitoria', 'disciplina applicabile nel tempo', 'raccordo operativo'],
+  },
+  {
+    slug: 'rimpatri',
+    label: 'Rimpatri',
+    aliases: ['regolamento rimpatri', 'ordine di rimpatrio', 'espulsione', 'allontanamento'],
+  },
+  {
+    slug: 'esternalizzazione',
+    label: 'Esternalizzazione',
+    aliases: ['Protocollo Italia-Albania', 'Albania', 'paese terzo sicuro'],
+  },
+  {
+    slug: 'attuazione-italiana',
+    label: 'Attuazione italiana',
+    aliases: ['d.l. 100/2026', 'decreto-legge 100/2026', 'legge di conversione', 'A.S. 1939'],
   },
 ];
