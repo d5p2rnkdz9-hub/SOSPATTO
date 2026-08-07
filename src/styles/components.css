@@ -1483,6 +1483,35 @@ a.scheda-tema:hover {
   margin-left: 2px;
 }
 
+/* Su mobile la barra dei temi è una sola riga scorrevole (stile app), a filo
+   dei bordi dello schermo, invece di un blocco di chip impilate che spinge in
+   basso le schede. La chip attiva viene centrata da filtro-temi.js. */
+@media (max-width: 768px) {
+  .temi-filtro {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.4rem;
+    /* il container ha padding 0 1rem: la riga sanguina fino ai bordi */
+    margin: 0 -1rem 1.25rem;
+    padding: 2px 1rem 8px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .temi-filtro::-webkit-scrollbar { display: none; }
+  .temi-filtro-btn {
+    /* annulla la regola generica di mobile.css (button { width: 100% })
+       pensata per i form: qui stirava ogni chip a tutta riga */
+    width: auto;
+    margin-bottom: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    scroll-snap-align: start;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+  }
+}
+
 /* le card filtrate: [hidden] deve vincere sul display:block della card */
 .archivio-card[hidden] { display: none; }
 

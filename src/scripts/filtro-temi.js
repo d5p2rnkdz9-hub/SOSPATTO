@@ -8,10 +8,25 @@
   const bottoni = Array.from(barra.querySelectorAll('.temi-filtro-btn'));
   const card = Array.from(document.querySelectorAll('.archivio-card[data-temi]'));
 
+  // Su mobile la barra è una riga scorrevole: porta la chip attiva in vista.
+  function centraAttivo() {
+    if (barra.scrollWidth <= barra.clientWidth) return;
+    const attivo = barra.querySelector('.temi-filtro-attivo');
+    if (!attivo) return;
+    const b = barra.getBoundingClientRect();
+    const a = attivo.getBoundingClientRect();
+    const riduci = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    barra.scrollTo({
+      left: barra.scrollLeft + (a.left - b.left) - (b.width - a.width) / 2,
+      behavior: riduci ? 'auto' : 'smooth',
+    });
+  }
+
   function applica(slug, aggiornaUrl) {
     bottoni.forEach((b) => {
       b.classList.toggle('temi-filtro-attivo', (b.dataset.tema || '') === slug);
     });
+    centraAttivo();
     card.forEach((c) => {
       const temi = (c.dataset.temi || '').trim().split(/\s+/);
       c.hidden = Boolean(slug) && !temi.includes(slug);
