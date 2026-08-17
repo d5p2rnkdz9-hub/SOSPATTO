@@ -22,29 +22,31 @@ module.exports = {
     label: 'Ultimi aggiornamenti',
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
+      // In testa pur essendo datato 21 luglio: per il lettore la data che conta è la
+      // pubblicazione in G.U. (10 agosto), che lo rende il piu' recente del nastro.
       {
-        date: '31 luglio 2026',
-        text: 'Trib. Torino: va approfondito se il richiedente appartenga a una categoria per cui la percentuale ≤ 20% non è rappresentativa',
+        date: 'in G.U. il 10 agosto 2026',
+        text: 'NUOVO D.M. zone di frontiera: ai luoghi del d.m. 2019 si aggiungono i valichi Schengen e i porti, con 19 nuove sezioni delle Commissioni territoriali',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-torino-14577-2026-07-31.html',
+        href: '/circolari/dm-zone-frontiera-2026-07-21.html',
       },
       {
-        date: '27 luglio 2026',
-        text: 'Trib. Caltanissetta: autorizzato a permanere per compressione del diritto di difesa in frontiera',
+        date: '7 agosto 2026',
+        text: 'Trib. Trieste: il d.m. 2019 sulle zone di frontiera è obsoleto, la procedura di frontiera non è applicabile a Gorizia',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-caltanissetta-1137-2026-07-27.html',
+        href: '/giurisprudenza/trib-trieste-4412-2026-08-07.html',
       },
       {
-        date: '25 luglio 2026',
-        text: 'Trib. Palermo: non basta un modulo con QR code a informare chi è in procedura di frontiera',
+        date: '4 agosto 2026',
+        text: 'Cassazione civile: anche post-Patto il richiedente è inespellibile fino alla scadenza del termine per impugnare',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-palermo-8695-2026-07-25.html',
+        href: '/giurisprudenza/cass-24430-2026-08-04.html',
       },
       {
-        date: '20 luglio 2026',
-        text: 'T.A.R. Lombardia: istruttoria sulla class action ASGI-NAGA per i ritardi nell’accesso alla procedura d’asilo a Milano',
+        date: '4 agosto 2026',
+        text: 'Trib. Napoli: se la volontà è stata manifestata prima del 12 giugno, il Patto non si applica anche se il C3 è successivo',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/tar-lombardia-3818-2026-07-20.html',
+        href: '/giurisprudenza/trib-napoli-17179-2026-08-04.html',
       },
     ],
   },

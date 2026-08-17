@@ -7,6 +7,7 @@ _site/
 
 # Anteprime di verifica oscuramento PDF (scripts/oscura_pdf.py --verifica)
 *_verifica/
+__pycache__/
 
 # Materiale sorgente scaricato dalle liste: contiene PDF NON oscurati (nomi,
 # date di nascita, C.U.I.). Il repo e' pubblico: non deve finirci dentro.

@@ -53,6 +53,27 @@ scripts/          retheme_blue.py — ritinta in blu i CSS (sito + bundle)
    box — può restare visibile). Guarda le anteprime e, per ogni residuo, aggiungi
    `--box PAGINA:x0,y0,x1,y1` (coordinate in punti). La cartella `_verifica/` è
    solo di lavoro: non committarla.
+
+   **Cosa lo script oscura SEMPRE** (`PATTERNS_SEMPRE`, non disattivabili nemmeno
+   con `--solo-nomi`): **C.U.I.** — con e senza etichetta, es. `(CUI: 07J37ZV)` —
+   codice fiscale, email, telefono, **data di nascita** (solo quando preceduta dal
+   contesto «nato/nata … il», così le date della decisione restano leggibili) e gli
+   ID dei gestionali negli URL. Sono gli identificativi che non servono mai al
+   lettore della scheda ed erano la causa più frequente di ripubblicazioni: il
+   C.U.I. in chiaro accanto al nome coperto è passato tre volte (Palermo 8694,
+   Firenze 9251-1/2026, Bologna 12435-1/2026). Il ricontrollo che nessuno di questi
+   sia più estraibile **gira sempre**, anche senza `--verifica`.
+
+   Due avvertenze che vengono dall'uso:
+   - **Sulle scansioni** (PDF senza livello testo) il ricontrollo automatico dice
+     sempre «0 caratteri»: il dato sta nei pixel, non è estraibile e quindi non
+     viene segnalato, ma è perfettamente leggibile. **Lì l'unica verifica che vale è
+     guardare le anteprime.**
+   - `--riscura --ocr` su una scansione di provvedimento oscura *tutte* le date, e
+     su questi decreti le date sono la sostanza (ingresso, manifestazione di
+     volontà, C3, data del decreto). Aggiungi **`--solo-nomi` anche con `--ocr`**:
+     l'OCR continua a cercare C.U.I./codici/email/telefoni ma lascia stare le date,
+     e per l'eventuale data di nascita usi un `--box` mirato.
 4. Il corpo del file è il commento libero in Markdown.
 5. `git add … && git commit && git push` → Netlify ricostruisce e pubblica da solo.
 
