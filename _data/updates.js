@@ -22,31 +22,31 @@ module.exports = {
     label: 'Ultimi aggiornamenti',
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
-      // In testa pur essendo datato 21 luglio: per il lettore la data che conta è la
-      // pubblicazione in G.U. (10 agosto), che lo rende il piu' recente del nastro.
+      {
+        date: '20 agosto 2026',
+        text: 'Trib. Trieste: il D.M. sulle zone di frontiera doveva esistere quando la procedura è stata avviata — la pubblicazione in G.U. del 10 agosto non sana le procedure anteriori',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-trieste-4748-2026-08-20.html',
+      },
+      {
+        date: '19 agosto 2026',
+        text: 'Trib. Roma: sospeso un trasferimento Dublino perché il decreto dell\'Unità Dublino cita un articolo del Regolamento rimasto non indicato',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-roma-2026-08-19.html',
+      },
+      {
+        date: '17 agosto 2026',
+        text: 'Trib. Perugia: se la Commissione decide una domanda post-Patto con le norme previgenti, anche il ricorso si esamina con quelle — ed è tempestivo',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-perugia-3003-2026-08-17.html',
+      },
+      // Datato 21 luglio ma in nastro con la data di pubblicazione in G.U. (10 agosto):
+      // per il lettore è quella la data che conta.
       {
         date: 'in G.U. il 10 agosto 2026',
         text: 'NUOVO D.M. zone di frontiera: ai luoghi del d.m. 2019 si aggiungono i valichi Schengen e i porti, con 19 nuove sezioni delle Commissioni territoriali',
         cta: 'Leggi la scheda',
         href: '/circolari/dm-zone-frontiera-2026-07-21.html',
-      },
-      {
-        date: '7 agosto 2026',
-        text: 'Trib. Trieste: il d.m. 2019 sulle zone di frontiera è obsoleto, la procedura di frontiera non è applicabile a Gorizia',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-trieste-4412-2026-08-07.html',
-      },
-      {
-        date: '4 agosto 2026',
-        text: 'Cassazione civile: anche post-Patto il richiedente è inespellibile fino alla scadenza del termine per impugnare',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/cass-24430-2026-08-04.html',
-      },
-      {
-        date: '4 agosto 2026',
-        text: 'Trib. Napoli: se la volontà è stata manifestata prima del 12 giugno, il Patto non si applica anche se il C3 è successivo',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-napoli-17179-2026-08-04.html',
       },
     ],
   },

@@ -39,6 +39,13 @@ conoscibile in quel momento. Da qui due questioni aperte, che vanno impostate ca
 il decreto è opponibile al richiedente, e che ne è delle procedure di frontiera avviate **prima** del
 10 agosto sulla base del solo d.m. 2019.
 
+> ✅ **Sulla seconda questione c'è ora una risposta.** Il [decreto del Tribunale di Trieste del 20
+> agosto 2026](/giurisprudenza/trib-trieste-4748-2026-08-20.html) è il primo pronunciato *dopo* la
+> pubblicazione in G.U. e disapplica ugualmente la procedura: il decreto ministeriale doveva esistere
+> **al momento dell'avvio della procedura**, e la sua pubblicazione sopravvenuta non la sana. La
+> genericità del d.m. 2019 nell'individuare le province — che il D.M. 21 luglio lascia intatta — regge
+> in quella decisione un secondo, autonomo motivo di disapplicazione.
+
 ## Che cosa dispone
 
 **1. Integra, non sostituisce** (art. 1). Il decreto «integra le zone di frontiera o di transito di cui
