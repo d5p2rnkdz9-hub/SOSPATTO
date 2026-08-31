@@ -9,6 +9,8 @@ norme:
   - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
   - { label: "Art. 28 Reg. (UE) 2024/1348 (formalizzazione della domanda; termine di 21 giorni)", href: "/patto-interattivo/1348.html#art_28" }
   - { label: "Art. 29, par. 3 Reg. (UE) 2024/1348 (documento rilasciato al richiedente)", href: "/patto-interattivo/1348.html#art_29" }
+  - { label: "Art. 29, parr. 1 e 4 Reg. (UE) 2024/1348 (documento dopo la registrazione e dopo la formalizzazione)", href: "/patto-interattivo/1348.html#art_29" }
+  - { label: "Art. 26-ter d.lgs. 25/2008 (formalizzazione presso le Commissioni territoriali)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_26-ter" }
   - { label: "Art. 46 Reg. (UE) 2024/1351 (registrazione dopo trasferimento)", href: "/patto-interattivo/1351.html#art_46" }
 pdf: /allegati/circolari/attestazione-manifestazione-trento-2026-06.pdf
 pdfLabel: "Scarica l'attestazione (PDF, oscurato)"
@@ -48,3 +50,47 @@ sanitaria; e dove venga registrata, per chi provenga da paese designato sicuro e
 tale informazione. Sul punto si segnalano gli opuscoli informativi aggiornati della Commissione
 nazionale per il diritto di asilo, disponibili in più lingue sul [sito del Dipartimento per le libertà
 civili e l'immigrazione](https://libertaciviliimmigrazione.dlci.interno.gov.it/opuscoli-informativi-sulla-procedura-dasilo-sullaccoglienza-dei-richiedenti-asilo-e-sugli).
+
+## Aggiornamento — fine agosto 2026: il modello è nazionale, e i 21 giorni restano lettera morta
+
+Un'attestazione **identica** rilasciata dalla **Questura di Forlì-Cesena** il **17 agosto 2026** è
+stata portata in lista ASGI il 29 agosto dall'avv. Francesco Roppo. Conferma che il modello è
+standardizzato a livello nazionale — stesse cinque lingue, stessi richiami all'art. 27 Reg. (UE)
+2024/1348 per la registrazione, ai 21 giorni dell'art. 28 per la formalizzazione e alla clausola
+prestampata sul trasferimento ex art. 46 Reg. (UE) 2024/1351 — e aggiunge tre elementi che chiariscono
+la portata pratica del documento.
+
+**Primo: nessuna indicazione su *come* formalizzare.** Il documento assegna 21 giorni per formalizzare
+«presso l'autorità competente», ma non dice quale sia né con quali modalità rivolgersi ad essa. Nel
+caso segnalato, riguardante una persona **fuori dal sistema di accoglienza**, la PEC inviata alla
+Questura per ottenere un appuntamento è rimasta senza risposta. Il combinato è che il termine corre
+mentre l'interessato non ha un canale per rispettarlo.
+
+**Secondo: nella fase transitoria il termine non viene applicato.** Dal confronto tra operatori — Bolzano,
+Rimini, Modena — risulta che, in forza del regime derogatorio della circolare del Dipartimento della
+pubblica sicurezza del **12 giugno 2026**, valido fino al **31 ottobre 2026**, la registrazione **tiene
+luogo della formalizzazione**: tutto continua a svolgersi in Questura, il modello C3 non viene redatto e
+alla persona non viene consegnato altro, salvo la convocazione davanti alla Commissione territoriale.
+I 21 giorni sono dunque una previsione fissa del modulo, che nel periodo transitorio non descrive
+alcun adempimento effettivo. Dove il meccanismo funziona, l'appuntamento arriva dalla Commissione:
+a **Bologna** è stato notificato via PEC al difensore — inserito nel fascicolo SUA dalla Questura di
+Modena — entro due settimane dalla formalizzazione, con udienza fissata a dicembre.
+
+**Terzo, ed è il rilievo giuridicamente più promettente: se la registrazione tiene luogo della
+formalizzazione, il documento consegnato è quello sbagliato.** L'osservazione è dell'avv. Igor
+Brunello. L'attestazione riproduce il contenuto del documento previsto dal **par. 1** dell'art. 29
+Reg. (UE) 2024/1348 — quello che segue la registrazione. Ma se per effetto della circolare la
+registrazione assorbe anche la formalizzazione, il documento dovuto è quello del **par. 4**, che ha
+contenuto diverso e più favorevole: attesta lo *status* di richiedente, la **durata annuale** e il
+**diritto di rimanere** nel territorio. Nulla di tutto questo compare sull'attestazione. E — questo è
+il punto — **una circolare non può derogare a un regolamento dell'Unione**.
+
+Resta aperto se l'illegittimità del documento si riverberi sulla regolarità della procedura o vada
+qualificata come mera irregolarità, non impedendo di per sé l'accesso al procedimento. La questione
+risulta in via di deduzione in un ricorso di prossimo deposito: è il tipo di rilievo che conviene
+tenere d'occhio.
+
+> **Nota.** La scansione dell'attestazione di Forlì-Cesena **non è allegata**: la copia circolata in
+> lista era oscurata in modo incompleto (fotografia del richiedente in parte visibile, frammenti di
+> C.U.I., ID manifestazione e comune di domicilio ancora leggibili). Il contenuto del modello è
+> comunque integralmente rappresentato dalla scansione di Trento allegata sopra, che è identica.
