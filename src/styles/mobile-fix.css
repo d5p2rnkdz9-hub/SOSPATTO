@@ -136,6 +136,19 @@
     z-index: 1040;
     padding: 5rem 1.5rem 2rem;
     flex-direction: column;
+    /* Il menu aperto e' piu' alto del viewport (5 voci + i 12 sotto-link del
+       dropdown, mostrati staticamente qui sotto): senza overflow le ultime voci
+       sono irraggiungibili, perche' app.js blocca lo scroll del body mentre il
+       menu e' aperto. In landscape ne resta fuori piu' di meta'. */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Le voci non devono comprimersi per stare nel wrapper flex: senza questo
+     shrink il contenuto si schiaccia invece di generare scroll. */
+  .nav-wrapper > * {
+    flex-shrink: 0;
   }
 
   .nav-wrapper.active {
