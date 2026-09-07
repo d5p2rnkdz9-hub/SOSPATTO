@@ -90,6 +90,37 @@ qualificata come mera irregolarità, non impedendo di per sé l'accesso al proce
 risulta in via di deduzione in un ricorso di prossimo deposito: è il tipo di rilievo che conviene
 tenere d'occhio.
 
+## Aggiornamento — inizio settembre 2026: l'attestazione regge il codice fiscale, non l'appuntamento
+
+Il confronto in lista è proseguito fino al 1° settembre e ha aggiunto un dato che serve subito allo
+sportello: **sull'attestazione il codice fiscale viene generato**, e da lì passa l'accesso ai diritti.
+
+- A **Bolzano** l'attestato riporta il codice fiscale «nel 90% dei casi, come era sul vecchio C3»
+  (avv. Luigi Gallo). Quando la Questura non lo genera, si prenota un appuntamento all'**Agenzia delle
+  Entrate**, che lo rilascia sulla base dell'attestazione. Su attestato più codice fiscale sono poi
+  partite le **iscrizioni al Servizio sanitario nazionale**, almeno per la città di Bolzano.
+- A **Firenze** e ad **Arezzo** viene rilasciato esattamente questo modello e il codice fiscale viene
+  generato; la convocazione in Commissione è arrivata «in tempi record» (avv.ta Carolin Kiper), che
+  conferma anche come, nel regime transitorio, quello sia **l'unico foglio consegnato**.
+
+Il che rende l'attestazione un documento più utile di quanto il suo contenuto suggerisca: non attesta
+lo *status* né il diritto di rimanere (v. sopra il rilievo sull'art. 29, par. 4), ma è la chiave del
+codice fiscale e quindi dell'iscrizione sanitaria. Dove la prassi locale non lo genera, vale la pena
+insistere in questa direzione.
+
+**Il canale per formalizzare, invece, resta chiuso per chi è fuori dall'accoglienza.** Nel caso già
+segnalato la Commissione territoriale di Bologna — Sezione di Forlì-Cesena ha confermato per iscritto
+che la competenza sulla formalizzazione è della **Questura**; l'interessato si è recato in Questura e
+**non è potuto entrare in assenza di appuntamento**, che nessun canale gli consente di ottenere. Il
+difensore ha reiterato la PEC a entrambe le autorità.
+
+Val la pena mettere questo caso accanto a [Trib. Bologna, 4 settembre
+2026](/giurisprudenza/trib-bologna-13590-2026-09-04.html), che viene dallo stesso distretto e dallo
+stesso difensore ma riguarda una persona **inserita in accoglienza**: là l'ingresso in accoglienza ha
+fatto da prova della manifestazione di volontà e ha determinato il regime applicabile. Chi è fuori
+dall'accoglienza non ha né quel documento né un canale per formalizzare — cioè, nel transitorio, la
+posizione peggiore delle due.
+
 > **Nota.** La scansione dell'attestazione di Forlì-Cesena **non è allegata**: la copia circolata in
 > lista era oscurata in modo incompleto (fotografia del richiedente in parte visibile, frammenti di
 > C.U.I., ID manifestazione e comune di domicilio ancora leggibili). Il contenuto del modello è
