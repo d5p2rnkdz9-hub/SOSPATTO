@@ -59,13 +59,11 @@ module.exports = {
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-perugia-3003-2026-08-17.html',
       },
-      // Datato 21 luglio ma in nastro con la data di pubblicazione in G.U. (10 agosto):
-      // per il lettore è quella la data che conta.
       {
-        date: 'in G.U. il 10 agosto 2026',
-        text: 'Nuovo D.M. zone di frontiera: inclusi valichi Schengen e porti, istituite 19 nuove sezioni delle Commissioni territoriali',
+        date: '10 agosto 2026',
+        text: 'Trib. Napoli: se la Commissione giudica non credibili i motivi politici, ammette la categoria che rende il 20% non rappresentativo',
         cta: 'Leggi la scheda',
-        href: '/circolari/dm-zone-frontiera-2026-07-21.html',
+        href: '/giurisprudenza/trib-napoli-17573-2026-08-10.html',
       },
     ],
   },
