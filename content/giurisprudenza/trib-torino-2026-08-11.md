@@ -1,5 +1,5 @@
 ---
-corte: "Tribunale di Torino, Sez. specializzata immigrazione"
+corte: "Tribunale di Torino"
 tipo: "Decreto (istanza di sospensione e autorizzazione a rimanere, art. 35-bis d.lgs. 25/2008)"
 numero: "R.G. oscurato nel provvedimento"
 date: 2026-08-11

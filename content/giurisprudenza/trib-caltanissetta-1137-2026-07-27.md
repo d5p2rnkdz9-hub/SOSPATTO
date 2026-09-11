@@ -1,5 +1,5 @@
 ---
-corte: "Tribunale di Caltanissetta, Sez. feriale — immigrazione"
+corte: "Tribunale di Caltanissetta"
 tipo: "Decreto (istanza di autorizzazione a permanere, art. 35-ter d.lgs. 25/2008)"
 numero: "N. 1137/2026 R.G."
 date: 2026-07-27
