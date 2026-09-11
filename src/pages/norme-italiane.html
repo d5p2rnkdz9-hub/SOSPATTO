@@ -79,13 +79,13 @@ extraStyles: |
     <h2 class="testi-sezione" id="norme-italiane">🇮🇹 Le norme italiane</h2>
     <div class="testi-grid">
       {% for t in testi.it %}
-      <a href="/patto-interattivo/{{ t.slug }}/index.html" class="testo-card">
+      <a href="{% if t.href %}{{ t.href }}{% else %}/patto-interattivo/{{ t.slug }}/index.html{% endif %}" class="testo-card">
         <div class="testo-card-top">
           <span class="testo-tag">{{ t.titolo }}</span>
         </div>
         <h3>{{ t.sotto }}</h3>
         <span class="testo-coord">{{ t.coord }}</span>
-        <span class="testo-go">Consulta →</span>
+        <span class="testo-go">{{ t.cta | default: "Consulta →" }}</span>
       </a>
       {% endfor %}
     </div>
