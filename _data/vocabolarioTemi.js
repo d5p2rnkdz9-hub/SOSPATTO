@@ -88,6 +88,10 @@ module.exports = [
     aliases: ['Protocollo Italia-Albania', 'Albania', 'paese terzo sicuro'],
   },
   {
+    // Solo per la DOTTRINA: un commento può avere per oggetto il decreto di
+    // attuazione in quanto tale. Nella giurisprudenza no — ogni decisione applica
+    // l'attuazione italiana, quindi il tema marcava tutto e non distingueva nulla
+    // (tolto dalle schede di giurisprudenza l'11.09.2026).
     slug: 'attuazione-italiana',
     label: 'Attuazione italiana',
     aliases: ['d.l. 100/2026', 'decreto-legge 100/2026', 'legge di conversione', 'A.S. 1939'],
