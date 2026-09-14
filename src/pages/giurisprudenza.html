@@ -16,15 +16,40 @@ description: "Le decisioni dei giudici italiani ed europei sul Patto UE su migra
   </div>
 </section>
 
+<style>
+  /* Filtri combinati (temi + autorità): etichetta di riga sopra ogni barra di chip. */
+  .filtri-elenco { margin-bottom: 1.75rem; }
+  .filtri-elenco .filtri-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+  .filtri-elenco .temi-filtro { margin-bottom: 1.1rem; }
+  .filtri-elenco .temi-filtro[hidden] + .filtri-label,
+  .filtri-elenco .filtri-label:has(+ .temi-filtro[hidden]) { display: none; }
+  .temi-filtro-btn.temi-filtro-vuoto { opacity: 0.45; }
+  @media (max-width: 768px) {
+    .filtri-elenco .temi-filtro { margin-bottom: 0.9rem; }
+  }
+</style>
+
 <section class="section" style="padding-top: 2rem;">
   <div class="container">
 
     {% assign schede = collections.giurisprudenza %}
     {% if schede.size > 0 %}
-    {% include "components/filtro-temi.liquid" %}
+    <div class="filtri-elenco">
+      <p class="filtri-label">Temi</p>
+      {% include "components/filtro-temi.liquid" %}
+      <p class="filtri-label">Autorità</p>
+      {% include "components/filtro-corti.liquid" %}
+    </div>
     <div class="archivio-grid">
       {% for scheda in schede %}
-      <a href="{{ scheda.url | url }}" class="archivio-card" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+      <a href="{{ scheda.url | url }}" class="archivio-card" data-corte="{{ scheda.data.corte | slugify }}" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
         {% if scheda.data.esempio %}<span class="scheda-esempio">Scheda di esempio</span>{% endif %}
         <p class="scheda-kicker">{{ scheda.data.tipo }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
         <h3>{{ scheda.data.corte }}, {{ scheda.date | dataIt }}</h3>

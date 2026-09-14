@@ -1,15 +1,32 @@
-// Filtro per macro-temi sulle pagine elenco (giurisprudenza, circolari, dottrina).
-// Le card portano data-temi="slug1 slug2"; lo stato vive in ?tema=<slug>.
+// Filtri sulle pagine elenco (giurisprudenza, circolari, dottrina).
+// Ogni barra `.temi-filtro` è una dimensione: `data-param` (default "tema") è il
+// nome del parametro in URL e della chiave sulle card (tema → data-temi, corte →
+// data-corte). Le chip portano data-valore (o il vecchio data-tema). Più barre si
+// combinano in AND; lo stato vive in ?tema=<slug>&corte=<slug>; i conteggi delle
+// chip si ricalcolano sul sottoinsieme selezionato dalle altre barre.
 (function () {
-  const barra = document.getElementById('temi-filtro');
-  if (!barra) return;
-  barra.hidden = false;
+  const barre = Array.from(document.querySelectorAll('.temi-filtro'));
+  if (!barre.length) return;
 
-  const bottoni = Array.from(barra.querySelectorAll('.temi-filtro-btn'));
-  const card = Array.from(document.querySelectorAll('.archivio-card[data-temi]'));
+  const card = Array.from(document.querySelectorAll('.archivio-card'));
+  const paramDi = (barra) => barra.dataset.param || 'tema';
+  const chiaveDi = (param) => (param === 'tema' ? 'temi' : param);
+  const valoreDi = (btn) => (btn.dataset.valore !== undefined ? btn.dataset.valore : btn.dataset.tema) || '';
+  const valoriCard = (c, param) => (c.dataset[chiaveDi(param)] || '').trim().split(/\s+/).filter(Boolean);
+
+  const stato = {};
+  const iniziali = new URLSearchParams(window.location.search);
+  barre.forEach((barra) => {
+    stato[paramDi(barra)] = iniziali.get(paramDi(barra)) || '';
+  });
+
+  // la card passa tutti i filtri attivi, salvo quello indicato in `escludi`
+  function corrisponde(c, escludi) {
+    return Object.keys(stato).every((p) => !stato[p] || p === escludi || valoriCard(c, p).includes(stato[p]));
+  }
 
   // Su mobile la barra è una riga scorrevole: porta la chip attiva in vista.
-  function centraAttivo() {
+  function centraAttivo(barra) {
     if (barra.scrollWidth <= barra.clientWidth) return;
     const attivo = barra.querySelector('.temi-filtro-attivo');
     if (!attivo) return;
@@ -22,32 +39,44 @@
     });
   }
 
-  function applica(slug, aggiornaUrl) {
-    bottoni.forEach((b) => {
-      b.classList.toggle('temi-filtro-attivo', (b.dataset.tema || '') === slug);
-    });
-    centraAttivo();
+  function applica(aggiornaUrl) {
     card.forEach((c) => {
-      const temi = (c.dataset.temi || '').trim().split(/\s+/);
-      c.hidden = Boolean(slug) && !temi.includes(slug);
+      c.hidden = !corrisponde(c);
+    });
+    barre.forEach((barra) => {
+      const p = paramDi(barra);
+      barra.querySelectorAll('.temi-filtro-btn').forEach((btn) => {
+        const v = valoreDi(btn);
+        btn.classList.toggle('temi-filtro-attivo', (stato[p] || '') === v);
+        const n = card.filter((c) => corrisponde(c, p) && (!v || valoriCard(c, p).includes(v))).length;
+        const span = btn.querySelector('.temi-filtro-n');
+        if (span) span.textContent = n;
+        btn.classList.toggle('temi-filtro-vuoto', n === 0 && v !== '');
+      });
+      centraAttivo(barra);
     });
     if (aggiornaUrl) {
       const url = new URL(window.location);
-      if (slug) url.searchParams.set('tema', slug);
-      else url.searchParams.delete('tema');
+      Object.keys(stato).forEach((p) => {
+        if (stato[p]) url.searchParams.set(p, stato[p]);
+        else url.searchParams.delete(p);
+      });
       history.replaceState(null, '', url);
     }
   }
 
-  bottoni.forEach((b) => {
-    b.addEventListener('click', () => {
-      const slug = b.dataset.tema || '';
-      // ri-cliccare il tema attivo lo deseleziona
-      const attivo = b.classList.contains('temi-filtro-attivo');
-      applica(attivo ? '' : slug, true);
+  barre.forEach((barra) => {
+    const p = paramDi(barra);
+    barra.hidden = false;
+    barra.querySelectorAll('.temi-filtro-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const v = valoreDi(btn);
+        // ri-cliccare la chip attiva la deseleziona
+        stato[p] = stato[p] === v ? '' : v;
+        applica(true);
+      });
     });
   });
 
-  const iniziale = new URLSearchParams(window.location.search).get('tema') || '';
-  if (iniziale) applica(iniziale, false);
+  applica(false);
 })();

@@ -1,0 +1,30 @@
+{%- comment -%}
+  Barra di filtro per autorità giudicante (campo `corte` delle schede).
+  Richiede nel contesto la variabile `schede`; le card devono portare
+  data-corte="{{ scheda.data.corte | slugify }}". Ordine: Cassazione, Corti
+  d'appello, poi gli altri uffici in ordine alfabetico. Nascosta senza JavaScript:
+  la mostra src/scripts/filtro-temi.js, che gestisce ogni barra `.temi-filtro[data-param]`.
+{%- endcomment -%}
+{%- assign elenco = "" -%}
+{%- for scheda in schede -%}
+  {%- assign voce = scheda.data.corte | append: "|" -%}
+  {%- assign chiave = "|" | append: voce -%}
+  {%- assign elencoChiuso = "|" | append: elenco -%}
+  {%- unless elencoChiuso contains chiave -%}{%- assign elenco = elenco | append: voce -%}{%- endunless -%}
+{%- endfor -%}
+{%- assign corti = elenco | split: "|" | sort -%}
+{%- assign ordinate = "" | split: "|" -%}
+{%- for c in corti -%}{%- if c contains "cassazione" or c contains "Cassazione" -%}{%- assign ordinate = ordinate | push: c -%}{%- endif -%}{%- endfor -%}
+{%- for c in corti -%}{%- if c contains "Appello" or c contains "appello" -%}{%- assign ordinate = ordinate | push: c -%}{%- endif -%}{%- endfor -%}
+{%- for c in corti -%}
+  {%- unless c contains "cassazione" or c contains "Cassazione" or c contains "Appello" or c contains "appello" -%}{%- assign ordinate = ordinate | push: c -%}{%- endunless -%}
+{%- endfor -%}
+<div class="temi-filtro" id="corti-filtro" data-param="corte" hidden aria-label="Filtra per autorità giudicante">
+  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-valore="">Tutte <span class="temi-filtro-n">{{ schede.size }}</span></button>
+  {%- for c in ordinate %}
+    {%- assign n = 0 %}
+    {%- for scheda in schede %}{% if scheda.data.corte == c %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+    {%- assign breve = c | replace: "Tribunale di ", "Trib. " | replace: "Corte d'Appello di ", "App. " | replace: "Corte d'appello di ", "App. " | replace: "Corte di cassazione", "Cassazione" | replace: "Corte di Cassazione", "Cassazione" %}
+  <button type="button" class="temi-filtro-btn" data-valore="{{ c | slugify }}" title="{{ c }}">{{ breve }} <span class="temi-filtro-n">{{ n }}</span></button>
+  {%- endfor %}
+</div>
