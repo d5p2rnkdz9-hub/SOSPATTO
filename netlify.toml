@@ -39,6 +39,14 @@
   to = "/giurisprudenza/trib-palermo-8695-2026-07-25.html"
   status = 301
 
+# ── SCHEDE RIMOSSE ──
+# L'ordinanza istruttoria del T.A.R. Lombardia sulla class action pubblica
+# (ord. 3818/2026) e' stata tolta dal sito: l'URL pubblicato rimanda all'indice.
+[[redirects]]
+  from = "/giurisprudenza/tar-lombardia-3818-2026-07-20.html"
+  to = "/giurisprudenza.html"
+  status = 301
+
 # ── HOMEPAGE CANONICAL ──
 [[redirects]]
   from = "/index.html"

@@ -54,16 +54,16 @@ module.exports = {
         href: '/giurisprudenza/trib-roma-2026-08-19.html',
       },
       {
-        date: '17 agosto 2026',
-        text: 'Trib. Perugia: se la Commissione ha applicato la disciplina pre-Patto, il ricorso segue il rito previgente ed è tempestivo',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-perugia-3003-2026-08-17.html',
-      },
-      {
         date: '10 agosto 2026',
         text: 'Trib. Napoli: se la Commissione giudica non credibili i motivi politici, ammette la categoria che rende il 20% non rappresentativo',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-napoli-17573-2026-08-10.html',
+      },
+      {
+        date: '3 agosto 2026',
+        text: 'Trib. Milano: la misura alternativa al trattenimento è priva di base giuridica in mancanza dei motivi tassativi del trattenimento',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-milano-33108-2026-08-03.html',
       },
     ],
   },

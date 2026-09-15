@@ -1,0 +1,76 @@
+# ⚠️ BOZZA — NON PUBBLICATA
+#
+# Estensione `.md.bozza`: Eleventy non la processa. Per pubblicare:
+#   1. anonimizzare il PDF: la scansione (200 dpi) diffusa dalla difesa ha rettangoli
+#      neri SEMITRASPARENTI sui dati anagrafici, C.F., CUI e ID Vestanet — tutto
+#      leggibile a occhio. È la variante «box semitrasparente» degli oscuramenti
+#      falsi; a pag. 1 si leggono nome/cognome, luogo e data di nascita, C.F., CUI e
+#      il n. Vestanet (i dati reali si leggono a occhio sul file sorgente).
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             DA-OSCURARE-trib-genova-9346-2026-09-07.pdf"
+#      Redaction (scansione, senza livello testo):
+#        python3 scripts/oscura_pdf.py \
+#          "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/DA-OSCURARE-trib-genova-9346-2026-09-07.pdf" \
+#          public/allegati/giurisprudenza/trib-genova-9346-2026-09-07.pdf \
+#          --riscura --ocr --solo-nomi \
+#          --nomi "<NOME COGNOME>" "<CODICE FISCALE>" "<N. VESTANET>" \
+#          --verifica
+#      Sulla scansione la verifica automatica dirà «0 caratteri»: guarda le
+#      anteprime pagina per pagina prima di pubblicare.
+#   2. copiarlo in public/allegati/giurisprudenza/trib-genova-9346-2026-09-07.pdf
+#   3. rinominare questo file in `trib-genova-9346-2026-09-07.md`
+#   4. caricare la copia oscurata sulla cartella Drive «SENTENZE PATTO»
+---
+corte: "Tribunale di Genova"
+tipo: "Decreto sulla sospensione dell'efficacia esecutiva e sull'istanza cautelare di autorizzazione a rimanere (art. 35-bis, commi 3 e 4, d.lgs. 25/2008)"
+numero: "N. 9346/2026 R.G.TRIB."
+date: 2026-09-07
+temi: [Regime transitorio, Accesso alla procedura, Procedure accelerate, Rimedi giurisdizionali]
+massima: "Ai fini del regime transitorio dell'art. 17, comma 4, d.l. 100/2026, la manifestazione di volontà di chiedere protezione, comprovata dall'ingresso in CAS anteriore al 12 giugno 2026 e riconducibile agli artt. 9, 11 e 17 d.lgs. 142/2015, radica l'applicazione della disciplina previgente pur quando la successiva formalizzazione ex art. 26 Reg. (UE) 2024/1348 sia intervenuta dopo. Applicata la disciplina previgente e non rispettati i termini della procedura accelerata di cui all'art. 28-bis, comma 2, d.lgs. 25/2008 nel testo anteriore al d.l. 100/2026, il rito riespande la procedura ordinaria e opera la sospensione automatica ex art. 35-bis, comma 3, primo periodo, d.lgs. 25/2008, con conseguente declaratoria di non luogo a provvedere sull'istanza cautelare. Il Tribunale fissa comunque udienza cartolare, valorizzando l'assenza di videoregistrazione dell'audizione e riservando la valutazione di merito."
+norme:
+  - { label: "Art. 17, comma 4, d.l. 100/2026 (disciplina transitoria; «presentazione»)", href: "/patto-interattivo/dl-100-2026/index.html#art_17-com4" }
+  - { label: "Art. 79, par. 3, Reg. (UE) 2024/1348 (disciplina transitoria)", href: "/patto-interattivo/1348.html#art_79" }
+  - { label: "Art. 26, par. 1, Reg. (UE) 2024/1348 (manifestazione della volontà)", href: "/patto-interattivo/1348.html#art_26" }
+  - { label: "Artt. 9, 11 e 17 d.lgs. 142/2015 (accoglienza; assegnazione al CAS a seguito della manifestazione di volontà)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_9" }
+  - { label: "Art. 28-bis d.lgs. 25/2008 (procedure accelerate; testo previgente)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_28-bis" }
+  - { label: "Art. 35-bis, commi 3 e 11, d.lgs. 25/2008 (sospensione automatica; udienza)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_35-bis" }
+pdf: /allegati/giurisprudenza/trib-genova-9346-2026-09-07.pdf
+---
+
+Il Tribunale di Genova (giudice dott.ssa Patrizia Cazzato) ha dichiarato l'efficacia esecutiva del
+diniego della Commissione territoriale automaticamente sospesa *ex lege*, dando non luogo a
+provvedere sull'istanza cautelare del ricorrente. Il decreto rientra nel filone che,
+[da Napoli 17179 del 4 agosto](/giurisprudenza/trib-napoli-17179-2026-08-04.html) a
+[Torino 16082 del 24 agosto](/giurisprudenza/trib-torino-16082-2026-08-24.html) a
+[Bologna 13590 del 4 settembre](/giurisprudenza/trib-bologna-13590-2026-09-04.html), valorizza la
+manifestazione di volontà anteriore al 12 giugno 2026 per applicare la disciplina previgente.
+
+## L'ingresso in CAS come manifestazione documentata
+
+La Commissione territoriale aveva applicato il d.l. 100/2026 e il Reg. (UE) 2024/1348, con
+procedura accelerata. Il Tribunale osserva però che, secondo gli atti, il ricorrente era stato
+collocato al CAS in data 29 maggio 2026: ai sensi degli artt. 9, 11 e 17 d.lgs. 142/2015
+l'assegnazione al CAS «avviene a seguito di manifestazione da parte dei richiedenti di volere
+presentare domanda di protezione internazionale». Combinando l'art. 26, par. 1, Reg. (UE) 2024/1348
+— che àncora la nozione di domanda alla manifestazione della volontà — e l'art. 17, comma 4, d.l.
+100/2026, il decreto conclude che, con manifestazione antecedente al 12 giugno 2026, si applica la
+disciplina previgente «con conseguente rispetto dei termini di fase secondo l'interpretazione datane
+dalla Cassazione SS.UU. 11399/2024».
+
+## Termini non rispettati e sospensione automatica
+
+Passando al caso di specie, il decreto rileva che non risultano rispettati i termini della procedura
+accelerata dell'art. 28-*bis*, comma 2, *ante* d.l. 100/2026 (trasmissione senza ritardo alla
+Commissione, audizione entro sette giorni, decisione entro i successivi due): la formalizzazione è del
+21 luglio 2026, l'audizione dell'11 agosto e la decisione del 19 agosto. Il mancato rispetto comporta
+il ripristino della procedura ordinaria e, con essa, della sospensione automatica: sull'istanza
+cautelare non v'è ragione di provvedere. Non essendo disponibile la videoregistrazione
+dell'audizione, il Tribunale fissa comunque udienza cartolare ex art. 35-*bis*, comma 11, lett. *a*),
+con termine per note e documenti alla difesa e al P.M., riservando la valutazione di merito.
+
+## Nota sulla fonte
+
+Provvedimento reso disponibile dalla difesa del ricorrente. Scansione (200 dpi) senza livello testo,
+con rettangoli neri semitrasparenti sui dati anagrafici, C.F., CUI e sul numero di modello
+Vestanet: la copia originaria non è diffondibile e richiede oscuramento reale prima della
+pubblicazione.

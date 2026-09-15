@@ -1,0 +1,88 @@
+# ⚠️ BOZZA — NON PUBBLICATA
+#
+# Estensione `.md.bozza`: Eleventy non la processa. Per pubblicare:
+#   1. anonimizzare il PDF: nel PDF diffuso i rettangoli neri sui dati del
+#      ricorrente e del difensore in intestazione (nome, luogo/data di nascita,
+#      cognome dell'avv.) sono vettoriali ma NON rimuovono il testo sotto — pdftotext
+#      ricava «<NOME COGNOME>, nato/a in <PAESE> il <GG/MM/AAAA> … <COGNOME NOME dell'avv.>» (i dati reali si leggono con pdftotext sul file sorgente). È
+#      la variante «box opaco vettoriale» degli oscuramenti falsi.
+#      File: "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/
+#             DA-OSCURARE-trib-bologna-13519-2026-09-07.pdf"
+#      Redaction:
+#        python3 scripts/oscura_pdf.py \
+#          "Materiali da caricare SOSPATTO/_DA-OSCURARE-prima-di-pubblicare/DA-OSCURARE-trib-bologna-13519-2026-09-07.pdf" \
+#          public/allegati/giurisprudenza/trib-bologna-13519-2026-09-07.pdf \
+#          --riscura --solo-nomi \
+#          --nomi "<NOME COGNOME>" "<COGNOME NOME avv.>" "<PAESE>" "<GG/MM/AAAA>" \
+#          --verifica
+#      Guarda le anteprime in _verifica/: la data di nascita nuda (senza «nato il»)
+#      e il cognome dell'avv. potrebbero non essere intercettati.
+#   2. copiarlo in public/allegati/giurisprudenza/trib-bologna-13519-2026-09-07.pdf
+#   3. rinominare questo file in `trib-bologna-13519-2026-09-07.md`
+#   4. caricare la copia oscurata sulla cartella Drive «SENTENZE PATTO»
+---
+corte: "Tribunale di Bologna"
+tipo: "Decreto sulla sospensione dell'efficacia esecutiva (art. 35-bis, commi 3, 4 e 5, d.lgs. 25/2008)"
+numero: "N.R.G. 13519-1/2026"
+date: 2026-09-07
+temi: [Procedura di frontiera, Vulnerabilità, Screening, Garanzie procedurali, Manifesta infondatezza, Rimedi giurisdizionali]
+massima: "In procedura accelerata obbligatoria di frontiera ex artt. 43 e 45 Reg. (UE) 2024/1348, la Commissione territoriale deve monitorare la condizione di vulnerabilità del richiedente non solo in sede di screening, ma anche in sede di audizione e nelle fasi successive: quando lo screening abbia rilevato che il richiedente è «persona sottoposta ad altre forme gravi di violenza psicologica, fisica o sessuale» e bisognosa di supporto psicologico, l'esclusione delle esigenze procedurali particolari registrata al momento dello screening non equivale a una presunzione di insussistenza per tutta la durata del procedimento. La prosecuzione della procedura di frontiera senza rivalutare la vulnerabilità post-audizione, ai fini della verifica sia della necessità di garanzie procedurali particolari sia della loro concreta assicurabilità nell'ambito della procedura, comporta la riconducibilità alla procedura ordinaria (SS.UU. n. 11399/2024). Ai fini dell'art. 68, par. 3, Reg. (UE) 2024/1348, la deroga al diritto di rimanere presuppone che al momento della decisione il richiedente sia stato correttamente sottoposto a esame accelerato o alla procedura di frontiera: la procedura non correttamente attuata riespande la regola della sospensione automatica."
+norme:
+  - { label: "Art. 43 Reg. (UE) 2024/1348 (condizioni di applicazione della procedura di frontiera)", href: "/patto-interattivo/1348.html#art_43" }
+  - { label: "Art. 45, par. 1, Reg. (UE) 2024/1348 (applicazione obbligatoria della procedura di frontiera)", href: "/patto-interattivo/1348.html#art_45" }
+  - { label: "Art. 53, par. 2, Reg. (UE) 2024/1348 (cessazione della procedura di frontiera in presenza di vulnerabilità)", href: "/patto-interattivo/1348.html#art_53" }
+  - { label: "Artt. 20 e 21 Reg. (UE) 2024/1348 (valutazione e sostegno per garanzie procedurali particolari)", href: "/patto-interattivo/1348.html#art_20" }
+  - { label: "Art. 39, par. 4, Reg. (UE) 2024/1348 (domanda manifestamente infondata)", href: "/patto-interattivo/1348.html#art_39" }
+  - { label: "Art. 42, par. 1, lett. j), Reg. (UE) 2024/1348 (procedura accelerata)", href: "/patto-interattivo/1348.html#art_42" }
+  - { label: "Art. 68, par. 3, Reg. (UE) 2024/1348 (deroghe all'effetto sospensivo del ricorso)", href: "/patto-interattivo/1348.html#art_68" }
+  - { label: "Art. 35-bis, commi 3, 4 e 5, d.lgs. 25/2008 (sospensione automatica; autorizzazione a permanere)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_35-bis" }
+  - { label: "Considerando 17 e 20 Reg. (UE) 2024/1348 (garanzie procedurali particolari; sconsigliata l'accelerazione)", href: "/patto-interattivo/1348.html" }
+pdf: /allegati/giurisprudenza/trib-bologna-13519-2026-09-07.pdf
+---
+
+Il Tribunale di Bologna (giudice dott.ssa Angela Baraldi) dichiara automaticamente sospeso il diniego
+con cui la Commissione territoriale di Bologna, il 30 luglio 2026, aveva rigettato la domanda di un
+cittadino bangladese in procedura di frontiera. Il decreto è dello stesso giudice di
+[Trib. Bologna 12908 del 17 agosto](/giurisprudenza/trib-bologna-12908-2026-08-17.html) e di
+[Trib. Bologna 13590 del 4 settembre](/giurisprudenza/trib-bologna-13590-2026-09-04.html) — ma qui
+il punto non è il regime intertemporale, bensì la **vulnerabilità nella procedura di frontiera**.
+
+## Lo screening di Agrigento e il seguito
+
+Il modulo di screening compilato a Agrigento aveva rilevato la necessità di supporto psicologico e
+l'appartenenza del richiedente ai gruppi vulnerabili — «persona sottoposta ad altre forme gravi di
+violenza psicologica, fisica o sessuale» — ma escluso le esigenze particolari di accoglienza e le
+esigenze procedurali speciali. Il 30 luglio 2026 il Presidente della Commissione ha adottato la
+determina di procedura accelerata obbligatoria di frontiera ex artt. 43 e 45 Reg. (UE) 2024/1348,
+attestando che «non si rinvengono allo stato altre condizioni che rendono necessario il ricorso alla
+procedura ordinaria».
+
+## Il monitoraggio non finisce con lo screening
+
+Il perno del decreto è nei considerando 17 e 20 e negli artt. 20, 21 e 53, par. 2, Reg. (UE) 2024/1348:
+la necessità di garanzie procedurali particolari può emergere «in qualunque momento e quindi anche
+dopo lo screening», e la Commissione deve monitorare la vulnerabilità lungo tutto il procedimento,
+dandone conto anche quando ne confermi l'insussistenza. Se in sede di audizione il richiedente
+risulta bisognoso di supporto psicologico, la Commissione deve approfondire natura e cause della
+vulnerabilità e verificare se il sostegno necessario possa essere assicurato nell'ambito della
+procedura accelerata o di frontiera: nel caso di specie, nessuna domanda in tal senso è stata posta e
+il provvedimento non ne dà conto.
+
+## La riconducibilità alla procedura ordinaria e l'effetto sospensivo
+
+Applicando Cass. SS.UU. n. 11399/2024, la deroga alla sospensione automatica opera solo dove la
+procedura accelerata sia stata «correttamente svolta in tutte le sue articolazioni». La mancata
+rivalutazione della vulnerabilità *dall'audizione in avanti* comporta la riconduzione alla procedura
+ordinaria. Il principio vale, «a maggior ragione», anche dopo l'entrata in vigore del Patto: l'art. 68,
+par. 3, Reg. (UE) 2024/1348 subordina il venir meno del diritto di rimanere al fatto che, al momento
+della decisione, il richiedente sia effettivamente sottoposto a esame accelerato o alla procedura di
+frontiera. Non correttamente attuata la procedura, non ricorre l'eccezione: torna la regola generale
+della sospensione automatica e viene accertato il diritto di permanere per la durata del giudizio.
+
+## Nota sulla fonte
+
+Provvedimento pubblicato nell'archivio «asilo» dell'**Osservatorio romano sulla giustizia civile**
+([romaosservatorio.it](https://www.romaosservatorio.it/dettaglio-news/archivio.html)), che lo indica
+come «Trib. Bologna, 7 settembre 2026, Baraldi». PDF nativo digitale con rettangoli vettoriali sui
+dati anagrafici del ricorrente e sul cognome del difensore, che tuttavia non rimuovono il testo sotto:
+la copia originaria non è diffondibile e richiede oscuramento reale prima della pubblicazione.
