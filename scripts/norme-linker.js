@@ -254,7 +254,7 @@ function passaArticoli(seg, ctx) {
 function passaConsiderando(seg, ctx) {
   return seg.replace(RE_RCT, (tutto, k, n, altri, sep, attoTxt) => {
     const atto = risolviAtto(attoTxt);
-    if (!atto || atto.scheda || atto.nl) return tutto;
+    if (!atto || atto.scheda || atto.nl || atto.ext) return tutto; // gli atti esterni non hanno i considerando
     const ids = idsDi(atto.file);
     if (!ids || !ids.has(`rct_${n}`)) { ctx.warn(`considerando ${n} non trovato in ${atto.key}`); return tutto; }
     ctx.links++;

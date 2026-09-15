@@ -36,6 +36,24 @@ module.exports = {
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
       {
+        date: '12 settembre 2026',
+        text: "Trib. Roma: l'esame accelerato presuppone le garanzie del Capo II, senza informativa e orientamento legale è procedura ordinaria",
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-roma-39909-2026-09-12.html',
+      },
+      {
+        date: '11 settembre 2026',
+        text: "Trib. Firenze: l'informativa non tradotta non riespande la procedura ordinaria se il colloquio si è svolto con il difensore",
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-firenze-11088-2026-09-11.html',
+      },
+      {
+        date: '10 settembre 2026',
+        text: 'Trib. Bologna: le esigenze procedurali particolari escludono la procedura di frontiera, non le nega un operatore allo screening',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-bologna-13748-2026-09-10.html',
+      },
+      {
         date: '4 settembre 2026',
         text: 'Trib. Bologna: C3 tardivo per inerzia della Questura, valgono le norme vigenti al momento della manifestazione di volontà',
         cta: 'Leggi la scheda',
@@ -46,24 +64,6 @@ module.exports = {
         text: 'Trib. Trieste: il D.M. zone di frontiera non ha effetto sanante sulle procedure instaurate prima della pubblicazione in G.U.',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-trieste-4748-2026-08-20.html',
-      },
-      {
-        date: '19 agosto 2026',
-        text: 'Trib. Roma: sospeso il trasferimento Dublino, il provvedimento richiama un articolo del Regolamento senza indicarne il numero',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-roma-2026-08-19.html',
-      },
-      {
-        date: '10 agosto 2026',
-        text: 'Trib. Napoli: se la Commissione giudica non credibili i motivi politici, ammette la categoria che rende il 20% non rappresentativo',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-napoli-17573-2026-08-10.html',
-      },
-      {
-        date: '3 agosto 2026',
-        text: 'Trib. Milano: la misura alternativa al trattenimento è priva di base giuridica in mancanza dei motivi tassativi del trattenimento',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-milano-33108-2026-08-03.html',
       },
     ],
   },
