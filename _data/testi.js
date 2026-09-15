@@ -90,17 +90,15 @@ module.exports = {
   ],
 
   it: [
-    // Il decreto di adeguamento non sta nel bundle interattivo (non è un testo
-    // consolidato ma una norma che nòvella): la card punta alla sua scheda, che
-    // porta il testo ufficiale in PDF. Da qui il campo `href`, che scavalca il
-    // percorso /patto-interattivo/<slug>/.
+    // Il decreto di adeguamento: atto di novella (non consolidato), reso come testo
+    // vigente interattivo; le sue modifiche si leggono evidenziate nei tre testi
+    // coordinati qui sotto. Un eventuale campo `href` scavalcherebbe il percorso
+    // /patto-interattivo/<slug>/ (serviva quando la card puntava alla scheda).
     {
       slug: 'dl-100-2026',
-      href: '/circolari/dl-100-2026.html',
       titolo: 'D.L. 100/2026',
       sotto: 'Prima attuazione italiana del Patto UE su migrazione e asilo',
-      coord: 'Testo ufficiale (G.U. 12 giugno 2026) — convertito senza modificazioni dalla l. 145/2026',
-      cta: 'Scheda e testo →',
+      coord: 'Testo vigente — convertito senza modificazioni dalla l. 145/2026',
       icon: '📜',
     },
     {

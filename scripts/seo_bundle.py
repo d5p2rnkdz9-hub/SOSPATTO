@@ -53,6 +53,12 @@ def make_description(title, rel):
     nome = parts[0]
     resto = parts[1] if len(parts) > 1 else ""
 
+    if rel.startswith("dl-"):
+        # il d.l. 100/2026: atto di novella, testo vigente (non consolidato)
+        return (f"{resto[:1].upper() + resto[1:] if resto else 'Testo interattivo'} del {nome}: "
+                f"il decreto-legge di prima attuazione italiana del Patto UE su migrazione e "
+                f"asilo, con i rinvii navigabili ai regolamenti e alle leggi coordinate, su SOS Patto.")
+
     if rel.startswith("dlgs-"):
         # testi consolidati italiani, modifiche evidenziate
         coda = f" ({resto})" if resto else ""
