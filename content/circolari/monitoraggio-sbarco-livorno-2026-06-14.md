@@ -1,5 +1,5 @@
 ---
-ente: "ASGI — monitoraggio in Toscana"
+ente: "Monitoraggio indipendente in Toscana"
 tipo: "Nota di monitoraggio"
 numero: "sbarco del 14/06/2026 (ONG Solidaire)"
 date: 2026-06-14

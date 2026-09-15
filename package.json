@@ -6,6 +6,7 @@
     "dev": "npx @11ty/eleventy --serve",
     "build": "node scripts/check_temi.js && npx @11ty/eleventy",
     "temi-check": "node scripts/check_temi.js",
+    "norme-check": "node scripts/norme-check.js",
     "retheme": "python3 scripts/retheme_blue.py",
     "seo": "python3 scripts/seo_bundle.py",
     "logo": "python3 scripts/inject_bundle_logo.py"

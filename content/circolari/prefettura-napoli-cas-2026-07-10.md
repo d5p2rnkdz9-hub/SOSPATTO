@@ -31,7 +31,6 @@ elementi informativi e, in particolare:
 
 La nota è significativa come prassi perché mostra il primo impiego, in sede di accesso
 all'accoglienza, del filtro temporale dei novanta giorni introdotto nel d.lgs. 142/2015: un criterio che
-opera a monte della valutazione sulle misure di accoglienza e che, nel confronto tra colleghi, è stato
-letto come possibile strumento di temporeggiamento istruttorio. L'indicazione operativa emersa è di
-evidenziare subito gli eventuali profili di vulnerabilità e di comunicare comunque la data di ingresso
-chiedendo l'immediato accesso all'accoglienza.
+opera a monte della valutazione sulle misure di accoglienza e che può prestarsi a un temporeggiamento
+istruttorio. Sul piano difensivo rilevano l'immediata allegazione degli eventuali profili di
+vulnerabilità e la comunicazione della data di ingresso con richiesta di accesso all'accoglienza.

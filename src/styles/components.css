@@ -1552,6 +1552,77 @@ a.scheda-tema:hover {
 .scheda-norme li { margin-bottom: 0.3rem; }
 .scheda-norme a { color: var(--black); font-weight: 700; }
 
+/* Riferimenti normativi nel testo delle schede (a.xref, generati in build da
+   scripts/norme-linker.js) e tooltip al passaggio del mouse (norme-hover.js):
+   stessa grammatica visiva del testo interattivo, palette del sito. */
+.scheda-body a.xref,
+.scheda-massima a.xref {
+  color: #1565C0;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(21, 101, 192, 0.55);
+  border-radius: 2px;
+  transition: background 0.15s ease;
+}
+.scheda-body a.xref:hover,
+.scheda-massima a.xref:hover {
+  background: var(--taxi-yellow-light);
+  border-bottom-style: solid;
+  border-bottom-color: #1565C0;
+}
+.scheda-body a.xref-scheda,
+.scheda-massima a.xref-scheda { border-bottom-style: dashed; }
+.scheda-body a.xref a.xref,
+.scheda-massima a.xref a.xref { border-bottom: none; }
+
+.norme-tip {
+  position: absolute;
+  z-index: 300;
+  width: min(560px, 88vw);
+  max-height: 360px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--black);
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--gray-dark);
+  text-align: left;
+}
+.norme-tip .tip-head { margin-bottom: 6px; }
+.norme-tip .t-act {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  background: var(--taxi-yellow-light);
+  border: 1.5px solid var(--black);
+  border-radius: 999px;
+  padding: 1px 9px;
+  margin-bottom: 4px;
+}
+.norme-tip .t-ver { font-size: 11px; color: #1565C0; margin-left: 6px; }
+.norme-tip .t-label { font-family: var(--font-heading); font-weight: 700; font-size: 13.5px; color: var(--black); }
+.norme-tip .t-heading { font-style: italic; font-size: 13px; color: var(--gray-medium); }
+.norme-tip .tip-body p { margin: 0.35em 0; }
+.norme-tip .tip-body table { border-collapse: collapse; width: 100%; }
+.norme-tip .tip-body td { vertical-align: top; padding: 1px 6px 1px 0; }
+.norme-tip .tip-body .title-article-norm { display: none; }
+.norme-tip .tip-nota { font-size: 12.5px; color: var(--gray-medium); }
+.norme-tip .tip-foot { margin-top: 8px; font-size: 12px; }
+.norme-tip .tip-foot a { color: #1565C0; font-weight: 600; cursor: pointer; text-decoration: none; }
+.norme-tip .hl-par { background: var(--taxi-yellow-light); display: block; border-radius: 4px; padding: 2px 4px; }
+.norme-tip .comma { margin: 0.45em 0; }
+.norme-tip .cnum { font-weight: 600; color: #1565C0; }
+.norme-tip .lett-n { display: inline-block; margin-left: 1.6em; color: #1565C0; font-weight: 600; }
+.norme-tip .comma.abrog { color: var(--gray-medium); }
+.norme-tip ins.amd-ins { color: #c1121f; text-decoration: none; background: rgba(193, 18, 31, 0.07); border-radius: 3px; padding: 0 1px; }
+.norme-tip del.amd-del { color: #8a8f98; text-decoration: line-through; }
+.norme-tip .fn-mark { font-size: 0.72em; vertical-align: super; color: var(--gray-medium); }
+.norme-tip a.xref, .norme-tip a.lawlink { color: #1565C0; text-decoration: none; border-bottom: 1px dotted rgba(21, 101, 192, 0.5); }
+
 .scheda-allegati {
   border: 2px solid var(--black);
   border-radius: 12px;

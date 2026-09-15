@@ -1,7 +1,7 @@
 ---
 ente: "Questura di Agrigento e Commissione territoriale di Palermo — Sez. Agrigento"
 tipo: "Atti di prassi — prima applicazione della procedura di frontiera"
-numero: "documentazione raccolta dal progetto In Limine (ASGI)"
+numero: "documentazione raccolta da osservatori indipendenti"
 date: 2026-06-18
 temi: [Procedura di frontiera, Screening, Accesso alla procedura]
 oggetto: "Fascicolo completo degli atti consegnati a un richiedente sottoposto a procedura accelerata di frontiera dopo lo sbarco a Porto Empedocle: attestazione di manifestazione ex art. 27 Reg. 2024/1348, verbale di presa in carico del passaporto, modulo di screening, informativa, determinazione della procedura accelerata di frontiera, convocazione per l'audizione e provvedimento prefettizio di permanenza presso il Centro Sikania."
@@ -20,7 +20,7 @@ pdf: /allegati/circolari/prassi-frontiera-sikania-2026-06.pdf
 pdfLabel: "Scarica il fascicolo degli atti (PDF, oscurato)"
 ---
 
-Fascicolo condiviso dal progetto **In Limine** di ASGI: la prima documentazione completa relativa
+Fascicolo raccolto da osservatori indipendenti: la prima documentazione completa relativa
 all'applicazione della procedura introdotta con l'entrata in vigore del Patto, raccolta a seguito di uno
 sbarco a Porto Empedocle del 18 giugno 2026. Contiene i moduli e gli atti effettivamente consegnati
 al cittadino straniero, previamente oscurati dei dati personali. È il riscontro documentale delle
