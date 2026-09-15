@@ -3,7 +3,7 @@ ente: "Ministero dell'interno"
 tipo: "Decreto ministeriale — integrazione delle zone di frontiera o di transito"
 numero: "D.M. 21 luglio 2026 (G.U. 10 agosto 2026; registrato alla Corte dei conti il 3 agosto 2026, reg. n. 3507)"
 date: 2026-07-21
-temi: [Procedura di frontiera, Procedure accelerate, Regime transitorio, Rimedi giurisdizionali]
+temi: [Procedura di frontiera, Procedure accelerate, Regime transitorio]
 norme_impliciti: false  # gli «art. N» senza atto sono articoli del d.m., che non ha testo interattivo
 oggetto: "È il decreto che il d.l. 100/2026 richiedeva e la cui assenza aveva fatto cadere la procedura di frontiera nei primi contenziosi. Non sostituisce il d.m. 5 agosto 2019: lo INTEGRA, aggiungendo come zone di frontiera o di transito tutti i valichi di frontiera del codice Schengen e la gran parte dei porti dell'allegato A della l. 84/1994, e istituisce fino al 14 ottobre 2027 diciannove nuove sezioni delle Commissioni territoriali competenti per le domande incanalate nella procedura accelerata di frontiera. Un allegato A elenca venticinque province in cui sono individuati i centri per l'espletamento della procedura."
 norme:

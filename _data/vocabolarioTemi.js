@@ -57,12 +57,6 @@ module.exports = [
       'obblighi informativi', 'diritto di difesa', 'credibilità', 'onere della prova'],
   },
   {
-    slug: 'rimedi-giurisdizionali',
-    label: 'Rimedi giurisdizionali',
-    aliases: ['autorizzazione a rimanere', 'sospensiva', 'sospensione automatica',
-      'class action', 'processo', 'iscrizione a ruolo', 'ufficio per il processo'],
-  },
-  {
     slug: 'vulnerabilita',
     label: 'Vulnerabilità',
     aliases: ['tratta', 'categorie fragili', 'esigenze di accoglienza particolari'],

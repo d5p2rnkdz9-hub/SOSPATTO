@@ -3,7 +3,7 @@ corte: "Tribunale di Torino"
 tipo: "Decreto (istanza di sospensione e autorizzazione a rimanere, art. 35-bis d.lgs. 25/2008)"
 numero: "R.G. oscurato nel provvedimento"
 date: 2026-08-11
-temi: [Regime transitorio, Procedure accelerate, Paesi sicuri e soglia del 20%, Rimedi giurisdizionali]
+temi: [Regime transitorio, Procedure accelerate, Paesi sicuri e soglia del 20%]
 massima: "Anche per una domanda formalizzata dopo il 12 giugno 2026 — e quindi soggetta al Patto — è illegittima l'applicazione della procedura accelerata fondata sull'art. 28-bis, comma 2, lett. c), d.lgs. 25/2008 (provenienza da Paese di origine sicuro), norma da ritenersi abrogata per effetto dell'entrata in vigore del Regolamento Procedure e del d.l. 100/2026. Caduto quel presupposto, non possono trovare applicazione le eccezioni all'effetto sospensivo tassativamente previste dall'art. 68, par. 3, Reg. (UE) 2024/1348, e il ricorrente è autorizzato a rimanere ai sensi dell'art. 68, par. 2."
 norme:
   - { label: "Art. 68, par. 2 Reg. (UE) 2024/1348 (diritto di rimanere in pendenza del ricorso)", href: "/patto-interattivo/1348.html#art_68" }

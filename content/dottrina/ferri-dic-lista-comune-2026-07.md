@@ -3,7 +3,7 @@ fonte: "Diritto, Immigrazione e Cittadinanza, n. 2/2026"
 titolo: "Il controllo sulla legittimità della lista comune dell'Unione sui paesi di origine sicuri: tra eredità giurisprudenziali più che mai attuali e prospettive di evoluzione"
 autori: "Marcella Ferri"
 date: 2026-07-01
-temi: [Paesi sicuri e soglia del 20%, Rimedi giurisdizionali]
+temi: [Paesi sicuri e soglia del 20%]
 sommario: >-
   Esamina, nel quadro del Reg. 2026/464, se i principi delle sentenze CGUE CV e Alace/Campelli sul
   sindacato giudiziale sulla designazione dei paesi sicuri restino validi anche per la lista comune

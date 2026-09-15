@@ -25,7 +25,7 @@ corte: "Tribunale di Genova"
 tipo: "Decreto sulla sospensione dell'efficacia esecutiva e sull'istanza cautelare di autorizzazione a rimanere (art. 35-bis, commi 3 e 4, d.lgs. 25/2008)"
 numero: "N. 9346/2026 R.G.TRIB."
 date: 2026-09-07
-temi: [Regime transitorio, Accesso alla procedura, Procedure accelerate, Rimedi giurisdizionali]
+temi: [Regime transitorio, Accesso alla procedura, Procedure accelerate]
 massima: "Ai fini del regime transitorio dell'art. 17, comma 4, d.l. 100/2026, la manifestazione di volontà di chiedere protezione, comprovata dall'ingresso in CAS anteriore al 12 giugno 2026 e riconducibile agli artt. 9, 11 e 17 d.lgs. 142/2015, radica l'applicazione della disciplina previgente pur quando la successiva formalizzazione ex art. 26 Reg. (UE) 2024/1348 sia intervenuta dopo. Applicata la disciplina previgente e non rispettati i termini della procedura accelerata di cui all'art. 28-bis, comma 2, d.lgs. 25/2008 nel testo anteriore al d.l. 100/2026, il rito riespande la procedura ordinaria e opera la sospensione automatica ex art. 35-bis, comma 3, primo periodo, d.lgs. 25/2008, con conseguente declaratoria di non luogo a provvedere sull'istanza cautelare. Il Tribunale fissa comunque udienza cartolare, valorizzando l'assenza di videoregistrazione dell'audizione e riservando la valutazione di merito."
 norme:
   - { label: "Art. 17, comma 4, d.l. 100/2026 (disciplina transitoria; «presentazione»)", href: "/patto-interattivo/dl-100-2026/index.html#art_17-com4" }
