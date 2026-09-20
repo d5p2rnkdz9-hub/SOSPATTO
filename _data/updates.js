@@ -36,6 +36,12 @@ module.exports = {
     pauseLabel: 'Metti in pausa gli aggiornamenti',
     items: [
       {
+        date: '14 settembre 2026',
+        text: 'Trib. Trieste: la soglia del 20% non dispensa la Commissione dalla valutazione individuale delle esigenze procedurali di genere',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-trieste-vulnerabilita-2026-09-14.html',
+      },
+      {
         date: '12 settembre 2026',
         text: "Trib. Roma: l'esame accelerato presuppone le garanzie del Capo II, senza informativa e orientamento legale è procedura ordinaria",
         cta: 'Leggi la scheda',
@@ -43,27 +49,21 @@ module.exports = {
       },
       {
         date: '11 settembre 2026',
-        text: "Trib. Firenze: l'informativa non tradotta non riespande la procedura ordinaria se il colloquio si è svolto con il difensore",
+        text: 'Trib. Milano: disapplica la designazione del Bangladesh come paese sicuro, la scheda ministeriale esclude le persone LGBTQI+',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-firenze-11088-2026-09-11.html',
+        href: '/giurisprudenza/trib-milano-26906-2026-09-11.html',
+      },
+      {
+        date: '11 settembre 2026',
+        text: 'Trib. Bologna: sospensione automatica se la determina di procedura del Presidente della Commissione territoriale non è firmata',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-bologna-17417-2026-09-11.html',
       },
       {
         date: '10 settembre 2026',
         text: 'Trib. Bologna: le esigenze procedurali particolari escludono la procedura di frontiera, non le nega un operatore allo screening',
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-bologna-13748-2026-09-10.html',
-      },
-      {
-        date: '4 settembre 2026',
-        text: 'Trib. Bologna: C3 tardivo per inerzia della Questura, valgono le norme vigenti al momento della manifestazione di volontà',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-bologna-13590-2026-09-04.html',
-      },
-      {
-        date: '20 agosto 2026',
-        text: 'Trib. Trieste: il D.M. zone di frontiera non ha effetto sanante sulle procedure instaurate prima della pubblicazione in G.U.',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-trieste-4748-2026-08-20.html',
       },
     ],
   },
