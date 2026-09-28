@@ -51,6 +51,20 @@ extraStyles: |
       margin-top: 1.25rem;
     }
     .diagram-open-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #1A1A1A; }
+    button.diagram-open-btn { cursor: pointer; }
+    /* Pieno schermo vero (Fullscreen API) sul riquadro del diagramma */
+    .diagram-iframe-wrap { position: relative; }
+    .diagram-iframe-wrap:fullscreen { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+    .diagram-iframe-wrap:fullscreen iframe { width: 100vw; height: 100vh; min-height: 0; }
+    .diagram-fs-exit {
+      display: none;
+      position: absolute; top: 12px; right: 12px; z-index: 5;
+      background: var(--white); color: #1A1A1A;
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif; font-weight: 700; font-size: 0.85rem;
+      padding: 0.4rem 0.9rem; border: 2px solid #1A1A1A; border-radius: 10px;
+      box-shadow: 2px 2px 0 #1A1A1A; cursor: pointer;
+    }
+    .diagram-iframe-wrap:fullscreen .diagram-fs-exit { display: block; }
   </style>
 ---
 
@@ -66,7 +80,7 @@ extraStyles: |
         <a href="/patto-interattivo/1349.html">Reg. 2024/1349 (rimpatrio alla frontiera)</a>
         e Direttiva 2008/115 (rimpatri).
       </p>
-      <a href="/diagramma/index.html" target="_blank" rel="noopener" class="diagram-open-btn">
+      <a href="/diagramma/index.html" target="_blank" rel="noopener" class="diagram-open-btn" id="diagram-fs-btn">
         ↗ Apri a schermo intero
       </a>
     </div>
@@ -82,9 +96,35 @@ extraStyles: |
       <span>👆 Hover per i dettagli</span>
     </div>
 
-    <div class="diagram-iframe-wrap">
+    <div class="diagram-iframe-wrap" id="diagram-wrap">
       <iframe src="/diagramma/index.html" title="Diagramma interattivo: screening e procedure di protezione internazionale" loading="lazy"></iframe>
+      <button type="button" class="diagram-fs-exit" id="diagram-fs-exit">✕ Esci (Esc)</button>
     </div>
 
   </div>
 </section>
+
+<script>
+  // Pieno schermo vero via Fullscreen API; dove non c'è (iPhone) il link
+  // resta com'è e apre il diagramma in una nuova scheda.
+  (function () {
+    var btn = document.getElementById('diagram-fs-btn');
+    var wrap = document.getElementById('diagram-wrap');
+    var exit = document.getElementById('diagram-fs-exit');
+    var req = wrap.requestFullscreen || wrap.webkitRequestFullscreen;
+    if (!req) return;
+    btn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      var iframe = wrap.querySelector('iframe');
+      iframe.loading = 'eager'; // l'iframe lazy potrebbe non essere ancora caricato
+      var p = req.call(wrap);
+      // se il browser rifiuta, apre comunque il diagramma (nuova scheda o, se bloccata, questa)
+      if (p && p.catch) p.catch(function () {
+        if (!window.open(btn.href, '_blank')) location.assign(btn.href);
+      });
+    });
+    exit.addEventListener('click', function () {
+      (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    });
+  })();
+</script>
