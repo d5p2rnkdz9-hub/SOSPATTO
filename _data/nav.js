@@ -16,8 +16,8 @@ module.exports = {
         label: 'Giurisprudenza e dottrina',
         href: '/giurisprudenza.html',
         items: [
-          { label: 'Italiana', href: '/giurisprudenza.html#italiana' },
-          { label: 'Europea', href: '/giurisprudenza.html#europea' },
+          { label: 'Giurisprudenza europea', href: '/giurisprudenza-europea.html' },
+          { label: 'Giurisprudenza italiana', href: '/giurisprudenza.html' },
           { label: 'Commenti e dottrina', href: '/dottrina.html' },
         ],
       },
