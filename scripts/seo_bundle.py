@@ -59,6 +59,12 @@ def make_description(title, rel):
                 f"il decreto-legge di prima attuazione italiana del Patto UE su migrazione e "
                 f"asilo, con i rinvii navigabili ai regolamenti e alle leggi coordinate, su SOS Patto.")
 
+    if rel.startswith("dlgs-115-2026"):
+        # il d.lgs. 115/2026: decreto di novella (tratta), testo vigente come il d.l. 100
+        return (f"Testo vigente interattivo del {nome}: attuazione della direttiva (UE) "
+                f"2024/1712 sulla tratta di esseri umani, che modifica il T.U. immigrazione e i "
+                f"d.lgs. 142/2015 e 25/2008, con i rinvii navigabili, su SOS Patto.")
+
     if rel.startswith("dlgs-"):
         # testi consolidati italiani, modifiche evidenziate
         coda = f" ({resto})" if resto else ""

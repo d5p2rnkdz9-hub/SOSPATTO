@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["@11ty/eleventy", "--serve"],
       "port": 8080
+    },
+    {
+      "name": "sospatto-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8091", "--directory", "_site"],
+      "port": 8091
     }
   ]
 }

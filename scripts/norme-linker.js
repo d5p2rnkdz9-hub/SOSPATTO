@@ -42,6 +42,7 @@ const LEGGI = {
   'dlgs-1998-286': 'dlgs-286-1998',
   'dlgs-2007-251': 'dlgs-251-2007',
   'dl-2026-100': 'dl-100-2026',
+  'dlgs-2026-115': 'dlgs-115-2026',
 };
 const CARTELLA_A_KEY = Object.fromEntries(Object.entries(LEGGI).map(([k, v]) => [v, k]));
 

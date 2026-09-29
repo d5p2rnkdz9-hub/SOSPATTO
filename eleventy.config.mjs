@@ -15,6 +15,7 @@ const DATE_FMT = {
   fr: new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
 };
 const { linkNorme, verificaHref } = require('./scripts/norme-linker.js');
+const { injectDir, devMiddleware } = require('./scripts/versioni-inject.js');
 
 const MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno',
   'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
@@ -117,6 +118,16 @@ export default function (eleventyConfig) {
     }
     normeStats.length = 0;
   });
+
+  // ---- selettore Nuovo / Vecchio / Modifiche, per articolo -------------------
+  // Il bundle public/patto-interattivo/ è generato a monte e si ricopia con rsync:
+  // il selettore si aggiunge qui, alle copie in _site/ (e al volo nel --serve, che
+  // serve public/ senza copiarlo). Dettagli in scripts/versioni-inject.js.
+  eleventyConfig.on('eleventy.after', ({ dir }) => {
+    const fatti = injectDir(dir.output);
+    if (fatti.length) console.log(`[versioni] selettore nuovo/vecchio/modifiche in ${fatti.join(', ')}`);
+  });
+  eleventyConfig.setServerOptions({ middleware: [devMiddleware] });
 
   // ---- collezioni ---------------------------------------------------------
   // una scheda = un file .md in content/giurisprudenza/ o content/circolari/

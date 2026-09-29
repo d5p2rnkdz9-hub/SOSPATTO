@@ -160,13 +160,48 @@ byte per byte (esclusa la cartella `dl-100-2026/`, che non viene da sospermesso:
 sorgente ha cambiato forma e va aggiornato lo script, non il bundle a mano.
 Aggiorna anche la data in `_data/testi.js` (`aggiornamento`) quando cambia il testo delle norme.
 
+### Versioni degli articoli: Nuovo / Vecchio / Modifiche
+
+Ogni articolo modificato di recente ha, sotto la rubrica, la riga «Modificato dal d.l. 12 giugno
+2026, n. 100 (art. 11); poi modificato dal d.lgs. 12 giugno 2026, n. 115 (art. 11)» e un
+selettore solo per quell'articolo: **Nuovo** (testo in vigore, default), **Vecchio** (la versione
+**immediatamente precedente l'ultima modifica** di quell'articolo) e **Modifiche** (le differenze
+tra le due, barrato + evidenziato). Una barra sotto il banner imposta tutti gli articoli in un
+colpo; la scelta è ricordata (`localStorage`) e linkabile: `…/dlgs-25-2008/?v=vecchio#art_28-bis`
+(valgono anche i vecchi `?v=vigente|previgente|confronto`). Un'ancora verso testo che la vista
+dell'articolo non ha (es. `#art_26-bis` in Vecchio) apre quell'articolo sulle Modifiche e lo dice.
+Vale per le tre leggi coordinate e per il d.l. 100/2026 (artt. 1, 2, 16).
+
+Cosa viene da dove:
+- **Generatore** (`~/Desktop/CONOSCENZA/PATTO UE/versioni.py`, agganciato ai `build_dlgs*.py` e a
+  `build_dl100.py`): le modifiche a **strati per atto** — le voci di `amendments.json` si
+  raggruppano per l'atto nominato in `src` («…, d.lgs. 115/2026»; senza `src` = d.l. 100), più
+  eventuali `amendments_<atto>.json`, e si applicano in ordine di entrata in vigore; ogni articolo
+  toccato da uno strato mostra il confronto con lo strato prima. Poi la riga «Modificato dal …»
+  (`p.amd-storia`, `data-ultima` sul `<div>`) e i **rinvii per versione**: ogni link del testo
+  vecchio porta all'atto del testo vecchio («regolamento (UE) ~~n. 604/2013~~ 2024/1351»: 604/2013
+  nel Vecchio, 2024/1351 nel Nuovo), con `data-alt` / `data-v` sui pezzi comuni.
+- **Sito**: bottoni, barra e comportamento li aggiunge la build (`eleventy.config.mjs` →
+  `scripts/versioni-inject.js`) alle copie in `_site/`, e il `npm run dev` al volo, solo sulle
+  pagine con `amd-storia`: una ricopia del bundle non li cancella. Lato browser:
+  `src/scripts/versioni-testo.js` + `src/styles/versioni-testo.css`.
+
+Una nuova modifica legislativa a una delle leggi: si aggiungono le sue voci ad `amendments.json`
+del builder (op come le altre, `src` che finisce con l'atto, es. «art. 8, comma 1, lettera a),
+d.lgs. 115/2026») e l'atto con la data di entrata in vigore in `ACT_NAMES` / `ACT_DATES` di
+`versioni.py`; poi build, copia, `npm run seo && npm run logo` (sotto).
+
 ### Il d.l. 100/2026 (`public/patto-interattivo/dl-100-2026/`)
 
 Il decreto di attuazione del Patto **non sta nella copia sospermesso**: è generato a monte, nel
 progetto "PATTO UE", da `dl-100-2026-interattivo/build_dl100.py` (sorgente: lo snapshot Normattiva
-`nm_fresh_20260710/dl100/`, 19 articoli; convertito senza modificazioni dalla l. 145/2026, quindi
-ancora il testo vigente). È un atto di novella, non un consolidato: viene reso come testo vigente
-senza modifiche evidenziate, con i rinvii navigabili verso gli atti del Patto, i tre d.lgs.
+`nm_fresh_20260710/dl100/`, 19 articoli; convertito senza modificazioni dalla l. 145/2026). Gli
+artt. 1, 2 e 16 li ha poi modificati l'art. 7 del d.l. 7 agosto 2026, n. 144: è lo strato
+`amendments_dl144.json`, generato da `genera_strato_dl144.py` confrontando lo snapshot del 10/7 con
+`nm_fresh_20260929/dl100/`; quei tre articoli hanno il selettore Nuovo / Vecchio / Modifiche. ⚠️ Il
+d.l. 144 è in conversione (scade il 6/10/2026) e il testo delle Commissioni cambia il nuovo art. 16:
+a conversione avvenuta, riscaricare (`fetch_normattiva.py --act dl100`) e rigenerare lo strato. È un
+atto di novella, non un consolidato: viene reso come testo vigente, con i rinvii navigabili verso gli atti del Patto, i tre d.lgs.
 coordinati (anche i rinvii «nudi» degli artt. 10-12 — «l'articolo 4 è sostituito…» — vanno al
 d.lgs. che quel comma nòvella) e il decreto stesso. È registrato in `sites.json` del progetto
 sorgente come `dl-2026-100`, così alla prossima ricostruzione anche i quattro d.lgs. lo linkano.
@@ -185,6 +220,27 @@ blocco `sospatto:brand`): se cambiano lì, ricopiali da `dlgs-251-2007/assets/`.
 sospermesso non tocca la cartella (non usa `--delete`). Le citazioni «art. 17, comma 4, d.l.
 100/2026» nelle schede si linkano al testo interattivo come le altre (`scripts/norme-linker.js`,
 chiave `dl-2026-100`).
+
+### Il d.lgs. 115/2026 (`public/patto-interattivo/dlgs-115-2026/`)
+
+Il decreto sulla tratta (attuazione della dir. (UE) 2024/1712, in vigore dal 16/7/2026) è, come il
+d.l. 100, un atto di novella reso come testo vigente: modifica l'art. 18 T.U. immigrazione, l'art. 17
+d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano articolo per articolo. Generato da
+`dlgs-115-2026-interattivo/build_dlgs115.py`, che riusa `build_dl100.py` (sorgente:
+`nm_fresh_20260929/dlgs115/`, `fetch_normattiva.py --act dlgs115`); registrato in `sites.json` come
+`dlgs-2026-115`, in `scripts/norme-linker.js` (LEGGI) e in `_data/testi.js`. Copia come il d.l. 100
+(index.html + assets/data.js + amend.css; style.css e app.js da `dlgs-251-2007/assets`).
+
+### Ricostruire e copiare tutto
+
+```bash
+cd ~/Desktop/CONOSCENZA/PATTO\ UE && for pass in 1 2; do for f in "Dlgs25 interattivo/build_dlgs25.py" 142-15-interattivo/build_dlgs142.py 286-98-interattivo/build_dlgs286.py 251-07-interattivo/build_dlgs251.py dl-100-2026-interattivo/build_dl100.py dlgs-115-2026-interattivo/build_dlgs115.py; do (cd "$(dirname "$f")" && python3 "$(basename "$f")" >/dev/null); done; done
+```
+
+Due passate perché ogni testo porta nelle anteprime gli articoli degli altri. Poi, da SOSPATTO,
+si copiano `index.html` e `assets/data.js` di ciascuno nella sua cartella di `public/patto-interattivo/`
+e si rilanciano `npm run seo && npm run logo`. ⚠️ Finché la copia sospermesso non è aggiornata
+allo stesso modo, l'rsync da sospermesso del primo passo riporta indietro queste pagine.
 
 ## Come aggiornare il DIAGRAMMA
 

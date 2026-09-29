@@ -1,0 +1,116 @@
+/* Selettore Nuovo / Vecchio / Modifiche, per articolo
+   (iniettato in build da scripts/versioni-inject.js; logica in src/scripts/versioni-testo.js).
+   La vista di un articolo è il suo data-vista, messo dallo script; finché lo script non gira
+   vale quella di <html> (decisa nel <head>): da qui le coppie :is(…) in ogni regola.
+   Senza JavaScript <html> non ha data-vista: resta il confronto del bundle e la barra non c'è. */
+
+/* ---------- barra «tutti gli articoli» ---------- */
+.vista-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+  padding: 10px 16px; border-bottom: 1px solid var(--line, #E2E2E5); background: #F7F9FC;
+  font-family: var(--sans); font-size: 13px; line-height: 1.45; color: var(--ink, #1A1A1A);
+}
+html:not([data-vista]) .vista-bar { display: none; }
+.vista-bar-lbl { font-weight: 700; }
+.vista-desc { flex: 1 1 100%; margin: 0; color: #3a3a3c; }
+.vista-desc ins, .vista-desc del { font-weight: 600; }
+.vista-nota { display: block; color: var(--muted, #757575); font-size: 12px; }
+/* il banner del bundle descrive la sola vista con le modifiche evidenziate */
+html[data-vista] .amd-banner .amd-legenda { display: none; }
+
+/* bottoni: stessi nella barra e negli articoli */
+.vista-seg {
+  display: inline-flex; flex: 0 0 auto; border: 2px solid var(--ink, #1A1A1A); border-radius: 10px;
+  overflow: hidden; background: #fff; box-shadow: var(--pop-sm, 1.5px 1.5px 0 #1A1A1A);
+}
+.vista-seg button {
+  appearance: none; margin: 0; border: 0; border-left: 1.5px solid var(--ink, #1A1A1A);
+  background: transparent; color: var(--ink, #1A1A1A); cursor: pointer;
+  font: 600 13px/1 var(--head, var(--sans)); padding: 8px 14px; min-height: 36px;
+}
+.vista-seg button:first-child { border-left: 0; }
+.vista-seg button:hover { background: #DBEDFF; }
+.vista-seg button[aria-pressed="true"] { background: var(--blue, #1565C0); color: #fff; }
+.vista-seg button:focus-visible { outline: 3px solid var(--blue-dark, #0D47A1); outline-offset: -3px; }
+
+/* ---------- riga «Modificato dal …» sotto la rubrica ---------- */
+.amd-storia {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px;
+  margin: .2em 0 .7em; font-family: var(--sans); font-size: 12.5px; line-height: 1.4;
+  color: #5b1416;
+}
+.amd-storia .vista-seg { border-width: 1.5px; border-radius: 8px; box-shadow: none; }
+.amd-storia .vista-seg button { font-size: 12px; padding: 5px 10px; min-height: 30px; border-left-width: 1px; }
+.vista-art-nota { flex: 1 1 100%; color: var(--muted, #757575); font-style: italic; display: none; }
+
+@media (max-width: 700px) {
+  .vista-bar { padding: 10px 12px; }
+  .vista-bar .vista-seg { display: flex; width: 100%; }
+  .vista-bar .vista-seg button { flex: 1 1 0; padding: 10px 6px; }
+  .amd-storia .vista-seg button { padding: 7px 10px; min-height: 34px; }
+}
+@media print { .vista-seg, .vista-avviso { display: none !important; } }
+
+/* avviso di cambio vista forzato (ancora verso testo assente): a galla, sopra il
+   «Torna al punto precedente» di app.js, perché compare quando si è già scesi nella pagina */
+.vista-avviso {
+  position: fixed; left: 50%; bottom: 72px; transform: translateX(-50%); z-index: 81;
+  width: max-content; max-width: calc(100vw - 32px); margin: 0; padding: 8px 14px;
+  border: 2px solid var(--ink, #1A1A1A); border-radius: 10px; background: #fff;
+  box-shadow: var(--pop-sm, 1.5px 1.5px 0 #1A1A1A); font-size: 13px;
+}
+.vista-avviso[hidden] { display: none; }
+
+/* ---------- NUOVO: via il soppresso, l'inserito è testo normale ---------- */
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) del.amd-del { display: none; }
+/* comma soppresso per intero: resta il numero, con «soppresso» */
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) .comma > .cnum > del.amd-del {
+  display: inline; text-decoration: none; color: var(--muted, #757575);
+}
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) .comma:has(> .cnum > del.amd-del) { color: var(--muted, #757575); }
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) .comma:has(> .cnum > del.amd-del)::after {
+  content: "soppresso"; font-family: var(--sans); font-size: 13px; font-style: italic;
+}
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) ins.amd-ins {
+  color: inherit; background: none; padding: 0; border-radius: 0; cursor: inherit;
+}
+
+/* ---------- VECCHIO: via l'inserito, il soppresso è testo normale ---------- */
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) ins.amd-ins { display: none; }
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) .comma:has(> .cnum > ins.amd-ins) { display: none; }
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) del.amd-del {
+  color: inherit; text-decoration: none; cursor: inherit;
+}
+/* articolo inserito: nella versione precedente non c'era — restano numero e riga storia */
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])).art-new .oj-ti-art ins.amd-ins { display: inline; }
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])).art-new > :not(.oj-ti-art):not(.amd-storia) { display: none; }
+.art-new[data-vista="vecchio"] .vista-art-nota { display: block; }
+
+/* ---------- MODIFICHE: la vista del bundle (barrato + evidenziato), niente da toccare ---------- */
+
+/* ---------- rinvii per versione (data-v / data-alt dal generatore) ---------- */
+/* un <a> che esiste in una sola lettura del testo è inerte nell'altra */
+:is(.art[data-vista="nuovo"], .art[data-vista="modifiche"],
+    html[data-vista="nuovo"] .art[data-ultima]:not([data-vista]),
+    html[data-vista="modifiche"] .art[data-ultima]:not([data-vista])) a[data-v="old"],
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) a[data-v="new"] {
+  pointer-events: none; color: inherit; border-bottom: 0; background: none; cursor: inherit;
+}
+:is(.art[data-vista="nuovo"], .art[data-vista="modifiche"]) a.ext[data-v="old"]::after,
+.art[data-vista="vecchio"] a.ext[data-v="new"]::after { display: none; }
+
+/* anteprime (tooltip e pannello): contengono il solo testo in vigore */
+.vista-tipnota {
+  font-family: var(--sans); font-size: 11.5px; color: var(--muted, #757575);
+  padding: 6px 14px; border-bottom: 1px solid var(--line, #E2E2E5); background: #F7F9FC;
+}
+
+/* rinvio spezzato in più <a> (una parte comune, una inserita o soppressa): la freccia ↗
+   dei link esterni va solo sull'ultimo pezzo della lettura mostrata */
+a.ext[data-fn="0"]::after { display: none; }
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) a.ext[data-fn="0"]::after { display: inline; }
+:is(.art[data-vista="vecchio"], html[data-vista="vecchio"] .art[data-ultima]:not([data-vista])) a.ext[data-fo="0"]::after { display: none; }
+
+/* comma sostituito (stesso numero ripreso da un comma nuovo): nel testo nuovo non è
+   «soppresso», semplicemente non c'è più — sparisce del tutto */
+:is(.art[data-vista="nuovo"], html[data-vista="nuovo"] .art[data-ultima]:not([data-vista])) .comma.amd-sostituito { display: none; }
