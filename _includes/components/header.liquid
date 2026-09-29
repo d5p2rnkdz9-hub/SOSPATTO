@@ -3,7 +3,7 @@
   <div class="container">
     <nav class="navbar">
       <!-- Logo (immagine, sostituisce il wordmark testuale) -->
-      <a href="{{ '/' | url }}" class="logo logo-sospatto" aria-label="SOS Patto — Home">
+      <a href="{{ '/' | langUrl: lang | url }}" class="logo logo-sospatto" aria-label="SOS Patto — {{ i18n.ui[lang].home | default: 'Home' }}">
         <img class="logo-sospatto-img" src="{{ '/IMAGES/logo-header.png' | url }}" width="281" height="160" alt="S.O.S. Patto">
       </a>
 

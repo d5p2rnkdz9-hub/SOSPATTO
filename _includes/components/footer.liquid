@@ -1,8 +1,9 @@
 <!-- Footer Component -->
+{%- assign t = i18n.ui[lang] | default: i18n.ui.it -%}
 <footer class="footer">
   <div class="container">
-    <p class="footer-cta-text">SOS Patto è un progetto gratuito e senza fini di lucro. Hai trovato un errore o vuoi proporre contenuti?</p>
-    <a href="mailto:{{ site.email }}" class="footer-cta-btn">Scrivici →</a>
-    <p class="footer-copyright">&copy; {{ site.year }} {{ site.name }} — contenuti CC BY 4.0 · <a href="{{ '/privacy-policy.html' | url }}">Privacy</a></p>
+    <p class="footer-cta-text">{{ t.footerCta }}</p>
+    <a href="mailto:{{ site.email }}" class="footer-cta-btn">{{ t.footerBtn }}</a>
+    <p class="footer-copyright">&copy; {{ site.year }} {{ site.name }} — {{ t.footerLicenza }} · <a href="{{ '/privacy-policy.html' | langUrl: lang | url }}">{{ t.privacy }}</a></p>
   </div>
 </footer>

@@ -11,16 +11,19 @@ const { linkNorme, verificaHref } = require('./norme-linker.js');
 const md = markdownIt({ html: true, linkify: true, typographer: true });
 const root = path.join(__dirname, '..', 'content');
 
-let files = process.argv.slice(2);
-if (!files.length) {
-  for (const dir of fs.readdirSync(root)) {
-    const full = path.join(root, dir);
-    if (!fs.statSync(full).isDirectory()) continue;
-    for (const f of fs.readdirSync(full)) {
-      if (f.endsWith('.md') || f.endsWith('.md.bozza')) files.push(path.join(full, f));
-    }
+// lingua dal percorso: content/en/... e content/fr/... sono le traduzioni, il resto è italiano
+const langDi = (f) => { const m = /(?:^|[\\/])content[\\/](en|fr)[\\/]/.exec(path.resolve(f).replace(path.resolve(root), 'content')); return m ? m[1] : 'it'; };
+const raccogli = (dir, out) => {
+  for (const nome of fs.readdirSync(dir)) {
+    const full = path.join(dir, nome);
+    if (fs.statSync(full).isDirectory()) raccogli(full, out);
+    else if (nome.endsWith('.md') || nome.endsWith('.md.bozza')) out.push(full);
   }
-}
+  return out;
+};
+
+let files = process.argv.slice(2);
+if (!files.length) files = raccogli(root, []);
 
 const verbose = process.env.NORME_VERBOSE === '1';
 let totLinks = 0, totImpl = 0, totWarn = 0, totOrf = 0, totHref = 0;
@@ -37,7 +40,7 @@ for (const f of files.sort()) {
   const html = `<div class="scheda-massima"><p>${testoMassima}</p></div>` + md.render(body);
   const hrefNorme = [...front.matchAll(/href:\s*"([^"]+)"/g)].map((m) => m[1]);
   const impliciti = !/^norme_impliciti:\s*false\b/m.test(front);
-  const r = linkNorme(html, { hrefNorme, impliciti });
+  const r = linkNorme(html, { hrefNorme, impliciti, lang: langDi(f) });
   for (const [k, v] of r.nonLinkabili) nonLinkabili.set(k, (nonLinkabili.get(k) || 0) + v);
 
   const hrefRotti = [];

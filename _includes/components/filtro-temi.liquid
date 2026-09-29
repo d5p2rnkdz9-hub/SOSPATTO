@@ -3,13 +3,14 @@
   Richiede nel contesto la variabile `schede` (collezione della pagina).
   Nascosta senza JavaScript: la mostra src/scripts/filtro-temi.js.
 {%- endcomment -%}
+{%- assign tf = i18n.ui[lang] | default: i18n.ui.it -%}
 <div class="temi-filtro" id="temi-filtro" hidden>
-  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-tema="">Tutti <span class="temi-filtro-n">{{ schede.size }}</span></button>
+  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-tema="">{{ tf.tutti }} <span class="temi-filtro-n">{{ schede.size }}</span></button>
   {%- for tema in vocabolarioTemi %}
     {%- assign n = 0 %}
     {%- for scheda in schede %}{% if scheda.data.temi contains tema.label %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
     {%- if n > 0 %}
-  <button type="button" class="temi-filtro-btn" data-tema="{{ tema.slug }}">{{ tema.label }} <span class="temi-filtro-n">{{ n }}</span></button>
+  <button type="button" class="temi-filtro-btn" data-tema="{{ tema.slug }}">{{ tema[lang] | default: tema.label }} <span class="temi-filtro-n">{{ n }}</span></button>
     {%- endif %}
   {%- endfor %}
 </div>

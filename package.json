@@ -9,7 +9,8 @@
     "norme-check": "node scripts/norme-check.js",
     "retheme": "python3 scripts/retheme_blue.py",
     "seo": "python3 scripts/seo_bundle.py",
-    "logo": "python3 scripts/inject_bundle_logo.py"
+    "logo": "python3 scripts/inject_bundle_logo.py",
+    "traduzioni": "node scripts/traduzioni.js"
   },
   "license": "CC-BY-4.0",
   "type": "commonjs",

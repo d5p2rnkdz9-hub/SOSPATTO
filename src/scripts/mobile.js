@@ -320,11 +320,11 @@ function showNetworkStatus() {
   };
 
   window.addEventListener('online', () => {
-    showMessage('✅ Connessione ripristinata', 'success');
+    showMessage({ en: '✅ Connection restored', fr: '✅ Connexion rétablie' }[document.documentElement.lang] || '✅ Connessione ripristinata', 'success');
   });
 
   window.addEventListener('offline', () => {
-    showMessage('⚠️ Nessuna connessione internet', 'warning');
+    showMessage({ en: '⚠️ No internet connection', fr: '⚠️ Pas de connexion internet' }[document.documentElement.lang] || '⚠️ Nessuna connessione internet', 'warning');
   });
 }
 

@@ -50,14 +50,19 @@ class Sitemap {
   render({ collections }) {
     const voci = [];
 
-    // 1. pagine Eleventy
+    // 1. pagine Eleventy, con le versioni EN/FR come alternates (hreflang)
+    const urls = new Set(collections.all.map((p) => p.url));
+    const base = (u) => u.replace(/^\/(en|fr)(?=\/)/, '');
     for (const pagina of collections.all) {
       if (!pagina.url) continue;
       if (pagina.data.sitemap === false) continue;
       if (pagina.data.esempio) continue; // schede campione fittizie
+      const b = base(pagina.url);
+      const alt = [['it', b], ['en', `/en${b}`], ['fr', `/fr${b}`]].filter(([, u]) => urls.has(u));
       voci.push({
         loc: SITE + pagina.url,
         lastmod: isoDay(pagina.date),
+        alt: alt.length > 1 ? alt : [],
       });
     }
 
@@ -75,10 +80,12 @@ class Sitemap {
     voci.sort((a, b) => a.loc.localeCompare(b.loc));
 
     const corpo = voci
-      .map((v) => `  <url>\n    <loc>${xmlEscape(v.loc)}</loc>\n    <lastmod>${v.lastmod}</lastmod>\n  </url>`)
+      .map((v) => `  <url>\n    <loc>${xmlEscape(v.loc)}</loc>\n    <lastmod>${v.lastmod}</lastmod>\n`
+        + (v.alt || []).map(([l, u]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${xmlEscape(SITE + u)}"/>\n`).join('')
+        + '  </url>')
       .join('\n');
 
-    return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${corpo}\n</urlset>\n`;
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${corpo}\n</urlset>\n`;
   }
 }
 

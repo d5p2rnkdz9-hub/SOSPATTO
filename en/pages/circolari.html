@@ -1,0 +1,51 @@
+---
+layout: layouts/base.liquid
+title: "Circulars and practice — SOS Patto"
+lang: en
+description: "Ministerial circulars and administrative practice on the EU Pact on Migration and Asylum and the Italian implementing legislation, linked to the articles of the interactive texts."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Circulars and practice</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      Ministerial circulars, notes and administrative practice on the implementation of the Pact.
+      Each entry gives the subject matter, the original PDF (in Italian) and links to the provisions in the
+      <a href="/en/testi.html">interactive texts</a> (in Italian).
+      Do you know of a circular we should include? <a href="mailto:{{ site.email }}">Write to us</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.circolari_en %}
+    {% if schede.size > 0 %}
+    {% include "components/filtro-temi.liquid" %}
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <a href="{{ scheda.url | url }}" class="archivio-card" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+        {% if scheda.data.esempio %}<span class="scheda-esempio">Sample entry</span>{% endif %}
+        <p class="scheda-kicker">{{ scheda.data.tipo | default: "Circular" }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
+        <h3>{{ scheda.data.ente }}, {{ scheda.date | data: lang }}</h3>
+        {% if scheda.data.oggetto %}<p>{{ scheda.data.oggetto | truncate: 180 }}</p>{% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<span class="scheda-tema">{{ tema | temaLabel: lang }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">📄</p>
+      <p>The collection is under construction: the first entries will be added soon.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<script src="{{ '/src/scripts/filtro-temi.js' | url }}?v={{ site.assetVersion }}" defer></script>

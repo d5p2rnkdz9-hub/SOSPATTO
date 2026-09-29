@@ -1,0 +1,68 @@
+---
+it_hash: 5321cfe4b1b1
+ente: "Questura of Trento — Immigration Office"
+tipo: "Practice document — applicant's new document"
+numero: "modello «Attestazione di manifestazione protezione internazionale»"
+date: 2026-06-30
+temi: [Accesso alla procedura, Regime transitorio]
+oggetto: "The new document issued by the Questura to applicants after 12 June 2026: a double-sided A4 sheet, in five languages, showing the C.U.I., manifestation ID, photograph and tax code, which certifies the registration of the application under Article 27 of Regulation 2024/1348, allots 21 days for lodging and is valid until the document under Article 29(3) is issued."
+norme:
+  - { label: "Article 27 of Regulation (EU) 2024/1348 (registration of the application)", href: "/patto-interattivo/1348.html#art_27" }
+  - { label: "Article 28 of Regulation (EU) 2024/1348 (lodging of the application; 21-day time limit)", href: "/patto-interattivo/1348.html#art_28" }
+  - { label: "Article 29(3) of Regulation (EU) 2024/1348 (document issued to the applicant)", href: "/patto-interattivo/1348.html#art_29" }
+  - { label: "Article 29(1) and (4) of Regulation (EU) 2024/1348 (document after registration and after lodging)", href: "/patto-interattivo/1348.html#art_29" }
+  - { label: "Article 26-ter of Legislative Decree 25/2008 (lodging before the Territorial Commissions)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_26-ter" }
+  - { label: "Article 46 of Regulation (EU) 2024/1351 (registration after transfer)", href: "/patto-interattivo/1351.html#art_46" }
+pdf: /allegati/circolari/attestazione-manifestazione-trento-2026-06.pdf
+pdfLabel: "Download the certificate (PDF, redacted)"
+---
+
+Redacted scan of the document that the *Questura* of Trento (police headquarters) issues to applicants for international
+protection after 12 June 2026. It is a double-sided A4 sheet entitled **«Certificate of
+expression of the wish to apply for international protection»**, translated into English, French, Spanish and German, which
+shows the C.U.I., the manifestation ID (format `SUA-TN-…`), the photograph and the tax code generated.
+
+## The content of the certificate
+
+The text certifies that the person concerned «has registered his or her application for international protection under
+Article 27 of Regulation (EU) 1348/2024», specifies that he or she «has 21 days to lodge the application with
+the competent authority under Article 28» and that the certificate «is valid until the issue of the
+document following the lodging of the application under Article 29(3) […], and is withdrawn at that time». It is not proof of identity but allows identification before the national authorities for
+the purposes of access to rights for the duration of the procedure. A pre-printed formula on all the forms
+also confirms registration «following a transfer under Article 46 of Regulation (EU)
+1351/2024», a clause that refers to situations different from the current ones.
+
+The form is standardised at national level: identical certificates are reported to have been issued by the
+Questure of Forlì-Cesena, Florence and Arezzo and by that of Agrigento (see the [Sikania
+file](/en/circolari/prassi-frontiera-sikania-2026-06.html)).
+
+## The document due is the one under Article 29(4) of Regulation (EU) 2024/1348
+
+The certificate reproduces the document provided for by **paragraph 1** of Article 29 of Regulation (EU) 2024/1348, the one
+that follows registration. But in the transitional period, by virtue of the circular of the Public Security Department
+of 12 June 2026 (valid until 31 October 2026), registration takes the
+place of lodging: Form C3 is not drawn up and nothing else is handed to the person,
+save the summons before the Territorial Commission. If registration absorbs
+lodging, the document due is the one under **paragraph 4**, with a different and more favourable content, which certifies the *status*
+of applicant, the annual duration and the right to remain in the territory — none of which appears
+on the certificate. And a circular cannot derogate from a Union regulation. It remains open whether
+the unlawfulness of the document affects the regularity of the procedure or is to be characterised as a mere
+irregularity.
+
+## The 21 days and the channel for lodging
+
+The 21-day time limit is a fixed provision of the form, which in the transitional period does not describe
+any actual step. The document does not indicate which authority is competent to receive
+lodging or how to approach it: according to reports, for those outside the
+reception system the channel remains in practice closed — access to the Questura requires an
+appointment that no channel makes it possible to obtain. This is the reverse of the situation examined by
+[Court of Bologna, 4 September 2026](/en/giurisprudenza/trib-bologna-13590-2026-09-04.html), where entry
+into reception served as proof of the expression of the wish to apply.
+
+In practical terms the certificate is in any case the key to the **tax code** — generated by the Questura
+or, failing that, issued by the Revenue Agency on its basis — and therefore to registration with the
+National Health Service.
+
+> **Note.** The scan of the Forlì-Cesena certificate is not attached because the copy available
+> was incompletely redacted. The content of the form is fully represented by the
+> Trento scan.

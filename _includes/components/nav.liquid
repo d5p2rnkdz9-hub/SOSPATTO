@@ -20,5 +20,18 @@
     </li>
     {% endif %}
     {% endfor %}
+    {%- comment -%} Selettore di lingua: stessa pagina nell'altra lingua, o la sua home se non è tradotta {%- endcomment -%}
+    {%- assign L = lang | default: 'it' -%}
+    {%- assign linguaCorrente = i18n.lingue | where: 'code', L | first -%}
+    <li class="nav-item has-dropdown nav-language">
+      <span class="nav-link" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="{{ i18n.ui[L].langMenu }}: {{ linguaCorrente.label }}"><img class="flag" src="{{ '/IMAGES/flags/' | append: linguaCorrente.flag | append: '.svg' | url }}" width="30" height="20" alt=""> <span class="lang-current">{{ L | upcase }}</span></span>
+      <ul class="nav-dropdown" role="menu">
+        {%- for l in i18n.lingue %}
+        <li role="none">
+          <a href="{{ page.url | altUrl: l.code, collections.all | url }}" class="dropdown-link{% if l.code == L %} active-lang{% endif %}" role="menuitem" hreflang="{{ l.hreflang }}" lang="{{ l.code }}"><img class="flag" src="{{ '/IMAGES/flags/' | append: l.flag | append: '.svg' | url }}" width="30" height="20" alt=""> <span class="lang-code">{{ l.code | upcase }}</span><span class="lang-name"> {{ l.label }}</span></a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </li>
   </ul>
 </div>

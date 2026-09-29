@@ -213,11 +213,7 @@
     display: none !important;
   }
 
-  /* The header language switcher (styled inline in components/language-switcher.liquid)
-     replaces the in-hamburger language item on mobile, so hide the latter. */
-  .nav-language {
-    display: none !important;
-  }
+  /* Il selettore di lingua su mobile sta in cima al menu hamburger (mobile.css). */
 
   /* ===============================================
      HERO SECTION MOBILE

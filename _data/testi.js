@@ -5,6 +5,8 @@
 module.exports = {
   // data dell'ultima verifica dei testi (EUR-Lex / Normattiva)
   aggiornamento: '10 luglio 2026',
+  aggiornamento_en: '10 July 2026',
+  aggiornamento_fr: '10 juillet 2026',
 
   ue: [
     {
@@ -14,6 +16,8 @@ module.exports = {
       titolo: 'Direttiva accoglienza',
       desc: "Norme sull'accoglienza e sul trattenimento dei richiedenti protezione internazionale.",
       icon: '🏠',
+      en: { tipo: 'Directive', numero: 'EU 2024/1346', titolo: 'Reception Conditions Directive', desc: 'Rules on the reception and detention of applicants for international protection.' },
+      fr: { tipo: 'Directive', numero: 'UE 2024/1346', titolo: 'Directive relative aux conditions d\'accueil', desc: 'Règles relatives à l\'accueil et à la rétention des demandeurs de protection internationale.' },
     },
     {
       num: '1347',
@@ -22,6 +26,8 @@ module.exports = {
       titolo: 'Regolamento qualifiche',
       desc: 'Criteri per il riconoscimento dello status di rifugiato e della protezione sussidiaria.',
       icon: '✅',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1347', titolo: 'Qualification Regulation', desc: 'Criteria for recognition as a refugee or as a person eligible for subsidiary protection.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1347', titolo: 'Règlement Qualification', desc: 'Critères de reconnaissance du statut de réfugié et de la protection subsidiaire.' },
     },
     {
       num: '1348',
@@ -30,6 +36,8 @@ module.exports = {
       titolo: 'Regolamento procedure',
       desc: 'Procedura comune europea per la protezione internazionale.',
       icon: '📋',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1348', titolo: 'Asylum Procedure Regulation', desc: 'Common European procedure for international protection.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1348', titolo: 'Règlement sur la procédure d\'asile', desc: 'Procédure commune européenne en matière de protection internationale.' },
     },
     {
       num: '1349',
@@ -38,6 +46,8 @@ module.exports = {
       titolo: 'Regolamento rimpatrio alla frontiera',
       desc: 'Procedure di rimpatrio applicabili alla frontiera.',
       icon: '↩️',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1349', titolo: 'Return Border Procedure Regulation', desc: 'Return procedures applicable at the border.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1349', titolo: 'Règlement sur la procédure de retour à la frontière', desc: 'Procédures de retour applicables à la frontière.' },
     },
     {
       num: '1350',
@@ -46,6 +56,8 @@ module.exports = {
       titolo: 'Regolamento reinsediamento',
       desc: "Quadro dell'Unione per il reinsediamento e l'ammissione umanitaria.",
       icon: '🤝',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1350', titolo: 'Union Resettlement Framework Regulation', desc: 'Union framework for resettlement and humanitarian admission.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1350', titolo: 'Règlement sur le cadre de l\'Union pour la réinstallation', desc: 'Cadre de l\'Union pour la réinstallation et l\'admission humanitaire.' },
     },
     {
       num: '1351',
@@ -54,6 +66,8 @@ module.exports = {
       titolo: 'Regolamento RAMM (Dublino)',
       desc: "Gestione dell'asilo e della migrazione: sostituisce il sistema di Dublino.",
       icon: '🗂️',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1351', titolo: 'Asylum and Migration Management Regulation (AMMR, Dublin)', desc: 'Management of asylum and migration: replaces the Dublin system.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1351', titolo: 'Règlement RGAM (Dublin)', desc: 'Gestion de l\'asile et de la migration : remplace le système de Dublin.' },
     },
     {
       num: '1352',
@@ -62,6 +76,8 @@ module.exports = {
       titolo: 'Modifiche ECRIS-TCN',
       desc: 'Modifiche al sistema europeo di informazione sui casellari giudiziari di cittadini di paesi terzi.',
       icon: '🗄️',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1352', titolo: 'ECRIS-TCN amendments', desc: 'Amendments to the European system for exchanging criminal records information on third-country nationals.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1352', titolo: 'Modifications ECRIS-TCN', desc: 'Modifications du système européen d\'information sur les casiers judiciaires des ressortissants de pays tiers.' },
     },
     {
       num: '1356',
@@ -70,6 +86,8 @@ module.exports = {
       titolo: 'Regolamento screening',
       desc: 'Accertamenti su cittadini di paesi terzi alle frontiere esterne.',
       icon: '🔍',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1356', titolo: 'Screening Regulation', desc: 'Screening of third-country nationals at the external borders.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1356', titolo: 'Règlement sur le filtrage', desc: 'Filtrage des ressortissants de pays tiers aux frontières extérieures.' },
     },
     {
       num: '1358',
@@ -78,6 +96,8 @@ module.exports = {
       titolo: 'Regolamento Eurodac',
       desc: 'Banca dati europea delle impronte digitali e dei dati biometrici.',
       icon: '🫆',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1358', titolo: 'Eurodac Regulation', desc: 'European database of fingerprints and biometric data.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1358', titolo: 'Règlement Eurodac', desc: 'Base de données européenne des empreintes digitales et des données biométriques.' },
     },
     {
       num: '1359',
@@ -86,6 +106,8 @@ module.exports = {
       titolo: 'Regolamento crisi e forza maggiore',
       desc: 'Situazioni di crisi, strumentalizzazione e forza maggiore in materia di migrazione e asilo.',
       icon: '🚨',
+      en: { tipo: 'Regulation', numero: 'EU 2024/1359', titolo: 'Crisis and Force Majeure Regulation', desc: 'Situations of crisis, instrumentalisation and force majeure in the field of migration and asylum.' },
+      fr: { tipo: 'Règlement', numero: 'UE 2024/1359', titolo: 'Règlement sur les situations de crise et de force majeure', desc: 'Situations de crise, d\'instrumentalisation et de force majeure dans le domaine de la migration et de l\'asile.' },
     },
   ],
 
@@ -100,6 +122,8 @@ module.exports = {
       sotto: 'Prima attuazione italiana del Patto UE su migrazione e asilo',
       coord: 'Testo vigente — convertito senza modificazioni dalla l. 145/2026',
       icon: '📜',
+      en: { titolo: 'Decree-Law 100/2026', sotto: 'First Italian implementation of the EU Pact on Migration and Asylum', coord: 'Text in force — converted without amendments by Law 145/2026' },
+      fr: { titolo: 'Décret-loi 100/2026', sotto: 'Première mise en œuvre italienne du Pacte de l\'UE sur la migration et l\'asile', coord: 'Texte en vigueur — converti sans modification par la loi 145/2026' },
     },
     {
       slug: 'dlgs-25-2008',
@@ -107,6 +131,8 @@ module.exports = {
       sotto: 'Procedure per il riconoscimento della protezione internazionale',
       coord: 'Testo coordinato con il d.l. 100/2026 (art. 11) — modifiche evidenziate',
       icon: '⚖️',
+      en: { titolo: 'Legislative Decree 25/2008', sotto: 'Procedures for the recognition of international protection', coord: 'Consolidated text with Decree-Law 100/2026 (Art. 11) — amendments highlighted' },
+      fr: { titolo: 'Décret législatif 25/2008', sotto: 'Procédures de reconnaissance de la protection internationale', coord: 'Texte coordonné avec le décret-loi 100/2026 (art. 11) — modifications mises en évidence' },
     },
     {
       slug: 'dlgs-142-2015',
@@ -114,6 +140,8 @@ module.exports = {
       sotto: 'Accoglienza dei richiedenti protezione internazionale',
       coord: 'Testo coordinato con il d.l. 100/2026 (art. 10) — modifiche evidenziate',
       icon: '🏘️',
+      en: { titolo: 'Legislative Decree 142/2015', sotto: 'Reception of applicants for international protection', coord: 'Consolidated text with Decree-Law 100/2026 (Art. 10) — amendments highlighted' },
+      fr: { titolo: 'Décret législatif 142/2015', sotto: 'Accueil des demandeurs de protection internationale', coord: 'Texte coordonné avec le décret-loi 100/2026 (art. 10) — modifications mises en évidence' },
     },
     {
       slug: 'dlgs-286-1998',
@@ -121,6 +149,8 @@ module.exports = {
       sotto: "Testo unico dell'immigrazione",
       coord: 'Testo coordinato con il d.l. 100/2026 (art. 12) — modifiche evidenziate',
       icon: '📕',
+      en: { titolo: 'Legislative Decree 286/1998', sotto: 'Consolidated Immigration Act', coord: 'Consolidated text with Decree-Law 100/2026 (Art. 12) — amendments highlighted' },
+      fr: { titolo: 'Décret législatif 286/1998', sotto: 'Texte unique sur l\'immigration', coord: 'Texte coordonné avec le décret-loi 100/2026 (art. 12) — modifications mises en évidence' },
     },
     {
       slug: 'dlgs-251-2007',
@@ -128,6 +158,8 @@ module.exports = {
       sotto: 'Qualifiche: status di rifugiato e protezione sussidiaria',
       coord: 'Testo vigente con rinvii navigabili',
       icon: '📗',
+      en: { titolo: 'Legislative Decree 251/2007', sotto: 'Qualification: refugee status and subsidiary protection', coord: 'Text in force with navigable cross-references' },
+      fr: { titolo: 'Décret législatif 251/2007', sotto: 'Qualification : statut de réfugié et protection subsidiaire', coord: 'Texte en vigueur avec renvois navigables' },
     },
   ],
 };

@@ -1,0 +1,76 @@
+---
+layout: layouts/base.liquid
+title: "Italian case law — SOS Patto"
+lang: en
+description: "Decisions of the Italian courts on the EU Pact on Migration and Asylum and the Italian implementing legislation, linked to the articles of the interactive texts."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Italian case law</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      The first decisions on the Pact and the implementing legislation. Each entry gives the headnote
+      and links to the articles in the <a href="/en/testi.html">interactive texts</a> (in Italian).
+      The collection has only just begun: <a href="mailto:{{ site.email }}">tell us about a decision</a>.
+      For the courts in Luxembourg and Strasbourg, see the <a href="/en/giurisprudenza-europea.html">European case law</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  /* Filtri combinati (temi + autorità): etichetta di riga sopra ogni barra di chip. */
+  .filtri-elenco { margin-bottom: 1.75rem; }
+  .filtri-elenco .filtri-label {
+    margin: 0 0 0.45rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+  .filtri-elenco .temi-filtro { margin-bottom: 1.1rem; }
+  .filtri-elenco .temi-filtro[hidden] + .filtri-label,
+  .filtri-elenco .filtri-label:has(+ .temi-filtro[hidden]) { display: none; }
+  .temi-filtro-btn.temi-filtro-vuoto { opacity: 0.45; }
+  @media (max-width: 768px) {
+    .filtri-elenco .temi-filtro { margin-bottom: 0.9rem; }
+  }
+</style>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.giurisprudenza_en %}
+    {% if schede.size > 0 %}
+    <div class="filtri-elenco">
+      <p class="filtri-label">Topics</p>
+      {% include "components/filtro-temi.liquid" %}
+      <p class="filtri-label">Court or authority</p>
+      {% include "components/filtro-corti.liquid" %}
+    </div>
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <a href="{{ scheda.url | url }}" class="archivio-card" data-corte="{{ scheda.data.corte | slugify }}" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+        {% if scheda.data.esempio %}<span class="scheda-esempio">Sample entry</span>{% endif %}
+        <p class="scheda-kicker">{{ scheda.data.tipo }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
+        <h3>{{ scheda.data.corte | corte: lang }}, {{ scheda.date | data: lang }}</h3>
+        {% if scheda.data.massima %}<p>{{ scheda.data.massima | truncate: 180 }}</p>{% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<span class="scheda-tema">{{ tema | temaLabel: lang }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">⚖️</p>
+      <p>The collection is under construction: the first entries will be added soon.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<script src="{{ '/src/scripts/filtro-temi.js' | url }}?v={{ site.assetVersion }}" defer></script>

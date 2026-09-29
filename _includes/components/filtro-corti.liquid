@@ -19,12 +19,13 @@
 {%- for c in corti -%}
   {%- unless c contains "cassazione" or c contains "Cassazione" or c contains "Appello" or c contains "appello" -%}{%- assign ordinate = ordinate | push: c -%}{%- endunless -%}
 {%- endfor -%}
-<div class="temi-filtro" id="corti-filtro" data-param="corte" hidden aria-label="Filtra per autorità giudicante">
-  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-valore="">Tutte <span class="temi-filtro-n">{{ schede.size }}</span></button>
+{%- assign tf = i18n.ui[lang] | default: i18n.ui.it -%}
+<div class="temi-filtro" id="corti-filtro" data-param="corte" hidden aria-label="{{ tf.filtraCorti }}">
+  <button type="button" class="temi-filtro-btn temi-filtro-attivo" data-valore="">{{ tf.tutte }} <span class="temi-filtro-n">{{ schede.size }}</span></button>
   {%- for c in ordinate %}
     {%- assign n = 0 %}
     {%- for scheda in schede %}{% if scheda.data.corte == c %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
-    {%- assign breve = c | replace: "Tribunale di ", "Trib. " | replace: "Corte d'Appello di ", "App. " | replace: "Corte d'appello di ", "App. " | replace: "Corte di cassazione", "Cassazione" | replace: "Corte di Cassazione", "Cassazione" %}
-  <button type="button" class="temi-filtro-btn" data-valore="{{ c | slugify }}" title="{{ c }}">{{ breve }} <span class="temi-filtro-n">{{ n }}</span></button>
+    {%- assign breve = c | corte: lang, true %}
+  <button type="button" class="temi-filtro-btn" data-valore="{{ c | slugify }}" title="{{ c | corte: lang }}">{{ breve }} <span class="temi-filtro-n">{{ n }}</span></button>
   {%- endfor %}
 </div>

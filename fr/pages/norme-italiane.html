@@ -1,0 +1,94 @@
+---
+layout: layouts/base.liquid
+title: "Législation italienne — SOS Patto"
+lang: fr
+description: "La législation italienne coordonnée avec le décret-loi 100/2026 d'adaptation au Pacte de l'UE : textes interactifs (en italien) avec les modifications mises en évidence article par article."
+extraStyles: |
+  <style>
+    .testi-head { text-align: center; max-width: 760px; margin: 0 auto; }
+    .testi-head h1 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 2.1rem; font-weight: 800; margin: 0 0 0.75rem;
+    }
+    .testi-head p { color: var(--gray-dark); line-height: 1.6; margin: 0 0 1rem; }
+    .testi-verifica {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--taxi-yellow-light);
+      border: 2px solid var(--black); border-radius: 999px;
+      font-size: 0.85rem; font-weight: 700; padding: 6px 16px;
+    }
+    .testi-sezione {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 1.3rem; font-weight: 800; margin: 0 0 1.25rem;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+    .testo-card {
+      display: flex; flex-direction: column;
+      background: var(--white);
+      border: 2.5px solid var(--black); border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--black);
+      padding: 1.3rem 1.4rem;
+      text-decoration: none; color: var(--black);
+      transition: all 0.12s ease;
+    }
+    .testo-card:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--black); }
+    .testo-card-top { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.6rem; }
+    .testo-tag {
+      display: inline-block; background: var(--taxi-yellow); color: var(--black);
+      font-size: 0.62rem; font-weight: 800; padding: 3px 8px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      border: 1.5px solid var(--black);
+    }
+    .testo-card h3 {
+      font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+      font-size: 1.02rem; font-weight: 800; margin: 0 0 0.35rem; line-height: 1.3;
+    }
+    .testo-card p { font-size: 0.85rem; color: var(--gray-dark); line-height: 1.45; margin: 0 0 0.75rem; }
+    .testo-card .testo-go { margin-top: auto; font-weight: 800; font-size: 0.85rem; }
+    .testo-coord {
+      font-size: 0.75rem; font-weight: 700;
+      background: var(--taxi-yellow-light);
+      border: 1.5px solid var(--black); border-radius: 8px;
+      padding: 4px 8px; margin: 0 0 0.75rem; display: inline-block;
+    }
+  </style>
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container">
+    <div class="testi-head">
+      <h1>La législation italienne</h1>
+      <p>
+        Les dispositions nationales concernées par l'adaptation au Pacte (décret-loi 100/2026) : dans les textes coordonnés, les
+        <strong style="color: #c1121f;">modifications sont mises en évidence</strong> — ajouts en rouge,
+        suppressions barrées. Les textes interactifs sont en italien.
+      </p>
+      <span class="testi-verifica">✓ Textes vérifiés sur Normattiva — {{ testi.aggiornamento_fr }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2.5rem;">
+  <div class="container">
+
+    <h2 class="testi-sezione" id="norme-italiane">🇮🇹 La législation italienne</h2>
+    <div class="testi-grid">
+      {% for t in testi.it %}
+      <a href="{% if t.href %}{{ t.href }}{% else %}/patto-interattivo/{{ t.slug }}/index.html{% endif %}" class="testo-card">
+        <div class="testo-card-top">
+          <span class="testo-tag">{{ t.fr.titolo | default: t.titolo }}</span>
+        </div>
+        <h3>{{ t.fr.sotto | default: t.sotto }}</h3>
+        <span class="testo-coord">{{ t.fr.coord | default: t.coord }}</span>
+        <span class="testo-go">{{ t.cta | default: "Consulter (en italien) →" }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

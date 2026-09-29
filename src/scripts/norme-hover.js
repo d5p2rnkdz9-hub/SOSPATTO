@@ -9,6 +9,14 @@
   if (!window.matchMedia('(hover: hover)').matches) return;
 
   var BUNDLE = '/patto-interattivo/';
+  // interfaccia nella lingua della pagina; i testi normativi restano in italiano
+  var LANG = (document.documentElement.lang || 'it').slice(0, 2);
+  var T = {
+    it: { ext: 'Atto esterno al Patto', apri: 'Clic per aprire il testo.', apriTutto: 'Clic per aprire il testo completo.', carica: 'Caricamento…', tutto: 'Mostra l’articolo completo', cons: 'Considerando' },
+    en: { ext: 'Act outside the Pact', apri: 'Click to open the text (in Italian).', apriTutto: 'Click to open the full text (in Italian).', carica: 'Loading…', tutto: 'Show the full article (in Italian)', cons: 'Considerando (recital)' },
+    fr: { ext: 'Acte extérieur au pacte', apri: 'Cliquez pour ouvrir le texte (en italien).', apriTutto: 'Cliquez pour ouvrir le texte intégral (en italien).', carica: 'Chargement…', tutto: 'Afficher l’article complet (en italien)', cons: 'Considerando (considérant)' },
+  }[LANG] || null;
+  if (!T) T = { ext: 'Atto esterno al Patto', apri: 'Clic per aprire il testo.', apriTutto: 'Clic per aprire il testo completo.', carica: 'Caricamento…', tutto: 'Mostra l’articolo completo', cons: 'Considerando' };
   var STORE = {};
   var loading = {};
 
@@ -85,13 +93,13 @@
     var r = act && act.recitals && act.recitals[n];
     if (!r) return null;
     return '<div class="tip-head"><span class="t-act">' + act.label + '</span>' +
-      '<div class="t-label">Considerando (' + n + ')</div></div><div class="tip-body">' + r + '</div>';
+      '<div class="t-label">' + T.cons + ' (' + n + ')</div></div><div class="tip-body">' + r + '</div>';
   }
   function actHTML(key) {
     var act = STORE[key];
     if (!act) return null;
-    var note = act.external ? 'Atto esterno al Patto' + (act.version ? ' — ' + act.version : '') + '. Clic per aprire il testo.'
-                            : 'Clic per aprire il testo completo.';
+    var note = act.external ? T.ext + (act.version ? ' — ' + act.version : '') + '. ' + T.apri
+                            : T.apriTutto;
     return '<div class="tip-head"><span class="t-act">' + act.label + '</span>' +
       '<div class="t-label">' + (act.short || '') + '</div></div><div class="tip-body tip-nota">' + note + '</div>';
   }
@@ -143,7 +151,7 @@
     var key = link.getAttribute('data-act');
     if (!pronto(key)) {
       tipLink = link;
-      tip.innerHTML = '<div class="tip-body tip-nota">Caricamento…</div>';
+      tip.innerHTML = '<div class="tip-body tip-nota">' + T.carica + '</div>';
       tip.hidden = false;
       posiziona(link);
       assicura(key, function (ok) {
@@ -156,7 +164,7 @@
     if (!html) { tip.hidden = true; return; }
     tipLink = link;
     var par = link.getAttribute('data-par');
-    var foot = (par && !full) ? '<div class="tip-foot"><a id="norme-tip-full">Mostra l’articolo completo</a></div>' : '';
+    var foot = (par && !full) ? '<div class="tip-foot"><a id="norme-tip-full">' + T.tutto + '</a></div>' : '';
     tip.innerHTML = html + foot;
     sistemaLink(key);
     tip.hidden = false;

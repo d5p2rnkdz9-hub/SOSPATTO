@@ -1,0 +1,57 @@
+---
+layout: layouts/base.liquid
+title: "Commentaires et doctrine — SOS Patto"
+lang: fr
+description: "Articles, notes et commentaires de la doctrine sur le Pacte de l'UE sur la migration et l'asile et sur sa mise en œuvre en Italie."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Commentaires et doctrine</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      Contributions de la doctrine et commentaires sur le Pacte de l'UE sur la migration et l'asile et sur sa
+      mise en œuvre en Italie, du plus récent au plus ancien. Les titres et les sources des contributions sont en italien.
+      Vous connaissez une contribution à signaler ? <a href="mailto:{{ site.email }}">Écrivez-nous</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.dottrina_fr %}
+    {% if schede.size > 0 %}
+    {% include "components/filtro-temi.liquid" %}
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <div class="archivio-card" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+        <p class="scheda-kicker">{{ scheda.data.fonte }}</p>
+        <h3>{{ scheda.data.titolo }}</h3>
+        <p style="font-weight: 600; margin-bottom: 0.35rem;">{{ scheda.data.autori }}</p>
+        <p>{{ scheda.data.sommario }}</p>
+        {% if scheda.data.links %}
+        <p>
+          {%- for l in scheda.data.links %}
+          <a href="{{ l.href }}" class="scheda-pdf-btn"{% unless l.interna %} target="_blank" rel="noopener"{% endunless %}>{{ l.label }}</a>
+          {%- endfor %}
+        </p>
+        {% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<a class="scheda-tema" href="{{ '/giurisprudenza.html' | langUrl: lang | url }}?tema={{ tema | temaSlug }}" title="Jurisprudence sur : {{ tema | temaLabel: lang }}">{{ tema | temaLabel: lang }}</a>{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">📚</p>
+      <p>La collection est en cours de constitution : les premières contributions arriveront bientôt.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<script src="{{ '/src/scripts/filtro-temi.js' | url }}?v={{ site.assetVersion }}" defer></script>

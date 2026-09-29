@@ -1,8 +1,10 @@
 ---
 layout: layouts/base.liquid
 ---
+{%- assign L = lang | default: 'it' -%}
+{%- assign t = i18n.ui[L] -%}
 {%- comment -%} Dati strutturati della scheda: Article + BreadcrumbList (il filtro json fa l'escape) {%- endcomment -%}
-{%- capture schedaHeadline %}{{ ente }}, {{ page.date | dataIt }}{% endcapture -%}
+{%- capture schedaHeadline %}{{ ente }}, {{ page.date | data: L }}{% endcapture -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -11,15 +13,15 @@ layout: layouts/base.liquid
       "@type": "Article",
       "headline": {{ schedaHeadline | json }},
       "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
-      "inLanguage": "it",
+      "inLanguage": "{{ L }}",
       "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
       "publisher": { "@id": "{{ site.url }}/#organization" }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
-        { "@type": "ListItem", "position": 2, "name": "Circolari e prassi", "item": "{{ site.url }}/circolari.html" },
+        { "@type": "ListItem", "position": 1, "name": "{{ t.home }}", "item": "{{ site.url }}{{ '/' | langUrl: L }}" },
+        { "@type": "ListItem", "position": 2, "name": "{{ t.circolari }}", "item": "{{ site.url }}{{ '/circolari.html' | langUrl: L }}" },
         { "@type": "ListItem", "position": 3, "name": {{ schedaHeadline | json }} }
       ]
     }
@@ -28,14 +30,14 @@ layout: layouts/base.liquid
 </script>
 <section class="bg-off-white" style="padding: 2rem 0 1rem;">
   <div class="container" style="max-width: 820px;">
-    <a href="{{ '/circolari.html' | url }}" class="scheda-back">← Tutte le circolari</a>
+    <a href="{{ '/circolari.html' | langUrl: L | url }}" class="scheda-back">{{ t.tutteCircolari }}</a>
     <div class="scheda-head">
-      {% if esempio %}<span class="scheda-esempio">Scheda di esempio</span>{% endif %}
-      <p class="scheda-kicker">{{ tipo | default: "Circolare" }}{% if numero %} · {{ numero }}{% endif %}</p>
-      <h1 class="scheda-title">{{ ente }}, {{ page.date | dataIt }}</h1>
+      {% if esempio %}<span class="scheda-esempio">{{ t.esempio }}</span>{% endif %}
+      <p class="scheda-kicker">{{ tipo | default: t.circolareDefault }}{% if numero %} · {{ numero }}{% endif %}</p>
+      <h1 class="scheda-title">{{ ente }}, {{ page.date | data: L }}</h1>
       {% if temi %}
       <div class="scheda-temi">
-        {% for tema in temi %}<a class="scheda-tema" href="{{ '/circolari.html' | url }}?tema={{ tema | temaSlug }}">{{ tema }}</a>{% endfor %}
+        {% for tema in temi %}<a class="scheda-tema" href="{{ '/circolari.html' | langUrl: L | url }}?tema={{ tema | temaSlug }}">{{ tema | temaLabel: L }}</a>{% endfor %}
       </div>
       {% endif %}
     </div>
@@ -45,10 +47,11 @@ layout: layouts/base.liquid
 <section class="section" style="padding-top: 1.5rem;">
   <div class="container" style="max-width: 820px;">
 
+    {% if t.avvisoTraduzione != "" %}<p class="scheda-avviso-traduzione">{{ t.avvisoTraduzione }}</p>{% endif %}
     <!--norme:on{% if norme_impliciti == false %} impliciti=off{% endif %}-->
     {% if oggetto %}
     <div class="scheda-massima">
-      <p class="scheda-massima-label">Oggetto</p>
+      <p class="scheda-massima-label">{{ t.oggetto }}</p>
       <p>{{ oggetto }}</p>
     </div>
     {% endif %}
@@ -60,10 +63,11 @@ layout: layouts/base.liquid
 
     {% if norme %}
     <div class="scheda-norme">
-      <p class="scheda-norme-label">Norme collegate</p>
+      <p class="scheda-norme-label">{{ t.normeCollegate }}</p>
       <ul>
         {% for n in norme %}
-        <li><a href="{{ n.href | url }}">{{ n.label }}</a></li>
+        {%- comment -%} le schede del sito (es. d.l. 100/2026) nella lingua della pagina; i testi interattivi restano in italiano {%- endcomment -%}
+        <li><a href="{% if n.href contains '/patto-interattivo/' %}{{ n.href | url }}{% else %}{{ n.href | langUrl: L | url }}{% endif %}">{{ n.label }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -71,13 +75,13 @@ layout: layouts/base.liquid
 
     {% if pdf %}
     <p style="margin-top: 2rem;">
-      <a href="{{ pdf | url }}" class="scheda-pdf-btn" target="_blank" rel="noopener">📄 {{ pdfLabel | default: "Scarica il documento (PDF)" }}</a>
+      <a href="{{ pdf | url }}" class="scheda-pdf-btn" target="_blank" rel="noopener">📄 {{ pdfLabel | default: t.pdfDocumento }}</a>
     </p>
     {% endif %}
 
     {% if allegati %}
     <div class="scheda-allegati">
-      <p class="scheda-norme-label">Allegati</p>
+      <p class="scheda-norme-label">{{ t.allegati }}</p>
       <ul>
         {% for a in allegati %}
         <li><a href="{{ a.href | url }}" target="_blank" rel="noopener">📎 {{ a.label }}</a></li>

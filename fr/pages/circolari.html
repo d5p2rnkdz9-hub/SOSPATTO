@@ -1,0 +1,51 @@
+---
+layout: layouts/base.liquid
+title: "Circulaires et pratiques — SOS Patto"
+lang: fr
+description: "Circulaires ministérielles et pratiques administratives sur le Pacte de l'UE sur la migration et l'asile et sur la législation italienne d'adaptation, reliées aux articles des textes interactifs."
+---
+
+<section class="bg-off-white" style="padding: 2.5rem 0 2rem;">
+  <div class="container" style="max-width: 760px; text-align: center;">
+    <h1 class="page-title" style="margin: 0 0 0.5rem;">Circulaires et pratiques administratives</h1>
+    <p style="color: var(--gray-dark); line-height: 1.6; margin: 0;">
+      Circulaires ministérielles, notes et pratiques administratives sur la mise en œuvre du Pacte.
+      Chaque fiche indique l'objet, le PDF original (en italien) et les liens vers les dispositions dans les
+      <a href="/fr/testi.html">textes interactifs</a> (en italien).
+      Vous connaissez une circulaire à signaler ? <a href="mailto:{{ site.email }}">Écrivez-nous</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+
+    {% assign schede = collections.circolari_fr %}
+    {% if schede.size > 0 %}
+    {% include "components/filtro-temi.liquid" %}
+    <div class="archivio-grid">
+      {% for scheda in schede %}
+      <a href="{{ scheda.url | url }}" class="archivio-card" data-temi="{% for tema in scheda.data.temi %}{{ tema | temaSlug }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+        {% if scheda.data.esempio %}<span class="scheda-esempio">Fiche d'exemple</span>{% endif %}
+        <p class="scheda-kicker">{{ scheda.data.tipo | default: "Circulaire" }}{% if scheda.data.numero %} · {{ scheda.data.numero }}{% endif %}</p>
+        <h3>{{ scheda.data.ente }}, {{ scheda.date | data: lang }}</h3>
+        {% if scheda.data.oggetto %}<p>{{ scheda.data.oggetto | truncate: 180 }}</p>{% endif %}
+        {% if scheda.data.temi %}
+        <div class="scheda-temi">
+          {% for tema in scheda.data.temi %}<span class="scheda-tema">{{ tema | temaLabel: lang }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="archivio-vuoto">
+      <p style="font-size: 2rem; margin: 0 0 0.5rem;">📄</p>
+      <p>La collection est en cours de constitution : les premières fiches arriveront bientôt.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<script src="{{ '/src/scripts/filtro-temi.js' | url }}?v={{ site.assetVersion }}" defer></script>

@@ -4,19 +4,21 @@
   title/description in frontmatter, quindi li ricaviamo da corte/ente + data
   e da massima/oggetto, per avere meta unici su ogni pagina.
 {%- endcomment -%}
+{%- assign L = lang | default: 'it' -%}
+{%- assign t = i18n.ui[L] -%}
 {%- capture pageTitle -%}
   {%- if title -%}{{ title }}
-  {%- elsif corte -%}{{ corte }}, {{ page.date | dataIt }} — SOS Patto
-  {%- elsif ente -%}{{ ente }}, {{ page.date | dataIt }} — SOS Patto
+  {%- elsif corte -%}{{ corte | corte: L }}, {{ page.date | data: L }} — SOS Patto
+  {%- elsif ente -%}{{ ente }}, {{ page.date | data: L }} — SOS Patto
   {%- else -%}{{ site.name }}{%- endif -%}
 {%- endcapture -%}
 {%- capture pageDescription -%}
   {%- if description -%}{{ description }}
   {%- elsif massima -%}{{ massima | strip_html | truncate: 158 }}
   {%- elsif oggetto -%}{{ oggetto | strip_html | truncate: 158 }}
-  {%- else -%}{{ site.defaultDescription }}{%- endif -%}
+  {%- else -%}{{ t.defaultDescription }}{%- endif -%}
 {%- endcapture -%}
-<html lang="{{ lang | default: 'it' }}" dir="ltr">
+<html lang="{{ L }}" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +43,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="SOS Patto — Il Patto UE su migrazione e asilo, spiegato">
+  <meta property="og:image:alt" content="{{ t.ogAlt }}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -51,6 +53,14 @@
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- comment -%} Versioni nelle altre lingue: solo quelle che esistono davvero {%- endcomment -%}
+  {%- assign altre = 0 -%}
+  {%- for l in i18n.lingue -%}{%- assign esiste = page.url | haAlt: l.code, collections.all -%}{%- if esiste and l.code != L -%}{%- assign altre = altre | plus: 1 -%}{%- endif -%}{%- endfor -%}
+  {%- if altre > 0 %}
+  {%- for l in i18n.lingue %}{% assign esiste = page.url | haAlt: l.code, collections.all %}{% if esiste %}
+  <link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ site.url }}{{ page.url | langUrl: l.code }}">{% endif %}{% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url | langUrl: 'it' }}">
+  {%- endif %}
 
   <!-- Structured data: Organization + WebSite -->
   <script type="application/ld+json">
@@ -62,14 +72,14 @@
         "@id": "{{ site.url }}/#organization",
         "name": "{{ site.name }}",
         "url": "{{ site.url }}/",
-        "description": "{{ site.defaultDescription }}"
+        "description": "{{ t.defaultDescription }}"
       },
       {
         "@type": "WebSite",
         "@id": "{{ site.url }}/#website",
         "name": "{{ site.name }}",
         "url": "{{ site.url }}/",
-        "inLanguage": "{{ lang | default: 'it' }}",
+        "inLanguage": "{{ L }}",
         "publisher": { "@id": "{{ site.url }}/#organization" }
       }
     ]
