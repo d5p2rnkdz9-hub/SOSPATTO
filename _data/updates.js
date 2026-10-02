@@ -63,7 +63,7 @@ module.exports = {
       },
       {
         date: '19 settembre 2026',
-        text: "Trib. Trieste: cautela ex art. 700 c.p.c. sul reclamo contro l'obbligo di soggiorno, assente il rintraccio dell'art. 43, lett. b)",
+        text: "Trib. Trieste: accolto il ricorso ex art. 700 c.p.c. per sospendere l'obbligo di soggiorno, manca il rintraccio dell'art. 43 b)",
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-trieste-5022-2026-09-19.html',
       },
@@ -98,7 +98,7 @@ module.exports = {
       },
       {
         date: "19 September 2026",
-        text: "Trieste Court: Article 700 CCP interim relief admitted on the appeal to residence order, apprehension under Article 43(b) is absent",
+        text: "Trieste Court: Article 700 CCP application granted to suspend the obligation to reside, no apprehension under Article 43(b)",
         cta: "Read the summary",
         href: "/en/giurisprudenza/trib-trieste-5022-2026-09-19.html",
       },
@@ -134,7 +134,7 @@ module.exports = {
       },
       {
         date: "19 septembre 2026",
-        text: "Tribunal de Trieste : pas d'interpellation ex art. 43 b), mesure provisoire ex art. 700 CPC admise contre l'obligation de résider",
+        text: "Tribunal de Trieste : art. 700 CPC accueilli pour suspendre l'obligation de résider, pas d'interpellation ex art. 43 b)",
         cta: "Lire la fiche",
         href: "/fr/giurisprudenza/trib-trieste-5022-2026-09-19.html",
       },
