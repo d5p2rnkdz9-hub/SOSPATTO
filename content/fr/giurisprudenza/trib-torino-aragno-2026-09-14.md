@@ -1,5 +1,5 @@
 ---
-it_hash: 75df6452373b
+it_hash: f8fbb55b57d7
 corte: "Tribunale di Torino"
 tipo: "Décret provisoire (article 35-bis, alinéas 2 et 3, du décret législatif 25/2008)"
 numero: "R.G. omesso"
@@ -12,6 +12,7 @@ norme:
   - { label: "Article 42 du règlement (UE) 2024/1348 (procédures d'examen accélérées)", href: "/patto-interattivo/1348.html#art_42" }
   - { label: "Article 68 du règlement (UE) 2024/1348 (effet suspensif du recours)", href: "/patto-interattivo/1348.html#art_68" }
 pdf: /allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf
+prePatto: true
 ---
 
 Le Tribunal de Turin (juge Alessandra Aragno) déclare n'y avoir lieu à statuer

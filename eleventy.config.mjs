@@ -130,9 +130,12 @@ export default function (eleventyConfig) {
   eleventyConfig.setServerOptions({ middleware: [devMiddleware] });
 
   // ---- collezioni ---------------------------------------------------------
-  // una scheda = un file .md in content/giurisprudenza/ o content/circolari/
+  // una scheda = un file .md in content/giurisprudenza/ o content/circolari/.
+  // Le schede `prePatto: true` (decisioni sul regime previgente) restano nella KB ma
+  // non sul sito: niente pagina (permalink: false) e fuori dagli indici.
+  const pubblicate = (api, glob) => api.getFilteredByGlob(glob).filter((p) => !p.data.prePatto);
   eleventyConfig.addCollection('giurisprudenza', (api) =>
-    api.getFilteredByGlob('content/giurisprudenza/*.md').sort((a, b) => b.date - a.date));
+    pubblicate(api, 'content/giurisprudenza/*.md').sort((a, b) => b.date - a.date));
   eleventyConfig.addCollection('circolari', (api) =>
     api.getFilteredByGlob('content/circolari/*.md').sort((a, b) => b.date - a.date));
   eleventyConfig.addCollection('dottrina', (api) =>
@@ -143,7 +146,7 @@ export default function (eleventyConfig) {
     for (const lang of LINGUE_TRADOTTE) {
       eleventyConfig.addCollection(`${sez}_${lang}`, (api) => {
         const tr = new Map(api.getFilteredByGlob(`content/${lang}/${sez}/*.md`).map((p) => [p.page.fileSlug, p]));
-        return api.getFilteredByGlob(`content/${sez}/*.md`)
+        return pubblicate(api, `content/${sez}/*.md`)
           .map((p) => tr.get(p.page.fileSlug) || p)
           .sort((a, b) => b.date - a.date);
       });

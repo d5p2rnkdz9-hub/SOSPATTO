@@ -1,5 +1,5 @@
 ---
-it_hash: 75df6452373b
+it_hash: f8fbb55b57d7
 corte: "Tribunale di Torino"
 tipo: "Interim decree (Article 35-bis(2) and (3) of Legislative Decree 25/2008)"
 numero: "R.G. omesso"
@@ -12,6 +12,7 @@ norme:
   - { label: "Article 42 of Regulation (EU) 2024/1348 (accelerated examination procedures)", href: "/patto-interattivo/1348.html#art_42" }
   - { label: "Article 68 of Regulation (EU) 2024/1348 (suspensive effect of the appeal)", href: "/patto-interattivo/1348.html#art_68" }
 pdf: /allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf
+prePatto: true
 ---
 
 The Tribunal of Turin (judge Alessandra Aragno) declares that there is no need to rule

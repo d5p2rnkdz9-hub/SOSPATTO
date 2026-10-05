@@ -11,6 +11,7 @@ norme:
   - { label: "Art. 42 Reg. (UE) 2024/1348 (procedure accelerate)", href: "/patto-interattivo/1348.html#art_42" }
   - { label: "Art. 68 Reg. (UE) 2024/1348 (effetto sospensivo del ricorso)", href: "/patto-interattivo/1348.html#art_68" }
 pdf: /allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf
+prePatto: true
 ---
 
 Il Tribunale di Torino (giudice dott.ssa Alessandra Aragno) dichiara non luogo a provvedere

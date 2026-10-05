@@ -5,6 +5,6 @@ module.exports = {
   tags: ['circolari_tradotte'],
   layout: 'layouts/circolare.liquid',
   eleventyComputed: {
-    permalink: (data) => `en/circolari/${data.page.fileSlug}.html`,
+    permalink: (data) => data.prePatto ? false : `en/circolari/${data.page.fileSlug}.html`,
   },
 };

@@ -5,6 +5,6 @@ module.exports = {
   tags: ['giurisprudenza_tradotta'],
   layout: 'layouts/decisione.liquid',
   eleventyComputed: {
-    permalink: (data) => `fr/giurisprudenza/${data.page.fileSlug}.html`,
+    permalink: (data) => data.prePatto ? false : `fr/giurisprudenza/${data.page.fileSlug}.html`,
   },
 };

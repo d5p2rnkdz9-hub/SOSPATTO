@@ -47,6 +47,28 @@
   to = "/giurisprudenza.html"
   status = 301
 
+# Decreto cautelare Trib. Torino del 14 settembre 2026 (giud. Aragno): regime pre-Patto,
+# tolto dal sito (resta nella KB). Il PDF non è più in public/.
+[[redirects]]
+  from = "/giurisprudenza/trib-torino-aragno-2026-09-14.html"
+  to = "/giurisprudenza.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/giurisprudenza/trib-torino-aragno-2026-09-14.html"
+  to = "/en/giurisprudenza.html"
+  status = 301
+
+[[redirects]]
+  from = "/fr/giurisprudenza/trib-torino-aragno-2026-09-14.html"
+  to = "/fr/giurisprudenza.html"
+  status = 301
+
+[[redirects]]
+  from = "/allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf"
+  to = "/giurisprudenza.html"
+  status = 301
+
 # ── HOMEPAGE CANONICAL ──
 [[redirects]]
   from = "/index.html"
