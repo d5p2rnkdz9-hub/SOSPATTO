@@ -1,16 +1,14 @@
 ---
-it_hash: f8fbb55b57d7
+it_hash: 064e5afa9b92
 corte: "Tribunale di Torino"
 tipo: "Décret provisoire (article 35-bis, alinéas 2 et 3, du décret législatif 25/2008)"
 numero: "R.G. omesso"
 date: 2026-09-14
 temi: [Procedure accelerate, Regime transitorio, Garanzie procedurali]
-massima: "Le principe de droit posé par les chambres réunies (Sezioni Unite) n° 11399/2024 — selon lequel la dérogation au principe général de suspension automatique de la mesure attaquée ne joue que lorsque la Commissione territoriale a correctement appliqué la procédure accélérée, tandis que le non-respect des étapes procédurales entraîne le rétablissement de la procédure ordinaire et la réapplication de la suspension de plein droit — s'applique également aux procédures engagées après le 12 juin 2026 à l'égard des demandeurs originaires de pays désignés comme sûrs. Lorsqu'entre l'introduction de la demande (30 juillet 2026) et la décision de la Commission (18 août 2026) s'est écoulé un laps de temps incompatible avec les délais de la procédure accélérée, l'espèce doit être ramenée à la procédure ordinaire au titre de l'article 27 du décret législatif 25/2008, avec application de l'article 35-bis, alinéas 2 et 3, première phrase, et suspension automatique de la force exécutoire de la mesure attaquée."
+massima: "En application du principe de droit posé par les chambres réunies (Sezioni Unite) n° 11399/2024 — selon lequel, à l'égard du demandeur originaire d'un pays sûr, la dérogation au principe général de suspension automatique de la mesure attaquée ne joue que lorsque la Commissione territoriale a correctement appliqué la procédure accélérée, tandis que le non-respect de ses étapes procédurales entraîne le rétablissement de la procédure ordinaire et la réapplication de la suspension de plein droit —, lorsqu'entre l'introduction de la demande (30 juillet 2026) et la décision de la Commission (18 août 2026) s'est écoulé un laps de temps incompatible avec les délais de la procédure accélérée, l'espèce doit être ramenée à la procédure ordinaire au titre de l'article 27 du décret législatif 25/2008, avec application de l'article 35-bis, alinéas 2 et 3, première phrase, et suspension automatique de la force exécutoire de la mesure attaquée."
 norme:
   - { label: "Article 27 du décret législatif 25/2008 (procédure ordinaire)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_27" }
   - { label: "Article 35-bis, alinéas 2 et 3, du décret législatif 25/2008 (suspension automatique)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_35-bis" }
-  - { label: "Article 42 du règlement (UE) 2024/1348 (procédures d'examen accélérées)", href: "/patto-interattivo/1348.html#art_42" }
-  - { label: "Article 68 du règlement (UE) 2024/1348 (effet suspensif du recours)", href: "/patto-interattivo/1348.html#art_68" }
 pdf: /allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf
 prePatto: true
 ---
@@ -30,7 +28,7 @@ décision de la Commission est intervenue le 18 août 2026 : un laps de temps qu
 procédure accélérée, dont les délais n'ont pas été « respectés dans ses étapes
 procédurales ».
 
-## Le principe des chambres réunies 11399/2024 appliqué au nouveau régime
+## Le principe des chambres réunies 11399/2024
 
 De la jurisprudence de la Cour de cassation, le Tribunal tire — « en tant que principe de droit applicable
 aussi en l'espèce, Cass. civ., Sez. un., n° 11399/24, dép. 29.4.2024 » — la règle selon laquelle la
@@ -40,7 +38,7 @@ la Commissione territoriale a appliqué une procédure accélérée correcte ».
 étapes procédurales, la procédure ordinaire est rétablie et le principe général de
 suspension automatique de la mesure de la Commissione territoriale s'applique de nouveau ».
 
-## L'issue procédurale et l'articulation avec le Pacte
+## L'issue procédurale
 
 La procédure d'appréciation de la demande « doit être ramenée à la procédure ordinaire
 prévue par l'article 27 du décret législatif 25/2008 », avec application de l'article 35-bis, alinéa 2,
@@ -48,8 +46,8 @@ première phrase, et alinéa 3, première phrase. Dès lors, la suspension de la
 tenue pour automatique » et le Tribunal déclare n'y avoir lieu à statuer sur la demande, tout en
 autorisant dans le même temps le maintien sur le territoire.
 
-Le décret s'inscrit dans le courant jurisprudentiel qui étend le principe de la Cour de cassation siégeant en chambres réunies au
-nouveau régime du Pacte. Il se rattache à
+Le décret applique le principe de la Cour de cassation siégeant en chambres réunies dans le cadre du décret législatif 25/2008
+antérieur au Pacte. Il se rattache à
 [Trib. Trieste 3940 (D'Alessio)](/fr/giurisprudenza/trib-trieste-3940-2026-07-31.html), qui — par une
 voie différente — concluait lui aussi à la suspension automatique, et rejoint la lecture des
 sections de Florence

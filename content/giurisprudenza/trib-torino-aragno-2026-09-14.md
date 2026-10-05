@@ -4,12 +4,10 @@ tipo: "Decreto cautelare (art. 35-bis, commi 2 e 3, d.lgs. 25/2008)"
 numero: "R.G. omesso"
 date: 2026-09-14
 temi: [Procedure accelerate, Regime transitorio, Garanzie procedurali]
-massima: "Il principio di diritto delle Sezioni Unite n. 11399/2024 — per cui la deroga al principio generale della sospensione automatica del provvedimento impugnato opera solo quando la Commissione territoriale abbia correttamente applicato la procedura accelerata, mentre il mancato rispetto delle articolazioni procedimentali determina il ripristino della procedura ordinaria e il riespandersi della sospensione ex lege — è applicabile anche alle procedure instaurate dopo il 12 giugno 2026 nei confronti dei richiedenti provenienti da Paesi designati sicuri. Nel caso in cui tra la formalizzazione della domanda (30 luglio 2026) e la decisione della Commissione (18 agosto 2026) sia decorso un lasso di tempo incompatibile con i termini della procedura accelerata, la fattispecie deve essere ricondotta nell'ambito della procedura ordinaria ex art. 27 d.lgs. 25/2008, con conseguente applicazione dell'art. 35-bis, commi 2 e 3, primo periodo, e sospensione automatica dell'efficacia esecutiva del provvedimento impugnato."
+massima: "In applicazione del principio di diritto delle Sezioni Unite n. 11399/2024 — per cui, nei confronti del richiedente proveniente da Paese sicuro, la deroga al principio generale della sospensione automatica del provvedimento impugnato opera solo quando la Commissione territoriale abbia correttamente applicato la procedura accelerata, mentre il mancato rispetto delle sue articolazioni procedimentali determina il ripristino della procedura ordinaria e il riespandersi della sospensione ex lege —, se tra la formalizzazione della domanda (30 luglio 2026) e la decisione della Commissione (18 agosto 2026) è decorso un lasso di tempo incompatibile con i termini della procedura accelerata, la fattispecie va ricondotta alla procedura ordinaria ex art. 27 d.lgs. 25/2008, con applicazione dell'art. 35-bis, commi 2 e 3, primo periodo, e sospensione automatica dell'efficacia esecutiva del provvedimento impugnato."
 norme:
   - { label: "Art. 27 d.lgs. 25/2008 (procedura ordinaria)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_27" }
   - { label: "Art. 35-bis, commi 2 e 3, d.lgs. 25/2008 (sospensione automatica)", href: "/patto-interattivo/dlgs-25-2008/index.html#art_35-bis" }
-  - { label: "Art. 42 Reg. (UE) 2024/1348 (procedure accelerate)", href: "/patto-interattivo/1348.html#art_42" }
-  - { label: "Art. 68 Reg. (UE) 2024/1348 (effetto sospensivo del ricorso)", href: "/patto-interattivo/1348.html#art_68" }
 pdf: /allegati/giurisprudenza/trib-torino-aragno-2026-09-14.pdf
 prePatto: true
 ---
@@ -29,7 +27,7 @@ decisione della Commissione il 18 agosto 2026: un lasso di tempo che eccede l'or
 procedura accelerata, i cui termini non sono stati «rispettati nelle sue articolazioni
 procedimentali».
 
-## Il principio delle Sezioni Unite 11399/2024 applicato al nuovo regime
+## Il principio delle Sezioni Unite 11399/2024
 
 Dalla giurisprudenza di legittimità il Tribunale ricava — «con principio di diritto applicabile
 anche al caso di specie, Cass. Civ., Sez. un., n. 11399/24, dep. 29.4.2024» — la regola per cui la
@@ -40,7 +38,7 @@ contraria, quando la procedura accelerata non sia stata rispettata nelle sue art
 procedimentali, si determina il ripristino della procedura ordinaria ed il riespandersi del
 principio generale di sospensione automatica del provvedimento della Commissione territoriale».
 
-## L'esito processuale e il raccordo col Patto
+## L'esito processuale
 
 La procedura di valutazione della domanda «deve essere ricondotta nell'ambito di quella ordinaria
 prevista dall'art. 27 d.lgs. 25/2008», con conseguente applicazione dell'art. 35-bis, comma 2,
@@ -48,8 +46,8 @@ primo periodo, e comma 3, primo periodo. Pertanto la sospensione dell'efficacia 
 intendersi automatica» e il Tribunale dichiara non luogo a provvedere sull'istanza, in
 contestuale autorizzazione a rimanere.
 
-Il decreto si colloca nel filone che estende il principio della Cassazione a Sezioni Unite al
-nuovo regime del Patto. Si collega a
+Il decreto applica il principio della Cassazione a Sezioni Unite nel quadro del d.lgs. 25/2008
+previgente al Patto. Si collega a
 [Trib. Trieste 3940 (D'Alessio)](/giurisprudenza/trib-trieste-3940-2026-07-31.html), che — per
 diversa via — concludeva comunque per la sospensione automatica, e in parallelo con la lettura
 delle sezioni di Firenze
