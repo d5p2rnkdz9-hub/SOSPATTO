@@ -56,10 +56,10 @@ module.exports = {
         href: '/giurisprudenza/trib-milano-31896-2026-09-29.html',
       },
       {
-        date: '22 settembre 2026',
-        text: "Trib. Venezia: se la domanda precede l'entrata in vigore del D.M. sui luoghi abilitati, la procedura di frontiera è illegittima",
+        date: '30 settembre 2026',
+        text: 'Trib. Venezia: la vulnerabilità sopravvenuta impone la revisione delle garanzie, esclusa la procedura di frontiera accelerata',
         cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-venezia-13622-2026-09-22.html',
+        href: '/giurisprudenza/trib-venezia-13922-2026-09-30.html',
       },
       {
         date: '19 settembre 2026',
@@ -91,10 +91,10 @@ module.exports = {
         href: "/en/giurisprudenza/trib-milano-31896-2026-09-29.html",
       },
       {
-        date: "22 September 2026",
-        text: "Venice Court: where the application predates the Ministerial Decree on authorised places, the border procedure is unlawful",
+        date: "30 September 2026",
+        text: "Venice Court: supervening vulnerability requires review of procedural guarantees, accelerated border procedure excluded",
         cta: "Read the summary",
-        href: "/en/giurisprudenza/trib-venezia-13622-2026-09-22.html",
+        href: "/en/giurisprudenza/trib-venezia-13922-2026-09-30.html",
       },
       {
         date: "19 September 2026",
@@ -127,10 +127,10 @@ module.exports = {
         href: "/fr/giurisprudenza/trib-milano-31896-2026-09-29.html",
       },
       {
-        date: "22 septembre 2026",
-        text: "Tribunal de Venise : si la demande précède le décret ministériel sur les lieux habilités, la procédure à la frontière est illégale",
+        date: "30 septembre 2026",
+        text: "Trib. Venise : la vulnérabilité survenue en cours de procédure impose la révision des garanties, procédure à la frontière exclue",
         cta: "Lire la fiche",
-        href: "/fr/giurisprudenza/trib-venezia-13622-2026-09-22.html",
+        href: "/fr/giurisprudenza/trib-venezia-13922-2026-09-30.html",
       },
       {
         date: "19 septembre 2026",
