@@ -44,6 +44,12 @@ module.exports = {
         href: '/giurisprudenza/trib-torino-18229-2026-10-01.html',
       },
       {
+        date: '1° ottobre 2026',
+        text: 'Trib. Bologna: procedura di frontiera avviata sul solo dato Eurostat del 20%, non è instaurata e il ricorso sospende ex lege',
+        cta: 'Leggi la scheda',
+        href: '/giurisprudenza/trib-bologna-15588-2026-10-01.html',
+      },
+      {
         date: '29 settembre 2026',
         text: 'Trib. Milano: il ritardo della Questura nella formalizzazione non ricade sul richiedente, vale la disciplina alla manifestazione',
         cta: 'Leggi la scheda',
@@ -61,12 +67,6 @@ module.exports = {
         cta: 'Leggi la scheda',
         href: '/giurisprudenza/trib-firenze-12067-2026-09-19.html',
       },
-      {
-        date: '19 settembre 2026',
-        text: 'Trib. Trieste: accolto ricorso ex art. 700 c.p.c. contro obbligo di soggiorno in mancanza di rintraccio in prossimità della frontiera',
-        cta: 'Leggi la scheda',
-        href: '/giurisprudenza/trib-trieste-5022-2026-09-19.html',
-      },
     ],
   },  en: {
     label: 'Latest updates',
@@ -77,6 +77,12 @@ module.exports = {
         text: "Turin Court: the 20% threshold does not bar authorisation to remain, generalised violence in Khyber Pakhtunkhwa",
         cta: "Read the summary",
         href: "/en/giurisprudenza/trib-torino-18229-2026-10-01.html",
+      },
+      {
+        date: "1 October 2026",
+        text: "Bologna Court: a border procedure started on the Eurostat 20% figure alone is not validly initiated, the appeal is suspensive",
+        cta: "Read the summary",
+        href: "/en/giurisprudenza/trib-bologna-15588-2026-10-01.html",
       },
       {
         date: "29 September 2026",
@@ -96,12 +102,6 @@ module.exports = {
         cta: "Read the summary",
         href: "/en/giurisprudenza/trib-firenze-12067-2026-09-19.html",
       },
-      {
-        date: "19 September 2026",
-        text: "Trieste Court: Article 700 CCP application granted against the obligation to reside, no apprehension in the vicinity of a border",
-        cta: "Read the summary",
-        href: "/en/giurisprudenza/trib-trieste-5022-2026-09-19.html",
-      },
     ],
   },
   fr: {
@@ -113,6 +113,12 @@ module.exports = {
         text: "Tribunal de Turin : le seuil de 20 % n'empêche pas l'autorisation de rester, violence généralisée dans le Khyber Pakhtunkhwa",
         cta: "Lire la fiche",
         href: "/fr/giurisprudenza/trib-torino-18229-2026-10-01.html",
+      },
+      {
+        date: "1er octobre 2026",
+        text: "Tribunal de Bologne : procédure à la frontière engagée sur la seule donnée Eurostat de 20 %, non valable, recours suspensif",
+        cta: "Lire la fiche",
+        href: "/fr/giurisprudenza/trib-bologna-15588-2026-10-01.html",
       },
       {
         date: "29 septembre 2026",
@@ -131,12 +137,6 @@ module.exports = {
         text: "Tribunal de Florence : l'information du filtrage ne supplée pas à celle de la procédure, l'autorisation de rester est accordée",
         cta: "Lire la fiche",
         href: "/fr/giurisprudenza/trib-firenze-12067-2026-09-19.html",
-      },
-      {
-        date: "19 septembre 2026",
-        text: "Tribunal de Trieste : art. 700 CPC accueilli contre l'obligation de résider, pas d'interpellation à proximité de la frontière",
-        cta: "Lire la fiche",
-        href: "/fr/giurisprudenza/trib-trieste-5022-2026-09-19.html",
       },
     ],
   },
