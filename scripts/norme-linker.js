@@ -47,8 +47,8 @@ const LEGGI = {
 const CARTELLA_A_KEY = Object.fromEntries(Object.entries(LEGGI).map(([k, v]) => [v, k]));
 
 // Atti che non hanno un testo interattivo ma una scheda sul sito (chiave -> URL della
-// scheda). Vuoto da quando il d.l. 100/2026 ha il suo testo interattivo (LEGGI).
-const SCHEDE = {};
+// scheda).
+const SCHEDE = { 'dl-2026-168': '/circolari/dl-168-2026.html' };
 
 // ---- id presenti nei file del bundle (cache per file) -----------------------
 const idCache = new Map();

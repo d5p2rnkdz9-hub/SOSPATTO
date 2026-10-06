@@ -125,6 +125,19 @@ module.exports = {
       en: { titolo: 'Decree-Law 100/2026', sotto: 'First Italian implementation of the EU Pact on Migration and Asylum', coord: 'Text in force — converted without amendments by Law 145/2026; Arts. 1, 2 and 16 amended by Decree-Law 144/2026' },
       fr: { titolo: 'Décret-loi 100/2026', sotto: 'Première mise en œuvre italienne du Pacte de l\'UE sur la migration et l\'asile', coord: 'Texte en vigueur — converti sans modification par la loi 145/2026 ; art. 1, 2 et 16 modifiés par le décret-loi 144/2026' },
     },
+    // Senza testo interattivo: la card apre la scheda con il PDF della G.U. Modifica l'art. 17
+    // del d.l. 100/2026 (strato da aggiungere al testo interattivo del d.l. 100 con un nuovo snapshot).
+    {
+      slug: 'dl-168-2026',
+      href: '/circolari/dl-168-2026.html',
+      titolo: 'D.L. 168/2026',
+      sotto: 'Regime transitorio del Patto: proroga al 30 aprile 2027 e documento del richiedente',
+      coord: 'In vigore dal 30 settembre 2026, in conversione — art. 4: modifica l\'art. 17 del d.l. 100/2026',
+      icon: '📜',
+      cta: 'Leggi la scheda →',
+      en: { href: '/en/circolari/dl-168-2026.html', titolo: 'Decree-Law 168/2026', sotto: 'Transitional regime of the Pact: extension to 30 April 2027 and the applicant\'s document', coord: 'In force since 30 September 2026, pending conversion — Art. 4: amends Art. 17 of Decree-Law 100/2026', cta: 'Read the summary →' },
+      fr: { href: '/fr/circolari/dl-168-2026.html', titolo: 'Décret-loi 168/2026', sotto: 'Régime transitoire du Pacte : prorogation au 30 avril 2027 et document du demandeur', coord: 'En vigueur depuis le 30 septembre 2026, en cours de conversion — art. 4 : modifie l\'art. 17 du décret-loi 100/2026', cta: 'Lire la fiche →' },
+    },
     // Decreto di novella anch'esso (tratta, dir. 2024/1712): modifica l'art. 18 T.U.,
     // l'art. 17 d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano articolo per articolo.
     {

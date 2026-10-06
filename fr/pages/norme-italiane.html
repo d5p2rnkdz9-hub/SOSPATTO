@@ -79,13 +79,13 @@ extraStyles: |
     <h2 class="testi-sezione" id="norme-italiane">🇮🇹 La législation italienne</h2>
     <div class="testi-grid">
       {% for t in testi.it %}
-      <a href="{% if t.href %}{{ t.href }}{% else %}/patto-interattivo/{{ t.slug }}/index.html{% endif %}" class="testo-card">
+      <a href="{% if t.fr.href %}{{ t.fr.href }}{% elsif t.href %}{{ t.href }}{% else %}/patto-interattivo/{{ t.slug }}/index.html{% endif %}" class="testo-card">
         <div class="testo-card-top">
           <span class="testo-tag">{{ t.fr.titolo | default: t.titolo }}</span>
         </div>
         <h3>{{ t.fr.sotto | default: t.sotto }}</h3>
         <span class="testo-coord">{{ t.fr.coord | default: t.coord }}</span>
-        <span class="testo-go">{{ t.cta | default: "Consulter (en italien) →" }}</span>
+        <span class="testo-go">{{ t.fr.cta | default: "Consulter (en italien) →" }}</span>
       </a>
       {% endfor %}
     </div>
