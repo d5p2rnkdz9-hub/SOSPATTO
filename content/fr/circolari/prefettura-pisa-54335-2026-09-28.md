@@ -1,5 +1,5 @@
 ---
-it_hash: 3ff8da37514b
+it_hash: b5366a9d165e
 ente: "Prefettura de Pise — Bureau territorial du Gouvernement, Zone IV"
 tipo: "Circulaire aux organismes publics du territoire (signée par le préfet Alessandro)"
 numero: "Prot. n. 0054335 del 28/09/2026"
@@ -8,7 +8,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "La Prefettura de Pise, reproduisant la circulaire n° 45722 du 21 septembre 2026 du ministère de l'Intérieur, rappelle aux communes, services de santé, Agence des recettes, organismes de sécurité sociale, centres pour l'emploi et centres de formation de reconnaître le nouveau document nominatif délivré au demandeur en vertu de l'article 4 du décret législatif 142/2015, tel que remplacé par l'article 10 du décret-loi 100/2026. L'absence de présentation de l'ancien permis de séjour pour demande d'asile ne peut constituer un obstacle à l'accès aux services, aux prestations et aux procédures administratives si le demandeur est en possession de la nouvelle documentation. Les services sont invités à adapter les pratiques et les procédures informatiques encore calquées sur la réglementation antérieure, sans préjudice des autres conditions éventuellement prévues par la réglementation sectorielle spécifique."
 norme:
   - { label: "Article 4 du décret législatif 142/2015 (documentation du demandeur, dans le texte remplacé par l'article 10 du décret-loi 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Article 27 du règlement (UE) 2024/1348 (enregistrement de la demande)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-pisa-54335-2026-09-28.pdf
 pdfLabel: "Télécharger la circulaire (PDF)"

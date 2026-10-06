@@ -1,5 +1,5 @@
 ---
-it_hash: 51879447820a
+it_hash: 7252ea05bd22
 ente: "Prefettura of Varese — Territorial Government Office, Area II"
 tipo: "Circular to local authorities and provincial administrations (signed by Deputy Prefect Federica Crupi)"
 numero: "Circolare n. 93, prot. n. 0053598 del 22/09/2026"
@@ -8,7 +8,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "The Prefettura of Varese, reproducing circular no. 45722 of 21/9/2026 of the Ministry of the Interior — Department for Civil Liberties and Immigration, reminds Municipalities, ATS Insubria, ASST Sette Laghi and Valle Olona, the Labour Inspectorate, INPS and the Revenue Agency to recognise the new personal document issued to the applicant under Article 4 of Legislative Decree 142/2015 as replaced by Article 10 of Decree-Law 100/2026: failure to produce the previous residence permit for asylum application cannot constitute an obstacle to access to services, benefits and administrative procedures if the applicant holds the new documentation. The circular recalls the need to adapt practices and IT procedures still based on the previous rules, without prejudice to any further requirements provided for by the specific sector legislation."
 norme:
   - { label: "Article 4 of Legislative Decree 142/2015 (applicant's documentation, as replaced by Article 10 of Decree-Law 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Article 10 of Decree-Law 100/2026 (replacement of Article 4 of Legislative Decree 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 10 of Decree-Law 100/2026 (replacement of Article 4 of Legislative Decree 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Article 27 of Regulation (EU) 2024/1348 (registration of the application)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-varese-93-2026-09-22.pdf
 pdfLabel: "Download the circular (PDF)"

@@ -1,5 +1,5 @@
 ---
-it_hash: da3d5c7596f3
+it_hash: 298d927a567a
 ente: "Prefettura d'Alexandrie — Bureau territorial du Gouvernement, Zone IV"
 tipo: "Circulaire aux organismes publics du territoire (signée par le sous-préfet adjoint Eugenio Licata)"
 numero: "Prot. n. 0058393 del 01/10/2026"
@@ -8,7 +8,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "La Prefettura d'Alexandrie, reproduisant la circulaire n° 45722 du 21 septembre 2026 du ministère de l'Intérieur, rappelle aux communes, au Conseil territorial pour l'immigration, à l'Agence des recettes, à l'ASL AL, aux centres pour l'emploi, aux centres de formation professionnelle et aux gestionnaires des CAS de reconnaître le nouveau document nominatif délivré au demandeur en vertu de l'article 4 du décret législatif 142/2015, tel que remplacé par l'article 10 du décret-loi 100/2026 : l'absence de présentation de l'ancien permis de séjour pour demande d'asile ne peut constituer un obstacle à l'accès aux services, aux prestations et aux procédures administratives. Les organismes destinataires sont invités à adapter les procédures administratives, les modalités opérationnelles et les outils informatiques, sans préjudice des autres conditions prévues par la réglementation sectorielle spécifique."
 norme:
   - { label: "Article 4 du décret législatif 142/2015 (documentation du demandeur, dans le texte remplacé par l'article 10 du décret-loi 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Article 27 du règlement (UE) 2024/1348 (enregistrement de la demande)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-alessandria-58393-2026-10-01.pdf
 pdfLabel: "Télécharger la circulaire (PDF)"

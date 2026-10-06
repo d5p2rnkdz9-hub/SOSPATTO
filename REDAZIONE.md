@@ -79,8 +79,8 @@ Il box «Norme collegate» (`norme:` nel frontmatter) resta a mano.
   `28-*bis*`), `comma 2-bis`, `lett. b-bis)`.
 - **Elenchi**: `artt. 5-ter, 5-quater e 5-quinquies d.lgs. 142/2015` → un link per articolo.
   Niente intervalli («artt. 20-21»): `artt. 20, 21 e 53`.
-- `d.l. 100/2026` non ha testo interattivo: rimanda a `/circolari/dl-100-2026.html`, senza
-  anteprima; nel frontmatter `norme:` usa quell'href.
+- `d.l. 100/2026`, `d.lgs. 115/2026` e `d.l. 168/2026` hanno il testo interattivo come gli altri:
+  nel frontmatter `norme:` l'href è `/patto-interattivo/<slug>/index.html#art_N`.
 - Restano testo, ed è corretto: `c.p.c.`, `Cost.`, `CEDU`, `d.l. 13/2017`, `Reg. (UE) 2026/464`
   e ogni atto senza testo nel bundle.
 
@@ -151,3 +151,23 @@ Campione di calibrazione — rileggilo prima di scrivere una voce:
 
 Il contenuto della voce si legge dal provvedimento: la sintesi breve è il punto in cui è più
 facile far dire a una decisione ciò che non dice.
+
+## 7. Gli atti normativi non sono circolari
+
+⚠️ **Decreti-legge, decreti legislativi e leggi non vanno MAI in `content/circolari/`**, né come
+scheda né come «recap»: le circolari sono gli atti dell'amministrazione (Ministero, Commissione
+nazionale, Prefetture, Questure) e la prassi. Un nuovo atto normativo si pubblica **solo in
+«Normativa italiana»** (`/norme-italiane.html`):
+
+1. testo interattivo in `public/patto-interattivo/<slug>/` (procedura nel `README.md`, «Come
+   aggiornare i TESTI INTERATTIVI»), più lo strato delle modifiche negli atti che novella;
+2. card in `_data/testi.js` (`it`), senza `href`: il recap brevissimo sta in `sotto` e `coord`, e
+   nel banner del testo interattivo;
+3. chiave in `scripts/norme-linker.js` (`LEGGI`), così le schede lo linkano;
+4. nel nastro, `href` al testo interattivo (uguale in `it`, `en` e `fr`), `cta` «Leggi il testo».
+
+Fino a ottobre 2026 il d.l. 100/2026 aveva anche una scheda in `/circolari/`: è stata tolta (redirect
+301 in `netlify.toml`) proprio perché faceva da modello sbagliato. `npm run build` si ferma se in
+`content/circolari/` compare un atto con `tipo` da decreto-legge, decreto legislativo o legge
+(`scripts/check_collocazione.js`).
+

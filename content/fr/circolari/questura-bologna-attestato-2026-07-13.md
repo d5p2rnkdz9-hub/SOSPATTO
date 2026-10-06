@@ -1,5 +1,5 @@
 ---
-it_hash: 5ee863ee9d88
+it_hash: cd584269610f
 ente: "Questura de Bologne — Bureau de l'immigration, 4e Section"
 tipo: "Note d'information aux administrations pour l'accès aux droits"
 numero: "prot. 0124209 del 15/07/2026"
@@ -12,7 +12,7 @@ norme:
   - { label: "Article 5-bis, alinéa 1, du décret législatif 142/2015 (inscription à l'état civil)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_5-bis" }
   - { label: "Article 21, alinéas 1 et 2, du décret législatif 142/2015 (affiliation au SSN et scolarisation des mineurs)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_21" }
   - { label: "Article 22, alinéa 1, du décret législatif 142/2015 (accès au travail après 90 jours)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_22" }
-  - { label: "Article 17 du décret-loi 100/2026 (régime transitoire)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 17 du décret-loi 100/2026 (régime transitoire)", href: "/patto-interattivo/dl-100-2026/index.html#art_17" }
 pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Télécharger la note (PDF)"
 ---

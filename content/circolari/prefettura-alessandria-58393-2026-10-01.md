@@ -7,7 +7,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "La Prefettura di Alessandria, riproducendo la circolare n. 45722 del 21 settembre 2026 del Ministero dell'Interno, richiama Comuni, Consiglio Territoriale per l'Immigrazione, Agenzia delle Entrate, ASL AL, Centri per l'Impiego, Centri di Formazione Professionale ed enti gestori dei CAS al riconoscimento del nuovo documento nominativo rilasciato al richiedente ai sensi dell'art. 4 d.lgs. 142/2015 come sostituito dall'art. 10 d.l. 100/2026: la mancata esibizione del previgente permesso di soggiorno per richiesta asilo non può costituire motivo ostativo all'accesso ai servizi, alle prestazioni e alle procedure amministrative. Gli enti in indirizzo sono invitati ad adeguare procedure amministrative, modalità operative e strumenti informatici, ferma la sussistenza degli ulteriori requisiti previsti dalla specifica normativa di settore."
 norme:
   - { label: "Art. 4 d.lgs. 142/2015 (documentazione del richiedente, nel testo sostituito dall'art. 10 d.l. 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Art. 10 d.l. 100/2026 (sostituzione dell'art. 4 d.lgs. 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Art. 10 d.l. 100/2026 (sostituzione dell'art. 4 d.lgs. 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-alessandria-58393-2026-10-01.pdf
 pdfLabel: "Scarica la circolare (PDF)"

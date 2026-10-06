@@ -1,5 +1,5 @@
 ---
-it_hash: 5ee863ee9d88
+it_hash: cd584269610f
 ente: "Questura of Bologna — Immigration Office, 4th Section"
 tipo: "Information note to administrations for access to rights"
 numero: "prot. 0124209 del 15/07/2026"
@@ -12,7 +12,7 @@ norme:
   - { label: "Article 5-bis(1) of Legislative Decree 142/2015 (registration in the population register)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_5-bis" }
   - { label: "Article 21(1) and (2) of Legislative Decree 142/2015 (registration with the National Health Service and education of minors)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_21" }
   - { label: "Article 22(1) of Legislative Decree 142/2015 (access to work after 90 days)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_22" }
-  - { label: "Article 17 of Decree-Law 100/2026 (transitional rules)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 17 of Decree-Law 100/2026 (transitional rules)", href: "/patto-interattivo/dl-100-2026/index.html#art_17" }
 pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Download the note (PDF)"
 ---

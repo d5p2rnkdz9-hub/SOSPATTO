@@ -11,7 +11,7 @@ norme:
   - { label: "Art. 5-bis, comma 1, d.lgs. 142/2015 (iscrizione anagrafica)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_5-bis" }
   - { label: "Art. 21, commi 1 e 2, d.lgs. 142/2015 (iscrizione al SSN e istruzione dei minori)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_21" }
   - { label: "Art. 22, comma 1, d.lgs. 142/2015 (accesso al lavoro decorsi 90 giorni)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_22" }
-  - { label: "Art. 17 d.l. 100/2026 (disciplina transitoria)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Art. 17 d.l. 100/2026 (disciplina transitoria)", href: "/patto-interattivo/dl-100-2026/index.html#art_17" }
 pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Scarica la nota (PDF)"
 ---

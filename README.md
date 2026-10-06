@@ -94,6 +94,10 @@ decrescente) e ha la sua pagina `/giurisprudenza/<nomefile>.html`.
 Identico, in `content/circolari/` (campi: `ente`, `tipo`, `numero`, `date`, `temi`,
 `oggetto`, `norme`, `pdf`). PDF in `public/allegati/circolari/`.
 
+⚠️ Solo atti dell'amministrazione e prassi. **Decreti-legge, d.lgs. e leggi non sono circolari**:
+vanno in «Normativa italiana» come testo interattivo (sotto, e `REDAZIONE.md` § 7). Il build lo
+controlla (`scripts/check_collocazione.js`).
+
 ## Come aggiungere un contributo di DOTTRINA
 
 Un file .md in `content/dottrina/` (nome parlante: `autore-argomento-AAAA-MM.md`).
@@ -198,7 +202,7 @@ progetto "PATTO UE", da `dl-100-2026-interattivo/build_dl100.py` (sorgente: lo s
 `nm_fresh_20260710/dl100/`, 19 articoli; convertito senza modificazioni dalla l. 145/2026). Gli
 artt. 1, 2 e 16 li ha poi modificati l'art. 7 del d.l. 7 agosto 2026, n. 144: è lo strato
 `amendments_dl144.json`, generato da `genera_strato_dl144.py` confrontando lo snapshot del 10/7 con
-`nm_fresh_20260929/dl100/`; quei tre articoli hanno il selettore Nuovo / Vecchio / Modifiche. ⚠️ Il
+`nm_fresh_20260929/dl100/`; quei tre articoli hanno il selettore Nuovo / Vecchio / Modifiche (l'art. 17 lo ha per il d.l. 168/2026, v. sotto). ⚠️ Il
 d.l. 144 è in conversione (scade il 6/10/2026) e il testo delle Commissioni cambia il nuovo art. 16:
 a conversione avvenuta, riscaricare (`fetch_normattiva.py --act dl100`) e rigenerare lo strato. È un
 atto di novella, non un consolidato: viene reso come testo vigente, con i rinvii navigabili verso gli atti del Patto, i tre d.lgs.
@@ -231,10 +235,23 @@ d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano articolo per articol
 `dlgs-2026-115`, in `scripts/norme-linker.js` (LEGGI) e in `_data/testi.js`. Copia come il d.l. 100
 (index.html + assets/data.js + amend.css; style.css e app.js da `dlgs-251-2007/assets`).
 
+### Il d.l. 168/2026 (`public/patto-interattivo/dl-168-2026/`)
+
+D.l. 29 settembre 2026, n. 168 (G.U. n. 226, in vigore dal 30/9/2026, in conversione: scade il
+28/11/2026). Per il Patto rileva l'art. 4, che novella l'art. 17 del d.l. 100/2026 (comma 1: regime
+transitorio fino al 30 aprile 2027; comma 3: documento della registrazione equivalente a quello
+dell'art. 4, comma 4, d.lgs. 142/2015, valido un anno, consente il lavoro). Generato da
+`dl-168-2026-interattivo/build_dl168.py`, che riusa `build_dl100.py` (sorgente:
+`nm_fresh_20261006/dl168/`, `fetch_normattiva.py --act dl168`); registrato in `sites.json` come
+`dl-2026-168`, in `scripts/norme-linker.js` (LEGGI), in `_data/testi.js` e in `seo_bundle.py`.
+Nel d.l. 100 è lo strato `amendments_dl168.json` (`genera_strato_dl168.py`, confronto fra
+`nm_fresh_20260929/dl100` e `nm_fresh_20261006/dl100`): l'art. 17 ha il selettore Nuovo / Vecchio /
+Modifiche. A conversione avvenuta, riscaricare `dl100` e `dl168` e rigenerare lo strato.
+
 ### Ricostruire e copiare tutto
 
 ```bash
-cd ~/Desktop/CONOSCENZA/PATTO\ UE && for pass in 1 2; do for f in "Dlgs25 interattivo/build_dlgs25.py" 142-15-interattivo/build_dlgs142.py 286-98-interattivo/build_dlgs286.py 251-07-interattivo/build_dlgs251.py dl-100-2026-interattivo/build_dl100.py dlgs-115-2026-interattivo/build_dlgs115.py; do (cd "$(dirname "$f")" && python3 "$(basename "$f")" >/dev/null); done; done
+cd ~/Desktop/CONOSCENZA/PATTO\ UE && for pass in 1 2; do for f in "Dlgs25 interattivo/build_dlgs25.py" 142-15-interattivo/build_dlgs142.py 286-98-interattivo/build_dlgs286.py 251-07-interattivo/build_dlgs251.py dl-100-2026-interattivo/build_dl100.py dlgs-115-2026-interattivo/build_dlgs115.py dl-168-2026-interattivo/build_dl168.py; do (cd "$(dirname "$f")" && python3 "$(basename "$f")" >/dev/null); done; done
 ```
 
 Due passate perché ogni testo porta nelle anteprime gli articoli degli altri. Poi, da SOSPATTO,

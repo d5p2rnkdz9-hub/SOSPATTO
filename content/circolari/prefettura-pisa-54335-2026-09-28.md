@@ -7,7 +7,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "La Prefettura di Pisa, riproducendo la circolare n. 45722 del 21 settembre 2026 del Ministero dell'Interno, richiama Comuni, uffici sanitari, Agenzia delle Entrate, enti previdenziali, Centri per l'impiego e Centri di formazione al riconoscimento del nuovo documento nominativo rilasciato al richiedente ai sensi dell'art. 4 d.lgs. 142/2015 come sostituito dall'art. 10 d.l. 100/2026. La mancata esibizione del previgente permesso di soggiorno per richiesta asilo non può costituire motivo ostativo all'accesso ai servizi, alle prestazioni e alle procedure amministrative se il richiedente è in possesso della nuova documentazione. L'invito agli uffici è quello di adeguare prassi e procedure informatiche ancora parametrate alla disciplina previgente, ferma la sussistenza degli ulteriori requisiti eventualmente previsti dalla specifica normativa di settore."
 norme:
   - { label: "Art. 4 d.lgs. 142/2015 (documentazione del richiedente, nel testo sostituito dall'art. 10 d.l. 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Art. 10 d.l. 100/2026 (sostituzione dell'art. 4 d.lgs. 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Art. 10 d.l. 100/2026 (sostituzione dell'art. 4 d.lgs. 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Art. 27 Reg. (UE) 2024/1348 (registrazione della domanda)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-pisa-54335-2026-09-28.pdf
 pdfLabel: "Scarica la circolare (PDF)"

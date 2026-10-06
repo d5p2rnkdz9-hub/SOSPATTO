@@ -1,5 +1,5 @@
 ---
-it_hash: 51879447820a
+it_hash: 7252ea05bd22
 ente: "Prefettura de Varèse — Bureau territorial du Gouvernement, Zone II"
 tipo: "Circulaire aux collectivités locales et aux administrations provinciales (signée par la Vice-préfète Federica Crupi)"
 numero: "Circolare n. 93, prot. n. 0053598 del 22/09/2026"
@@ -8,7 +8,7 @@ temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
 oggetto: "La Prefettura de Varèse, reproduisant la circulaire n° 45722 du 21/9/2026 du ministère de l'Intérieur — Département pour les libertés civiles et l'immigration, rappelle aux Communes, à l'ATS Insubria, à l'ASST Sette Laghi et Valle Olona, à l'Inspection du travail, à l'INPS et à l'Agence des recettes de reconnaître le nouveau document nominatif délivré au demandeur au titre de l'article 4 du décret législatif 142/2015 tel que remplacé par l'article 10 du décret-loi 100/2026 : le défaut de présentation de l'ancien permis de séjour pour demande d'asile ne peut constituer un obstacle à l'accès aux services, aux prestations et aux procédures administratives si le demandeur est en possession de la nouvelle documentation. La circulaire rappelle la nécessité d'adapter les pratiques et les procédures informatiques encore calquées sur le régime antérieur, sans préjudice des autres conditions éventuellement prévues par la réglementation sectorielle spécifique."
 norme:
   - { label: "Article 4 du décret législatif 142/2015 (documentation du demandeur, dans le texte remplacé par l'article 10 du décret-loi 100/2026)", href: "/patto-interattivo/dlgs-142-2015/index.html#art_4" }
-  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/circolari/dl-100-2026.html" }
+  - { label: "Article 10 du décret-loi 100/2026 (remplacement de l'article 4 du décret législatif 142/2015)", href: "/patto-interattivo/dl-100-2026/index.html#art_10" }
   - { label: "Article 27 du règlement (UE) 2024/1348 (enregistrement de la demande)", href: "/patto-interattivo/1348.html#art_27" }
 pdf: /allegati/circolari/prefettura-varese-93-2026-09-22.pdf
 pdfLabel: "Télécharger la circulaire (PDF)"

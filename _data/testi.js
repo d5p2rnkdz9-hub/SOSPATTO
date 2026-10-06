@@ -114,29 +114,27 @@ module.exports = {
   it: [
     // Il decreto di adeguamento: atto di novella (non consolidato), reso come testo
     // vigente interattivo; le sue modifiche si leggono evidenziate nei tre testi
-    // coordinati qui sotto. Un eventuale campo `href` scavalcherebbe il percorso
-    // /patto-interattivo/<slug>/ (serviva quando la card puntava alla scheda).
+    // coordinati qui sotto. Ogni atto normativo ha qui la sua card verso il testo interattivo
+    // /patto-interattivo/<slug>/: MAI una scheda in content/circolari/ (v. REDAZIONE.md, § 7).
     {
       slug: 'dl-100-2026',
       titolo: 'D.L. 100/2026',
       sotto: 'Prima attuazione italiana del Patto UE su migrazione e asilo',
-      coord: 'Testo vigente — convertito senza modificazioni dalla l. 145/2026; artt. 1, 2 e 16 modificati dal d.l. 144/2026',
+      coord: 'Testo vigente — convertito senza modificazioni dalla l. 145/2026; artt. 1, 2 e 16 modificati dal d.l. 144/2026, art. 17 dal d.l. 168/2026',
       icon: '📜',
-      en: { titolo: 'Decree-Law 100/2026', sotto: 'First Italian implementation of the EU Pact on Migration and Asylum', coord: 'Text in force — converted without amendments by Law 145/2026; Arts. 1, 2 and 16 amended by Decree-Law 144/2026' },
-      fr: { titolo: 'Décret-loi 100/2026', sotto: 'Première mise en œuvre italienne du Pacte de l\'UE sur la migration et l\'asile', coord: 'Texte en vigueur — converti sans modification par la loi 145/2026 ; art. 1, 2 et 16 modifiés par le décret-loi 144/2026' },
+      en: { titolo: 'Decree-Law 100/2026', sotto: 'First Italian implementation of the EU Pact on Migration and Asylum', coord: 'Text in force — converted without amendments by Law 145/2026; Arts. 1, 2 and 16 amended by Decree-Law 144/2026, Art. 17 by Decree-Law 168/2026' },
+      fr: { titolo: 'Décret-loi 100/2026', sotto: 'Première mise en œuvre italienne du Pacte de l\'UE sur la migration et l\'asile', coord: 'Texte en vigueur — converti sans modification par la loi 145/2026 ; art. 1, 2 et 16 modifiés par le décret-loi 144/2026, art. 17 par le décret-loi 168/2026' },
     },
-    // Senza testo interattivo: la card apre la scheda con il PDF della G.U. Modifica l'art. 17
-    // del d.l. 100/2026 (strato da aggiungere al testo interattivo del d.l. 100 con un nuovo snapshot).
+    // Decreto di novella: per il Patto rileva l'art. 4, che modifica l'art. 17 del d.l. 100/2026
+    // (lo strato amendments_dl168.json nel testo del d.l. 100).
     {
       slug: 'dl-168-2026',
-      href: '/circolari/dl-168-2026.html',
       titolo: 'D.L. 168/2026',
-      sotto: 'Regime transitorio del Patto: proroga al 30 aprile 2027 e documento del richiedente',
-      coord: 'In vigore dal 30 settembre 2026, in conversione — art. 4: modifica l\'art. 17 del d.l. 100/2026',
+      sotto: 'Regime transitorio del Patto prorogato al 30 aprile 2027; il documento rilasciato alla registrazione vale un anno e consente il lavoro',
+      coord: 'Testo vigente, in conversione — l\'art. 4 modifica l\'art. 17 del d.l. 100/2026',
       icon: '📜',
-      cta: 'Leggi la scheda →',
-      en: { href: '/en/circolari/dl-168-2026.html', titolo: 'Decree-Law 168/2026', sotto: 'Transitional regime of the Pact: extension to 30 April 2027 and the applicant\'s document', coord: 'In force since 30 September 2026, pending conversion — Art. 4: amends Art. 17 of Decree-Law 100/2026', cta: 'Read the summary →' },
-      fr: { href: '/fr/circolari/dl-168-2026.html', titolo: 'Décret-loi 168/2026', sotto: 'Régime transitoire du Pacte : prorogation au 30 avril 2027 et document du demandeur', coord: 'En vigueur depuis le 30 septembre 2026, en cours de conversion — art. 4 : modifie l\'art. 17 du décret-loi 100/2026', cta: 'Lire la fiche →' },
+      en: { titolo: 'Decree-Law 168/2026', sotto: 'Transitional regime of the Pact extended to 30 April 2027; the document issued on registration is valid for one year and allows the holder to work', coord: 'Text in force, pending conversion — Art. 4 amends Art. 17 of Decree-Law 100/2026' },
+      fr: { titolo: 'Décret-loi 168/2026', sotto: 'Régime transitoire du Pacte prorogé au 30 avril 2027 ; le document délivré à l\'enregistrement vaut un an et permet de travailler', coord: 'Texte en vigueur, en cours de conversion — l\'art. 4 modifie l\'art. 17 du décret-loi 100/2026' },
     },
     // Decreto di novella anch'esso (tratta, dir. 2024/1712): modifica l'art. 18 T.U.,
     // l'art. 17 d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano articolo per articolo.

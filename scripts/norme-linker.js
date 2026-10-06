@@ -43,12 +43,13 @@ const LEGGI = {
   'dlgs-2007-251': 'dlgs-251-2007',
   'dl-2026-100': 'dl-100-2026',
   'dlgs-2026-115': 'dlgs-115-2026',
+  'dl-2026-168': 'dl-168-2026',
 };
 const CARTELLA_A_KEY = Object.fromEntries(Object.entries(LEGGI).map(([k, v]) => [v, k]));
 
 // Atti che non hanno un testo interattivo ma una scheda sul sito (chiave -> URL della
-// scheda).
-const SCHEDE = { 'dl-2026-168': '/circolari/dl-168-2026.html' };
+// scheda). Vuoto: gli atti normativi hanno il testo interattivo (LEGGI), mai una scheda.
+const SCHEDE = {};
 
 // ---- id presenti nei file del bundle (cache per file) -----------------------
 const idCache = new Map();

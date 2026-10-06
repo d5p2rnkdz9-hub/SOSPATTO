@@ -64,8 +64,8 @@ module.exports = {
       {
         date: "in G.U. il 29 settembre 2026",
         text: "Nuovo D.L. 168/2026: regime transitorio prorogato al 30 aprile 2027, il documento rilasciato alla registrazione vale un anno",
-        cta: "Leggi la scheda",
-        href: "/circolari/dl-168-2026.html",
+        cta: "Leggi il testo",
+        href: "/patto-interattivo/dl-168-2026/index.html",
       },
     ],
   },  en: {
@@ -99,8 +99,8 @@ module.exports = {
       {
         date: "in the Official Gazette on 29 September 2026",
         text: "New Decree-Law 168/2026: transitional regime extended to 30 April 2027, the document issued on registration is valid for one year",
-        cta: "Read the summary",
-        href: "/en/circolari/dl-168-2026.html",
+        cta: "Read the text",
+        href: "/patto-interattivo/dl-168-2026/index.html",
       },
     ],
   },
@@ -135,8 +135,8 @@ module.exports = {
       {
         date: "au J.O. le 29 septembre 2026",
         text: "Nouveau décret-loi 168/2026 : régime transitoire prorogé au 30 avril 2027, le document délivré à l'enregistrement vaut un an",
-        cta: "Lire la fiche",
-        href: "/fr/circolari/dl-168-2026.html",
+        cta: "Lire le texte",
+        href: "/patto-interattivo/dl-168-2026/index.html",
       },
     ],
   },

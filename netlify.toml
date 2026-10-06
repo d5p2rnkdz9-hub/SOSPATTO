@@ -108,3 +108,37 @@
   for = "/patto-interattivo/*"
   [headers.values]
     Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# ── ATTI NORMATIVI FUORI DALLE CIRCOLARI ──
+# Decreti-legge, d.lgs. e leggi stanno solo in «Normativa italiana», come testo interattivo:
+# le vecchie schede in /circolari/ rimandano al testo (v. REDAZIONE.md, § 7).
+[[redirects]]
+  from = "/circolari/dl-100-2026.html"
+  to = "/patto-interattivo/dl-100-2026/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/circolari/dl-168-2026.html"
+  to = "/patto-interattivo/dl-168-2026/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/circolari/dl-100-2026.html"
+  to = "/patto-interattivo/dl-100-2026/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/circolari/dl-168-2026.html"
+  to = "/patto-interattivo/dl-168-2026/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/fr/circolari/dl-100-2026.html"
+  to = "/patto-interattivo/dl-100-2026/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/fr/circolari/dl-168-2026.html"
+  to = "/patto-interattivo/dl-168-2026/index.html"
+  status = 301
+

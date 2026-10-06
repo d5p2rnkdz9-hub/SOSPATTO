@@ -53,6 +53,12 @@ def make_description(title, rel):
     nome = parts[0]
     resto = parts[1] if len(parts) > 1 else ""
 
+    if rel.startswith("dl-168-2026"):
+        # il d.l. 168/2026: decreto di novella, l'art. 4 modifica l'art. 17 del d.l. 100
+        return (f"Testo vigente interattivo del D.L. 168/2026: l'art. 4 modifica l'art. 17 del "
+                f"d.l. 100/2026, proroga al 30 aprile 2027 il regime transitorio e disciplina il "
+                f"documento del richiedente asilo, con i rinvii navigabili, su SOS Patto.")
+
     if rel.startswith("dl-"):
         # il d.l. 100/2026: atto di novella, testo vigente (non consolidato)
         return (f"{resto[:1].upper() + resto[1:] if resto else 'Testo interattivo'} del {nome}: "
