@@ -142,3 +142,19 @@
   to = "/patto-interattivo/dl-168-2026/index.html"
   status = 301
 
+# D.M. zone di frontiera: da /circolari/ alla sezione /normativa/ (atti senza testo interattivo)
+[[redirects]]
+  from = "/circolari/dm-zone-frontiera-2026-07-21.html"
+  to = "/normativa/dm-zone-frontiera-2026-07-21.html"
+  status = 301
+
+[[redirects]]
+  from = "/en/circolari/dm-zone-frontiera-2026-07-21.html"
+  to = "/en/normativa/dm-zone-frontiera-2026-07-21.html"
+  status = 301
+
+[[redirects]]
+  from = "/fr/circolari/dm-zone-frontiera-2026-07-21.html"
+  to = "/fr/normativa/dm-zone-frontiera-2026-07-21.html"
+  status = 301
+

@@ -154,7 +154,7 @@ facile far dire a una decisione ciò che non dice.
 
 ## 7. Gli atti normativi non sono circolari
 
-⚠️ **Decreti-legge, decreti legislativi e leggi non vanno MAI in `content/circolari/`**, né come
+⚠️ **Decreti-legge, decreti legislativi, leggi e decreti ministeriali non vanno MAI in `content/circolari/`**, né come
 scheda né come «recap»: le circolari sono gli atti dell'amministrazione (Ministero, Commissione
 nazionale, Prefetture, Questure) e la prassi. Un nuovo atto normativo si pubblica **solo in
 «Normativa italiana»** (`/norme-italiane.html`):
@@ -166,8 +166,16 @@ nazionale, Prefetture, Questure) e la prassi. Un nuovo atto normativo si pubblic
 3. chiave in `scripts/norme-linker.js` (`LEGGI`), così le schede lo linkano;
 4. nel nastro, `href` al testo interattivo (uguale in `it`, `en` e `fr`), `cta` «Leggi il testo».
 
+Un atto **senza testo interattivo** (un D.M. pubblicato solo in G.U., come il D.M. 21 luglio 2026
+sulle zone di frontiera) ha la sua scheda con il PDF ufficiale in **`content/normativa/`** (stessi
+campi delle circolari; pagina `/normativa/<file>.html`, il link «indietro» porta a «Normativa
+italiana») e la card in `_data/testi.js` con `href` alla scheda e `cta` «Leggi la scheda →» (le
+pagine EN/FR prefissano l'href con la lingua). Nelle `norme:` delle altre schede l'href è
+`/normativa/<file>.html`.
+
 Fino a ottobre 2026 il d.l. 100/2026 aveva anche una scheda in `/circolari/`: è stata tolta (redirect
 301 in `netlify.toml`) proprio perché faceva da modello sbagliato. `npm run build` si ferma se in
-`content/circolari/` compare un atto con `tipo` da decreto-legge, decreto legislativo o legge
-(`scripts/check_collocazione.js`).
+`content/circolari/` compare un atto con `tipo` da decreto-legge, decreto legislativo, legge o
+decreto ministeriale (`scripts/check_collocazione.js`). Il D.M. zone di frontiera, prima fra le
+circolari, è stato spostato in `content/normativa/` (redirect 301).
 

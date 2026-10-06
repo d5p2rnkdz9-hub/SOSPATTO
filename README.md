@@ -94,8 +94,9 @@ decrescente) e ha la sua pagina `/giurisprudenza/<nomefile>.html`.
 Identico, in `content/circolari/` (campi: `ente`, `tipo`, `numero`, `date`, `temi`,
 `oggetto`, `norme`, `pdf`). PDF in `public/allegati/circolari/`.
 
-⚠️ Solo atti dell'amministrazione e prassi. **Decreti-legge, d.lgs. e leggi non sono circolari**:
-vanno in «Normativa italiana» come testo interattivo (sotto, e `REDAZIONE.md` § 7). Il build lo
+⚠️ Solo atti dell'amministrazione e prassi. **Decreti-legge, d.lgs., leggi e D.M. non sono
+circolari**: vanno in «Normativa italiana», come testo interattivo (sotto) o, se non ce l'hanno,
+come scheda in `content/normativa/` con la card in `_data/testi.js` (`REDAZIONE.md` § 7). Il build lo
 controlla (`scripts/check_collocazione.js`).
 
 ## Come aggiungere un contributo di DOTTRINA

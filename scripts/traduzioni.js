@@ -15,7 +15,7 @@ const matter = require('gray-matter');
 
 const ROOT = path.join(__dirname, '..');
 const LINGUE = ['en', 'fr'];
-const SEZIONI = ['giurisprudenza', 'circolari', 'dottrina'];
+const SEZIONI = ['giurisprudenza', 'circolari', 'dottrina', 'normativa'];
 // campi che devono restare identici all'italiano
 const TECNICI = ['corte', 'numero', 'date', 'temi', 'pdf', 'norme_impliciti', 'esempio', 'titolo', 'autori'];
 const LISTE_HREF = ['norme', 'allegati', 'links'];

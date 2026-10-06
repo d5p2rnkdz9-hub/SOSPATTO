@@ -115,7 +115,8 @@ module.exports = {
     // Il decreto di adeguamento: atto di novella (non consolidato), reso come testo
     // vigente interattivo; le sue modifiche si leggono evidenziate nei tre testi
     // coordinati qui sotto. Ogni atto normativo ha qui la sua card verso il testo interattivo
-    // /patto-interattivo/<slug>/: MAI una scheda in content/circolari/ (v. REDAZIONE.md, § 7).
+    // /patto-interattivo/<slug>/ o, se non ce l'ha, verso la scheda in /normativa/ (`href`):
+    // MAI una scheda in content/circolari/ (v. REDAZIONE.md, § 7).
     {
       slug: 'dl-100-2026',
       titolo: 'D.L. 100/2026',
@@ -146,6 +147,19 @@ module.exports = {
       icon: '🛡️',
       en: { titolo: 'Legislative Decree 115/2026', sotto: 'Trafficking in human beings: implementation of Directive (EU) 2024/1712', coord: 'Text in force — amends Art. 18 Consolidated Immigration Act, Art. 17 Leg. Decree 142/2015 and Art. 32 Leg. Decree 25/2008' },
       fr: { titolo: 'Décret législatif 115/2026', sotto: 'Traite des êtres humains : transposition de la directive (UE) 2024/1712', coord: 'Texte en vigueur — modifie l\'art. 18 du texte unique sur l\'immigration, l\'art. 17 du décret législatif 142/2015 et l\'art. 32 du décret législatif 25/2008' },
+    },
+    // Atto normativo senza testo interattivo: la card apre la sua scheda in /normativa/
+    // (content/normativa/), mai una scheda fra le circolari (REDAZIONE.md § 7).
+    {
+      slug: 'dm-zone-frontiera-2026-07-21',
+      href: '/normativa/dm-zone-frontiera-2026-07-21.html',
+      titolo: 'D.M. 21 luglio 2026',
+      sotto: 'Zone di frontiera o di transito: integra il d.m. 5 agosto 2019, istituisce 19 nuove sezioni delle Commissioni territoriali',
+      coord: 'In G.U. il 10 agosto 2026 — scheda con il testo ufficiale (PDF)',
+      icon: '🗺️',
+      cta: 'Leggi la scheda →',
+      en: { titolo: 'Ministerial Decree of 21 July 2026', sotto: 'Border or transit zones: supplements the Ministerial Decree of 5 August 2019, sets up 19 new sections of the Territorial Commissions', coord: 'Published in the Official Gazette on 10 August 2026 — summary with the official text (PDF)', cta: 'Read the summary →' },
+      fr: { titolo: 'Décret ministériel du 21 juillet 2026', sotto: 'Zones frontalières ou de transit : complète le décret ministériel du 5 août 2019, institue 19 nouvelles sections des Commissions territoriales', coord: 'Publié au J.O. le 10 août 2026 — fiche avec le texte officiel (PDF)', cta: 'Lire la fiche →' },
     },
     {
       slug: 'dlgs-25-2008',
