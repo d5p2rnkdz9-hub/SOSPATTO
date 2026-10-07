@@ -32,3 +32,8 @@ tools/testi-interattivi/*/assets/data-ext/
 tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/*.html
 tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/assets/data.js
 tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/assets/data-ext/
+
+# KB testuale (tools/kb/build_kb.py → kb/): derivata dal sito, si rigenera con `npm run kb`;
+# la cache OCR e' locale (lenta da rifare, non committarla: e' indicizzata per md5 del PDF)
+/kb/
+tools/kb/ocr_cache/

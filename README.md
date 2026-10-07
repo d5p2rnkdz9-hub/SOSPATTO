@@ -28,6 +28,8 @@ scripts/          retheme_blue.py — ritinta in blu i CSS (sito + bundle)
                   seo_bundle.py — inietta canonical/description/OG nel bundle
                   inject_bundle_logo.py — logo, link home e CSS brand nel bundle
 tools/testi-interattivi/   generatori dei testi interattivi: snapshot Normattiva/EUR-Lex, builder, assemble.py
+tools/kb/         build_kb.py (→ kb/, ignorata da git) e kb.py per interrogarla; ocr_cache/ locale
+kb/               KB testuale generata (npm run kb): norme con tag di citazione, schede, testi dei PDF
 ```
 
 ## Come aggiungere una DECISIONE (giurisprudenza)
@@ -255,6 +257,20 @@ Nuovo / Vecchio / Modifiche) o un nuovo `SRC`.
 
 `public/diagramma/index.html` è un file unico autonomo (fonte: cartella "Diagrammone",
 Corso imPATTO). Basta sostituirlo.
+
+## KB testuale e chatbot
+
+`npm run kb` (= `tools/kb/build_kb.py`) genera in `kb/` la knowledge base testuale di tutto ciò che
+è pubblicato: norme UE e italiane riga per riga con il tag di citazione (`[1348 art.13 par.8]`,
+`[dlgs25 art.35-bis c.3]`), atti collegati, schede di giurisprudenza, circolari, normativa e
+dottrina con il testo integrale dei PDF (OCR dove serve, cache in `tools/kb/ocr_cache/`).
+`kb/` è in `.gitignore`: si rigenera in ~10 s dal working tree; la cache OCR è locale e va
+conservata. Si interroga con `tools/kb/kb.py` (`cerca`, `art`, `cons`, `giur`, `schede`); è la
+base della skill `ricerca-kb-sospatto`. Struttura e comandi in `tools/kb/README.md`.
+
+`npm run chatbot-kb` (= `scripts/chatbot-kb.mjs`) ricava dalla KB i tre JSON di `netlify/chat/kb/`
+letti dalla funzione del chatbot (`netlify/chat/core.mjs`). Sequenza dopo una modifica al sito:
+`npm run build && npm run kb && npm run chatbot-kb`.
 
 ## Deploy (Netlify)
 
