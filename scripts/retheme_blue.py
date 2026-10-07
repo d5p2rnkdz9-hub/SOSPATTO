@@ -8,7 +8,7 @@ Due bersagli:
                                novelle NON si tocca, e' convenzione giuridica)
 
 Rieseguibile senza danni (idempotente): le sostituzioni sono esatte sui token sorgente.
-Da rilanciare dopo ogni nuova copia del bundle da sospermesso/deploy.
+Da rilanciare dopo ogni ricopia del bundle (lo fa `npm run testi`).
 """
 import pathlib, re, sys
 

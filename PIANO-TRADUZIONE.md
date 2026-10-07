@@ -50,7 +50,7 @@ italiano (è un verbale).
 
 ### Fase 2 — Testi interattivi (il pezzo più grosso)
 - **Atti UE (10 + 82 atti esterni)**: *non si traducono*, si usano i testi ufficiali
-  EN/FR di EUR-Lex. Il builder a monte (`~/Desktop/CONOSCENZA/PATTO UE/…/
+  EN/FR di EUR-Lex. Il builder (`tools/testi-interattivi/Testi definitivi Regolamenti/
   build_patto_interattivo.py`) oggi legge solo i CONVEX italiani e ha `lang="it"` e
   `legal-content/IT/` scritti nel codice: va parametrizzato per lingua, verificato il
   parsing di «Article»/«considérant», e generati `/en/patto-interattivo/` e

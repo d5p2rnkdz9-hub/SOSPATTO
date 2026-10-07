@@ -1,0 +1,19 @@
+{
+  "_note": "Articoli citati dal testo coordinato ma non ancora presenti nel consolidato Normattiva degli atti-fonte (es. introdotti dallo stesso d.l. 100/2026, posteriore alla data di consolidamento). Forniti manualmente per rendere il rinvio navigabile/hoverabile. Ogni voce: act-key -> { art-label -> { heading, source, commi:[[num,testo],...] } }.",
+  "dlgs-1998-286": {
+    "14.1": {
+      "heading": "Ricorso per cassazione",
+      "source": "introdotto dal d.l. 12 giugno 2026, n. 100",
+      "commi": [
+        ["1", "Contro il decreto che decide sulla convalida, sulla proroga o sul riesame del trattenimento o delle misure alternative, e' proponibile ricorso per cassazione ai sensi dell'articolo 360 del codice di procedura civile, entro dieci giorni dalla pronuncia in udienza o dalla comunicazione."],
+        ["2", "Il ricorso e' depositato, a pena di improcedibilita', entro cinque giorni dalla notificazione. Si applica il secondo comma dell'articolo 369 del codice di procedura civile."],
+        ["3", "La parte contro la quale il ricorso e' diretto puo' depositare sintetica memoria difensiva nel termine di cinque giorni dal deposito del ricorso. La memoria difensiva puo' contenere anche motivi di ricorso incidentale."],
+        ["4", "La Corte decide in camera di consiglio entro trenta giorni dal deposito del ricorso. Della fissazione del ricorso in camera di consiglio e' data comunicazione agli avvocati delle parti e al pubblico ministero almeno quindici giorni prima dell'adunanza."],
+        ["5", "Il pubblico ministero puo' depositare conclusioni scritte non oltre dieci giorni prima dell'adunanza in camera di consiglio. Nello stesso termine le parti possono presentare i documenti previsti dall'articolo 372 del codice di procedura civile."],
+        ["6", "Le parti possono depositare sintetiche memorie illustrative non oltre cinque giorni prima dell'adunanza."],
+        ["7", "L'adunanza puo' svolgersi anche mediante collegamenti audiovisivi a distanza. L'ordinanza, sinteticamente motivata, e' depositata al termine della camera di consiglio, ma il collegio puo' depositare il solo dispositivo riservandosi il deposito della motivazione nei successivi quindici giorni."],
+        ["8", "Per quanto non previsto dal presente articolo si applicano, in quanto compatibili, le disposizioni del codice procedura civile."]
+      ]
+    }
+  }
+}

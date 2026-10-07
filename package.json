@@ -11,7 +11,9 @@
     "seo": "python3 scripts/seo_bundle.py",
     "logo": "python3 scripts/inject_bundle_logo.py",
     "traduzioni": "node scripts/traduzioni.js",
-    "collocazione-check": "node scripts/check_collocazione.js"
+    "collocazione-check": "node scripts/check_collocazione.js",
+    "testi": "python3 tools/testi-interattivi/assemble.py && npm run retheme && npm run seo && npm run logo",
+    "testi-copia": "python3 tools/testi-interattivi/assemble.py --no-build && npm run retheme && npm run seo && npm run logo"
   },
   "license": "CC-BY-4.0",
   "type": "commonjs",

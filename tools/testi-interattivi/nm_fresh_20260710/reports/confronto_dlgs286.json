@@ -1,0 +1,202 @@
+{
+ "act": "dlgs286",
+ "gate_consolidato_dl100": true,
+ "failed_fetch": 0,
+ "stats_A": {
+  "articoli_ok": 72,
+  "commi_ok": 665,
+  "abrogazioni_ok": 0,
+  "findings": 27,
+  "per_classe": {
+   "ARTICOLO-NUOVO-NORMATTIVA": 2,
+   "COMMA-NUOVO-NORMATTIVA": 10,
+   "MISMATCH": 14,
+   "RUBRICA-DIFFORME": 1
+  }
+ },
+ "stats_B": {
+  "articoli_ok": 76,
+  "commi_ok": 700,
+  "abrogazioni_ok": 1,
+  "findings": 4,
+  "per_classe": {
+   "ok-segmentazione-commi": 4
+  },
+  "aperti": 0
+ },
+ "findings_B": [
+  {
+   "art": "10",
+   "comma": "1",
+   "classe": "ok-segmentazione-commi",
+   "sito": "La polizia di frontiera respinge gli stranieri che si presentano ai valichi di frontiera senza avere i requisiti richiesti dal codice frontiere Schengen di cui al regolamento (UE) 2016/399 del Parlamento europeo e del Consiglio, del 9 marzo 2016, e dal presente testo unico per l'ingresso nel territorio dello Stato. 1.1. L'ufficio di polizia di frontiera ovvero il Questore, laddove siano conferite alla Questura le attribuzioni di polizia di frontiera, cura le attivita'relative al trasferimento di persone rintracciate nelle zone di frontiera interne, ai sensi dell'articolo 23 bis del citato regolamento (UE) 2016/399, e lo straniero e'trasferito immediatamente secondo la procedura di cui all'Allegato XII del medesimo regolamento. 1.2. Nei casi di cui al comma 1.1, ovvero in caso di trasferimento in altro Stato membro in virtu'di accordi o intese bilaterali o nell'ambito del quadro della cooperazione bilaterale qualora non e'convenuto il ricorso alla procedura di cui all'articolo 23-bis del regolamento (UE) 2016/399, gli accertamenti di cui all'articolo 8, paragrafo 5, del regolamento (UE) 2024/1356 non hanno luogo in attuazione dell'articolo 7, paragrafo 2, del medesimo regolamento. Si applicano comunque le disposizioni di cui all'articolo 10-ter.",
+   "norm": "La polizia di frontiera respinge gli stranieri che si presentano ai valichi di frontiera senza avere i requisiti richiesti dal codice frontiere Schengen di cui al regolamento (UE) 2016/399 del Parlamento europeo e del Consiglio, del 9 marzo 2016, e dal presente testo unico per l'ingresso nel territorio dello Stato. 1.1. L'ufficio di polizia di frontiera ovvero il Questore, laddove siano conferite alla Questura le attribuzioni di polizia di frontiera, cura le attivita'relative al trasferimento di persone rintracciate nelle zone di frontiera interne, ai sensi dell'articolo 23 bis del citato regolamento (UE) 2016/399, e lo straniero e'trasferito immediatamente secondo la procedura di cui all'Allegato XII del medesimo regolamento. 1.2 Nei casi di cui al comma 1.1, ovvero in caso di trasferimento in altro Stato membro in virtu'di accordi o intese bilaterali o nell'ambito del quadro della cooperazione bilaterale qualora non e'convenuto il ricorso alla procedura di cui all'articolo 23-bis del regolamento (UE) 2016/399, gli accertamenti di cui all'articolo 8, paragrafo 5, del regolamento (UE) 2024/1356 non hanno luogo in attuazione dell'articolo 7, paragrafo 2, del medesimo regolamento. Si applicano comunque le disposizioni di cui all'articolo 10-ter.",
+   "diff": "La polizia di […] del medesimo regolamento. {SITO- 1.2.} {NORM+ 1.2} Nei casi di […] cui all'articolo 10-ter.",
+   "in_confronto_A": true
+  },
+  {
+   "art": "12",
+   "comma": "1",
+   "classe": "ok-segmentazione-commi",
+   "sito": "Salvo che il fatto costituisca piu'grave reato, chiunque, in violazione delle disposizioni del presente testo unico, promuove, dirige, organizza, finanzia o effettua il trasporto di stranieri nel territorio dello Stato ovvero compie altri atti diretti a procurarne illegalmente l'ingresso nel territorio dello Stato, ovvero di altro Stato del quale la persona non e'cittadina o non ha titolo di residenza permanente, e'punito con la reclusione da due a sei anni e con la multa di 15.000 euro per ogni persona. 1-bis Se i fatti di cui al comma 1 sono commessi in violazione di un divieto, di un obbligo o di una restrizione imposti da una misura restrittiva dell'Unione europea, ovvero da disposizioni di legge nazionale che attuano una misura restrittiva dell'Unione europea, consentendo o comunque agevolando l'ingresso nel territorio dello Stato di persone fisiche designate, la pena e'aumentata.",
+   "norm": "Salvo che il fatto costituisca piu'grave reato, chiunque, in violazione delle disposizioni del presente testo unico, promuove, dirige, organizza, finanzia o effettua il trasporto di stranieri nel territorio dello Stato ovvero compie altri atti diretti a procurarne illegalmente l'ingresso nel territorio dello Stato, ovvero di altro Stato del quale la persona non e'cittadina o non ha titolo di residenza permanente, e'punito con la reclusione da due a sei anni e con la multa di 15.000 euro per ogni persona.",
+   "diff": "Salvo che il […] per ogni persona. {SITO- 1-bis Se i fatti di cui al comma 1 sono commessi in violazione di un divieto, di un obbligo o di una restrizione imposti da una misura restrittiva dell'Unione europea, ovvero da disposizioni di legge nazionale che attuano una misura restrittiva dell'Unione europea, consentendo o comunque agevolando l'ingresso nel territorio dello Stato di persone fisiche designate, la pena e'aumentata.}",
+   "in_confronto_A": true
+  },
+  {
+   "art": "12",
+   "comma": "1-bis",
+   "classe": "ok-segmentazione-commi",
+   "sito": null,
+   "norm": "Se i fatti di cui al comma 1 sono commessi in violazione di un divieto, di un obbligo o di una restrizione imposti da una misura restrittiva dell'Unione europea, ovvero da disposizioni di legge nazionale che attuano una misura restrittiva dell'Unione europea, consentendo o comunque agevolando l'ingr",
+   "diff": null,
+   "in_confronto_A": true
+  },
+  {
+   "art": "14",
+   "comma": "5-quater",
+   "classe": "ok-segmentazione-commi",
+   "sito": "La violazione dell'ordine disposto ai sensi del comma 5-ter, terzo periodo, e'punita, salvo giustificato motivo, con la multa da 15.000 a 30.000 euro. Salvo il caso in cui sopraggiungono situazioni personali diverse, non si procede all'adozione di un nuovo provvedimento di espulsione per violazione all'ordine di allontanamento adottato dal questore ai sensi del primo periodo e si applicano le disposizioni di cui al comma 5-ter, quarto periodo 5-quater.1. Nella valutazione della condotta tenuta dallo straniero destinatario dell'ordine del questore, di cui ai commi 5-ter e 5-quater, il giudice accerta anche l'eventuale consegna all'interessato della documentazione di cui al comma 5-bis, la cooperazione resa dallo stesso ai fini dell'esecuzione del provvedimento di allontanamento, in particolare attraverso l'esibizione d'idonea documentazione.",
+   "norm": "La violazione dell'ordine disposto ai sensi del comma 5-ter, terzo periodo, e'punita, salvo giustificato motivo, con la multa da 15.000 a 30.000 euro. Salvo il caso in cui sopraggiungono situazioni personali diverse, non si procede all'adozione di un nuovo provvedimento di espulsione per violazione all'ordine di allontanamento adottato dal questore ai sensi del primo periodo e si applicano le disposizioni di cui al comma 5-ter, quarto periodo. 5-quater.1. Nella valutazione della condotta tenuta dallo straniero destinatario dell'ordine del questore, di cui ai commi 5-ter e 5-quater, il giudice accerta anche l'eventuale consegna all'interessato della documentazione di cui al comma 5-bis, la cooperazione resa dallo stesso ai fini dell'esecuzione del provvedimento di allontanamento, in particolare attraverso l'esibizione d'idonea documentazione.",
+   "diff": "La violazione dell'ordine […] comma 5-ter, quarto {SITO- periodo} {NORM+ periodo.} 5-quater.1. Nella valutazione […] l'esibizione d'idonea documentazione.",
+   "in_confronto_A": true
+  }
+ ],
+ "findings_A_sintesi": [
+  {
+   "art": "10",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10",
+   "comma": "2-ter",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10",
+   "comma": "6",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10",
+   "comma": "2-septies",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "10-ter",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-ter",
+   "comma": "1-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-ter",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-ter",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-ter",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-ter",
+   "comma": "2-quater",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "2-quinquies",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "2-sexies",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "2-septies",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "4-bis",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "4-ter",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "10-ter",
+   "comma": "4-quater",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "12",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "12",
+   "comma": "9-septies",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "12",
+   "comma": "1-bis",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "12",
+   "comma": "9-octies",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "13",
+   "comma": "4-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "14",
+   "comma": "5-quater",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "14",
+   "comma": "6",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "10-quater",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "14.1",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  }
+ ]
+}

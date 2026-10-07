@@ -23,6 +23,7 @@ const MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno',
 export default function (eleventyConfig) {
   eleventyConfig.ignores.add('node_modules/**');
   eleventyConfig.ignores.add('scripts/**');
+  eleventyConfig.ignores.add('tools/**');          // generatori dei testi interattivi (HTML/MD sorgenti, non pagine del sito)
   eleventyConfig.ignores.add('.claude/**');
   eleventyConfig.ignores.add('.git/**');
   // public/ e' copiato tale e quale: gli .md e .html interni (bundle testi

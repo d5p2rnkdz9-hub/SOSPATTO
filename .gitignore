@@ -21,3 +21,14 @@ test_SOSPatto/
 
 # Documento di lavoro locale
 PAF a Pantelleria e Lampedusa.docx
+
+# tools/testi-interattivi: output dei generatori (si rigenerano con `npm run testi`);
+# in git restano solo sorgenti, snapshot Normattiva/EUR-Lex e script
+tools/testi-interattivi/*/index.html
+tools/testi-interattivi/*/REPORT_MODIFICHE.md
+tools/testi-interattivi/*/assets/data.js
+tools/testi-interattivi/*/assets/amend.css
+tools/testi-interattivi/*/assets/data-ext/
+tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/*.html
+tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/assets/data.js
+tools/testi-interattivi/Testi definitivi Regolamenti/Patto interattivo/assets/data-ext/

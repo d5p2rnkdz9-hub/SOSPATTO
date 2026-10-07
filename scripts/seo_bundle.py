@@ -17,7 +17,7 @@ ricevono SOLO <meta name="robots" content="noindex">, niente canonical/og.
 Rieseguibile senza danni (idempotente): se un file ha gia' il blocco
 seo:begin/end lo sostituisce; se ha gia' canonical/description/robots
 propri (fuori dal blocco) non tocca nulla.
-Da rilanciare dopo ogni nuova copia del bundle da sospermesso/deploy,
+Da rilanciare dopo ogni ricopia del bundle (lo fa `npm run testi`),
 insieme a retheme_blue.py.
 """
 import html

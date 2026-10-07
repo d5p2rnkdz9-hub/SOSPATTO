@@ -1,0 +1,91 @@
+{
+  "_nota": "Registro condiviso dei testi interattivi del progetto Patto UE. Usato da tutti i build_dlgs*.py per i collegamenti incrociati e da assemble_deploy.py per comporre l'albero di pubblicazione. 'src' = cartella di lavoro (dove vive il data.js sorgente, letto in fase di build); 'slug' = cartella nell'albero di deploy sotto /patto-interattivo/. Gli href emessi sono RELATIVI all'albero di deploy: home/hub = '../', pagina atto del Patto = '../<num>.html', sito gemello = '../<slug>/index.html'.",
+  "deploy_base": "/patto-interattivo/",
+  "pact_src": "Testi definitivi Regolamenti/Patto interattivo",
+  "acts": {
+    "dlgs-2008-25": {
+      "slug": "dlgs-25-2008",
+      "src": "Dlgs25 interattivo",
+      "it": [
+        "decreto.legislativo",
+        "25"
+      ],
+      "date": "2008-01-28",
+      "label": "D.Lgs. 28 gennaio 2008, n. 25",
+      "short": "D.Lgs. 25/2008 (procedure)",
+      "coord": "art. 11 d.l. 100/2026"
+    },
+    "dlgs-2015-142": {
+      "slug": "dlgs-142-2015",
+      "src": "142-15-interattivo",
+      "it": [
+        "decreto.legislativo",
+        "142"
+      ],
+      "date": "2015-08-18",
+      "label": "D.Lgs. 18 agosto 2015, n. 142",
+      "short": "D.Lgs. 142/2015 (accoglienza)",
+      "coord": "art. 10 d.l. 100/2026"
+    },
+    "dlgs-1998-286": {
+      "slug": "dlgs-286-1998",
+      "src": "286-98-interattivo",
+      "it": [
+        "decreto.legislativo",
+        "286"
+      ],
+      "date": "1998-07-25",
+      "label": "D.Lgs. 25 luglio 1998, n. 286",
+      "short": "D.Lgs. 286/1998 (T.U. immigrazione)",
+      "coord": "art. 12 d.l. 100/2026"
+    },
+    "dlgs-2007-251": {
+      "slug": "dlgs-251-2007",
+      "src": "251-07-interattivo",
+      "it": [
+        "decreto.legislativo",
+        "251"
+      ],
+      "date": "2007-11-19",
+      "label": "D.Lgs. 19 novembre 2007, n. 251",
+      "short": "D.Lgs. 251/2007 (qualifiche)",
+      "coord": null
+    },
+    "dl-2026-100": {
+      "slug": "dl-100-2026",
+      "src": "dl-100-2026-interattivo",
+      "it": [
+        "decreto.legge",
+        "100"
+      ],
+      "date": "2026-06-12",
+      "label": "D.L. 12 giugno 2026, n. 100",
+      "short": "D.L. 100/2026 (attuazione del Patto)",
+      "coord": null
+    },
+    "dlgs-2026-115": {
+      "slug": "dlgs-115-2026",
+      "src": "dlgs-115-2026-interattivo",
+      "it": [
+        "decreto.legislativo",
+        "115"
+      ],
+      "date": "2026-06-12",
+      "label": "D.Lgs. 12 giugno 2026, n. 115",
+      "short": "D.Lgs. 115/2026 (tratta)",
+      "coord": null
+    },
+    "dl-2026-168": {
+      "slug": "dl-168-2026",
+      "src": "dl-168-2026-interattivo",
+      "it": [
+        "decreto.legge",
+        "168"
+      ],
+      "date": "2026-09-29",
+      "label": "D.L. 29 settembre 2026, n. 168",
+      "short": "D.L. 168/2026 (regime transitorio del Patto)",
+      "coord": null
+    }
+  }
+}

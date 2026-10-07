@@ -1,0 +1,39 @@
+[
+ {"art": "10-ter", "where": "com1", "text": "articolo 5", "nth": 1, "target": {"act": "reg-2024-1356", "art": "5"}, "reason": "Art. 10-ter, c.1 (nuovo): «In attuazione dell'articolo 5, paragrafi 1 e 2, dello stesso regolamento»: l'antecedente semantico è il reg. (UE) 2024/1356 (screening: art. 5 sullo svolgimento degli accertamenti nei punti di crisi), non il reg. 2024/1348 nominato per ultimo (solo per l'individuazione dei luoghi, art. 54 §3)."},
+
+ {"art": "10-ter", "where": "com1", "text": "14", "nth": 1, "target": {"act": "reg-2024-1356", "art": "14"}, "reason": "«gli accertamenti di cui agli articoli 14, 15 e 16 del medesimo regolamento»: gli accertamenti (identità/sicurezza/salute) sono quelli del reg. (UE) 2024/1356 (artt. 14-16), non del reg. 2024/1348; coerente con tutte le altre occorrenze nel d.l. 100/2026."},
+
+ {"art": "10-ter", "where": "com1", "text": "15", "nth": 1, "target": {"act": "reg-2024-1356", "art": "15"}, "reason": "Cfr. supra: articoli 14, 15 e 16 del reg. (UE) 2024/1356 (accertamenti di screening), non del reg. 2024/1348."},
+
+ {"art": "10-ter", "where": "com1", "text": "16", "nth": 1, "target": {"act": "reg-2024-1356", "art": "16"}, "reason": "Cfr. supra: articoli 14, 15 e 16 del reg. (UE) 2024/1356 (accertamenti di screening), non del reg. 2024/1348."},
+
+ {"art": "39-bis", "where": "com1-ter", "text": "articolo 1", "nth": 1, "target": {"unlink": true}, "reason": "«le linee guida di cui alla legge del 28 giugno 2012, n. 92, articolo 1, comma 34»: l'«articolo 1, comma 34» appartiene alla legge 92/2012 (nominata immediatamente prima), non al d.lgs. 286/1998. Atto non-core: il nome della legge è già collegato; il rinvio all'articolo resta testo semplice."},
+
+ {"art": "9", "where": "com4", "text": "1", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-09-06;159"}, "reason": "«categorie indicate negli articoli 1, 4 e 16 del codice delle leggi antimafia e delle misure di prevenzione, di cui al decreto legislativo 6 settembre 2011, n. 159»: artt. del d.lgs. 159/2011, non del T.U. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "9", "where": "com4", "text": "4", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-09-06;159"}, "reason": "Cfr. supra: art. 4 del codice antimafia (d.lgs. 159/2011). [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "9-bis", "where": "com6", "text": "1", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-09-06;159"}, "reason": "«categorie indicate negli articoli 1, 4 e 16 del codice delle leggi antimafia … di cui al decreto legislativo 6 settembre 2011, n. 159»: d.lgs. 159/2011, non il T.U. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "9-bis", "where": "com6", "text": "4", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-09-06;159"}, "reason": "Cfr. supra: art. 4 del codice antimafia. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "9-bis", "where": "com6", "text": "16", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2011-09-06;159"}, "reason": "Cfr. supra: art. 16 del codice antimafia. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "10-ter", "where": "com2", "text": "9", "nth": 1, "target": {"href": "https://eur-lex.europa.eu/eli/reg/2013/603/oj/ita"}, "reason": "Testo previgente (soppresso): «obblighi di cui agli articoli 9 e 14 del regolamento UE n. 603/2013»: art. 9 del reg. Eurodac 2013, non del T.U.; il frammento soppresso non contiene il nome dell'atto. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "10-ter", "where": "com2", "text": "14", "nth": 1, "target": {"href": "https://eur-lex.europa.eu/eli/reg/2013/603/oj/ita"}, "reason": "Cfr. supra: art. 14 del reg. (UE) n. 603/2013 (testo previgente). [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "12", "where": "com3-sexies", "text": "articolo 4-bis", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1975-07-26;354"}, "reason": "«All'articolo 4-bis, comma 1, terzo periodo, della legge 26 luglio 1975, n. 354»: art. 4-bis dell'ordinamento penitenziario, non del T.U. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "12", "where": "com8", "text": "articolo 45", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-07-03;117"}, "reason": "«Registro unico nazionale del Terzo settore, istituito dall'articolo 45 del citato codice di cui al decreto legislativo n. 117 del 2017»: art. 45 del codice del Terzo settore. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "14", "where": "com6", "text": "articolo 22", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2005-04-22;69"}, "reason": "Testo previgente (comma soppresso): «le disposizioni dell'articolo 22, comma 5-bis, secondo e quarto periodo, della legge 22 aprile 2005, n. 69»: art. 22 della legge sul mandato d'arresto europeo; coda nascosta da «secondo e quarto periodo». [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "15", "where": "com1", "text": "articolo 32", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1975-07-26;354"}, "reason": "«obbligo di cooperare di cui all'articolo 32, sesto comma, della legge 26 luglio 1975, n. 354»: art. 32 dell'ordinamento penitenziario. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "45", "where": "com1", "text": "articolo 11", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1978-08-05;468"}, "reason": "«ai sensi dell'articolo 11, comma 3, lett. d), della legge 5 agosto 1978, n. 468»: art. 11 della legge di contabilità 468/1978. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "47", "where": "com2", "text": "articolo 5", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:1979-12-30;663"}, "reason": "Lett. d): «l'articolo 5, commi sesto, settimo e ottavo, del decreto legge 30 dicembre 1979, n. 663, convertito … dalla legge 29 febbraio 1980, n. 33»: art. 5 del d.l. 663/1979, non del T.U. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "47", "where": "com2", "text": "2", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:1989-12-30;416"}, "reason": "Lett. e): «gli articoli 2 e seguenti del decreto-legge 30 dicembre 1989, n. 416, convertito … dalla legge 28 febbraio 1990, n. 39»: artt. del d.l. 416/1989 (legge Martelli), non del T.U. [29/9/2026, da RINVII.tsv]"}
+]

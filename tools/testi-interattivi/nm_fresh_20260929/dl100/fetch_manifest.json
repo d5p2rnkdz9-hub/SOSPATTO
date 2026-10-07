@@ -1,0 +1,205 @@
+{
+ "act": "dl100",
+ "detail_url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=2026-06-12&atto.codiceRedazionale=26G00119&tipoDettaglio=multivigenza&classica=true",
+ "fetched": "2026-09-29T12:31:37.263850",
+ "n_discovered": 19,
+ "warnings": [],
+ "files": [
+  {
+   "filename": "a_1_1_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=2&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=1&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 2,
+   "ok": true,
+   "label": null,
+   "sha256": "61e05a2177393dee8388cf62f05e7d5ae9ca7e85c901517a7bafbe1d80a5b3f2",
+   "vigore_dal": "2026-08-08"
+  },
+  {
+   "filename": "a_1_2_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=2&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=2&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 2,
+   "ok": true,
+   "label": "2",
+   "sha256": "3baa8724bd7b835f950ea97cd05a421a337cddb980d087e1f7041f39cf32b40b",
+   "vigore_dal": "2026-08-08"
+  },
+  {
+   "filename": "a_1_3_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=3&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "3",
+   "sha256": "e24cfde34bdec73336ccce5c1e8670c5ae8e751dc58118729dac7d9dda00db5e",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_4_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=4&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "4",
+   "sha256": "9ddbf36f9875099ea1b2bc1a6ee4bec459ecec7f9d85eb03b96cb27cb6ad286f",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_5_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=5&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "5",
+   "sha256": "112c4cebbe94f60dbaf9271eeaa144af96ebd4fbb01db315afaece644e09d404",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_6_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=6&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "6",
+   "sha256": "05a0219f1c3a7042d6b3c8b45bdf8887985b7fa186310f718b8fc18d922491d6",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_7_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=7&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "7",
+   "sha256": "e1027128eefcacf5b048deb2c9feddb5cb009e89e9395bb85f2ab910e3b162d8",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_8_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=8&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "8",
+   "sha256": "57a0d954c673a5c67057e1de01b963a0d235ec9cae77f6c80e4a94cfb27a6b8e",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_1_9_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=1&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=9&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "9",
+   "sha256": "6831ebe4fe3e0e600a61daefcb47589a3f4dd1a504e60b6019e15658afa0f5e5",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_10_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=10&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "10",
+   "sha256": "70e33e7bbcde3022a2f3adf1a2221cd296fb5732f516fc5778097e98a4c5ff3b",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_11_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=11&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "11",
+   "sha256": "54c27ee943099009e721776433c200d4f2f5b2bf9251350ffb1908d7e07139c9",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_12_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=12&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "12",
+   "sha256": "66de080f035d74f82a7f9419fe5131b0991facfae07d1214abae3398ba18cc70",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_13_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=13&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "13",
+   "sha256": "db30a8dd2c58b43457cce9d26383a85b760c77f881aa963b524a7dc3f44a0849",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_14_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=14&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "14",
+   "sha256": "21eca410f89be0563ee5d801aee37b5c4a0b630e3750fc4515965371fb6b4736",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_15_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=15&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "15",
+   "sha256": "9b14485ac352e34188c3ea6da0cf6b6d3ee1658d105bfe737fceeb679e5eab9b",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_2_16_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=2&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=16&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 2,
+   "ok": true,
+   "label": "16",
+   "sha256": "c6651d1d35ce21d016087835eb62ff77661643cb33da58f13e7bc1298b3eee89",
+   "vigore_dal": "2026-08-08"
+  },
+  {
+   "filename": "a_2_17_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=17&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "17",
+   "sha256": "abc50594c4b1ef2c250adcfd915f2515455306c4aa32ee52a88029937df21136",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_3_18_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=3&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=18&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "18",
+   "sha256": "d8930513e05b71b9d79b9f1de5b339cf2fc6b8681f499e3c94a8ed3ad8f0f0ee",
+   "vigore_dal": "2026-06-12"
+  },
+  {
+   "filename": "a_3_19_1.html",
+   "url": "https://www.normattiva.it/atto/caricaArticolo?art.versione=1&art.idGruppo=3&art.flagTipoArticolo=0&art.codiceRedazionale=26G00119&art.idArticolo=19&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=2026-06-12&art.progressivo=0&",
+   "versione": 1,
+   "ok": true,
+   "label": "19",
+   "sha256": "c28a5acf0c3515c32cc3ad6235b09a641b14619cb440de9774c15d88eb10dcf5",
+   "vigore_dal": "2026-06-12"
+  }
+ ],
+ "versioni_future": [],
+ "n_ok": 19,
+ "labels": [
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19"
+ ],
+ "expected_new": [],
+ "missing_expected_new": [],
+ "consolidato_dl100": null
+}

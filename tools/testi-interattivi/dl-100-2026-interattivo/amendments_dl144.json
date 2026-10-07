@@ -1,0 +1,92 @@
+{
+ "_atto": "d.l. 144/2026",
+ "_nome": "d.l. 7 agosto 2026, n. 144",
+ "_data": "2026-08-08",
+ "_source": "Art. 7, comma 1, d.l. 7 agosto 2026, n. 144 (G.U. n. 182 del 7/8/2026, in vigore dall'8/8/2026). Generato da genera_strato_dl144.py confrontando nm_fresh_20260710/dl100 e nm_fresh_20260929/dl100.",
+ "amendments": [
+  {
+   "id": "144-a",
+   "letter": "144 art. 7 a)",
+   "src": "art. 7, comma 1, lettera a), d.l. 144/2026",
+   "op": "substitute",
+   "target": {
+    "art": "1",
+    "comma": "3"
+   },
+   "pairs": [
+    [
+     "La prova orale ha luogo nella medesima sede della prova scritta e consiste in un colloquio avente ad oggetto:\na) la soluzione di un caso pratico che postuli conoscenze di diritto sostanziale e di diritto processuale, in una materia scelta preventivamente dal candidato tra il diritto privato, il diritto penale e il diritto amministrativo;\nb) la risposta a tre quesiti: il primo in materia di diritto processuale, civile o penale, a scelta del candidato, il secondo in materia di diritto sostanziale, civile, penale o amministrativo, a scelta del candidato, e il terzo in materia di diritto costituzionale, commerciale, del lavoro, internazionale, dell'Unione Europea o tributario, a scelta del candidato;\nc) un quesito in materia di ordinamento, deontologia e previdenza forense.",
+     "La prova orale ha luogo nella medesima sede della prova scritta e consiste in un colloquio avente ad oggetto:\na) la soluzione di un caso pratico che postuli conoscenze di diritto sostanziale e di diritto processuale, in una materia scelta preventivamente dal candidato tra il diritto privato, il diritto penale e il diritto amministrativo;\nb) la risposta a tre quesiti: il primo in materia di diritto processuale, civile o penale, a scelta del candidato, il secondo in materia di diritto sostanziale, civile, penale o amministrativo, a scelta del candidato, e il terzo in materia di diritto costituzionale, commerciale, del lavoro, ecclesiastico, internazionale privato e processuale, dell'Unione Europea o tributario, a scelta del candidato;\nc) un quesito in materia di ordinamento, deontologia e previdenza forense."
+    ]
+   ]
+  },
+  {
+   "id": "144-b",
+   "letter": "144 art. 7 b)",
+   "src": "art. 7, comma 1, lettera b), d.l. 144/2026",
+   "op": "repeal_comma",
+   "target": {
+    "art": "2"
+   },
+   "commi": [
+    "5"
+   ]
+  },
+  {
+   "id": "144-c",
+   "letter": "144 art. 7 c)",
+   "src": "art. 7, comma 1, lettera c), d.l. 144/2026",
+   "op": "replace_article",
+   "target": {
+    "art": "16"
+   },
+   "rubrica": "Istituzione dell'ufficio per il processo stralcio presso le  sezioni specializzate in materia di immigrazione",
+   "commi": [
+    {
+     "num": "1",
+     "text": "Al fine di garantire che i procedimenti previsti e disciplinati dal capo II del presente decreto siano definiti nei tempi previsti, e dunque senza la preventiva definizione dell'arretrato pendente, presso ciascuna delle sezioni specializzate di cui all'articolo 1, comma 1, del decreto-legge 17 febbraio 2017, n. 13, convertito, con modificazioni, dalla legge 13 aprile 2017, n. 46, e' istituito un ufficio per il processo stralcio per la piu' celere definizione di tutti i procedimenti pendenti alla data dell'11 giugno 2026 e aventi ad oggetto le materie di cui all'articolo 3, commi 1 e 2, del citato decreto-legge n. 13 del 2017, ad esclusione di quelli di cui alla lettera e-bis) del medesimo comma 1. I procedimenti di cui al primo periodo sono definiti in composizione monocratica ai sensi dell'articolo 3, comma 4, del decreto-legge n. 13 del 2017."
+    },
+    {
+     "num": "2",
+     "text": "Ai fini di cui al comma 1 si considerano pendenti i procedimenti instaurati con atto introduttivo depositato o notificato prima della data di entrata in vigore del presente decreto."
+    },
+    {
+     "num": "3",
+     "text": "All'ufficio per il processo di cui al comma 1 sono assegnati, ai sensi dell'articolo 7-bis dell'ordinamento giudiziario, di cui al regio decreto 30 gennaio 1941, n. 12, almeno tre giudici onorari di pace ai quali e' delegata, dal giudice assegnatario, la trattazione di tutti i procedimenti di cui al medesimo comma 1 nonche' l'adozione dei relativi provvedimenti definitori in deroga a quanto previsto dall'articolo 10, comma 12, del decreto legislativo 13 luglio 2017, n. 116. Il provvedimento di assegnazione adottato ai sensi del citato articolo 7-bis dell'ordinamento giudiziario, di cui al regio decreto n. 12 del 1941, stabilisce i criteri da seguire per la delega ai giudici onorari di pace dei procedimenti di cui al comma 1 ed e' immediatamente esecutivo."
+    },
+    {
+     "num": "4",
+     "text": "Con il medesimo provvedimento di assegnazione di cui al comma 3, adottato ai sensi del citato articolo 7-bis dell'ordinamento giudiziario, di cui al regio decreto n. 12 del 1941, la trattazione e la definizione dei procedimenti di cui al comma 1, puo' essere delegata anche ai magistrati onorari confermati in servizio presso le sezioni specializzate di cui all'articolo 1, comma 1, del decreto-legge n. 13 del 2017, e ai magistrati onorari confermati, in servizio presso gli uffici giudiziari sedi delle sezioni specializzate, che aderiscano ad apposito interpello."
+    },
+    {
+     "num": "5",
+     "text": "Per le maggiori esigenze delle sezioni specializzate di cui all'articolo 1, comma 1, del decreto-legge n. 13 del 2017, i magistrati onorari confermati a seguito della procedura di cui all'articolo 2 della legge 15 aprile 2025, n. 51, sono destinati ai tribunali distrettuali tenuto conto dei procedimenti pendenti alla data di completamento della stessa procedura. Conclusa la procedura valutativa di cui al primo periodo, la dotazione organica dei giudici onorari di pace e dei viceprocuratori di pace e' determinata, entro sei mesi, con le medesime modalita' di cui all'articolo 3 del decreto legislativo n. 116 del 2017, nei limiti delle risorse finanziarie disponibili a legislazione vigente, e comunque nel rispetto del contingente complessivo attualmente previsto. Con separato decreto del Ministro della giustizia, da adottare entro otto mesi dalla conclusione della medesima procedura valutativa, e' determinata la pianta organica degli uffici del giudice di pace, nel rispetto della vigente dotazione organica complessiva."
+    },
+    {
+     "num": "6",
+     "text": "I giudici onorari delegati ai sensi dei commi 3 e 4 sono destinati, in via esclusiva, salve imprescindibili e preminenti esigenze dell'ufficio, per un periodo non inferiore a dodici mesi, alla trattazione dei procedimenti previsti dal presente articolo. Ai medesimi giudici onorari e' assicurata adeguata formazione nelle materie di cui al comma 1, anche mediante la partecipazione obbligatoria ai corsi di cui all'articolo 2, comma 1, del decreto-legge n. 13 del 2017."
+    },
+    {
+     "num": "7",
+     "text": "Si applicano le disposizioni dettate dagli articoli 10 e 22 del decreto legislativo n. 116 del 2017, per quanto non derogato dal presente articolo e in quanto compatibili. Ai giudici onorari di pace inseriti nell'ufficio per il processo stralcio non si applica la decurtazione prevista dall'articolo 23, comma 3, del medesimo decreto legislativo n. 116 del 2017."
+    },
+    {
+     "num": "8",
+     "text": "Fermo restando quanto previsto dal comma 1, secondo periodo, i procedimenti di cui al medesimo comma 1 proseguono nelle forme di cui all'articolo 35-bis del decreto legislativo 28 gennaio 2008, n. 25, nel testo vigente fino alla data di entrata in vigore del presente decreto, previa fissazione di udienza avanti al giudice delegato alla trattazione. L'udienza puo' essere sostituita dal deposito di note scritte ai sensi dell'articolo 127-ter del codice di procedura civile."
+    },
+    {
+     "num": "9",
+     "text": "La delega ai giudici onorari di pace della pronuncia di provvedimenti definitori ai sensi del comma 3 e' possibile fino al 31 ottobre 2029 o, se anteriore, fino alla data di definizione di tutti i procedimenti di cui al comma 1. Il presidente del tribunale procede al monitoraggio della definizione dei procedimenti affidati all'ufficio per il processo stralcio e, decorsi dodici mesi dall'entrata in vigore del presente decreto, trasmette al Ministro della giustizia e al Consiglio superiore della magistratura una relazione contenente il numero dei procedimenti definiti rispetto alle pendenze iniziali e l'indicazione dei tempi presumibilmente necessari per la completa definizione dei procedimenti di cui al presente articolo."
+    },
+    {
+     "num": "10",
+     "text": "Anche al fine di supportare il funzionamento degli uffici per il processo stralcio istituiti dal presente articolo, il Ministero della giustizia procede, nel limite di milleseicento unita', alla proroga di tre mesi dei contratti di lavoro a tempo determinato, in scadenza al 30 giugno 2026, del personale assunto ai sensi degli articoli 11 e 13 del decreto-legge 9 giugno 2021, n. 80, convertito, con modificazioni, dalla legge 6 agosto 2021, n. 113, in deroga all'articolo 19 del decreto legislativo 15 giugno 2015, n. 81. La proroga di cui al primo periodo e' disposta limitatamente al personale che, alla data del 30 settembre 2026, ha prestato servizio per un periodo inferiore a trentasei mesi. I criteri di individuazione delle unita' di cui al primo periodo sono stabiliti con decreto del Ministro della giustizia da adottarsi entro quindici giorni dalla data di entrata in vigore del presente decreto. Per le unita' da destinare alla Corte di cassazione e' titolo preferenziale l'esperienza lavorativa specifica sul giudizio di legittimita'."
+    },
+    {
+     "num": "11",
+     "text": "Al fine di assicurare quanto previsto dal comma 10 e' autorizzata la spesa di euro 19.740.396 per l'anno 2026, cui si provvede:\na) quanto a euro 1.880.396 per l'anno 2026 mediante corrispondente riduzione del «Fondo da destinare ad interventi strategici finalizzati al recupero di efficienza del sistema giudiziario e al completamento del processo telematico» di cui all'articolo 1, comma 96, della legge 23 dicembre 2014, n. 190, iscritto nello stato di previsione del Ministero della giustizia;\nb) quanto a euro 17.860.000 mediante corrispondente riduzione dello stanziamento del fondo speciale di parte corrente iscritto, ai fini del bilancio triennale 2026-2028, nell'ambito del programma «Fondi di riserva e speciali» della missione «Fondi da ripartire» dello stato di previsione del Ministero dell'economia e delle finanze per l'anno 2026, allo scopo parzialmente utilizzando l'accantonamento relativo al Ministero della giustizia."
+    }
+   ]
+  }
+ ]
+}

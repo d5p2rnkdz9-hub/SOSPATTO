@@ -1,6 +1,6 @@
 /* Selettore Nuovo / Vecchio / Modifiche, articolo per articolo.
  *
- * Il generatore (PATTO UE/versioni.py) marca ogni articolo modificato con data-ultima
+ * Il generatore (tools/testi-interattivi/versioni.py) marca ogni articolo modificato con data-ultima
  * (l'ultimo atto che l'ha toccato) e una riga <p class="amd-storia"> «Modificato dal …»;
  * qui ci si aggancia un selettore. La vista di un articolo è il suo data-vista:
  *   nuovo      testo in vigore (il soppresso sparisce, l'inserito è testo normale)

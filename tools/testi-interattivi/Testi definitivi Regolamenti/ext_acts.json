@@ -1,0 +1,572 @@
+[
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 2303,
+  "cites": 94
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1240,
+  "cites": 70
+ },
+ {
+  "t": "reg",
+  "year": 2016,
+  "num": 399,
+  "cites": 66
+ },
+ {
+  "t": "reg",
+  "year": 2019,
+  "num": 818,
+  "cites": 59
+ },
+ {
+  "t": "reg",
+  "year": 2016,
+  "num": 679,
+  "cites": 59
+ },
+ {
+  "t": "dir",
+  "year": 2008,
+  "num": 115,
+  "cites": 57
+ },
+ {
+  "t": "reg",
+  "year": 2008,
+  "num": 767,
+  "cites": 54
+ },
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 1147,
+  "cites": 50
+ },
+ {
+  "t": "reg",
+  "year": 2019,
+  "num": 817,
+  "cites": 49
+ },
+ {
+  "t": "reg",
+  "year": 2019,
+  "num": 816,
+  "cites": 41
+ },
+ {
+  "t": "reg",
+  "year": 2017,
+  "num": 2226,
+  "cites": 38
+ },
+ {
+  "t": "dir",
+  "year": 2001,
+  "num": 55,
+  "cites": 31
+ },
+ {
+  "t": "reg",
+  "year": 2019,
+  "num": 1896,
+  "cites": 31
+ },
+ {
+  "t": "reg",
+  "year": 2016,
+  "num": 794,
+  "cites": 27
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1862,
+  "cites": 23
+ },
+ {
+  "t": "dir",
+  "year": 2016,
+  "num": 680,
+  "cites": 22
+ },
+ {
+  "t": "reg",
+  "year": 2011,
+  "num": 182,
+  "cites": 21
+ },
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 1060,
+  "cites": 20
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 604,
+  "cites": 19
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1725,
+  "cites": 19
+ },
+ {
+  "t": "dir",
+  "year": 2003,
+  "num": 109,
+  "cites": 16
+ },
+ {
+  "t": "dec_framw",
+  "year": 2002,
+  "num": 584,
+  "cites": 15
+ },
+ {
+  "t": "dir",
+  "year": 2013,
+  "num": 32,
+  "cites": 14
+ },
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 1148,
+  "cites": 14
+ },
+ {
+  "t": "dec",
+  "year": 1999,
+  "num": 437,
+  "cites": 14
+ },
+ {
+  "t": "reg",
+  "year": 2003,
+  "num": 1560,
+  "cites": 12
+ },
+ {
+  "t": "dir",
+  "year": 2011,
+  "num": 95,
+  "cites": 11
+ },
+ {
+  "t": "dir",
+  "year": 2017,
+  "num": 541,
+  "cites": 11
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1726,
+  "cites": 11
+ },
+ {
+  "t": "reg",
+  "year": 2011,
+  "num": 1077,
+  "cites": 11
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1861,
+  "cites": 11
+ },
+ {
+  "t": "reg",
+  "year": 2009,
+  "num": 810,
+  "cites": 10
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 603,
+  "cites": 9
+ },
+ {
+  "t": "reg",
+  "year": 2010,
+  "num": 439,
+  "cites": 9
+ },
+ {
+  "t": "reg",
+  "year": 2016,
+  "num": 1624,
+  "cites": 9
+ },
+ {
+  "t": "reg",
+  "year": 2004,
+  "num": 883,
+  "cites": 9
+ },
+ {
+  "t": "dir",
+  "year": 2005,
+  "num": 36,
+  "cites": 9
+ },
+ {
+  "t": "dec",
+  "year": 2008,
+  "num": 615,
+  "cites": 8
+ },
+ {
+  "t": "dir",
+  "year": 2004,
+  "num": 38,
+  "cites": 8
+ },
+ {
+  "t": "reg",
+  "year": 2022,
+  "num": 922,
+  "cites": 8
+ },
+ {
+  "t": "dir",
+  "year": 2011,
+  "num": 36,
+  "cites": 6
+ },
+ {
+  "t": "dec_impl",
+  "year": 2022,
+  "num": 382,
+  "cites": 6
+ },
+ {
+  "t": "dec",
+  "year": 2008,
+  "num": 633,
+  "cites": 6
+ },
+ {
+  "t": "dec",
+  "year": 2004,
+  "num": 512,
+  "cites": 6
+ },
+ {
+  "t": "dec",
+  "year": 2008,
+  "num": 146,
+  "cites": 6
+ },
+ {
+  "t": "dec",
+  "year": 2011,
+  "num": 350,
+  "cites": 6
+ },
+ {
+  "t": "dir",
+  "year": 2003,
+  "num": 86,
+  "cites": 6
+ },
+ {
+  "t": "reg",
+  "year": 2004,
+  "num": 2252,
+  "cites": 6
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1052,
+  "cites": 5
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1860,
+  "cites": 5
+ },
+ {
+  "t": "dir",
+  "year": 1995,
+  "num": 46,
+  "cites": 5
+ },
+ {
+  "t": "reg",
+  "year": 2004,
+  "num": 866,
+  "cites": 4
+ },
+ {
+  "t": "reg",
+  "year": 2014,
+  "num": 515,
+  "cites": 4
+ },
+ {
+  "t": "reg",
+  "year": 2001,
+  "num": 45,
+  "cites": 4
+ },
+ {
+  "t": "dec",
+  "year": 2002,
+  "num": 1247,
+  "cites": 4
+ },
+ {
+  "t": "reg",
+  "year": 1968,
+  "num": 1612,
+  "cites": 4
+ },
+ {
+  "t": "dir",
+  "year": 1964,
+  "num": 221,
+  "cites": 4
+ },
+ {
+  "t": "dec",
+  "year": 2002,
+  "num": 192,
+  "cites": 4
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1806,
+  "cites": 4
+ },
+ {
+  "t": "dir",
+  "year": 2005,
+  "num": 85,
+  "cites": 4
+ },
+ {
+  "t": "reg",
+  "year": 2002,
+  "num": 1030,
+  "cites": 4
+ },
+ {
+  "t": "dir",
+  "year": 2013,
+  "num": 33,
+  "cites": 4
+ },
+ {
+  "t": "dec",
+  "year": 2007,
+  "num": 533,
+  "cites": 3
+ },
+ {
+  "t": "reg",
+  "year": 2003,
+  "num": 343,
+  "cites": 3
+ },
+ {
+  "t": "reg",
+  "year": 2018,
+  "num": 1046,
+  "cites": 3
+ },
+ {
+  "t": "reg",
+  "year": 2007,
+  "num": 862,
+  "cites": 3
+ },
+ {
+  "t": "dir",
+  "year": 2004,
+  "num": 83,
+  "cites": 3
+ },
+ {
+  "t": "reg",
+  "year": 2010,
+  "num": 1231,
+  "cites": 3
+ },
+ {
+  "t": "reg",
+  "year": 2001,
+  "num": 1049,
+  "cites": 3
+ },
+ {
+  "t": "dec_framw",
+  "year": 2002,
+  "num": 475,
+  "cites": 2
+ },
+ {
+  "t": "dec",
+  "year": 2005,
+  "num": 671,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2006,
+  "num": 1987,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2006,
+  "num": 1986,
+  "cites": 2
+ },
+ {
+  "t": "dec",
+  "year": 2010,
+  "num": 261,
+  "cites": 2
+ },
+ {
+  "t": "dec_framw",
+  "year": 2008,
+  "num": 977,
+  "cites": 2
+ },
+ {
+  "t": "dir",
+  "year": 2009,
+  "num": 52,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 836,
+  "cites": 2
+ },
+ {
+  "t": "dec_impl",
+  "year": 2018,
+  "num": 1993,
+  "cites": 2
+ },
+ {
+  "t": "dec",
+  "year": 2013,
+  "num": 488,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1053,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2007,
+  "num": 168,
+  "cites": 2
+ },
+ {
+  "t": "reg",
+  "year": 2021,
+  "num": 1160,
+  "cites": 1
+ },
+ {
+  "t": "dec",
+  "year": 2013,
+  "num": 1313,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1296,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1301,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1303,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1304,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1309,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2013,
+  "num": 1316,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2014,
+  "num": 223,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2014,
+  "num": 283,
+  "cites": 1
+ },
+ {
+  "t": "dec",
+  "year": 2014,
+  "num": 541,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2012,
+  "num": 966,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 1976,
+  "num": 311,
+  "cites": 1
+ },
+ {
+  "t": "reg",
+  "year": 2009,
+  "num": 987,
+  "cites": 1
+ }
+]

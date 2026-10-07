@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Adatta il bundle dei testi interattivi al sito SOS Patto ("brand" del bundle).
 
-Bersaglio: public/patto-interattivo/, copiato tale e quale dalla copia di sospermesso
-(~/TECH/SOSpermesso/Sito_Nuovo/public/patto-interattivo). Quella copia porta ancora
-i link e la hub del sito di origine; questo script la fa diventare quella di SOS Patto:
+Bersaglio: public/patto-interattivo/, composto da tools/testi-interattivi/assemble.py
+(`npm run testi`). I builder emettono ancora i link e la hub del progetto di origine
+«Patto UE»; questo script li fa diventare quelli di SOS Patto:
 
 1. TOPBAR: il link "torna alla home" (testuale, in tutte le varianti con cui arriva:
    «⌂ Patto UE» -> index.html nelle pagine UE, «⌂ SOS Permesso» -> /normativa.html nelle

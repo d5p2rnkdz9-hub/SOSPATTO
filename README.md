@@ -20,11 +20,14 @@ src/pages/        pagine del sito (escono alla radice: /testi.html, /diagramma.h
 src/styles/       tema clonato da sospermesso e ritinto in blu (+ appendice SOS Patto in components.css)
 content/          giurisprudenza/, circolari/ e dottrina/ — UNA scheda = UN file .md
 public/           copiato tale e quale alla radice del sito:
-  patto-interattivo/   bundle dei testi interattivi (10 atti UE + 4 leggi coordinate + il d.l. 100/2026)
+  patto-interattivo/   bundle dei testi interattivi (10 atti UE + 82 atti collegati + 7 leggi italiane),
+                       generato da tools/testi-interattivi/ (npm run testi)
   diagramma/           Diagrammone (flowchart screening/procedure, file unico)
   allegati/            PDF di giurisprudenza e circolari
 scripts/          retheme_blue.py — ritinta in blu i CSS (sito + bundle)
                   seo_bundle.py — inietta canonical/description/OG nel bundle
+                  inject_bundle_logo.py — logo, link home e CSS brand nel bundle
+tools/testi-interattivi/   generatori dei testi interattivi: snapshot Normattiva/EUR-Lex, builder, assemble.py
 ```
 
 ## Come aggiungere una DECISIONE (giurisprudenza)
@@ -121,48 +124,60 @@ I temi sulla card rimandano alla giurisprudenza sullo stesso tema
 
 ## Come aggiornare i TESTI INTERATTIVI
 
-Il bundle vive in `public/patto-interattivo/` e **non si modifica a mano**: si ricopia
-dalla sorgente e si rilanciano tre script idempotenti che lo adattano a SOS Patto.
+Il bundle vive in `public/patto-interattivo/` e **non si modifica a mano**: lo generano gli
+script di `tools/testi-interattivi/`, che da ottobre 2026 stanno in questo repo (prima nel
+progetto privato "PATTO UE" su Desktop, con passaggio dalla copia di sospermesso: quel giro è
+finito, SOSPATTO è autonomo). Dentro `tools/testi-interattivi/`:
 
-**Sorgente**: la copia del bundle nel sito sospermesso,
-`~/TECH/SOSpermesso/Sito_Nuovo/public/patto-interattivo/`. È quella (non il `deploy/`
-del progetto "PATTO UE") ad avere il CSS «tema SOS Permesso» che `retheme_blue.py` sa
-ritingere: il `deploy/` di PATTO UE ha un tema diverso e i suoi CSS resterebbero com'è.
-A monte, il bundle nasce nel progetto "PATTO UE" (`~/Desktop/CONOSCENZA/PATTO UE/`,
-`assemble_deploy.py` + un `build_dlgs*.py` per legge) e da lì passa a sospermesso.
-
-```bash
-# 1. copia il bundle nuovo (solo la cartella patto-interattivo/, mai le copie iCloud
-#    tipo "patto-interattivo 2")
-rsync -a ~/TECH/SOSpermesso/Sito_Nuovo/public/patto-interattivo/ public/patto-interattivo/
-# 2. ritinta i CSS in blu:
-npm run retheme
-# 3. reinietta i meta SEO (canonical, description, Open Graph):
-npm run seo
-# 4. adatta il bundle al sito (logo, link home, pannello, hub, CSS della topbar):
-npm run logo
-# 5. controlla: devono cambiare SOLO i file il cui contenuto è davvero nuovo
-git status --short public/patto-interattivo
+```
+sites.json                        registro dei testi (slug nel bundle, cartella sorgente, date, etichette)
+versioni.py                       strati di modifica per atto → selettore Nuovo / Vecchio / Modifiche
+fetch_normattiva.py               scarica da Normattiva uno snapshot datato (nm_fresh_AAAAMMGG/)
+confronto_normattiva.py           confronta uno snapshot col testo generato (+ confronto_whitelist.json)
+nm_html*/ , nm_fresh_*/           snapshot Normattiva congelati: sono LA fonte dei testi italiani
+D.Lgs_*.akn.xml                   Akoma Ntoso dei quattro d.lgs. (metadati per i builder)
+Dlgs25 interattivo/ 142-15-… 286-98-… 251-07-…   un builder per legge coordinata
+                                  (build_dlgs*.py, amendments.json, overrides.json, extra_acts.json)
+dl-100-2026-interattivo/          build_dl100.py + strati amendments_dl144/dl168.json (genera_strato_*.py)
+dlgs-115-2026-interattivo/ , dl-168-2026-interattivo/   riusano build_dl100.py
+Testi definitivi Regolamenti/     build_patto_interattivo.py: i 10 atti del Patto dagli HTML EUR-Lex
+                                  (TEsti html/) + gli 82 atti esterni (Atti esterni html/, scarica_atti_esterni.py)
+assemble.py                       compone public/patto-interattivo/ (sotto)
 ```
 
-Cosa fa ciascuno (tutti rieseguibili senza danni; l'ordine non conta):
-- `scripts/retheme_blue.py` ritinta giallo/teal → blu nei 9 CSS del bundle e verifica
-  che non restino token del tema di origine. Il ROSSO delle novelle (inserimenti e
-  soppressioni) è convenzione giuridica e non si tocca.
-- `scripts/seo_bundle.py` aggiunge nel `<head>` di ogni pagina canonical, meta description
-  e tag Open Graph (blocco `<!-- seo:begin -->`); `index.html` e `audit.html` ricevono
-  solo `noindex`.
-- `scripts/inject_bundle_logo.py` fa le personalizzazioni che prima erano state fatte a
-  mano e che una ricopia distruggeva: nella topbar il link testuale «⌂ Patto UE» /
-  «⌂ SOS Permesso» diventa il logo del sito (`IMAGES/logo-header.png`) verso la home;
-  in fondo al pannello a comparsa «⌂ Patto UE» diventa «⌂ SOS Patto» verso `/`; la hub
-  `index.html` del bundle diventa un redirect a `/testi.html` (assorbita da
-  `/testi.html` e `/norme-italiane.html`); aggiunge il blocco CSS `sospatto:brand` ai 5
-  `style.css` e aggiorna il cache-buster `?v=` del CSS in ogni pagina.
+Gli output dei builder (`index.html`, `assets/data.js`, `assets/amend.css`, `assets/data-ext/`,
+`REPORT_MODIFICHE.md`, le pagine in `Patto interattivo/`) sono in `.gitignore`: si rigenerano.
+Dipendenze: `python3` con `bs4`.
 
-Verificato il 14 settembre 2026: copia + tre script riproducono il bundle committato
-byte per byte (esclusa la cartella `dl-100-2026/`, che non viene da sospermesso: v. sotto). Se dopo il passo 5 compaiono differenze inattese (topbar, hub, CSS), il
-sorgente ha cambiato forma e va aggiornato lo script, non il bundle a mano.
+```bash
+npm run testi          # build Patto (12 s) + due passate delle leggi + copia + retheme + seo + logo
+npm run testi-copia    # solo copia + adattamento, se gli output sono già pronti
+git status --short public/patto-interattivo   # devono cambiare SOLO i file col contenuto davvero nuovo
+```
+
+Cosa fa `assemble.py`: ricostruisce tutto (due passate perché ogni testo porta nelle anteprime
+gli articoli degli altri), poi copia nel bundle **solo i file di contenuto**: per il Patto le
+pagine `<num>.html`, `ext-*.html`, `audit.html`, `assets/data.js` e `assets/data-ext/`; per
+ogni legge `<slug>/index.html`, `assets/data.js`, `assets/amend.css`, `assets/data-ext/`. Alle
+pagine del Patto aggiunge la breadcrumb «⌂ Patto UE › atto» e il link al Patto nel pannello.
+**`style.css` e `app.js` del bundle non li tocca**: sono di SOS Patto (tema blu, blocco
+`sospatto:brand`), i builder portano ancora il tema di origine. La hub `index.html` del bundle
+è un redirect a `/testi.html` e non viene sovrascritta.
+
+I tre script di adattamento restano quelli di prima, idempotenti e in qualunque ordine:
+- `scripts/retheme_blue.py` ritinta giallo/teal → blu nei CSS del bundle e verifica che non
+  restino token del tema di origine. Il ROSSO delle novelle è convenzione giuridica e non si tocca.
+- `scripts/seo_bundle.py` aggiunge nel `<head>` di ogni pagina canonical, meta description e
+  tag Open Graph (blocco `<!-- seo:begin -->`); `index.html` e `audit.html` ricevono solo `noindex`.
+- `scripts/inject_bundle_logo.py`: nella topbar il link «⌂ Patto UE» diventa il logo del sito
+  verso la home; in fondo al pannello «⌂ Patto UE» diventa «⌂ SOS Patto» verso `/`; la hub
+  diventa il redirect; aggiunge il blocco CSS `sospatto:brand` agli `style.css` e aggiorna il
+  cache-buster `?v=` del CSS in ogni pagina.
+
+Verificato il 7 ottobre 2026: `npm run testi-copia` sul bundle committato cambia solo i 4
+`amend.css` delle leggi coordinate (colori allineati a quelli di dl-100/dlgs-115/dl-168, che
+già venivano dal builder). Se compaiono differenze inattese (topbar, hub, CSS), il builder ha
+cambiato forma e va aggiornato `assemble.py` o lo script di adattamento, non il bundle a mano.
 Aggiorna anche la data in `_data/testi.js` (`aggiornamento`) quando cambia il testo delle norme.
 
 ### Versioni degli articoli: Nuovo / Vecchio / Modifiche
@@ -178,7 +193,7 @@ dell'articolo non ha (es. `#art_26-bis` in Vecchio) apre quell'articolo sulle Mo
 Vale per le tre leggi coordinate e per il d.l. 100/2026 (artt. 1, 2, 16).
 
 Cosa viene da dove:
-- **Generatore** (`~/Desktop/CONOSCENZA/PATTO UE/versioni.py`, agganciato ai `build_dlgs*.py` e a
+- **Generatore** (`tools/testi-interattivi/versioni.py`, agganciato ai `build_dlgs*.py` e a
   `build_dl100.py`): le modifiche a **strati per atto** — le voci di `amendments.json` si
   raggruppano per l'atto nominato in `src` («…, d.lgs. 115/2026»; senza `src` = d.l. 100), più
   eventuali `amendments_<atto>.json`, e si applicano in ordine di entrata in vigore; ogni articolo
@@ -194,71 +209,47 @@ Cosa viene da dove:
 Una nuova modifica legislativa a una delle leggi: si aggiungono le sue voci ad `amendments.json`
 del builder (op come le altre, `src` che finisce con l'atto, es. «art. 8, comma 1, lettera a),
 d.lgs. 115/2026») e l'atto con la data di entrata in vigore in `ACT_NAMES` / `ACT_DATES` di
-`versioni.py`; poi build, copia, `npm run seo && npm run logo` (sotto).
+`versioni.py`; poi `npm run testi`.
 
-### Il d.l. 100/2026 (`public/patto-interattivo/dl-100-2026/`)
+### Il d.l. 100/2026, il d.lgs. 115/2026 e il d.l. 168/2026
 
-Il decreto di attuazione del Patto **non sta nella copia sospermesso**: è generato a monte, nel
-progetto "PATTO UE", da `dl-100-2026-interattivo/build_dl100.py` (sorgente: lo snapshot Normattiva
-`nm_fresh_20260710/dl100/`, 19 articoli; convertito senza modificazioni dalla l. 145/2026). Gli
-artt. 1, 2 e 16 li ha poi modificati l'art. 7 del d.l. 7 agosto 2026, n. 144: è lo strato
-`amendments_dl144.json`, generato da `genera_strato_dl144.py` confrontando lo snapshot del 10/7 con
-`nm_fresh_20260929/dl100/`; quei tre articoli hanno il selettore Nuovo / Vecchio / Modifiche (l'art. 17 lo ha per il d.l. 168/2026, v. sotto). ⚠️ Il
-d.l. 144 è in conversione (scade il 6/10/2026) e il testo delle Commissioni cambia il nuovo art. 16:
-a conversione avvenuta, riscaricare (`fetch_normattiva.py --act dl100`) e rigenerare lo strato. È un
-atto di novella, non un consolidato: viene reso come testo vigente, con i rinvii navigabili verso gli atti del Patto, i tre d.lgs.
-coordinati (anche i rinvii «nudi» degli artt. 10-12 — «l'articolo 4 è sostituito…» — vanno al
-d.lgs. che quel comma nòvella) e il decreto stesso. È registrato in `sites.json` del progetto
-sorgente come `dl-2026-100`, così alla prossima ricostruzione anche i quattro d.lgs. lo linkano.
+Sono atti di novella resi come testo vigente, con i rinvii navigabili verso gli atti del Patto,
+i d.lgs. coordinati e sé stessi; i rinvii «nudi» degli artt. 10-12 del d.l. 100 («l'articolo 4 è
+sostituito…») vanno al d.lgs. che quel comma nòvella.
+- **d.l. 100/2026** (`dl-100-2026-interattivo/build_dl100.py`, fonte `nm_fresh_20260710/dl100/`,
+  19 articoli; convertito senza modificazioni dalla l. 145/2026). Gli artt. 1, 2 e 16 li ha
+  modificati l'art. 7 del d.l. 144/2026 (strato `amendments_dl144.json`, da `genera_strato_dl144.py`
+  confrontando lo snapshot del 10/7 con `nm_fresh_20260929/dl100/`); l'art. 17 l'art. 4 del
+  d.l. 168/2026 (strato `amendments_dl168.json`, `genera_strato_dl168.py`, snapshot 29/9 vs 6/10).
+  ⚠️ A conversione dei d.l. 144 e 168, riscaricare (`fetch_normattiva.py --act dl100`) e
+  rigenerare gli strati.
+- **d.lgs. 115/2026** (tratta, attuazione della dir. (UE) 2024/1712, in vigore dal 16/7/2026):
+  `dlgs-115-2026-interattivo/build_dlgs115.py`, fonte `nm_fresh_20260929/dlgs115/`. Modifica
+  l'art. 18 T.U., l'art. 17 d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano
+  articolo per articolo.
+- **d.l. 168/2026** (G.U. n. 226, in vigore dal 30/9/2026, in conversione: scade il 28/11/2026):
+  `dl-168-2026-interattivo/build_dl168.py`, fonte `nm_fresh_20261006/dl168/`. L'art. 4 novella
+  l'art. 17 del d.l. 100 (regime transitorio fino al 30 aprile 2027; documento della
+  registrazione valido un anno, consente il lavoro).
 
-Per aggiornarlo: `python3 build_dl100.py` nel progetto sorgente, poi copia a mano
+Ognuno è registrato in `sites.json` (`dl-2026-100`, `dlgs-2026-115`, `dl-2026-168`), in
+`scripts/norme-linker.js` (LEGGI), in `_data/testi.js` e in `scripts/seo_bundle.py`. Un nuovo
+atto: cartella `<slug>-interattivo/` con un `build_*.py` che riusa `build_dl100.py`, voce in
+`sites.json` e nei quattro registri qui sopra, poi `npm run testi` (`assemble.py` crea la
+cartella nel bundle e le dà `style.css` e `app.js` di `dlgs-251-2007`).
 
-```bash
-D=~/Desktop/CONOSCENZA/PATTO\ UE/dl-100-2026-interattivo
-cp "$D/index.html" public/patto-interattivo/dl-100-2026/index.html
-cp "$D/assets/data.js" "$D/assets/amend.css" public/patto-interattivo/dl-100-2026/assets/
-npm run seo && npm run logo      # meta SEO, logo in topbar, «⌂ SOS Patto», cache-buster
-```
-
-`style.css` e `app.js` della cartella sono gli stessi delle quattro leggi (già ritinti e con il
-blocco `sospatto:brand`): se cambiano lì, ricopiali da `dlgs-251-2007/assets/`. L'`rsync` da
-sospermesso non tocca la cartella (non usa `--delete`). Le citazioni «art. 17, comma 4, d.l.
-100/2026» nelle schede si linkano al testo interattivo come le altre (`scripts/norme-linker.js`,
-chiave `dl-2026-100`).
-
-### Il d.lgs. 115/2026 (`public/patto-interattivo/dlgs-115-2026/`)
-
-Il decreto sulla tratta (attuazione della dir. (UE) 2024/1712, in vigore dal 16/7/2026) è, come il
-d.l. 100, un atto di novella reso come testo vigente: modifica l'art. 18 T.U. immigrazione, l'art. 17
-d.lgs. 142/2015 e l'art. 32 d.lgs. 25/2008, che lo mostrano articolo per articolo. Generato da
-`dlgs-115-2026-interattivo/build_dlgs115.py`, che riusa `build_dl100.py` (sorgente:
-`nm_fresh_20260929/dlgs115/`, `fetch_normattiva.py --act dlgs115`); registrato in `sites.json` come
-`dlgs-2026-115`, in `scripts/norme-linker.js` (LEGGI) e in `_data/testi.js`. Copia come il d.l. 100
-(index.html + assets/data.js + amend.css; style.css e app.js da `dlgs-251-2007/assets`).
-
-### Il d.l. 168/2026 (`public/patto-interattivo/dl-168-2026/`)
-
-D.l. 29 settembre 2026, n. 168 (G.U. n. 226, in vigore dal 30/9/2026, in conversione: scade il
-28/11/2026). Per il Patto rileva l'art. 4, che novella l'art. 17 del d.l. 100/2026 (comma 1: regime
-transitorio fino al 30 aprile 2027; comma 3: documento della registrazione equivalente a quello
-dell'art. 4, comma 4, d.lgs. 142/2015, valido un anno, consente il lavoro). Generato da
-`dl-168-2026-interattivo/build_dl168.py`, che riusa `build_dl100.py` (sorgente:
-`nm_fresh_20261006/dl168/`, `fetch_normattiva.py --act dl168`); registrato in `sites.json` come
-`dl-2026-168`, in `scripts/norme-linker.js` (LEGGI), in `_data/testi.js` e in `seo_bundle.py`.
-Nel d.l. 100 è lo strato `amendments_dl168.json` (`genera_strato_dl168.py`, confronto fra
-`nm_fresh_20260929/dl100` e `nm_fresh_20261006/dl100`): l'art. 17 ha il selettore Nuovo / Vecchio /
-Modifiche. A conversione avvenuta, riscaricare `dl100` e `dl168` e rigenerare lo strato.
-
-### Ricostruire e copiare tutto
+### Nuovo snapshot Normattiva
 
 ```bash
-cd ~/Desktop/CONOSCENZA/PATTO\ UE && for pass in 1 2; do for f in "Dlgs25 interattivo/build_dlgs25.py" 142-15-interattivo/build_dlgs142.py 286-98-interattivo/build_dlgs286.py 251-07-interattivo/build_dlgs251.py dl-100-2026-interattivo/build_dl100.py dlgs-115-2026-interattivo/build_dlgs115.py dl-168-2026-interattivo/build_dl168.py; do (cd "$(dirname "$f")" && python3 "$(basename "$f")" >/dev/null); done; done
+cd tools/testi-interattivi
+python3 fetch_normattiva.py --act dl100            # → nm_fresh_AAAAMMGG/dl100/
+python3 confronto_normattiva.py --act dlgs25 --freshdir nm_fresh_AAAAMMGG   # cosa è cambiato
 ```
 
-Due passate perché ogni testo porta nelle anteprime gli articoli degli altri. Poi, da SOSPATTO,
-si copiano `index.html` e `assets/data.js` di ciascuno nella sua cartella di `public/patto-interattivo/`
-e si rilanciano `npm run seo && npm run logo`. ⚠️ Finché la copia sospermesso non è aggiornata
-allo stesso modo, l'rsync da sospermesso del primo passo riporta indietro queste pagine.
+I builder leggono gli snapshot indicati nel loro `SRC` (le quattro leggi: `nm_html*`, con le
+modifiche applicate da `amendments.json`; i decreti del 2026: `nm_fresh_*`). Un testo cambiato
+su Normattiva diventa o uno strato in `amendments*.json` (se è una novella da mostrare con
+Nuovo / Vecchio / Modifiche) o un nuovo `SRC`.
 
 ## Come aggiornare il DIAGRAMMA
 
@@ -270,5 +261,5 @@ Corso imPATTO). Basta sostituirlo.
 Collegato al repo GitHub: ogni push su `main` fa build (`npm run build`) e pubblica `_site/`.
 Config in `netlify.toml`. Dominio da collegare nel pannello Netlify → Domain management.
 
-⚠️ Il repo vive su Desktop (sincronizzato iCloud): fai `git add` mirato (mai `git commit -a`)
-per non trascinare file spazzatura tipo `nome 2.ext` creati da iCloud.
+⚠️ `git add` mirato (mai `git commit -a`): `Materiali da caricare SOSPATTO/` contiene PDF non
+oscurati ed è ignorata, ma file di lavoro e duplicati tipo `nome 2.ext` non devono finire nel repo pubblico.

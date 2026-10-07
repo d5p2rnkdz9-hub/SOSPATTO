@@ -1,0 +1,382 @@
+{
+ "act": "dlgs25",
+ "gate_consolidato_dl100": true,
+ "failed_fetch": 0,
+ "stats_A": {
+  "articoli_ok": 36,
+  "commi_ok": 159,
+  "abrogazioni_ok": 0,
+  "findings": 66,
+  "per_classe": {
+   "ARTICOLO-NUOVO-NORMATTIVA": 4,
+   "COMMA-ASSENTE-NORMATTIVA": 6,
+   "COMMA-NUOVO-NORMATTIVA": 5,
+   "MISMATCH": 47,
+   "RUBRICA-DIFFORME": 4
+  }
+ },
+ "stats_B": {
+  "articoli_ok": 54,
+  "commi_ok": 209,
+  "abrogazioni_ok": 14,
+  "findings": 2,
+  "per_classe": {
+   "equivalente-verificato": 1,
+   "placeholder-artifact": 1
+  },
+  "aperti": 0
+ },
+ "findings_B": [
+  {
+   "art": "32",
+   "comma": "4",
+   "classe": "equivalente-verificato",
+   "sito": "La decisione di cui al comma 1, lettere b), b-bis) b-ter) e b-quater), del presente articolo e il verificarsi delle ipotesi previste dagli articoli 23, 23-bis, 29 e 29-bis comportano, alla scadenza del termine per l'impugnazione, l'obbligo per il richiedente di lasciare il territorio nazionale, salvo che gli sia stato rilasciato un permesso di soggiorno ad altro titolo e salvo che la Commissione territoriale rilevi la sussistenza di una delle condizioni di cui ai commi 3.2 e 3-bis del presente articolo o di una delle cause impeditive di cui all'articolo 19, commi 1-bis e 2, del decreto legislativo 25 luglio 1998, n. 286. Nei casi di cui al periodo precedente, la decisione reca anche l'attestazione dell'obbligo di rimpatrio e del divieto di reingresso di cui all'articolo 13, commi 13 e 14, del decreto legislativo 25 luglio 1998, n. 286. L'attestazione tiene luogo e produce gli effetti del provvedimento di espulsione amministrativa di cui all'articolo 13 del decreto legislativo 25 luglio 1998, n. 286, e il questore procede ai sensi del medesimo articolo 13, commi 4 e 5, salvi gli effetti di cui all'articolo 35-bis, commi 3 e 4, del presente decreto. Il provvedimento recante l'attestazione dell'obbligo di rimpatrio in conformita'al presente comma e'impugnabile con ricorso unitario ai sensi dell'articolo 35, comma 1, del presente decreto.",
+   "norm": "La decisione di cui al comma 1, lettere b), b-bis) b-ter) e b-quater, del presente articolo e il verificarsi delle ipotesi previste dagli articoli 23, 23-bis, 29 e 29-bis comportano, alla scadenza del termine per l'impugnazione, l'obbligo per il richiedente di lasciare il territorio nazionale, salvo che gli sia stato rilasciato un permesso di soggiorno ad altro titolo e salvo che la Commissione territoriale rilevi la sussistenza di una delle condizioni di cui ai commi 3.2 e 3-bis del presente articolo o di una delle cause impeditive di cui all'articolo 19, commi 1-bis e 2, del decreto legislativo 25 luglio 1998, n. 286. Nei casi di cui al periodo precedente, la decisione reca anche l'attestazione dell'obbligo di rimpatrio e del divieto di reingresso di cui all'articolo 13, commi 13 e 14, del decreto legislativo 25 luglio 1998, n. 286. L'attestazione tiene luogo e produce gli effetti del provvedimento di espulsione amministrativa di cui all'articolo 13 del decreto legislativo 25 luglio 1998, n. 286, e il questore procede ai sensi del medesimo articolo 13, commi 4 e 5, salvi gli effetti di cui all'articolo 35-bis, commi 3 e 4, del presente decreto. Il provvedimento recante l'attestazione dell'obbligo di rimpatrio in conformita'al presente comma e'impugnabile con ricorso unitario ai sensi dell'articolo 35, comma 1, del presente decreto.",
+   "diff": "La decisione di […] b-bis) b-ter) e {SITO- b-quater),} {NORM+ b-quater,} del presente articolo […] del presente decreto.",
+   "in_confronto_A": true,
+   "motivo": "Normattiva rende l'inserimento come «b-ter) ((e b-quater)) ,» perdendo la parentesi di chiusura della lettera inserita dentro il marcatore ((…)). Il sito segue il testo letterale della novella GU (art. 11, lettera p), n. 2), d.l. 100/2026: dopo «b-ter)» aggiungere «e b-quater)»). Differenza di sola resa tipografica, testo normativo equivalente. Verificato 10/7/2026."
+  },
+  {
+   "art": "35",
+   "comma": "2-bis",
+   "classe": "placeholder-artifact",
+   "sito": "I provvedimenti comunicati alla Commissione nazionale ovvero alle Commissioni territoriali ai sensi dell'articolo 35-bis, commi 4 e 13, sono tempestivamente trasmessi dalle medesime Commissioni territoriali o nazionali al questore del luogo di domicilio del ricorrente, risultante agli atti della Commissione, per gli adempimenti conseguenti.",
+   "norm": "I provvedimenti comunicati alla Commissione nazionale ovvero alle Commissioni territoriali ai sensi dell'articolo 35-bis, commi 4 e 13, sono tempestivamente trasmessi dalle medesime Commissioni territoriali o nazionali al questore del luogo di domicilio del ricorrente, risultante agli atti della Commissione, per gli adempimenti conseguenti. PERIODO SOPPRESSO DAL D.L. 12 GIUGNO 2026, N. 100.",
+   "diff": "I provvedimenti comunicati […] gli adempimenti conseguenti. {NORM+ PERIODO SOPPRESSO DAL D.L. 12 GIUGNO 2026, N. 100.}",
+   "in_confronto_A": true
+  }
+ ],
+ "findings_A_sintesi": [
+  {
+   "art": "3",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "3",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "4",
+   "comma": "2-ter",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "6",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "7",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "7",
+   "comma": "2",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "10",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "23-bis",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "23-bis",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "23-bis",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "23-bis",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "23-bis",
+   "comma": "4",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "23-bis",
+   "comma": "4-bis",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "23-bis",
+   "comma": "5",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "26",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "26",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "26",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "26",
+   "comma": "2-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "26",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "28-bis",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "2-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "5",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-bis",
+   "comma": "6",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-ter",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "28-ter",
+   "comma": "1-bis",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "29",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "32",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "32",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "32",
+   "comma": "4-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "32",
+   "comma": "4-ter",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "35",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35",
+   "comma": "2-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "2-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "2-ter",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "4-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "5",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "6",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "13",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "14",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "17",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-bis",
+   "comma": "17-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "35-ter",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "2-bis",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "35-ter",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "5",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "35-ter",
+   "comma": "6",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "35-ter",
+   "comma": "7",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "35-ter",
+   "comma": "8",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "26-bis",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "26-ter",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "28-bis.1",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "28-bis.2",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  }
+ ]
+}

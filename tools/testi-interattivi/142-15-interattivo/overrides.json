@@ -1,0 +1,11 @@
+[
+ {"art": "6", "where": "com2", "text": "articolo 1", "nth": 1, "target": {"href": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1954-07-24;722"}, "reason": "«condizioni previste dall'articolo 1, paragrafo F della Convenzione relativa allo status di rifugiato, firmata a Ginevra … ratificata con la legge 24 luglio 1954, n. 722»: art. 1F della Convenzione di Ginevra (legge di ratifica 722/1954), non art. 1 del d.lgs. 142/2015. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "6", "where": "com2", "text": "12", "nth": 1, "target": {"act": "dlgs-2007-251", "art": "12"}, "reason": "Lett. a): «nelle condizioni di cui agli articoli 12, comma 1, lettere b) e c), e 16 del decreto legislativo 19 novembre 2007, n. 251»: art. 12 retto dal d.lgs. 251/2007 (qualifiche), non dal d.lgs. 142/2015. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "6", "where": "com2", "text": "12", "nth": 2, "target": {"act": "dlgs-2007-251", "art": "12"}, "reason": "Lett. c): «reati previsti dagli articoli 12, comma 1, lettera c), e 16, comma 1, lettera d-bis) del decreto legislativo 19 novembre 2007, n. 251»: art. 12 retto dal d.lgs. 251/2007. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "6-quater", "where": "com3", "text": "articolo 14", "nth": 1, "target": {"act": "dlgs-1998-286", "art": "14", "par": "1-bis"}, "reason": "«Si applica l'articolo 14, comma 1-bis, secondo, terzo, quarto, quinto, sesto e settimo periodo, del decreto legislativo 25 luglio 1998, n. 286»: art. 14 T.U. immigrazione; coda nascosta dall'elenco dei periodi. [29/9/2026, da RINVII.tsv]"},
+
+ {"art": "7", "where": "com1", "text": "14", "nth": 1, "target": {"act": "dlgs-1998-286", "art": "14"}, "reason": "«secondo le disposizioni di cui agli articoli 14 del testo unico e 21 del d.P.R. 31 agosto 1999, n. 394»: il «testo unico» è il d.lgs. 286/1998 (art. 14, CPR), di cui il d.P.R. 394/1999 è il regolamento di attuazione. [29/9/2026, da RINVII.tsv]"}
+]

@@ -1,0 +1,184 @@
+{
+ "act": "dlgs142",
+ "gate_consolidato_dl100": true,
+ "failed_fetch": 0,
+ "stats_A": {
+  "articoli_ok": 30,
+  "commi_ok": 149,
+  "abrogazioni_ok": 0,
+  "findings": 31,
+  "per_classe": {
+   "ARTICOLO-NUOVO-NORMATTIVA": 5,
+   "COMMA-ASSENTE-NORMATTIVA": 1,
+   "COMMA-NUOVO-NORMATTIVA": 2,
+   "MISMATCH": 21,
+   "RUBRICA-DIFFORME": 2
+  }
+ },
+ "stats_B": {
+  "articoli_ok": 40,
+  "commi_ok": 193,
+  "abrogazioni_ok": 2,
+  "findings": 0,
+  "per_classe": {},
+  "aperti": 0
+ },
+ "findings_B": [],
+ "findings_A_sintesi": [
+  {
+   "art": "4",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "4",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "4",
+   "comma": "1-bis",
+   "classe": "COMMA-ASSENTE-NORMATTIVA"
+  },
+  {
+   "art": "4",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "4",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "4",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "4",
+   "comma": "5",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "5",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "4-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "5",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "5-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6",
+   "comma": "8",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "rubrica",
+   "classe": "RUBRICA-DIFFORME"
+  },
+  {
+   "art": "6-bis",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "2-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "3",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "4",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "4-bis",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "6-bis",
+   "comma": "3-bis",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "6-bis",
+   "comma": "3-ter",
+   "classe": "COMMA-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "22",
+   "comma": "1",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "22",
+   "comma": "2",
+   "classe": "MISMATCH"
+  },
+  {
+   "art": "5-ter",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "5-quater",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "5-quinquies",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "5-sexies",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  },
+  {
+   "art": "6-quater",
+   "comma": null,
+   "classe": "ARTICOLO-NUOVO-NORMATTIVA"
+  }
+ ]
+}

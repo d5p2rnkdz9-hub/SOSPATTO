@@ -1,12 +1,12 @@
 /* Selettore Nuovo / Vecchio / Modifiche, articolo per articolo, per i testi del bundle.
  *
  * Le pagine public/patto-interattivo/<legge>/index.html sono generate a monte
- * (progetto "PATTO UE" → sospermesso → rsync, v. README) e una ricopia le
+ * (tools/testi-interattivi/, `npm run testi`, v. README) e una ricopia le
  * sovrascrive: per questo il selettore NON sta nel bundle, ma viene aggiunto
  * dalla build del sito (eleventy.config.mjs) sulle copie in _site/, e dal server
  * di sviluppo al volo. Il bundle resta com'è e l'rsync non lo può cancellare.
  *
- * Il generatore (PATTO UE/versioni.py) marca ogni articolo modificato con
+ * Il generatore (tools/testi-interattivi/versioni.py) marca ogni articolo modificato con
  * data-ultima="<ultimo atto modificativo>" e una riga <p class="amd-storia">
  * «Modificato dal …» sotto la rubrica: qui si tocca solo chi ha quei marcatori.
  * Si aggiungono il CSS e lo snippet che sceglie la vista prima del primo paint (nel

@@ -1,0 +1,22 @@
+{
+ "act": "dlgs251",
+ "gate_consolidato_dl100": null,
+ "failed_fetch": 0,
+ "stats_A": {
+  "articoli_ok": 34,
+  "commi_ok": 81,
+  "abrogazioni_ok": 0,
+  "findings": 0,
+  "per_classe": {}
+ },
+ "stats_B": {
+  "articoli_ok": 34,
+  "commi_ok": 81,
+  "abrogazioni_ok": 0,
+  "findings": 0,
+  "per_classe": {},
+  "aperti": 0
+ },
+ "findings_B": [],
+ "findings_A_sintesi": []
+}

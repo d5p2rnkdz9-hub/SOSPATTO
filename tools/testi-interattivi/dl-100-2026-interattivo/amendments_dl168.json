@@ -1,0 +1,40 @@
+{
+ "_atto": "d.l. 168/2026",
+ "_nome": "d.l. 29 settembre 2026, n. 168",
+ "_data": "2026-09-30",
+ "_source": "Art. 4, comma 1, d.l. 29 settembre 2026, n. 168 (G.U. n. 226 del 29/9/2026, in vigore dal 30/9/2026). Generato da genera_strato_dl168.py confrontando nm_fresh_20260929/dl100 e nm_fresh_20261006/dl100.",
+ "amendments": [
+  {
+   "id": "168-a",
+   "letter": "168 art. 4 a)",
+   "src": "art. 4, comma 1, lettera a), d.l. 168/2026",
+   "op": "substitute",
+   "target": {
+    "art": "17",
+    "comma": "1"
+   },
+   "pairs": [
+    [
+     "In sede di prima attuazione del Patto dell'Unione europea sulla migrazione e l'asilo e, comunque, fino al 31 ottobre 2026, sono in ogni caso competenti a ricevere la manifestazione della volonta' di ottenere la protezione internazionale, la registrazione e la formalizzazione della domanda, per tutti i richiedenti, le questure e gli uffici della polizia di frontiera.",
+     "In sede di prima attuazione del Patto dell'Unione europea sulla migrazione e l'asilo e, comunque, fino al 30 aprile 2027, sono in ogni caso competenti a ricevere la manifestazione della volonta' di ottenere la protezione internazionale, la registrazione e la formalizzazione della domanda, per tutti i richiedenti, le questure e gli uffici della polizia di frontiera."
+    ]
+   ]
+  },
+  {
+   "id": "168-b",
+   "letter": "168 art. 4 b)",
+   "src": "art. 4, comma 1, lettera b), d.l. 168/2026",
+   "op": "substitute",
+   "target": {
+    "art": "17",
+    "comma": "3"
+   },
+   "pairs": [
+    [
+     "Al momento della registrazione della domanda di cui al comma 2, al richiedente e' rilasciato il documento nominativo previsto dall'articolo 4, comma 1, del decreto legislativo 18 agosto 2015, n. 142.",
+     "Al momento della registrazione della domanda di cui al comma 2, al richiedente e' rilasciato il documento nominativo previsto dall'articolo 4, comma 1, del decreto legislativo 18 agosto 2015, n. 142 che, in tal caso, equivale al documento di cui al comma 4 dello stesso articolo 4. Il documento rilasciato ai sensi del presente comma e' valido per il periodo di un anno decorrente dalla data in cui la domanda di protezione internazionale e' registrata, fatto salvo il rinnovo previsto dall'articolo 29, paragrafo 9, del regolamento (UE) 2024/1348, e consente l'esercizio dell'attivita' lavorativa ai sensi dell'articolo 22, comma 1, del decreto legislativo 18 agosto 2015, n. 142."
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+[
+ {"art":"5","where":"com1-quater","text":"articolo 19","nth":1,
+  "target":{"act":"dlgs-1998-286","art":"19"},
+  "reason":"«divieti di espulsione e respingimento … di cui all'articolo 19, commi 1 e ((1.1,)) del decreto legislativo 25 luglio 1998, n. 286»: art. 19 retto dal T.U. immigrazione (286/1998), non dal d.lgs. 25/2008. Coda nascosta dai marcatori ((…))."},
+
+ {"art":"18","where":"com1","text":"articolo 2","nth":1,
+  "target":{"href":"https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241"},
+  "reason":"«ai capi I, ad esclusione dell'articolo 2, comma 2, II, IV-bis e V, nonché agli articoli 7, 8 e 10 del capo III della legge 7 agosto 1990, n. 241»: l'art. 2 (escluso dal capo I) appartiene alla legge 241/1990 sul procedimento amministrativo (atto nominato in coda all'intero elenco)."},
+
+ {"art":"26","where":"com2-bis","text":"5","nth":1,
+  "target":{"act":"reg-2024-1356","art":"5"},
+  "reason":"«non è soggetto agli accertamenti di cui al regolamento (UE) 2024/1356, ai sensi degli articoli 5, paragrafo 3, e 7, paragrafi 1 e 2, del medesimo Regolamento»: «medesimo Regolamento» = reg. (UE) 2024/1356 (uso di «paragrafo»), non art. 5 del d.lgs. 25/2008."},
+
+ {"art":"28-bis","where":"com1","text":"12","nth":1,
+  "target":{"act":"dlgs-2007-251","art":"12"},
+  "reason":"«uno dei reati di cui agli articoli 12, comma 1, lettera c), e 16, comma 1, lettera d-bis), del decreto legislativo 19 novembre 2007, n. 251»: art. 12 retto dal d.lgs. 251/2007 (qualifiche)."},
+
+ {"art":"28-ter","where":"com1","text":"articolo 6","nth":1,
+  "target":{"act":"dlgs-2015-142","art":"6"},
+  "reason":"«si trova nelle condizioni di cui all'articolo 6, commi 2, lettere a), b) e c), e 3, del decreto legislativo 18 agosto 2015, n. 142»: art. 6 retto dal d.lgs. 142/2015 (accoglienza)."},
+
+ {"art":"29-bis","where":"com1-bis","text":"13","nth":1,
+  "target":{"act":"dlgs-1998-286","art":"13"},
+  "reason":"«ai sensi degli articoli 13, comma 5-bis, e 14, comma 4, del decreto legislativo 25 luglio 1998, n. 286»: art. 13 retto dal T.U. immigrazione 286/1998."},
+
+ {"art":"29-bis","where":"com1-bis","text":"articolo 19","nth":2,
+  "target":{"act":"dlgs-1998-286","art":"19"},
+  "reason":"«del divieto di espulsione ai sensi del predetto articolo 19»: «predetto articolo 19» richiama l'art. 19 del d.lgs. 286/1998 citato poco prima nello stesso comma, non l'art. 19 del presente decreto."},
+
+ {"art":"32","where":"com1","text":"articolo 38","nth":1,
+  "target":{"act":"reg-2024-1348","art":"38"},
+  "reason":"«condizioni previste dall'articolo 38, paragrafo 1, lettere a), b) c) d) ed e) del regolamento (UE) 2024/1348»: art. 38 retto dal reg. (UE) 2024/1348 (uso di «paragrafo»); coda nascosta da lettere separate da spazi."},
+
+ {"art":"32","where":"com4","text":"articolo 13","nth":3,
+  "target":{"act":"dlgs-1998-286","art":"13"},
+  "reason":"«… di cui all'articolo 13 del decreto legislativo 25 luglio 1998, n. 286, e il questore procede ai sensi del medesimo articolo 13, commi 4 e 5»: «medesimo articolo 13» = art. 13 del d.lgs. 286/1998 (antecedente nello stesso periodo)."},
+
+ {"art":"32","where":"com4-bis","text":"articolo 10","nth":1,
+  "target":{"act":"dlgs-1998-286","art":"10"},
+  "reason":"«produce gli effetti del provvedimento di respingimento di cui all'articolo 10, comma 2, lettera b-bis), del decreto legislativo 25 luglio 1998, n. 286»: art. 10 (respingimento) retto dal T.U. immigrazione 286/1998."},
+
+ {"art":"39","where":"com8","text":"articolo 7","nth":1,
+  "target":{"href":"https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1978-08-05;468"},
+  "reason":"«decreti emanati ai sensi dell'articolo 7, comma 2, n. 2), della legge 5 agosto del 1978, n. 468»: art. 7 appartiene alla legge 468/1978 (contabilità di Stato), atto esterno."}
+]

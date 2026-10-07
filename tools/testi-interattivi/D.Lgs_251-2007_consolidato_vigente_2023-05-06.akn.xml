@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="UTF-8"?><akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:eli="http://data.europa.eu/eli/ontology#" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:gu="http://www.gazzettaufficiale.it/eli/" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:na="http://www.normattiva.it/eli/" xmlns:nakn="http://normattiva.it/akn/vocabulary" xmlns:nrdfa="http://www.normattiva.it/rdfa/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfa="http://www.w3.org/1999/xhtml#">
+    <act name="monovigente">
+        <meta>
+            <identification source="">
+                <FRBRWork>
+                    <FRBRthis value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251/!main"/>
+                    <FRBRuri value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251"/>
+                    <FRBRalias name="urn:nir" value="urn:nir:stato:decreto.legislativo:2007-11-19;251"/>
+                    <FRBRalias name="eli" value="eli/id/2008/01/04/007G0259/CONSOLIDATED/20230506"/>
+                    <FRBRdate date="2007-11-19" name=""/>
+                    <FRBRauthor as="#author" href=""/>
+                    <preservation>
+                        <nrdfa:eli about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506" aknrelname="eli/id/2008/01/04/007G0259/CONSOLIDATED/20230506">
+                            <nrdfa:span property="rdf:type" resource="eli:LegalResource"/>
+                            <nrdfa:span content="Attuazione della direttiva 2004/83/CE recante norme minime sull'attribuzione, a cittadini di Paesi terzi o apolidi, della qualifica del rifugiato o di persona altrimenti bisognosa di protezione internazionale, nonche' norme minime sul contenuto della protezione riconosciuta. " lang="it" property="eli:title" xml:lang="it"/>
+                            <nrdfa:span content="http://www.normattiva.it/eli/id/{yyyy}/{mm}/{dd}/{codiceRedazionale}/{tipoVersione}" property="eli:uri_schema"/>
+                            <nrdfa:span content="007G0259" property="eli:id_local"/>
+                            <nrdfa:span property="eli:type_document" resource="gu:tables/resource-type#DECRETO LEGISLATIVO"/>
+                            <nrdfa:span content="2007-11-19" datatype="xsd:date" property="eli:date_document"/>
+                            <nrdfa:span property="eli:version" resource="gu:tables/versions#ORIGINAL"/>
+                        </nrdfa:eli>
+                    </preservation>
+                    <FRBRcountry value="it"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251/ita@2023-05-06/!main"/>
+                    <FRBRuri value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251/ita@2023-05-06"/>
+                    <FRBRdate date="2023-05-06" name=""/>
+                    <FRBRauthor as="#author" href=""/>
+                    <preservation>
+                        <nrdfa:eli about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita">
+                            <nrdfa:span property="rdf:type" resource="eli:LegalExpression"/>
+                            <nrdfa:span property="eli:realizes" resource="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506"/>
+                            <nrdfa:span property="eli:is_embodied_by" resource="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita/akn"/>
+                            <nrdfa:span property="eli:language" resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+                            <nrdfa:span property="eli:publisher_agent" resource="http://www.ipzs.it"/>
+                        </nrdfa:eli>
+                    </preservation>
+                    <FRBRlanguage language="ita"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251/ita@2023-05-06/!main.xml"/>
+                    <FRBRuri value="/akn/it/act/decreto_legislativo/stato/2007-11-19/251/ita@2023-05-06.xml"/>
+                    <FRBRdate date="2007-11-19" name=""/>
+                    <FRBRauthor as="#author" href=""/>
+                    <preservation>
+                        <nrdfa:eli about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita/akn">
+                            <nrdfa:span property="rdf:type" resource="eli:Format"/>
+                            <nrdfa:span property="eli:format" resource="http://www.iana.org/assignments/media-types/xml"/>
+                        </nrdfa:eli>
+                    </preservation>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2008-01-04" name="" number="3" showAs=""/>
+            <lifecycle source="">
+                <eventRef date="2008-01-04" eId="eventRef_0" source="ro1"/>
+                <eventRef date="2013-08-20" eId="eventRef_1" source="rp1"/>
+                <eventRef date="2014-03-07" eId="eventRef_2" source="rp2"/>
+                <eventRef date="2018-10-04" eId="eventRef_3" source="rp3"/>
+                <eventRef date="2018-12-17" eId="eventRef_4" source="rp4"/>
+                <eventRef date="2023-03-10" eId="eventRef_5" source="rp5"/>
+                <eventRef date="2023-05-05" eId="eventRef_6" source="rp6"/>
+            </lifecycle>
+            <analysis source="">
+                <activeModifications>
+                    <textualMod eId="amod_0" type="insertion">
+                        <source href="urn:nir:stato:decreto.legislativo:2007-11-19;251#34"/>
+                        <destination href="urn:nir:stato:decreto.legge:1989-12-30;416#1"/>
+                        <new>
+                            <nakn:text>ha disposto (con l' art. 34, comma 1) la soppressione delle lettere c) e d) al comma 4 dell'art. 1.</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="amod_1" type="insertion">
+                        <source href="urn:nir:stato:decreto.legislativo:2007-11-19;251#34"/>
+                        <destination href="urn:nir:stato:decreto.legge:1989-12-30;416#1 sexies"/>
+                        <new>
+                            <nakn:text>ha disposto (con l' art. 34, comma 3) la modifica dell'art. 1-sexies, comma 4.</nakn:text>
+                        </new>
+                    </textualMod>
+                </activeModifications>
+                <passiveModifications>
+                    <textualMod eId="pmod_0" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_1"/>
+                        <new>
+                            <nakn:text>((della qualifica di beneficiario di protezione internazionale nonche' norme sul contenuto dello status riconosciuto))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_1" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_2"/>
+                        <new>
+                            <nakn:text>((a-bis) 'beneficiario di protezione internazionale': cittadino straniero cui e' stato riconosciuto lo status di rifugiato o lo status di protezione sussidiaria come definito alle lettere f) e h);))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_2" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_3"/>
+                        <new>
+                            <nakn:text>((i) 'domanda di protezione internazionale': la domanda di protezione presentata secondo le procedure previste dal decreto legislativo 28 gennaio 2008, n. 25, diretta ad ottenere lo status di rifugiato o lo status di protezione sussidiaria;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_3" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_4"/>
+                        <new>
+                            <nakn:text>((i-bis) 'richiedente': lo straniero che ha presentato una domanda di protezione internazionale sulla quale non e' ancora stata adottata una decisione definitiva;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_4" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_5"/>
+                        <new>
+                            <nakn:text>((b) i figli minori del beneficiario dello status di rifugiato o dello status di protezione sussidiaria, anche adottati o nati fuori dal matrimonio, a condizione che non siano sposati. I minori affidati o sottoposti a tutela sono equiparati ai figli;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_5" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_6"/>
+                        <new>
+                            <nakn:text>((b-bis) il genitore o altro adulto legalmente responsabile, ai sensi degli articoli 343 e seguenti del codice civile, del minore beneficiario dello status di rifugiato o dello status di protezione sussidiaria;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_6" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_7"/>
+                        <new>
+                            <nakn:text>((Nel valutare l'attendibilita' del minore, si tiene conto anche del suo grado di maturita' e di sviluppo personale.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_7" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_8"/>
+                        <new>
+                            <nakn:text>((, a condizione che abbiano la volonta' e la capacita' di offrire protezione conformemente al comma 2.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_8" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_9"/>
+                        <new>
+                            <nakn:text>((e' effettiva e non temporanea e))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_9" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_10"/>
+                        <new>
+                            <nakn:text>((e-bis) azioni giudiziarie o sanzioni penali sproporzionate o discriminatorie che comportano gravi violazioni di diritti umani fondamentali in conseguenza del rifiuto di prestare servizio militare per motivi di natura morale, religiosa, politica o di appartenenza etnica o nazionale;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_10" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_11"/>
+                        <new>
+                            <nakn:text>((o la mancanza di protezione contro tali atti))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_11" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_12"/>
+                        <new>
+                            <nakn:text>((ai fini della determinazione dell'appartenenza a un determinato gruppo sociale o dell'individuazione delle caratteristiche proprie di tale gruppo, si tiene debito conto delle considerazioni di genere, compresa l'identita' di genere;))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_12" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_13"/>
+                        <new>
+                            <nakn:text>((2-ter. Per l'applicazione del comma 1, lettera d), e' rilevante ogni rientro, anche di breve durata, nel Paese di origine, ove non giustificato da gravi e comprovati motivi e per il periodo strettamente necessario))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_13" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_14"/>
+                        <new>
+                            <nakn:text>((prima di esservi ammesso in qualita' di richiedente,))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_14" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_15"/>
+                        <new>
+                            <nakn:text>((del codice di procedura penale ovvero dagli articoli 336, 583, 583-bis, 583-quater, 624 nell'ipotesi aggravata di cui all'articolo 625, primo comma, numero 3), e 624-bis, primo comma, del codice penale. I reati di cui all'articolo 407, comma 2, lettera a), numeri 2), 6) e 7-bis), del codice di procedura penale, sono rilevanti anche nelle fattispecie non aggravate))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_15" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_16"/>
+                        <new>
+                            <nakn:text>((2-ter. Ai fini di cui al comma 2, e' rilevante ogni rientro, anche di breve durata, nel Paese di origine, ove non giustificato da gravi e comprovati motivi e per il periodo strettamente necessario))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_16" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_17"/>
+                        <new>
+                            <nakn:text>((del codice di procedura penale ovvero dagli articoli 336, 583, 583-bis, 583-quater, 624 nell'ipotesi aggravata di cui all'articolo 625, primo comma, numero 3), e 624-bis, primo comma, del codice penale. I reati di cui all'articolo 407, comma 2, lettera a), numeri 2), 6) e 7-bis), del codice di procedura penale, sono rilevanti anche nelle fattispecie non aggravate.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_17" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_18"/>
+                        <new>
+                            <nakn:text>((i minori non accompagnati, le vittime della tratta di esseri umani, le persone con disturbi psichici,))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_18" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_19"/>
+                        <new>
+                            <nakn:text>((2-bis. Nell'attuazione delle disposizioni del presente decreto e' preso in considerazione con carattere di priorita' il superiore interesse del minore.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_19" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_20"/>
+                        <new>
+                            <nakn:text>((ed in conformita' degli obblighi internazionali ratificati dall'Italia,))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_20" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_21"/>
+                        <new>
+                            <nakn:text>((status di protezione internazionale))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_21" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_22"/>
+                        <new>
+                            <nakn:text>((4. Lo straniero ammesso alla protezione sussidiaria ha diritto al ricongiungimento familiare ai sensi e alle condizioni previste dall'articolo 29-bis del decreto legislativo 25 luglio 1998, n. 286.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_22" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_23"/>
+                        <new>
+                            <nakn:text>((con validita' quinquennale))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_23" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_24"/>
+                        <new>
+                            <nakn:text>((per la formazione professionale, compresi i corsi di aggiornamento, per il tirocinio sul luogo di lavoro e per i servizi resi dai centri per l'impiego di cui all'articolo 4 del decreto legislativo 23 dicembre 1997, n. 469.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_24" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_25"/>
+                        <new>
+                            <nakn:text>((3-bis. Per il riconoscimento delle qualifiche professionali, dei diplomi, dei certificati e di altri titoli conseguiti all'estero dai titolari dello status di rifugiato o dello status di protezione sussidiaria, le amministrazioni competenti individuano sistemi appropriati di valutazione, convalida e accreditamento che consentono il riconoscimento dei titoli ai sensi dell'articolo 49 del decreto del Presidente della Repubblica 31 agosto 1999, n. 394, anche in assenza di certificazione da parte dello Stato in cui e' stato ottenuto il titolo, ove l'interessato dimostra di non poter acquisire detta certificazione.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_25" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_26"/>
+                        <new>
+                            <nakn:text>((1-bis. Il Ministero della salute adotta linee guida per la programmazione degli interventi di assistenza e riabilitazione nonche' per il trattamento dei disturbi psichici dei titolari dello status di rifugiato e dello status di protezione sussidiaria che hanno subito torture, stupri o altre forme gravi di violenza psicologica, fisica o sessuale, compresi eventuali programmi di formazione e aggiornamento specifici rivolti al personale sanitario da realizzarsi nell'ambito delle risorse finanziarie disponibili a legislazione vigente.))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_26" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_27"/>
+                        <new>
+                            <nakn:text>((, quanto prima, a seguito del riconoscimento della protezione ove non avviate in precedenza,))</nakn:text>
+                        </new>
+                    </textualMod>
+                    <textualMod eId="pmod_27" type="insertion">
+                        <source href="#"/>
+                        <destination href="#ins_28"/>
+                        <new>
+                            <nakn:text>((2. Nell'attuazione delle misure e dei servizi di cui all'articolo 1-sexies del decreto-legge 30 dicembre 1989, n. 416, convertito, con modificazioni, dalla legge 28 febbraio 1990, n. 39, all'articolo 5 del decreto legislativo 30 maggio 2005, n. 140, ed all'articolo 42 del decreto legislativo 25 luglio 1998, n. 286, si tiene conto anche delle esigenze di integrazione dei beneficiari di protezione internazionale, promuovendo, nei limiti delle risorse disponibili, ogni iniziativa adeguata a superare la condizione di svantaggio determinata dalla perdita della protezione del Paese di origine e a rimuovere gli ostacoli che di fatto ne impediscono la piena integrazione. 
+ 3. Ai fini della programmazione degli interventi e delle misure volte a favorire l'integrazione dei beneficiari di protezione internazionale, il Tavolo di coordinamento nazionale insediato presso il Ministero dell'interno - Dipartimento per le liberta' civili e l'immigrazione con l'obiettivo di ottimizzare i sistemi di accoglienza dei richiedenti e/o titolari di protezione internazionale secondo gli indirizzi sanciti d'intesa con la Conferenza unificata di cui all'articolo 8 del decreto legislativo 28 agosto 1997, n. 281, predispone, altresi', ogni due anni, salva la necessita' di un termine piu' breve, un Piano nazionale che individua le linee di intervento per realizzare l'effettiva integrazione dei beneficiari di protezione internazionale, con particolare riguardo all'inserimento socio-lavorativo, anche promuovendo specifici programmi di incontro tra domanda e offerta di lavoro, all'accesso all'assistenza sanitaria e sociale, all'alloggio, alla formazione linguistica e all'istruzione nonche' al contrasto delle discriminazioni. Il Piano indica una stima dei destinatari delle misure di integrazione nonche' specifiche misure attuative della programmazione dei pertinenti fondi europei predisposta dall'autorita' responsabile. Il predetto Tavolo e' composto da rappresentanti del Ministero dell'interno, dell'Ufficio del Ministro per l'integrazione, del Ministero del lavoro e delle politiche sociali, delle Regioni, dell'Unione delle province d'Italia (UPI) e dell'Associazione nazionale dei comuni italiani (ANCI), ed e' integrato, in sede di programmazione delle misure di cui alla presente disposizione, con un rappresentante del Ministro delegato alle pari opportunita', un rappresentante dell'Alto Commissariato delle Nazioni Unite per i Rifugiati (UNHCR), un rappresentante, della Commissione nazionale per il diritto di asilo e, a seconda delle materie trattate, con rappresentanti delle altre amministrazioni o altri soggetti interessati. 
+ 3-bis. All'attuazione delle disposizioni di cui al comma 3, le Amministrazioni interessate provvedono con le risorse umane, strumentali e finanziarie disponibili a legislazione vigente. La partecipazione alle sedute del Tavolo non da' luogo alla corresponsione di compensi, gettoni, emolumenti, indennita' o rimborsi spese comunque denominati. 
+ 3-ter. L'accesso ai benefici relativi all'alloggio previsti dall'articolo 40, comma 6, del decreto legislativo 25 luglio 1998, n. 286, e' consentito ai titolari dello status di rifugiato e di protezione sussidiaria, in condizioni di parita' con i cittadini italiani.))</nakn:text>
+                        </new>
+                    </textualMod>
+                </passiveModifications>
+            </analysis>
+            <references source="">
+                <original eId="ro1" href="/akn/it/act/DECRETO_LEGISLATIVO/stato/2007-11-19/251/!main" showAs=""/>
+                <passiveRef eId="rp1" href="/akn/it/act/LEGGE/stato/2013-08-06/97/!main" showAs=""/>
+                <passiveRef eId="rp2" href="/akn/it/act/DECRETO_LEGISLATIVO/stato/2014-02-21/18/!main" showAs=""/>
+                <passiveRef eId="rp3" href="/akn/it/act/DECRETO-LEGGE/stato/2018-10-04/113/!main" showAs=""/>
+                <passiveRef eId="rp4" href="" showAs=""/>
+                <passiveRef eId="rp5" href="/akn/it/act/DECRETO-LEGGE/stato/2023-03-10/20/!main" showAs=""/>
+                <passiveRef eId="rp6" href="/akn/it/act/LEGGE/stato/2023-05-05/50/!main" showAs=""/>
+            </references>
+            <proprietary source="">
+                <rdf:RDF>
+                    <rdf:Description rdf:about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506">
+                        <rdf:type rdf:resource="eli:LegalResource"/>
+                        <eli:title xml:lang="it">Attuazione della direttiva 2004/83/CE recante norme minime sull'attribuzione, a cittadini di Paesi terzi o apolidi, della qualifica del rifugiato o di persona altrimenti bisognosa di protezione internazionale, nonche' norme minime sul contenuto della protezione riconosciuta. </eli:title>
+                        <eli:uri_schema>http://www.normattiva.it/eli/id/{yyyy}/{mm}/{dd}/{codiceRedazionale}/{tipoVersione}</eli:uri_schema>
+                        <eli:id_local>007G0259</eli:id_local>
+                        <eli:type_document rdf:resource="gu:tables/resource-type#DECRETO LEGISLATIVO"/>
+                        <eli:date_document rdf:datatype="xsd:date">2007-11-19</eli:date_document>
+                        <eli:version rdf:resource="gu:tables/versions#ORIGINAL"/>
+                    </rdf:Description>
+                    <rdf:Description rdf:about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita">
+                        <rdf:type rdf:resource="eli:LegalExpression"/>
+                        <eli:realizes rdf:resource="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506"/>
+                        <eli:is_embodied_by rdf:resource="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita/akn"/>
+                        <eli:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+                        <eli:publisher_agent rdf:resource="http://www.ipzs.it"/>
+                    </rdf:Description>
+                    <rdf:Description rdf:about="na:id/2008/01/04/007G0259/CONSOLIDATED/20230506/ita/akn">
+                        <rdf:type rdf:resource="eli:format"/>
+                        <eli:format rdf:resource="http://www.iana.org/assignments/media-types/xml"/>
+                    </rdf:Description>
+                </rdf:RDF>
+            </proprietary>
+        </meta>
+        <preface>
+            <p>
+                <docType>DECRETO LEGISLATIVO</docType>
+                <docDate date="2007-11-19">19 novembre 2007</docDate>
+                <docNumber>251</docNumber>
+                <docTitle>Attuazione della direttiva 2004/83/CE recante norme minime sull'attribuzione, a cittadini di Paesi terzi o apolidi, della qualifica del rifugiato o di persona altrimenti bisognosa di protezione internazionale, nonche' norme minime sul contenuto della protezione riconosciuta.
+</docTitle>
+            </p>
+            <p>
+                <authorialNote eId="atn1" placement="bottom">
+                    <p>Entrata in vigore del provvedimento: 19/1/2008</p>
+                </authorialNote>
+            </p>
+        </preface>
+        <preamble>
+            <formula name="formulaInizialePreambolo">
+                <p>IL PRESIDENTE DELLA REPUBBLICA</p>
+            </formula>
+            <citations eId="cits_1">
+                <citation eId="cits_1__cit_1">
+                    <p>Visti gli <ref eId="ref_1" href="/akn/it/act/costituzione/stato/1947-12-27/const/!main#art_76">articoli 76</ref> e <ref eId="ref_2" href="/akn/it/act/costituzione/stato/1947-12-27/const/!main#art_87">87 della Costituzione</ref>;</p>
+                </citation>
+            </citations>
+            <citations eId="cits_2">
+                <citation eId="cits_2__cit_1">
+                    <p>Vista la <ref eId="ref_3" href="/akn/it/act/direttivaUe/eu/2004/83/!main">direttiva 2004/83/CE del Consiglio, del 29 aprile 2004</ref>, recante norme minime sull'attribuzione, a cittadini di Paesi terzi o apolidi, della qualifica di rifugiato o di persona altrimenti bisognosa di protezione internazionale, nonche' norme minime sul contenuto della protezione riconosciuta;</p>
+                </citation>
+            </citations>
+            <citations eId="cits_3">
+                <citation eId="cits_3__cit_1">
+                    <p>Vista la <ref eId="ref_4" href="/akn/it/act/legge/stato/2006-01-25/29/!main">legge 25 gennaio 2006, n. 29</ref>, recante disposizioni per l'adempimento di obblighi derivanti dall'appartenenza dell'Italia alle Comunita' europee - Legge comunitaria 2005, ed in particolare l'articolo 1 e l'allegato B;</p>
+                </citation>
+            </citations>
+            <citations eId="cits_4">
+                <citation eId="cits_4__cit_1">
+                    <p>Visto il testo unico delle disposizioni concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero, di cui al <ref eId="ref_5" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, e successive modificazioni;</p>
+                </citation>
+            </citations>
+            <citations eId="cits_5">
+                <citation eId="cits_5__cit_1">
+                    <p>Vista la preliminare deliberazione del Consiglio dei Ministri adottata nella riunione del 26 luglio 2007;</p>
+                </citation>
+            </citations>
+            <p>Acquisiti i pareri delle competenti Commissioni della Camera dei deputati;</p>
+            <recitals eId="recs_1">
+                <recital eId="recs_1__rec_1">
+                    <p>Considerato che le competenti Commissioni del Senato della Repubblica non hanno espresso il proprio parere nei termini previsti;</p>
+                </recital>
+            </recitals>
+            <citations eId="cits_6">
+                <citation eId="cits_6__cit_1">
+                    <p>Vista la deliberazione del Consiglio dei Ministri adottata nella riunione del 9 novembre 2007;</p>
+                </citation>
+            </citations>
+            <p>Sulla proposta del Ministro per le politiche europee e del Ministro dell'interno, di concerto con i Ministri degli affari esteri, della giustizia, dell'economia e delle finanze, della salute, del lavoro e della previdenza sociale, della solidarieta' sociale, per le riforme e le innovazioni nella pubblica amministrazione e per i diritti e le pari opportunita';</p>
+            <formula name="formulaFinalePreambolo">
+                <p>Emana il seguente decreto legislativo:</p>
+            </formula>
+        </preamble>
+        <body>
+            <chapter eId="chp_I">
+                <num>Capo I</num>
+                <heading>Disposizioni generali</heading>
+                <article eId="art_1">
+                    <num>Art. 1.</num>
+                    <heading> Finalita'</heading>
+                    <paragraph eId="art_1__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Il presente decreto stabilisce le norme sull'attribuzione a cittadini di Paesi non appartenenti all'Unione europea o ad apolidi, di seguito denominati: «stranieri», <ins eId="ins_1">((della qualifica di beneficiario di protezione internazionale nonche' norme sul contenuto dello status riconosciuto))</ins>. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_2">
+                    <num>Art. 2.</num>
+                    <heading> Definizioni</heading>
+                    <paragraph eId="art_2__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_2__para_1__intro_1">
+                                <p>Ai fini del presente decreto s'intende per: 
+ </p>
+                            </intro>
+                            <point eId="art_2__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>«protezione internazionale»: lo status di rifugiato e di protezione sussidiaria di cui alle lettere f) e h); 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_a-bis">
+                                <num>a-bis)</num>
+                                <content>
+                                    <p>'beneficiario di protezione internazionale': cittadino straniero cui e' stato riconosciuto lo status di rifugiato o lo status di protezione sussidiaria come definito alle lettere f) e h);</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>«Convenzione di Ginevra»: la Convenzione relativa allo status dei rifugiati, firmata a Ginevra il 28 luglio 1951, ratificata con <ref eId="content__ref_6" href="/akn/it/act/legge/stato/1954-07-24/722/!main">legge 24 luglio 1954, n. 722</ref>, e modificata dal Protocollo di New York del 31 gennaio 1967, ratificato con <ref eId="content__ref_7" href="/akn/it/act/legge/stato/1970-02-14/95/!main">legge 14 febbraio 1970, n. 95</ref>; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>«Carta delle Nazioni Unite»: Statuto delle Nazioni Unite, firmato a S. Francisco il 26 giugno 1945 e ratificato con <ref eId="content__ref_8" href="/akn/it/act/legge/stato/1957-08-17/848/!main">legge 17 agosto 1957, n. 848</ref>; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>«Convenzione sui diritti dell'Uomo»: la Convenzione europea di salvaguardia dei diritti dell'uomo e delle liberta' fondamentali, ratificata con <ref eId="content__ref_9" href="/akn/it/act/legge/stato/1955-08-04/848/!main">legge 4 agosto 1955, n. 848</ref>; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>«rifugiato»: cittadino straniero il quale, per il timore fondato di essere perseguitato per motivi di razza, religione, nazionalita', appartenenza ad un determinato gruppo sociale o opinione politica, si trova fuori dal territorio del Paese di cui ha la cittadinanza e non puo' o, a causa di tale timore, non vuole avvalersi della protezione di tale Paese, oppure apolide che si trova fuori dal territorio nel quale aveva precedentemente la dimora abituale per le stesse ragioni succitate e non puo' o, a causa di siffatto timore, non vuole farvi ritorno, ferme le cause di esclusione di cui all'articolo 10; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_f">
+                                <num>f)</num>
+                                <content>
+                                    <p>«status di rifugiato»: il riconoscimento da parte dello Stato di un cittadino straniero quale rifugiato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_g">
+                                <num>g)</num>
+                                <content>
+                                    <p>«persona ammissibile alla protezione sussidiaria»: cittadino straniero che non possiede i requisiti per essere riconosciuto come rifugiato ma nei cui confronti sussistono fondati motivi di ritenere che, se ritornasse nel Paese di origine, o, nel caso di un apolide, se ritornasse nel Paese nel quale aveva precedentemente la dimora abituale, correrebbe un rischio effettivo di subire un grave danno come definito dal presente decreto e il quale non puo' o, a causa di tale rischio, non vuole avvalersi della protezione di detto Paese; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_h">
+                                <num>h)</num>
+                                <content>
+                                    <p>«status di protezione sussidiaria»: il riconoscimento da parte dello Stato di uno straniero quale persona ammissibile alla protezione sussidiaria; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_i">
+                                <num>i)</num>
+                                <content>
+                                    <p>'domanda di protezione internazionale': la domanda di protezione presentata secondo le procedure previste dal <ref eId="content__ref_10" href="/akn/it/act/decretoLegislativo/stato/2008-01-28/25/!main">decreto legislativo 28 gennaio 2008, n. 25</ref>, diretta ad ottenere lo status di rifugiato o lo status di protezione sussidiaria;</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_i-bis">
+                                <num>i-bis)</num>
+                                <content>
+                                    <p>'richiedente': lo straniero che ha presentato una domanda di protezione internazionale sulla quale non e' ancora stata adottata una decisione definitiva;</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_l">
+                                <num>l)</num>
+                                <content>
+                                    <p>«familiari»: i seguenti soggetti appartenenti al nucleo familiare, gia' costituito prima dell'arrivo nel territorio nazionale, del beneficiario dello status di rifugiato o dello status di protezione sussidiaria, i quali si trovano nel territorio nazionale, in connessione alla domanda di protezione internazionale: 
+ a) il coniuge del beneficiario dello status di rifugiato o dello status di protezione sussidiaria; 
+ <ins eId="ins_5">((b) i figli minori del beneficiario dello status di rifugiato o dello status di protezione sussidiaria, anche adottati o nati fuori dal matrimonio, a condizione che non siano sposati. I minori affidati o sottoposti a tutela sono equiparati ai figli;))</ins>
+                                        <ins eId="ins_6">((b-bis) il genitore o altro adulto legalmente responsabile, ai sensi degli articoli 343 e seguenti del codice civile, del minore beneficiario dello status di rifugiato o dello status di protezione sussidiaria;))</ins>
+                                    </p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_m">
+                                <num>m)</num>
+                                <content>
+                                    <p>«minore non accompagnato»: lo straniero di eta' inferiore agli anni diciotto che si trova, per qualsiasi causa, nel territorio nazionale, privo di assistenza e di rappresentanza legale; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_2__para_1.__point_n">
+                                <num>n)</num>
+                                <content>
+                                    <p>«Paese di origine»: il Paese o i Paesi di cui il richiedente e' cittadino o, per un apolide, il Paese in cui aveva precedentemente la dimora abituale. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+            </chapter>
+            <chapter eId="chp_II">
+                <num>Capo II</num>
+                <heading>Valutazione delle domande di protezione internazionale</heading>
+                <article eId="art_3">
+                    <num>Art. 3.</num>
+                    <heading> Esame dei fatti e delle circostanze</heading>
+                    <paragraph eId="art_3__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Il richiedente e' tenuto a presentare, unitamente alla domanda di protezione internazionale o comunque appena disponibili, tutti gli elementi e la documentazione necessari a motivare la medesima domanda. L'esame e' svolto in cooperazione con il richiedente e riguarda tutti gli elementi significativi della domanda. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_3__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Gli elementi di cui al comma 1 che il richiedente e' tenuto a produrre comprendono le dichiarazioni e tutta la documentazione in possesso del richiedente in merito alla sua eta', condizione sociale, anche dei congiunti, se rilevante ai fini del riconoscimento, identita', cittadinanza, paesi e luoghi in cui ha soggiornato in precedenza, domande d'asilo pregresse, itinerari di viaggio, documenti di identita' e di viaggio, nonche' i motivi della sua domanda di protezione internazionale. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_3__para_3">
+                        <num>3.</num>
+                        <list>
+                            <intro eId="art_3__para_3__intro_1">
+                                <p>L'esame della domanda di protezione internazionale e' effettuato su base individuale e prevede la valutazione: 
+ </p>
+                            </intro>
+                            <point eId="art_3__para_3.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>di tutti i fatti pertinenti che riguardano il Paese d'origine al momento dell'adozione della decisione in merito alla domanda, comprese, ove possibile, le disposizioni legislative e regolamentari del Paese d'origine e relative modalita' di applicazione; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_3.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>della dichiarazione e della documentazione pertinenti presentate dal richiedente, che deve anche rendere noto se ha gia' subito o rischia di subire persecuzioni o danni gravi; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_3.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>della situazione individuale e delle circostanze personali del richiedente, in particolare la condizione sociale, il sesso e l'eta', al fine di valutare se, in base alle circostanze personali del richiedente, gli atti a cui e' stato o potrebbe essere esposto si configurino come persecuzione o danno grave; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_3.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>dell'eventualita' che le attivita' svolte dal richiedente, dopo aver lasciato il Paese d'origine, abbiano mirato, esclusivamente o principalmente, a creare le condizioni necessarie alla presentazione di una domanda di protezione internazionale, al fine di stabilire se dette attivita' espongano il richiedente a persecuzione o danno grave in caso di rientro nel Paese; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_3.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>dell'eventualita' che, in considerazione della documentazione prodotta o raccolta o delle dichiarazioni rese o, comunque, sulla base di altre circostanze, si possa presumere che il richiedente potrebbe far ricorso alla protezione di un altro Paese, di cui potrebbe dichiararsi cittadino. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_3__para_4">
+                        <num>4.</num>
+                        <content>
+                            <p>Il fatto che il richiedente abbia gia' subito persecuzioni o danni gravi o minacce dirette di persecuzioni o danni costituisce un serio indizio della fondatezza del timore del richiedente di subire persecuzioni o del rischio effettivo di subire danni gravi, salvo che si individuino elementi o motivi per ritenere che le persecuzioni o i danni gravi non si ripeteranno e purche' non sussistono gravi motivi umanitari che impediscono il ritorno nel Paese di origine. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_3__para_5">
+                        <num>5.</num>
+                        <list>
+                            <intro eId="art_3__para_5__intro_1">
+                                <p>Qualora taluni elementi o aspetti delle dichiarazioni del richiedente la protezione internazionale non siano suffragati da prove, essi sono considerati veritieri se l'autorita' competente a decidere sulla domanda ritiene che: 
+ </p>
+                            </intro>
+                            <point eId="art_3__para_5.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>il richiedente ha compiuto ogni ragionevole sforzo per circostanziare la domanda; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_5.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>tutti gli elementi pertinenti in suo possesso sono stati prodotti ed e' stata fornita una idonea motivazione dell'eventuale mancanza di altri elementi significativi; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_5.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>le dichiarazioni del richiedente sono ritenute coerenti e plausibili e non sono in contraddizione con le informazioni generali e specifiche pertinenti al suo caso, di cui si dispone; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_5.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>il richiedente ha presentato la domanda di protezione internazionale il prima possibile, a meno che egli non dimostri di aver avuto un giustificato motivo per ritardarla; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_3__para_5.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>dai riscontri effettuati il richiedente e', in generale, attendibile.<ins eId="ins_7">((Nel valutare l'attendibilita' del minore, si tiene conto anche del suo grado di maturita' e di sviluppo personale.))</ins>
+                                    </p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_4">
+                    <num>Art. 4.</num>
+                    <heading> Bisogno di protezione internazionale sorto
+ dopo aver lasciato il Paese d'origine</heading>
+                    <paragraph eId="art_4__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>La domanda di protezione internazionale puo' essere motivata da avvenimenti verificatisi dopo la partenza del richiedente dal suo Paese di origine ovvero da attivita' svolte dal richiedente dopo la sua partenza dal Paese d'origine, in particolare quando sia accertato che le attivita' addotte costituiscono l'espressione e la continuazione di convinzioni od orientamenti gia' manifestati nel Paese d'origine.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_5">
+                    <num>Art. 5.</num>
+                    <heading> Responsabili della persecuzione o del danno grave</heading>
+                    <paragraph eId="art_5__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_5__para_1__intro_1">
+                                <p>Ai fini della valutazione della domanda di protezione internazionale, i responsabili della persecuzione o del danno grave sono:
+ </p>
+                            </intro>
+                            <point eId="art_5__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>lo Stato;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_5__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>i partiti o le organizzazioni che controllano lo Stato o una parte consistente del suo territorio;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_5__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>soggetti non statuali, se i responsabili di cui alle lettere a) e b), comprese le organizzazioni internazionali, non possono o non vogliono fornire protezione, ai sensi dell'articolo 6, comma 2, contro persecuzioni o danni gravi.
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_6">
+                    <num>Art. 6.</num>
+                    <heading> Soggetti che offrono protezione</heading>
+                    <paragraph eId="art_6__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_6__para_1__intro_1">
+                                <p>Ai fini dell'esame della domanda di protezione internazionale, e' valutata la possibilita' di protezione da parte: 
+ </p>
+                            </intro>
+                            <point eId="art_6__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>dello Stato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_6__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>dei partiti o organizzazioni, comprese le organizzazioni internazionali, che controllano lo Stato o una parte consistente del suo territorio <ins eId="ins_8">((, a condizione che abbiano la volonta' e la capacita' di offrire protezione conformemente al comma 2.))</ins>
+                                    </p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_6__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>La protezione di cui al comma 1 <ins eId="ins_9">((e' effettiva e non temporanea e))</ins> consiste nell'adozione di adeguate misure per impedire che possano essere inflitti atti persecutori o danni gravi, avvalendosi tra l'altro di un sistema giuridico effettivo che permetta di individuare, di perseguire penalmente e di punire gli atti che costituiscono persecuzione o danno grave, e nell'accesso da parte del richiedente a tali misure. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_6__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Per stabilire se un'organizzazione internazionale controlla uno Stato o una parte consistente del suo territorio e se fornisce protezione, ai sensi del comma 2, si tiene conto degli eventuali orientamenti contenuti negli atti emanati dal Consiglio dell'Unione europea e, ove ritenuto opportuno, delle valutazioni di altre competenti organizzazioni internazionali e in particolare dell'Alto Commissariato delle Nazioni Unite per i rifugiati. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+            </chapter>
+            <chapter eId="chp_III">
+                <num>Capo III</num>
+                <heading>Status di rifugiato</heading>
+                <article eId="art_7">
+                    <num>Art. 7.</num>
+                    <heading> Atti di persecuzione</heading>
+                    <paragraph eId="art_7__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_7__para_1__intro_1">
+                                <p>Ai fini della valutazione del riconoscimento dello status di rifugiato, gli atti di persecuzione, ai sensi dell'articolo 1 A della Convenzione di Ginevra, devono alternativamente: 
+ </p>
+                            </intro>
+                            <point eId="art_7__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>essere sufficientemente gravi, per loro natura o frequenza, da rappresentare una violazione grave dei diritti umani fondamentali, in particolare dei diritti per cui qualsiasi deroga e' esclusa, ai sensi dell'articolo 15, paragrafo 2, della Convenzione sui diritti dell'Uomo; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>costituire la somma di diverse misure, tra cui violazioni dei diritti umani, il cui impatto sia sufficientemente grave da esercitare sulla persona un effetto analogo a quello di cui alla lettera a). 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_7__para_2">
+                        <num>2.</num>
+                        <list>
+                            <intro eId="art_7__para_2__intro_1">
+                                <p>Gli atti di persecuzione di cui al comma 1 possono, tra l'altro, assumere la forma di: 
+ </p>
+                            </intro>
+                            <point eId="art_7__para_2.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>atti di violenza fisica o psichica, compresa la violenza sessuale; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>provvedimenti legislativi, amministrativi, di polizia o giudiziari, discriminatori per loro stessa natura o attuati in modo discriminatorio; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>azioni giudiziarie o sanzioni penali sproporzionate o discriminatorie; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>rifiuto di accesso ai mezzi di tutela giuridici e conseguente sanzione sproporzionata o discriminatoria; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>azioni giudiziarie o sanzioni penali in conseguenza del rifiuto di prestare servizio militare in un conflitto, quando questo potrebbe comportare la commissione di crimini, reati o atti che rientrano nelle clausole di esclusione di cui all'articolo 10, comma 2; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_e-bis">
+                                <num>e-bis)</num>
+                                <content>
+                                    <p>azioni giudiziarie o sanzioni penali sproporzionate o discriminatorie che comportano gravi violazioni di diritti umani fondamentali in conseguenza del rifiuto di prestare servizio militare per motivi di natura morale, religiosa, politica o di appartenenza etnica o nazionale;</p>
+                                </content>
+                            </point>
+                            <point eId="art_7__para_2.__point_f">
+                                <num>f)</num>
+                                <content>
+                                    <p>atti specificamente diretti contro un genere sessuale o contro l'infanzia. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_8">
+                    <num>Art. 8.</num>
+                    <heading> Motivi di persecuzione</heading>
+                    <paragraph eId="art_8__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_8__para_1__intro_1">
+                                <p>Al fine del riconoscimento dello status di rifugiato, gli atti di persecuzione di cui all'articolo 7 <ins eId="ins_11">((o la mancanza di protezione contro tali atti))</ins> devono essere riconducibili ai motivi, di seguito definiti: 
+ </p>
+                            </intro>
+                            <point eId="art_8__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>«razza»: si riferisce, in particolare, a considerazioni inerenti al colore della pelle, alla discendenza o all'appartenenza ad un determinato gruppo etnico; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_8__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>«religione»: include, in particolare, le convinzioni teiste, non teiste e ateiste, la partecipazione a, o l'astensione da, riti di culto celebrati in privato o in pubblico, sia singolarmente sia in comunita', altri atti religiosi o professioni di fede, nonche' le forme di comportamento personale o sociale fondate su un credo religioso o da esso prescritte; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_8__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>«nazionalita»: non si riferisce esclusivamente alla cittadinanza, o all'assenza di cittadinanza, ma designa, in particolare, l'appartenenza ad un gruppo caratterizzato da un'identita' culturale, etnica o linguistica, comuni origini geografiche o politiche o la sua affinita' con la popolazione di un altro Stato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_8__para_1.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>«particolare gruppo sociale»: e' quello costituito da membri che condividono una caratteristica innata o una storia comune, che non puo' essere mutata oppure condividono una caratteristica o una fede che e' cosi' fondamentale per l'identita' o la coscienza che una persona non dovrebbe essere costretta a rinunciarvi, ovvero quello che possiede un'identita' distinta nel Paese di origine, perche' vi e' percepito come diverso dalla societa' circostante. In funzione della situazione nel Paese d'origine, un particolare gruppo sociale puo' essere individuato in base alla caratteristica comune dell'orientamento sessuale, fermo restando che tale orientamento non includa atti penalmente rilevanti ai sensi della legislazione italiana <ins eId="ins_12">((ai fini della determinazione dell'appartenenza a un determinato gruppo sociale o dell'individuazione delle caratteristiche proprie di tale gruppo, si tiene debito conto delle considerazioni di genere, compresa l'identita' di genere;))</ins>
+                                    </p>
+                                </content>
+                            </point>
+                            <point eId="art_8__para_1.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>«opinione politica»: si riferisce, in particolare, alla professione di un'opinione, un pensiero o una convinzione su una questione inerente ai potenziali persecutori di cui all'articolo 5 e alle loro politiche o ai loro metodi, indipendentemente dal fatto che il richiedente abbia tradotto tale opinione, pensiero o convinzione in atti concreti. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_8__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Nell'esaminare se un richiedente abbia un timore fondato di essere perseguitato, e' irrilevante che il richiedente possegga effettivamente le caratteristiche razziali, religiose, nazionali, sociali o politiche che provocano gli atti di persecuzione, purche' una siffatta caratteristica gli venga attribuita dall'autore delle persecuzioni. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_9">
+                    <num>Art. 9.</num>
+                    <heading> Cessazione</heading>
+                    <paragraph eId="art_9__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_9__para_1__intro_1">
+                                <p>Uno straniero cessa di essere rifugiato quando: 
+ </p>
+                            </intro>
+                            <point eId="art_9__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>si sia volontariamente avvalso di nuovo della protezione del Paese di cui ha la cittadinanza; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_9__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>avendo perso la cittadinanza, l'abbia volontariamente riacquistata; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_9__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>abbia acquistato la cittadinanza italiana ovvero altra cittadinanza e goda della protezione del Paese di cui ha acquistato la cittadinanza; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_9__para_1.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>si sia volontariamente ristabilito nel Paese che ha lasciato o in cui non ha fatto ritorno per timore di essere perseguitato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_9__para_1.__point_e">
+                                <num>e)</num>
+                                <content>
+                                    <p>non possa piu' rinunciare alla protezione del Paese di cui ha la cittadinanza, perche' sono venute meno le circostanze che hanno determinato il riconoscimento dello status di rifugiato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_9__para_1.__point_f">
+                                <num>f)</num>
+                                <content>
+                                    <p>se trattasi di un apolide, sia in grado di tornare nel Paese nel quale aveva la dimora abituale, perche' sono venute meno le circostanze che hanno determinato il riconoscimento dello status di rifugiato. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_9__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Per l'applicazione delle lettere e) ed f) del comma 1, il cambiamento delle circostanze deve avere una natura non temporanea e tale da eliminare il fondato timore di persecuzioni e non devono sussistere gravi motivi umanitari che impediscono il ritorno nel Paese di origine. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_9__para_2-bis">
+                        <num>2-bis.</num>
+                        <content>
+                            <p>Le disposizioni di cui alle lettere e) e f) del comma 1 non si applicano quando il rifugiato puo' addurre motivi imperativi derivanti da precedenti persecuzioni tali da rifiutare di avvalersi della protezione del Paese di cui ha la cittadinanza ovvero, se si tratta di apolide, del Paese nel quale aveva la dimora abituale. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((2-ter. Per l'applicazione del comma 1, lettera d), e' rilevante ogni rientro, anche di breve durata, nel Paese di origine, ove non giustificato da gravi e comprovati motivi e per il periodo strettamente necessario))</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_9__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>La cessazione e' dichiarata sulla base di una valutazione individuale della situazione personale dello straniero. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_10">
+                    <num>Art. 10.</num>
+                    <heading> Esclusione</heading>
+                    <paragraph eId="art_10__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Lo straniero e' escluso dallo status di rifugiato se rientra nel campo d'applicazione dell'articolo 1 D della Convenzione di Ginevra, relativo alla protezione o assistenza di un organo o di un'agenzia delle Nazioni Unite diversi dall'Alto Commissariato delle Nazioni Unite per i rifugiati. Quando tale protezione o assistenza cessa per qualsiasi motivo, senza che la posizione di tali stranieri sia stata definitivamente stabilita in conformita' delle pertinenti risoluzioni adottate dall'assemblea generale delle Nazioni Unite, essi hanno pieno accesso alle forme di protezione previste dal presente decreto. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_10__para_2">
+                        <num>2.</num>
+                        <list>
+                            <intro eId="art_10__para_2__intro_1">
+                                <p>Lo straniero e' altresi' escluso dallo status di rifugiato ove sussistono fondati motivi per ritenere: 
+ </p>
+                            </intro>
+                            <point eId="art_10__para_2.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>che abbia commesso un crimine contro la pace, un crimine di guerra o un crimine contro l'umanita', quali definiti dagli strumenti internazionali relativi a tali crimini; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_10__para_2.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>che abbia commesso al di fuori del territorio italiano, <ins eId="ins_14">((prima di esservi ammesso in qualita' di richiedente,))</ins> un reato grave ovvero che abbia commesso atti particolarmente crudeli, anche se perpetrati con un dichiarato obiettivo politico, che possano essere classificati quali reati gravi. La gravita' del reato e' valutata anche tenendo conto della pena prevista dalla legge italiana per il reato non inferiore nel minimo a quattro anni o nel massimo a dieci anni; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_10__para_2.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>che si sia reso colpevole di atti contrari alle finalita' e ai principi delle Nazioni Unite, quali stabiliti nel preambolo e negli articoli 1 e 2 della Carta delle Nazioni Unite. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_10__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Il comma 2 si applica anche alle persone che istigano o altrimenti concorrono alla commissione dei crimini, reati o atti in esso previsti. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_11">
+                    <num>Art. 11.</num>
+                    <heading> Riconoscimento dello status di rifugiato</heading>
+                    <paragraph eId="art_11__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>La domanda di protezione internazionale ha come esito il riconoscimento dello status di rifugiato quando la relativa domanda e' valutata positivamente in relazione a quanto stabilito negli articoli 3, 4, 5 e 6, in presenza dei presupposti di cui agli articoli 7 e 8, salvo che non sussistano le cause di cessazione e di esclusione di cui agli articoli 9 e 10.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_12">
+                    <num>Art. 12.</num>
+                    <heading> Diniego dello status di rifugiato</heading>
+                    <paragraph eId="art_12__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_12__para_1__intro_1">
+                                <p>Sulla base di una valutazione individuale, lo status di rifugiato non e' riconosciuto quando: 
+ </p>
+                            </intro>
+                            <point eId="art_12__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>in conformita' a quanto stabilito dagli articoli 3, 4, 5 e 6 non sussistono i presupposti di cui agli articoli 7 e 8 ovvero sussistono le cause di esclusione di cui all'articolo 10; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_12__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>sussistono fondati motivi per ritenere che lo straniero costituisce un pericolo per la sicurezza dello Stato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_12__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>lo straniero costituisce un pericolo per l'ordine e la sicurezza pubblica, essendo stato condannato con sentenza definitiva per i reati previsti dall'articolo 407, comma 2, lettera a), <ins eId="ins_15">((del codice di procedura penale ovvero dagli articoli 336, 583, 583-bis, 583-quater, 624 nell'ipotesi aggravata di cui all'articolo 625, primo comma, numero 3), e 624-bis, primo comma, del codice penale. I reati di cui all'articolo 407, comma 2, lettera a), numeri 2), 6) e 7-bis), del codice di procedura penale, sono rilevanti anche nelle fattispecie non aggravate))</ins>. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_13">
+                    <num>Art. 13.</num>
+                    <heading> Revoca dello status di rifugiato</heading>
+                    <paragraph eId="art_13__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_13__para_1__intro_1">
+                                <p>Fatto salvo l'obbligo del rifugiato di rivelare tutti i fatti pertinenti e di produrre tutta la pertinente documentazione in suo possesso, la revoca dello status di rifugiato di uno straniero e' adottata su base individuale, qualora, successivamente al riconoscimento dello status di rifugiato, e' accertato che:
+ </p>
+                            </intro>
+                            <point eId="art_13__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>sussistono le condizioni di cui all'articolo 12;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_13__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>il riconoscimento dello status di rifugiato e' stato determinato, in modo esclusivo, da fatti presentati in modo erroneo o dalla loro omissione, o dal ricorso ad una falsa documentazione dei medesimi fatti.
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+            </chapter>
+            <chapter eId="chp_IV">
+                <num>Capo IV</num>
+                <heading>Protezione sussidiaria</heading>
+                <article eId="art_14">
+                    <num>Art. 14.</num>
+                    <heading> Danno grave</heading>
+                    <paragraph eId="art_14__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_14__para_1__intro_1">
+                                <p>Ai fini del riconoscimento della protezione sussidiaria, sono considerati danni gravi:
+ </p>
+                            </intro>
+                            <point eId="art_14__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>la condanna a morte o all'esecuzione della pena di morte;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_14__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>la tortura o altra forma di pena o trattamento inumano o degradante ai danni del richiedente nel suo Paese di origine;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_14__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>la minaccia grave e individuale alla vita o alla persona di un civile derivante dalla violenza indiscriminata in situazioni di conflitto armato interno o internazionale.
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_15">
+                    <num>Art. 15.</num>
+                    <heading> Cessazione</heading>
+                    <paragraph eId="art_15__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>La cessazione dello status di protezione sussidiaria e' dichiarata su base individuale quando le circostanze che hanno indotto al riconoscimento sono venute meno o sono mutate in misura tale che la protezione non e' piu' necessaria. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_15__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Per produrre gli effetti di cui al comma 1, e' necessario che le mutate circostanze abbiano natura cosi' significativa e non temporanea che la persona ammessa al beneficio della protezione sussidiaria non sia piu' esposta al rischio effettivo di danno grave di cui all'articolo 14 e non devono sussistere gravi motivi umanitari che impediscono il ritorno nel Paese di origine. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_15__para_2-bis">
+                        <num>2-bis.</num>
+                        <content>
+                            <p>La disposizione di cui al comma 1 non si applica quando il titolare di protezione sussidiaria puo' addurre motivi imperativi derivanti da precedenti persecuzioni tali da rifiutare di avvalersi della protezione del Paese di cui ha la cittadinanza ovvero, se si tratta di apolide, del Paese nel quale aveva la dimora abituale. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((2-ter. Ai fini di cui al comma 2, e' rilevante ogni rientro, anche di breve durata, nel Paese di origine, ove non giustificato da gravi e comprovati motivi e per il periodo strettamente necessario))</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_16">
+                    <num>Art. 16.</num>
+                    <heading> Esclusione</heading>
+                    <paragraph eId="art_16__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_16__para_1__intro_1">
+                                <p>Lo status di protezione sussidiaria e' escluso quando sussistono fondati motivi per ritenere che lo straniero: 
+ </p>
+                            </intro>
+                            <point eId="art_16__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>abbia commesso un crimine contro la pace, un crimine di guerra o un crimine contro l'umanita', quali definiti dagli strumenti internazionali relativi a tali crimini; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_16__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>abbia commesso, al di fuori del territorio nazionale, prima di esservi ammesso in qualita' di richiedente, un reato grave. La gravita' del reato e' valutata anche tenendo conto della pena, non inferiore nel minimo a quattro anni o nel massimo a dieci anni, prevista dalla legge italiana per il reato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_16__para_1.__point_c">
+                                <num>c)</num>
+                                <content>
+                                    <p>si sia reso colpevole di atti contrari alle finalita' e ai principi delle Nazioni Unite, quali stabiliti nel preambolo e negli articoli 1 e 2 della Carta delle Nazioni Unite; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_16__para_1.__point_d">
+                                <num>d)</num>
+                                <content>
+                                    <p>costituisca un pericolo per la sicurezza dello Stato. 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_16__para_1.__point_d-bis">
+                                <num>d-bis)</num>
+                                <content>
+                                    <p>costituisca un pericolo per l'ordine e la sicurezza pubblica, essendo stato condannato con sentenza definitiva per i reati previsti dall'articolo 407, comma 2, lettera a), <ins eId="ins_17">((del codice di procedura penale ovvero dagli articoli 336, 583, 583-bis, 583-quater, 624 nell'ipotesi aggravata di cui all'articolo 625, primo comma, numero 3), e 624-bis, primo comma, del codice penale. I reati di cui all'articolo 407, comma 2, lettera a), numeri 2), 6) e 7-bis), del codice di procedura penale, sono rilevanti anche nelle fattispecie non aggravate.))</ins>. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                    <paragraph eId="art_16__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Il comma 1 si applica anche alle persone che istigano o altrimenti concorrono alla commissione dei crimini, reati o atti in esso menzionati. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_17">
+                    <num>Art. 17.</num>
+                    <heading> Riconoscimento dello status di protezione sussidiaria</heading>
+                    <paragraph eId="art_17__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>La domanda di protezione internazionale ha come esito il riconoscimento dello status di protezione sussidiaria, in conformita' a quanto stabilito dagli articoli 3, 4, 5 e 6, se ricorrono i presupposti di cui all'articolo 14 e non sussistono le cause di cessazione e di esclusione di cui agli articoli 15 e 16.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_18">
+                    <num>Art. 18.</num>
+                    <heading> Revoca dello status di protezione sussidiaria</heading>
+                    <paragraph eId="art_18__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_18__para_1__intro_1">
+                                <p>La revoca dello status di protezione sussidiaria di uno straniero e' adottata se, successivamente al riconoscimento dello status, e' accertato che:
+ </p>
+                            </intro>
+                            <point eId="art_18__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>sussistono le cause di esclusione di cui all'articolo 16;
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_18__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>il riconoscimento dello status di protezione sussidiaria e' stato determinato, in modo esclusivo, da fatti presentati in modo erroneo o dalla loro omissione, o dal ricorso ad una falsa documentazione dei medesimi fatti.
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+            </chapter>
+            <chapter eId="chp_V">
+                <num>Capo V</num>
+                <heading>Contenuto della protezione internazionale</heading>
+                <article eId="art_19">
+                    <num>Art. 19.</num>
+                    <heading> Disposizioni generali</heading>
+                    <paragraph eId="art_19__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Le disposizioni del presente decreto non pregiudicano i diritti stabiliti dalla Convenzione di Ginevra. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_19__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Nell'attuazione delle disposizioni del presente capo, si tiene conto, sulla base di una valutazione individuale, della specifica situazione delle persone vulnerabili, quali i minori, i disabili, gli anziani, le donne in stato di gravidanza, i genitori singoli con figli minori <ins eId="ins_18">((i minori non accompagnati, le vittime della tratta di esseri umani, le persone con disturbi psichici,))</ins>, le persone che hanno subito torture, stupri o altre forme gravi di violenza psicologica, fisica o sessuale. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_19__para_2-bis">
+                        <num>2-bis.</num>
+                        <content>
+                            <p>Nell'attuazione delle disposizioni del presente decreto e' preso in considerazione con carattere di priorita' il superiore interesse del minore.</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>))</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_20">
+                    <num>Art. 20.</num>
+                    <heading> Protezione dall'espulsione</heading>
+                    <paragraph eId="art_20__para_1">
+                        <num>1.</num>
+                        <list>
+                            <intro eId="art_20__para_1__intro_1">
+                                <p>Fermo restando quanto previsto dall'articolo 19, comma 1, del testo unico delle disposizioni concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero, di cui al <ref eId="content__ref_11" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, <ins eId="ins_20">((ed in conformita' degli obblighi internazionali ratificati dall'Italia,))</ins> il rifugiato o lo straniero ammesso alla protezione sussidiaria e' espulso quando: 
+ </p>
+                            </intro>
+                            <point eId="art_20__para_1.__point_a">
+                                <num>a)</num>
+                                <content>
+                                    <p>sussistono motivi per ritenere che rappresenti un pericolo per la sicurezza dello Stato; 
+</p>
+                                </content>
+                            </point>
+                            <point eId="art_20__para_1.__point_b">
+                                <num>b)</num>
+                                <content>
+                                    <p>rappresenta un pericolo per l'ordine e la sicurezza pubblica, essendo stato condannato con sentenza definitiva per un reato per il quale e' prevista la pena della reclusione non inferiore nel minimo a quattro anni o nel massimo a dieci anni. 
+</p>
+                                </content>
+                            </point>
+                        </list>
+                    </paragraph>
+                </article>
+                <article eId="art_21">
+                    <num>Art. 21.</num>
+                    <heading> Informazioni</heading>
+                    <paragraph eId="art_21__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Unitamente alla decisione che riconosce la protezione internazionale e' consegnato allo straniero interessato un opuscolo contenente informazioni sui diritti e gli obblighi connessi allo status di protezione riconosciuto, redatto in una lingua che si presume a lui comprensibile o comunque in lingua inglese, francese, spagnola o araba.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_21__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Per garantire la piu' ampia informazione sui diritti e doveri degli status riconosciuti, in sede di audizione del richiedente lo status di protezione internazionale e' comunque fornita una informazione preliminare sui medesimi diritti e doveri.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_22">
+                    <num>Art. 22.</num>
+                    <heading> Mantenimento del nucleo familiare</heading>
+                    <paragraph eId="art_22__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>E' tutelata l'unita' del nucleo familiare dei beneficiari dello status di rifugiato e dello status di protezione sussidiaria. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_22__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>I familiari che non hanno individualmente diritto allo status di protezione internazionale hanno i medesimi diritti riconosciuti al familiare titolare dello status. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_22__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Ai familiari del titolare dello <ins eId="ins_21">((status di protezione internazionale))</ins> presenti sul territorio nazionale che individualmente non hanno diritto a tale status e' rilasciato il permesso di soggiorno per motivi familiari ai sensi dell'articolo 30 del testo unico delle disposizioni concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero, di cui al <ref eId="content__ref_12" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_22__para_4">
+                        <num>4.</num>
+                        <content>
+                            <p>Lo straniero ammesso alla protezione sussidiaria ha diritto al ricongiungimento familiare ai sensi e alle condizioni previste dall'<ref eId="content__ref_13" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main#art_29bis">articolo 29-bis del decreto legislativo 25 luglio 1998, n. 286</ref>.</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>))</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_22__para_5">
+                        <num>5.</num>
+                        <content>
+                            <p>Le disposizioni di cui al presente articolo non si applicano ai familiari che sono o sarebbero esclusi dallo status di rifugiato o dalla protezione sussidiaria ai sensi degli articoli 10, 12 e 16. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_23">
+                    <num>Art. 23.</num>
+                    <heading> Permesso di soggiorno</heading>
+                    <paragraph eId="art_23__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Il permesso di soggiorno per asilo rilasciato ai titolari dello status di rifugiato ha validita' quinquennale ed e' rinnovabile. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_23__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Ai titolari dello status di protezione sussidiaria e' rilasciato un permesso di soggiorno per protezione sussidiaria <ins eId="ins_23">((con validita' quinquennale))</ins> rinnovabile previa verifica della permanenza delle condizioni che hanno consentito il riconoscimento della protezione sussidiaria. Tale permesso di soggiorno consente l'accesso al lavoro e allo studio ed e' convertibile per motivi di lavoro, sussistendone i requisiti. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_24">
+                    <num>Art. 24.</num>
+                    <heading> Documenti di viaggio</heading>
+                    <paragraph eId="art_24__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Per consentire i viaggi al di fuori del territorio nazionale, la competente questura rilascia ai titolari dello status di rifugiato un documento di viaggio di validita' quinquennale rinnovabile secondo i1 modello allegato alla Convenzione di Ginevra.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_24__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Quando sussistono fondate ragioni che non consentono al titolare dello status di protezione sussidiaria di chiedere il passaporto alle autorita' diplomatiche del Paese di cittadinanza, la questura competente rilascia allo straniero interessato il titolo di viaggio per stranieri. Qualora sussistano ragionevoli motivi per dubitare dell'identita' del titolare della protezione sussidiaria, il documento e' rifiutato o ritirato.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_24__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Il rilascio dei documenti di cui ai commi 1 e 2 e' rifiutato ovvero, nel caso di rilascio, il documento e' ritirato se sussistono gravissimi motivi attinenti la sicurezza nazionale e l'ordine pubblico che ne impediscono il rilascio.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_25">
+                    <num>Art. 25.</num>
+                    <heading> Accesso all'occupazione</heading>
+                    <paragraph eId="art_25__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>I titolari dello status di rifugiato e dello status di protezione sussidiaria hanno diritto di godere del medesimo trattamento previsto per il cittadino italiano in materia di lavoro subordinato, lavoro autonomo, per l'iscrizione agli albi professionali, <ins eId="ins_24">((per la formazione professionale, compresi i corsi di aggiornamento, per il tirocinio sul luogo di lavoro e per i servizi resi dai centri per l'impiego di cui all'articolo 4 del decreto legislativo 23 dicembre 1997, n. 469.))</ins>
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_25__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>E' consentito al titolare dello status di rifugiato e dello status di protezione sussidiaria l'accesso al pubblico impiego, con le modalita' e le limitazioni previste per i cittadini dell'Unione europea. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_26">
+                    <num>Art. 26.</num>
+                    <heading> Accesso all'istruzione</heading>
+                    <paragraph eId="art_26__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>I minori titolari dello status di rifugiato o dello status di protezione sussidiaria hanno accesso agli studi di ogni ordine e grado, secondo le modalita' previste per il cittadino italiano. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_26__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>I maggiorenni, titolari dello status di rifugiato o dello status di protezione sussidiaria, hanno diritto di accedere al sistema di istruzione generale e di aggiornamento e perfezionamento professionale nei limiti e nei modi stabiliti per gli stranieri regolarmente soggiornanti. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_26__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Si applicano ai titolari dello status di rifugiato o di protezione sussidiaria le disposizioni concernenti il riconoscimento di diplomi, certificati ed altri titoli stranieri per i cittadini italiani. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_26__para_3-bis">
+                        <num>3-bis.</num>
+                        <content>
+                            <p>Per il riconoscimento delle qualifiche professionali, dei diplomi, dei certificati e di altri titoli conseguiti all'estero dai titolari dello status di rifugiato o dello status di protezione sussidiaria, le amministrazioni competenti individuano sistemi appropriati di valutazione, convalida e accreditamento che consentono il riconoscimento dei titoli ai sensi dell'<ref eId="content__ref_14" href="/akn/it/act/decretoDelPresidenteDellaRepubblica/stato/1999-08-31/394/!main#art_49">articolo 49 del decreto del Presidente della Repubblica 31 agosto 1999, n. 394</ref>, anche in assenza di certificazione da parte dello Stato in cui e' stato ottenuto il titolo, ove l'interessato dimostra di non poter acquisire detta certificazione.</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>))</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_27">
+                    <num>Art. 27.</num>
+                    <heading> Assistenza sanitaria e sociale</heading>
+                    <paragraph eId="art_27__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>I titolari dello status di rifugiato e dello status di protezione sussidiaria hanno diritto al medesimo trattamento riconosciuto al cittadino italiano in materia di assistenza sociale e sanitaria. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_27__para_1-bis">
+                        <num>1-bis.</num>
+                        <content>
+                            <p>Il Ministero della salute adotta linee guida per la programmazione degli interventi di assistenza e riabilitazione nonche' per il trattamento dei disturbi psichici dei titolari dello status di rifugiato e dello status di protezione sussidiaria che hanno subito torture, stupri o altre forme gravi di violenza psicologica, fisica o sessuale, compresi eventuali programmi di formazione e aggiornamento specifici rivolti al personale sanitario da realizzarsi nell'ambito delle risorse finanziarie disponibili a legislazione vigente.</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>))</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_28">
+                    <num>Art. 28.</num>
+                    <heading> Minori non accompagnati</heading>
+                    <paragraph eId="art_28__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Quando e' accertata la presenza sul territorio nazionale di minori non accompagnati richiedenti la protezione internazionale si applicano gli articoli 343, e seguenti, del <ref eId="content__ref_15" href="/akn/it/act/codice.civile/stato/1942-03-16/262/!main">codice civile</ref>. Nelle more dell'adozione dei provvedimenti conseguenti, il minore che abbia espresso la volonta' di richiedere la protezione internazionale puo' anche beneficiare dei servizi erogati dall'ente locale nell'ambito del sistema di protezione per richiedenti asilo e rifugiati di cui all'<ref eId="content__ref_16" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1sexies">articolo 1-sexies del decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_17" href="/akn/it/act/legge/stato/1990-02-28/39/!main">legge 28 febbraio 1990, n. 39</ref>, nell'ambito delle risorse del Fondo nazionale per le politiche e i servizi dell'asilo, di cui all'articolo 1-septies del citato <ref eId="content__ref_18" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main">decreto-legge n. 416 del 30 dicembre 1989</ref>. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_28__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Ferma la possibilita' di beneficiare degli specifici programmi di accoglienza, riservati a categorie di soggetti vulnerabili ai sensi dell'<ref eId="content__ref_19" href="/akn/it/act/decretoLegislativo/stato/2005-05-30/140/!main#art_8">articolo 8 del decreto legislativo 30 maggio 2005, n. 140</ref>, il minore non accompagnato richiedente la protezione internazionale e' affidato dalla competente autorita' giudiziaria a un familiare, adulto e regolarmente soggiornante, qualora questi sia stato rintracciato sul territorio nazionale; ove non sia possibile, si provvede ai sensi dell'<ref eId="content__ref_20" href="/akn/it/act/legge/stato/1983-05-04/184/!main#art_2-com1">articolo 2, commi 1</ref> e <ref eId="content__ref_21" href="/akn/it/act/legge/stato/1983-05-04/184/!main#art_2-com2">2, della legge 4 maggio 1983, n. 184</ref>, e successive modificazioni. I provvedimenti di cui al presente comma sono adottati nell'interesse prevalente del minore, avendo comunque cura di non separare il medesimo dai fratelli, eventualmente presenti sul territorio nazionale, e di limitarne al minimo gli spostamenti sul territorio stesso. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_28__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Le iniziative per l'individuazione dei familiari del minore non accompagnato, titolare dello status di protezione internazionale, sono assunte <ins eId="ins_27">((, quanto prima, a seguito del riconoscimento della protezione ove non avviate in precedenza,))</ins> nell'ambito delle convenzioni di cui all'<ref eId="content__ref_22" href="/akn/it/act/decretoLegislativo/stato/2005-05-30/140/!main#art_8">articolo 8 del decreto legislativo 30 maggio 2005, n. 140</ref>, da stipulare anche con organismi o associazioni umanitarie a carattere nazionale o internazionale. I relativi programmi sono attuati nel superiore interesse del minore e con l'obbligo della assoluta riservatezza in modo da tutelare la sicurezza del titolare della protezione internazionale e dei suoi familiari. 
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_29">
+                    <num>Art. 29.</num>
+                    <heading> Libera circolazione, integrazione e alloggio</heading>
+                    <paragraph eId="art_29__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Fatto salvo quanto stabilito dall'articolo 6, comma 6, del testo unico delle disposizioni concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero, di cui al <ref eId="content__ref_23" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, i titolari dello status di rifugiato e di protezione sussidiaria possono circolare liberamente sul territorio nazionale. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>((</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_29__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Nell'attuazione delle misure e dei servizi di cui all'<ref eId="content__ref_24" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1sexies">articolo 1-sexies del decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_25" href="/akn/it/act/legge/stato/1990-02-28/39/!main#art_5">legge 28 febbraio 1990, n. 39, all'articolo 5</ref> del <ref eId="content__ref_26" href="/akn/it/act/decretoLegislativo/stato/2005-05-30/140/!main#art_42">decreto legislativo 30 maggio 2005, n. 140, ed all'articolo 42</ref> del <ref eId="content__ref_27" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, si tiene conto anche delle esigenze di integrazione dei beneficiari di protezione internazionale, promuovendo, nei limiti delle risorse disponibili, ogni iniziativa adeguata a superare la condizione di svantaggio determinata dalla perdita della protezione del Paese di origine e a rimuovere gli ostacoli che di fatto ne impediscono la piena integrazione. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_29__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Ai fini della programmazione degli interventi e delle misure volte a favorire l'integrazione dei beneficiari di protezione internazionale, il Tavolo di coordinamento nazionale insediato presso il Ministero dell'interno - Dipartimento per le liberta' civili e l'immigrazione con l'obiettivo di ottimizzare i sistemi di accoglienza dei richiedenti e/o titolari di protezione internazionale secondo gli indirizzi sanciti d'intesa con la Conferenza unificata di cui all'<ref eId="content__ref_28" href="/akn/it/act/decretoLegislativo/stato/1997-08-28/281/!main#art_8">articolo 8 del decreto legislativo 28 agosto 1997, n. 281</ref>, predispone, altresi', ogni due anni, salva la necessita' di un termine piu' breve, un Piano nazionale che individua le linee di intervento per realizzare l'effettiva integrazione dei beneficiari di protezione internazionale, con particolare riguardo all'inserimento socio-lavorativo, anche promuovendo specifici programmi di incontro tra domanda e offerta di lavoro, all'accesso all'assistenza sanitaria e sociale, all'alloggio, alla formazione linguistica e all'istruzione nonche' al contrasto delle discriminazioni. Il Piano indica una stima dei destinatari delle misure di integrazione nonche' specifiche misure attuative della programmazione dei pertinenti fondi europei predisposta dall'autorita' responsabile. Il predetto Tavolo e' composto da rappresentanti del Ministero dell'interno, dell'Ufficio del Ministro per l'integrazione, del Ministero del lavoro e delle politiche sociali, delle Regioni, dell'Unione delle province d'Italia (UPI) e dell'Associazione nazionale dei comuni italiani (ANCI), ed e' integrato, in sede di programmazione delle misure di cui alla presente disposizione, con un rappresentante del Ministro delegato alle pari opportunita', un rappresentante dell'Alto Commissariato delle Nazioni Unite per i Rifugiati (UNHCR), un rappresentante, della Commissione nazionale per il diritto di asilo e, a seconda delle materie trattate, con rappresentanti delle altre amministrazioni o altri soggetti interessati. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_29__para_3-bis">
+                        <num>3-bis.</num>
+                        <content>
+                            <p>All'attuazione delle disposizioni di cui al comma 3, le Amministrazioni interessate provvedono con le risorse umane, strumentali e finanziarie disponibili a legislazione vigente. La partecipazione alle sedute del Tavolo non da' luogo alla corresponsione di compensi, gettoni, emolumenti, indennita' o rimborsi spese comunque denominati. 
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_29__para_3-ter">
+                        <num>3-ter.</num>
+                        <content>
+                            <p>L'accesso ai benefici relativi all'alloggio previsti dall'<ref eId="content__ref_29" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main#art_40-com6">articolo 40, comma 6, del decreto legislativo 25 luglio 1998, n. 286</ref>, e' consentito ai titolari dello status di rifugiato e di protezione sussidiaria, in condizioni di parita' con i cittadini italiani.</p>
+                        </content>
+                    </paragraph>
+                    <paragraph>
+                        <content>
+                            <p>))</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_30">
+                    <num>Art. 30.</num>
+                    <heading> Rimpatrio</heading>
+                    <paragraph eId="art_30__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>L'assistenza al rimpatrio volontario dei titolari della protezione internazionale e' disposta nell'ambito dei programmi attuati ai sensi dell'<ref eId="content__ref_30" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1sexies">articolo 1-sexies del decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_31" href="/akn/it/act/legge/stato/1990-02-08/39/!main">legge 8 febbraio 1990, n. 39</ref>, nei limiti dei relativi finanziamenti.
+</p>
+                        </content>
+                    </paragraph>
+                    <section>
+                        <content>
+                            <p>
+                                <authorialNote eId="authorialNote_1" placement="bottom">
+                                    <p> Nota all'art. 30:
+ - Per il testo dell'art. 1-sexies del citato <ref eId="content__ref_32" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main">decreto-legge 30 dicembre 1989, n. 416</ref>, si vedano le note all'art. 28.
+</p>
+                                </authorialNote>
+                            </p>
+                        </content>
+                    </section>
+                </article>
+            </chapter>
+            <chapter eId="chp_VI">
+                <num>Capo VI</num>
+                <heading>Disposizioni finali</heading>
+                <article eId="art_31">
+                    <num>Art. 31.</num>
+                    <heading> Punto di contatto</heading>
+                    <paragraph eId="art_31__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Il Ministero dell'interno - Dipartimento per le liberta' civili e l'immigrazione, in qualita' di punto di contatto, adotta, nel limite delle risorse umane, strumentali e finanziarie disponibili sulla base della legislazione vigente, ogni misura idonea ad instaurare una cooperazione diretta e lo scambio di informazioni ai fini dell'applicazione del presente decreto con i competenti uffici degli Stati membri dell'Unione europea.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_32">
+                    <num>Art. 32.</num>
+                    <heading> Personale</heading>
+                    <paragraph eId="art_32__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Il personale componente delle Commissioni territoriali che provvede all'applicazione delle norme del presente decreto riceve una formazione di base per l'attuazione della disciplina secondo gli ordinamenti degli uffici e dei servizi in cui espleta la propria attivita' ed e' soggetto all'obbligo di riservatezza in ordine alle informazioni sui rifugiati e sui titolari della protezione sussidiaria che apprende sulla base della attivita' svolta.
+</p>
+                        </content>
+                    </paragraph>
+                </article>
+                <article eId="art_33">
+                    <num>Art. 33.</num>
+                    <heading> Norma finanziaria</heading>
+                    <paragraph eId="art_33__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Per le finalita' di cui all'articolo 21 e' autorizzata la spesa di euro 50.000 per ciascuno degli anni 2007, 2008 e 2009.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_33__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Gli oneri di cui agli articoli 22 e 27 sono valutati in euro 2.031.510 per l'anno 2007, in euro 11.901.820 per l'anno 2008, in euro 15.677.600 per l'anno 2009, in euro 19.453.380 per l'anno 2010 e in euro 23.229.160 a decorrere dal 2011.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_33__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>All'onere derivante dall'applicazione del presente decreto, valutato in euro 2.081.510 per l'anno 2007, in euro 11.951.820 per l'anno 2008 ed in euro 23.229.160 a decorrere dall'anno 2009, si provvede a decorrere dall'anno 2007 mediante utilizzo delle risorse del Fondo di rotazione per l'attuazione delle politiche comunitarie, di cui all'<ref eId="content__ref_33" href="/akn/it/act/legge/stato/1987-04-16/183/!main#art_5">articolo 5 della legge 16 aprile 1987, n. 183</ref>, che, a tale fine, sono versate all'entrata del bilancio dello Stato e rassegnate ai pertinenti stati di previsione per essere destinate alle finalita' di cui al presente decreto.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_33__para_4">
+                        <num>4.</num>
+                        <content>
+                            <p>I1 Ministro dell'economia e delle finanze e' autorizzato ad apportare, con propri decreti, le occorrenti variazioni di bilancio.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_33__para_5">
+                        <num>5.</num>
+                        <content>
+                            <p>Il Ministero dell'interno, il Ministero del lavoro e della previdenza sociale, il Ministero della salute e il Ministero della solidarieta' sociale provvedono al monitoraggio degli oneri di cui al comma 2 del presente articolo, informando tempestivamente il Ministro dell'economia e delle finanze, ai fini dell'adozione dei provvedimenti correttivi di cui all'<ref eId="content__ref_34" href="/akn/it/act/legge/stato/1978-08-05/468/!main#art_11ter-com7">articolo 11-ter, comma 7, della legge 5 agosto 1978, n. 468</ref>, ovvero delle misure correttive da assumere, ai sensi dell'articolo 11, comma 3, lettera i-quater) della medesima legge. Gli eventuali &#127;decreti adottati, ai sensi dell'<ref eId="content__ref_35" href="/akn/it/act/legge/stato/1978-08-05/468/!main#art_7-com2-num2">articolo 7, secondo comma, n. 2), della legge 5 agosto 1978, n. 468</ref>, prima della data di entrata in vigore dei provvedimenti o delle misure di cui al presente comma, sono tempestivamente trasmessi alle Camere, corredati da apposite relazioni illustrative.
+</p>
+                        </content>
+                    </paragraph>
+                    <section>
+                        <content>
+                            <p>
+                                <authorialNote eId="authorialNote_2" placement="bottom">
+                                    <p> Note all'art. 33:
+ - Il testo dell'<ref eId="content__ref_36" href="/akn/it/act/legge/stato/1987-04-16/183/!main#art_5">art 5 della legge 16 aprile 1987, n. 183</ref>, recante: Coordinamento delle politiche riguardanti l'appartenenza dell'Italia alle Comunita' europee ed adeguamento dell'ordinamento interno agli atti normativi comunitari, pubblicata nella Gazzetta Ufficiale 13 maggio 1987, n. 109, supplemento ordinario, e' il seguente:
+ «Art. 5 (Fondo di rotazione). - 1. E' istituito, nell'ambito del Ministero del tesoro - Ragioneria generale dello Stato, un fondo di rotazione con amministrazione autonoma e gestione fuori bilancio, ai sensi dell'<ref eId="content__ref_37" href="/akn/it/act/legge/stato/1971-11-25/1041/!main#art_9">art. 9 della legge 25 novembre 1971, n. 1041</ref>.
+ 2. Il fondo di rotazione di cui al comma 1 si avvale di un apposito conto corrente infruttifero, aperto presso la tesoreria centrale dello Stato denominato «Ministero del tesoro - Fondo di rotazione per l'attuazione delle politiche comunitarie», nel quale sono versate:
+ a) le disponibilita' residue del fondo di cui alla <ref eId="content__ref_38" href="/akn/it/act/legge/stato/1977-10-03/863/!main">legge 3 ottobre 1977, n. 863</ref>, che viene soppresso a decorrere dalla data di inizio della operativita' del fondo di cui al comma 1;
+ b) le somme erogate dalle istituzioni delle Comunita' europee per contributi e sovvenzioni a favore dell'Italia;
+ c) le somme da individuare annualmente in sede di legge finanziaria, sulla base delle indicazioni del comitato interministeriale per la programmazione economica (CIPE) ai sensi dell'art. 2, comma 1, lettera c), nell'ambito delle autorizzazioni di spesa recate da disposizioni di legge aventi le stesse finalita' di quelle previste dalle norme comunitarie da attuare;
+ d) le somme annualmente determinate con la legge di approvazione del bilancio dello Stato, sulla base dei dati di cui all'art. 7.
+ 3. Restano salvi i rapporti finanziari direttamente intrattenuti con le Comunita' europee dalle amministrazioni e dagli organismi di cui all'<ref eId="content__ref_39" href="/akn/it/act/decretoDelPresidenteDellaRepubblica/stato/1971-04-16/321/!main#art_2">art. 2 del decreto del Presidente della Repubblica 16 aprile 1971, n. 321</ref>, ed alla <ref eId="content__ref_40" href="/akn/it/act/legge/stato/1975-11-26/748/!main">legge 26 novembre 1975, n. 748</ref>.».
+ - Il testo degli articoli 11-ter, comma 7, 11, comma 3, lettera i-quater, e 7, <ref eId="content__ref_41" href="/akn/it/act/legge/stato/1978-08-05/468/!main#art_com2-num2">secondo comma, n. 2, della legge 5 agosto 1978, n. 468</ref>: (Riforma di alcune norme di contabilita' generale dello Stato in materia di bilancio), pubblicata nella Gazzetta Ufficiale 22 agosto 1978, n. 233, e' il seguente:
+ «Art. 11-ter (Copertura finanziaria delle leggi). - (Omissis).
+ 7. Qualora nel corso dell'attuazione di leggi si verifichino o siano in procinto di verificarsi scostamenti rispetto alle previsioni di spesa o di entrata indicate dalle medesime leggi al fine della copertura finanziaria, il Ministro competente ne da' notizia tempestivamente al Ministro dell'economia e delle finanze, il quale, anche ove manchi la predetta segnalazione, riferisce al Parlamento con propria relazione e assume le conseguenti iniziative legislative.
+ La relazione individua le cause che hanno determinato gli scostamenti, anche ai fini della revisione dei dati e dei metodi utilizzati per la quantificazione degli oneri autorizzati dalle predette leggi. Il Ministro dell'economia e delle finanze puo' altresi' promuovere la procedura di cui al presente comma allorche' riscontri che l'attuazione di leggi rechi pregiudizio al conseguimento degli obiettivi di finanza pubblica indicati dal Documento di programmazione economico-finanziaria e da eventuali aggiornamenti, come approvati dalle relative risoluzioni parlamentari. La stessa procedura e' applicata in caso di sentenze definitive di organi giurisdizionali e della Corte costituzionale recanti interpretazioni della normativa vigente suscettibili di determinare maggiori oneri.».
+ «Art. 11 (Legge finanziaria). - (Omissis).
+ 3. La legge finanziaria non puo' contenere norme di delega o di carattere ordinamentale ovvero organizzatorio.
+ Essa contiene esclusivamente norme tese a realizzare effetti finanziari con decorrenza dal primo anno considerato nel bilancio pluriennale e in particolare:
+ (omissis);
+ i-quater) norme recanti misure correttive degli effetti finanziari delle leggi di cui all'art. 11-ter, comma 7.».
+ «Art. 7 (Fondo di riserva per le spese obbligatorie e di ordine). - (Omissis).
+ Con decreti del Ministro del tesoro, da registrarsi alla Corte dei conti, sono trasferite dal predetto fondo ed iscritte in aumento sia delle dotazioni di competenza che di cassa dei competenti capitoli le somme necessarie:
+ (omissis);
+ 2) per aumentare gli stanziamenti dei capitoli di spesa aventi carattere obbligatorio o connessi con l'accertamento e la riscossione delle entrate.».
+</p>
+                                </authorialNote>
+                            </p>
+                        </content>
+                    </section>
+                </article>
+                <article eId="art_34">
+                    <num>Art. 34.</num>
+                    <heading> Disposizioni transitorie e finali</heading>
+                    <paragraph eId="art_34__para_1">
+                        <num>1.</num>
+                        <content>
+                            <p>Le <ref eId="content__ref_42" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1-com4-letc">lettere c)</ref> e <ref eId="content__ref_43" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1-com4-letd">d) del comma 4 dell'articolo 1 del decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_44" href="/akn/it/act/legge/stato/1990-02-28/39/!main">legge 28 febbraio 1990, n. 39</ref>, sono soppresse.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_34__para_2">
+                        <num>2.</num>
+                        <content>
+                            <p>Fino alla data di entrata in vigore del decreto legislativo di recepimento della <ref eId="content__ref_45" href="/akn/it/act/direttivaUe/eu/2005/85/!main">direttiva 2005/85/CE del Consiglio, del 1° dicembre 2005</ref>, le norme del presente decreto si applicano secondo le procedure di cui al <ref eId="content__ref_46" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main">decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_47" href="/akn/it/act/legge/stato/1990-02-28/39/!main">legge 28 febbraio 1990, n. 39</ref>, e al relativo regolamento di attuazione adottato con <ref eId="content__ref_48" href="/akn/it/act/decretoDelPresidenteDellaRepubblica/stato/2004-09-16/303/!main">decreto del Presidente della Repubblica 16 settembre 2004, n. 303</ref>.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_34__para_3">
+                        <num>3.</num>
+                        <content>
+                            <p>Al comma 4, primo periodo, dell'<ref eId="content__ref_49" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1sexies">articolo 1-sexies del decreto-legge 30 dicembre 1989, n. 416</ref>, convertito, con modificazioni, dalla <ref eId="content__ref_50" href="/akn/it/act/legge/stato/1990-02-28/39/!main">legge 28 febbraio 1990, n. 39</ref>, per soggetto destinatario dei servizi di accoglienza di cui al comma l del medesimo articolo si intende anche lo straniero con permesso di protezione sussidiaria di cui al presente decreto.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_34__para_4">
+                        <num>4.</num>
+                        <content>
+                            <p>Allo straniero con permesso di soggiorno umanitario di cui all'articolo 5, comma 6, del testo unico delle disposizioni concernenti la disciplina dell'immigrazione e norme sulla condizione dello straniero di cui al <ref eId="content__ref_51" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, e successive modificazioni, rilasciato dalla questura su richiesta dell'organo di esame della istanza di riconoscimento dello status di rifugiato, prima dell'entrata in vigore del presente decreto, e' rilasciato al momento del rinnovo il permesso per protezione sussidiaria di cui al presente decreto.
+</p>
+                        </content>
+                    </paragraph>
+                    <paragraph eId="art_34__para_5">
+                        <num>5.</num>
+                        <content>
+                            <p>Ai titolari del permesso di soggiorno umanitario di cui al comma 4 sono riconosciuti i medesimi diritti stabiliti dal presente decreto a favore dei titolari dello status di protezione sussidiaria.
+ </p>
+                        </content>
+                    </paragraph>
+                    <section>
+                        <content>
+                            <p>
+                                <authorialNote eId="authorialNote_3" placement="bottom">
+                                    <p> Note all'art. 34:
+ - Si riporta il testo vigente dell'art. 1 del citato <ref eId="content__ref_52" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main">decreto-legge 30 dicembre 1989, n. 416</ref>, cosi' come modificato dal presente decreto:
+ «Art. 1 (Rifugiati). - 1. Dalla data di entrata in vigore del presente decreto cessano nell'ordinamento interno gli effetti della dichiarazione di limitazione geografica e delle riserve di cui agli articoli 17 e 18 della convenzione di Ginevra del 28 luglio 1951, ratificata con <ref eId="content__ref_53" href="/akn/it/act/legge/stato/1954-07-24/722/!main">legge 24 luglio 1954, n. 722</ref>, poste dall'Italia all'atto della sottoscrizione della convenzione stessa. Il Governo provvede agli adempimenti necessari per il formale ritiro di tale limitazione e di tali riserve.
+ 2. Al fine di garantire l'efficace attuazione della norma di cui al comma 1, il Governo provvede ai sensi dell'<ref eId="content__ref_54" href="/akn/it/act/legge/stato/1988-08-23/400/!main#art_17">art. 17 della legge 23 agosto 1988, n. 400</ref>, a riordinare, entro sessanta giorni dalla data di entrata in vigore del presente decreto, gli organi e le procedure per l'esame delle richieste di riconoscimento dello status di rifugiato, nel rispetto di quanto disposto dal comma 1.
+ 3. Agli stranieri extraeuropei «sotto mandato» dell'Alto Commissariato delle Nazioni Unite per i rifugiati (ACNUR) alla data del 31 dicembre 1989 e' riconosciuto, su domanda da presentare, entro sessanta giorni dalla data di entrata in vigore della legge di conversione del presente decreto, al Ministro dell'interno, lo status di rifugiato.
+ Tale riconoscimento non comporta l'erogazione dell'assistenza.
+ 4. Non e' consentito l'ingresso nel territorio dello Stato dello straniero che intende chiedere il riconoscimento dello status di rifugiato quando, da riscontri obiettivi da parte della polizia di frontiera, risulti che il richiedente:
+ a) sia stato gia' riconosciuto rifugiato in altro Stato. In ogni caso non e' consentito il respingimento verso uno degli Stati di cui all'art. 7, comma 10;
+ b) provenga da uno Stato, diverso da quello di appartenenza, che abbia aderito alla convenzione di Ginevra, nel quale abbia trascorso un periodo di soggiorno, non considerandosi tale il tempo necessario per il transito del relativo territorio sino alla frontiera italiana. In ogni caso non e' consentito il respingimento verso uno degli Stati di cui all'art. 7, comma 10;
+ c)-d) (soppresse).
+ 5. Salvo quanto previsto dal comma 3, lo straniero che intende entrare nel territorio dello Stato per essere riconosciuto rifugiato deve rivolgere istanza motivata e, in quanto possibile, documentata all'ufficio di polizia di frontiera. Qualora si tratti di minori non accompagnati, viene data comunicazione della domanda al tribunale dei minori competente per territorio ai fini della adozione dei provvedimenti di competenza. Qualora non ricorrano le ipotesi di cui al comma 4, lo straniero elegge domicilio nel territorio dello Stato. Il questore territorialmente competente, quando non ricorrano le ipotesi previste negli articoli 1-bis e 1-ter, rilascia, su richiesta, un permesso di soggiorno temporaneo valido fino alla definizione della procedura di riconoscimento.
+ 6. Avverso la decisione di respingimento presa in base ai commi 4 e 5 e' ammesso ricorso giurisdizionale.
+ 7. (Abrogato).
+ 8. Con decreto del Ministro dell'interno, di concerto con il Ministro del tesoro, da emanarsi entro sessanta giorni dalla data di entrata in vigore della legge di conversione del presente decreto, sono stabilite la misura e le modalita' di erogazione del contributo di cui al comma 7.
+ 9. All'onere derivante dall'attuazione dei commi 2 e 7 valutato rispettivamente in lire 3.000 milioni ed in lire 67.500 milioni in ragione di anno per ciascuno degli anni 1990, 1991 e 1992, si provvede, quanto a lire 20.000 milioni, a carico dello stanziamento iscritto al capitolo 4239 dello stato di previsione del Ministero dell'interno per l'anno 1990 e corrispondenti capitoli per gli anni successivi e, quanto a lire 50.500 milioni, mediante corrispondente riduzione dello stanziamento iscritto, ai fini del bilancio triennale 1990-1992, al capitolo 6856 dello stato di previsione del Ministero del tesoro per il 1990, all'uopo parzialmente utilizzando l'accantonamento «Interventi in favore dei lavoratori immigrati».
+ All'eventuale maggiore onere si provvede sulla base di una nuova specifica autorizzazione legislativa.
+ 10. Il Ministro del tesoro e' autorizzato ad apportare, con propri decreti, le occorrenti variazioni di bilancio.
+ 11. I richiedenti asilo che hanno fatto ricorso alle disposizioni previste per la sanatoria dei lavoratori immigrati non perdono il diritto al riconoscimento dello status di rifugiato. Nei loro confronti non si fa luogo a interventi di prima assistenza.».
+ - La <ref eId="content__ref_55" href="/akn/it/act/direttivaUe/eu/2005/85/!main">direttiva 2005/85/CE</ref> e' pubblicata nella G.U.C.E. 13 dicembre 2005, n. L. 326.
+ - Per i riferimenti al <ref eId="content__ref_56" href="/akn/it/act/decretoDelPresidenteDellaRepubblica/stato/2004-09-16/303/!main">decreto del Presidente della Repubblica 16 settembre 2004, n. 303</ref>, si vedano le note all'art. 2.
+ - Per il testo dell'<ref eId="content__ref_57" href="/akn/it/act/decretoLegge/stato/1989-12-30/416/!main#art_1sexies">art. 1-sexies del decreto-legge 30 dicembre 1989, n. 416</ref>, si vedano le note all'art. 28.
+ - Il testo dell'art. 5, comma 6, del citato <ref eId="content__ref_58" href="/akn/it/act/decretoLegislativo/stato/1998-07-25/286/!main">decreto legislativo 25 luglio 1998, n. 286</ref>, e' il seguente:
+ «Art. 5 (Permesso di soggiorno). - (Omissis).
+ 6. Il rifiuto o la revoca del permesso di soggiorno possono essere altresi' adottati sulla base di convenzioni o accordi internazionali, resi esecutivi in Italia, quando lo straniero non soddisfi le condizioni di soggiorno applicabili in uno degli Stati contraenti, salvo che ricorrano seri motivi, in particolare di carattere umanitario o risultanti da obblighi costituzionali o internazionali dello Stato italiano.».
+</p>
+                                </authorialNote>
+                            </p>
+                        </content>
+                    </section>
+                </article>
+            </chapter>
+        </body>
+        <conclusions>
+            <formula name="formulaFinaleConclusioni">
+                <p>Il presente decreto, munito del sigillo dello Stato, sara' inserito nella Raccolta ufficiale degli atti normativi della Repubblica italiana. E' fatto obbligo a chiunque spetti di osservarlo e di farlo osservare.</p>
+            </formula>
+            <p> Dato a Roma, addi' 19 novembre 2007</p>
+            <p>NAPOLITANO Prodi, Presidente del Consiglio dei Ministri Bonino, Ministro per le politiche europee Amato, Ministro dell'interno D'Alema, Ministro degli affari esteri Mastella, Ministro della giustizia Padoa Schioppa, Ministro dell'economia e delle finanze Turco, Ministro della salute Damiano, Ministro del lavoro e della previdenza sociale Ferrero, Ministro della solidarieta' sociale Nicolais, Ministro per le riforme e le innovazioni nella pubblica amministrazione Pollastrini, Ministro per i diritti e le pari opportunita' Visto, il Guardasigilli: Mastella</p>
+        </conclusions>
+    </act>
+</akomaNtoso>
