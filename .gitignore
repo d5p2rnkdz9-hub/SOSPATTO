@@ -19,8 +19,6 @@ REVISIONE-*.md
 # Progetto Next.js di prova, estraneo al sito
 test_SOSPatto/
 
-# Documento di lavoro locale
-PAF a Pantelleria e Lampedusa.docx
 
 # tools/testi-interattivi: output dei generatori (si rigenerano con `npm run testi`);
 # in git restano solo sorgenti, snapshot Normattiva/EUR-Lex e script
