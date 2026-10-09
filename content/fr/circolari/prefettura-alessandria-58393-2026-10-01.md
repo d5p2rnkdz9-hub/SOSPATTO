@@ -1,7 +1,7 @@
 ---
 it_hash: 298d927a567a
 ente: "Prefettura d'Alexandrie — Bureau territorial du Gouvernement, Zone IV"
-tipo: "Circulaire aux organismes publics du territoire (signée par le sous-préfet adjoint Eugenio Licata)"
+tipo: "Circulaire aux organismes publics du territoire"
 numero: "Prot. n. 0058393 del 01/10/2026"
 date: 2026-10-01
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -14,8 +14,7 @@ pdf: /allegati/circolari/prefettura-alessandria-58393-2026-10-01.pdf
 pdfLabel: "Télécharger la circulaire (PDF)"
 ---
 
-La *Prefettura* d'Alexandrie, par circulaire du 1er octobre 2026 signée du sous-préfet adjoint
-Eugenio Licata, transmet aux organismes du territoire les indications opérationnelles du ministère de
+La *Prefettura* d'Alexandrie, par circulaire du 1er octobre 2026, transmet aux organismes du territoire les indications opérationnelles du ministère de
 l'Intérieur contenues dans la circulaire n° 45722 du 21 septembre 2026, dans les mêmes termes que la
 [note de la Questura de Bologne du 13 juillet 2026](/fr/circolari/questura-bologna-attestato-2026-07-13.html),
 la [circulaire de la Prefettura de Varese du 22 septembre 2026](/fr/circolari/prefettura-varese-93-2026-09-22.html)

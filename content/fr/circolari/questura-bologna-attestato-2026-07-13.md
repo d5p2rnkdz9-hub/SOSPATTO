@@ -17,8 +17,7 @@ pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Télécharger la note (PDF)"
 ---
 
-Note de la *Questura* de Bologne (préfecture de police) — Bureau de l'immigration, signée par la Dirigeante V.Q.A. Dre Claudia
-Storto — adressée à l'AUSL, à la Commune, à l'Agence des recettes et à la Chambre de commerce de
+Note de la *Questura* de Bologne (préfecture de police) — Bureau de l'immigration, adressée à l'AUSL, à la Commune, à l'Agence des recettes et à la Chambre de commerce de
 Bologne. Elle a une fonction de coordination opérationnelle : elle explique aux acteurs qui devront
 interagir quotidiennement avec le demandeur quel est le document avec lequel celui-ci se présentera désormais, à la place du
 permis de séjour pour demande d'asile, et avec quels effets sur l'accès aux droits.

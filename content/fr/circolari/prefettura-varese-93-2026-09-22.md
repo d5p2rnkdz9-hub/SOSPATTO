@@ -1,7 +1,7 @@
 ---
 it_hash: 7252ea05bd22
 ente: "Prefettura de Varèse — Bureau territorial du Gouvernement, Zone II"
-tipo: "Circulaire aux collectivités locales et aux administrations provinciales (signée par la Vice-préfète Federica Crupi)"
+tipo: "Circulaire aux collectivités locales et aux administrations provinciales"
 numero: "Circolare n. 93, prot. n. 0053598 del 22/09/2026"
 date: 2026-09-22
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -14,8 +14,7 @@ pdf: /allegati/circolari/prefettura-varese-93-2026-09-22.pdf
 pdfLabel: "Télécharger la circulaire (PDF)"
 ---
 
-La *Prefettura* de Varèse, par circulaire n° 93 du 22 septembre 2026 signée par la Vice-préfète
-Federica Crupi, transmet aux maires, à l'ATS Insubria, à l'ASST Sette Laghi et Valle Olona, à l'Inspection
+La *Prefettura* de Varèse, par circulaire n° 93 du 22 septembre 2026, transmet aux maires, à l'ATS Insubria, à l'ASST Sette Laghi et Valle Olona, à l'Inspection
 territoriale du travail, à l'INPS et à l'Agence des recettes les indications opérationnelles du ministère de
 l'Intérieur — Direction centrale des services civils pour l'immigration et l'asile, contenues dans la
 circulaire n° 45722 du 21 septembre 2026, sur l'accès aux services par les demandeurs

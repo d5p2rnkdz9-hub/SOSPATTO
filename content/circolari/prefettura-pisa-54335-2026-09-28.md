@@ -1,6 +1,6 @@
 ---
 ente: "Prefettura di Pisa — Ufficio Territoriale del Governo, Area IV"
-tipo: "Circolare agli enti pubblici del territorio (a firma del Prefetto Alessandro)"
+tipo: "Circolare agli enti pubblici del territorio"
 numero: "Prot. n. 0054335 del 28/09/2026"
 date: 2026-09-28
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -34,7 +34,7 @@ previgente sistema fondato sul rilascio del permesso di soggiorno per richiesta 
 
 ## Non è esigibile il vecchio permesso di soggiorno
 
-Il Prefetto chiede agli uffici di riconoscere e accettare la nuova documentazione in luogo del
+La Prefettura chiede agli uffici di riconoscere e accettare la nuova documentazione in luogo del
 previgente permesso di soggiorno per richiesta asilo: «la mancata esibizione del previgente
 permesso di soggiorno per richiesta asilo non può, di per sé, costituire motivo ostativo
 all'accesso ai servizi, alle prestazioni e alle procedure amministrative cui il richiedente abbia

@@ -1,7 +1,7 @@
 ---
 it_hash: b5366a9d165e
 ente: "Prefettura of Pisa — Territorial Government Office, Area IV"
-tipo: "Circular to local public bodies (signed by Prefect Alessandro)"
+tipo: "Circular to local public bodies"
 numero: "Prot. n. 0054335 del 28/09/2026"
 date: 2026-09-28
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -35,7 +35,7 @@ residence permit for asylum application”.
 
 ## The old residence permit can no longer be required
 
-The Prefect asks the offices to recognise and accept the new documentation in place of the previous
+The Prefettura asks the offices to recognise and accept the new documentation in place of the previous
 residence permit for asylum application: “failure to produce the previous residence permit for asylum
 application cannot, in itself, constitute an obstacle to access to the services, benefits and administrative
 procedures to which the applicant is entitled under the legislation in force, where the person concerned holds

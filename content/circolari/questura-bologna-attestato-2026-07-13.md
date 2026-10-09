@@ -16,8 +16,7 @@ pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Scarica la nota (PDF)"
 ---
 
-Nota della Questura di Bologna — Ufficio Immigrazione, a firma del Dirigente V.Q.A. dott.ssa Claudia
-Storto — indirizzata all'AUSL, al Comune, all'Agenzia delle Entrate e alla Camera di Commercio di
+Nota della Questura di Bologna — Ufficio Immigrazione, indirizzata all'AUSL, al Comune, all'Agenzia delle Entrate e alla Camera di Commercio di
 Bologna. Ha una funzione di raccordo operativo: spiega ai soggetti che con il richiedente si troveranno
 a interagire quotidianamente qual è il documento con cui questi si presenterà d'ora in poi, in luogo del
 permesso di soggiorno per richiesta asilo, e con quali effetti sull'accesso ai diritti.

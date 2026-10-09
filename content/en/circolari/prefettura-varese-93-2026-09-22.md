@@ -1,7 +1,7 @@
 ---
 it_hash: 7252ea05bd22
 ente: "Prefettura of Varese — Territorial Government Office, Area II"
-tipo: "Circular to local authorities and provincial administrations (signed by Deputy Prefect Federica Crupi)"
+tipo: "Circular to local authorities and provincial administrations"
 numero: "Circolare n. 93, prot. n. 0053598 del 22/09/2026"
 date: 2026-09-22
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -14,8 +14,7 @@ pdf: /allegati/circolari/prefettura-varese-93-2026-09-22.pdf
 pdfLabel: "Download the circular (PDF)"
 ---
 
-The *Prefettura* of Varese, by circular no. 93 of 22 September 2026 signed by Deputy Prefect
-Federica Crupi, transmits to Mayors, ATS Insubria, ASST Sette Laghi and Valle Olona, the Territorial
+The *Prefettura* of Varese, by circular no. 93 of 22 September 2026, transmits to Mayors, ATS Insubria, ASST Sette Laghi and Valle Olona, the Territorial
 Labour Inspectorate, INPS and the Revenue Agency the operational guidance of the Ministry of
 the Interior — Central Directorate for Civil Services for Immigration and Asylum, contained in
 circular no. 45722 of 21 September 2026, on access to services by applicants

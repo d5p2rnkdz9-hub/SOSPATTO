@@ -179,3 +179,12 @@ Fino a ottobre 2026 il d.l. 100/2026 aveva anche una scheda in `/circolari/`: è
 decreto ministeriale (`scripts/check_collocazione.js`). Il D.M. zone di frontiera, prima fra le
 circolari, è stato spostato in `content/normativa/` (redirect 301).
 
+
+## 8. Niente nomi di chi ha firmato
+
+⚠️ Nelle schede delle circolari (e nelle traduzioni EN/FR) **non si indica mai chi ha firmato
+l'atto**: niente «a firma del Viceprefetto…», «firmata dal Dirigente dott.ssa…», né il nome nel
+`tipo`. Si cita l'**ufficio** (Prefettura di…, Questura di… — Ufficio Immigrazione), e nel corpo
+«la Prefettura chiede…», non «il Prefetto chiede…». `npm run build` si ferma se in
+`content/{,en/,fr/}circolari/` compare una formula di firma (`scripts/check_firmatari.js`; da
+solo: `npm run firmatari-check`). I nomi restano solo nei PDF originali allegati.

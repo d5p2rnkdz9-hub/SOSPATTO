@@ -1,7 +1,7 @@
 ---
 it_hash: 298d927a567a
 ente: "Prefettura of Alessandria — Territorial Government Office, Area IV"
-tipo: "Circular to local public bodies (signed by Deputy Vice-Prefect Eugenio Licata)"
+tipo: "Circular to local public bodies"
 numero: "Prot. n. 0058393 del 01/10/2026"
 date: 2026-10-01
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -14,8 +14,7 @@ pdf: /allegati/circolari/prefettura-alessandria-58393-2026-10-01.pdf
 pdfLabel: "Download the circular (PDF)"
 ---
 
-The *Prefettura* of Alessandria, by circular of 1 October 2026 signed by Deputy Vice-Prefect
-Eugenio Licata, transmits to the local bodies the operational guidance of the Ministry of
+The *Prefettura* of Alessandria, by circular of 1 October 2026, transmits to the local bodies the operational guidance of the Ministry of
 the Interior contained in circular no. 45722 of 21 September 2026, in the same terms as the
 [note of the Questura of Bologna of 13 July 2026](/en/circolari/questura-bologna-attestato-2026-07-13.html),
 the [circular of the Prefettura of Varese of 22 September 2026](/en/circolari/prefettura-varese-93-2026-09-22.html)

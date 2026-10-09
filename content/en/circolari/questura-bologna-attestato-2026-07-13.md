@@ -17,8 +17,7 @@ pdf: /allegati/circolari/questura-bologna-attestato-2026-07-13.pdf
 pdfLabel: "Download the note (PDF)"
 ---
 
-Note from the *Questura* of Bologna (police headquarters) — Immigration Office, signed by the Head V.Q.A. Dr Claudia
-Storto — addressed to the AUSL, the Municipality, the Revenue Agency and the Chamber of Commerce of
+Note from the *Questura* of Bologna (police headquarters) — Immigration Office, addressed to the AUSL, the Municipality, the Revenue Agency and the Chamber of Commerce of
 Bologna. It serves an operational liaison function: it explains to those who will
 interact daily with the applicant which document he or she will present from now on, in place of the
 residence permit for asylum application, and with what effects on access to rights.

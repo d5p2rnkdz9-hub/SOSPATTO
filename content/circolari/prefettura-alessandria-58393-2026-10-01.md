@@ -1,6 +1,6 @@
 ---
 ente: "Prefettura di Alessandria — Ufficio Territoriale del Governo, Area IV"
-tipo: "Circolare agli enti pubblici del territorio (a firma del Viceprefetto Aggiunto Eugenio Licata)"
+tipo: "Circolare agli enti pubblici del territorio"
 numero: "Prot. n. 0058393 del 01/10/2026"
 date: 2026-10-01
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -13,8 +13,7 @@ pdf: /allegati/circolari/prefettura-alessandria-58393-2026-10-01.pdf
 pdfLabel: "Scarica la circolare (PDF)"
 ---
 
-La Prefettura di Alessandria, con circolare del 1° ottobre 2026 a firma del Viceprefetto Aggiunto
-Eugenio Licata, trasmette agli enti del territorio le indicazioni operative del Ministero
+La Prefettura di Alessandria, con circolare del 1° ottobre 2026, trasmette agli enti del territorio le indicazioni operative del Ministero
 dell'Interno di cui alla circolare n. 45722 del 21 settembre 2026, nei medesimi termini della
 [nota della Questura di Bologna del 13 luglio 2026](/circolari/questura-bologna-attestato-2026-07-13.html),
 della [circolare della Prefettura di Varese del 22 settembre 2026](/circolari/prefettura-varese-93-2026-09-22.html)

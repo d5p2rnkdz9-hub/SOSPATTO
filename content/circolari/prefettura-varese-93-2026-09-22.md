@@ -1,6 +1,6 @@
 ---
 ente: "Prefettura di Varese — Ufficio Territoriale del Governo, Area II"
-tipo: "Circolare a enti locali e amministrazioni provinciali (a firma del Viceprefetto Federica Crupi)"
+tipo: "Circolare a enti locali e amministrazioni provinciali"
 numero: "Circolare n. 93, prot. n. 0053598 del 22/09/2026"
 date: 2026-09-22
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -13,8 +13,7 @@ pdf: /allegati/circolari/prefettura-varese-93-2026-09-22.pdf
 pdfLabel: "Scarica la circolare (PDF)"
 ---
 
-La Prefettura di Varese, con circolare n. 93 del 22 settembre 2026 firmata dal Viceprefetto
-Federica Crupi, trasmette a Sindaci, ATS Insubria, ASST Sette Laghi e Valle Olona, Ispettorato
+La Prefettura di Varese, con circolare n. 93 del 22 settembre 2026, trasmette a Sindaci, ATS Insubria, ASST Sette Laghi e Valle Olona, Ispettorato
 Territoriale del Lavoro, INPS e Agenzia delle Entrate le indicazioni operative del Ministero
 dell'Interno — Direzione Centrale per i Servizi Civili per l'Immigrazione e l'Asilo, di cui alla
 circolare n. 45722 del 21 settembre 2026, sull'accesso ai servizi da parte dei richiedenti in

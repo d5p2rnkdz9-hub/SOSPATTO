@@ -1,7 +1,7 @@
 ---
 it_hash: b5366a9d165e
 ente: "Prefettura de Pise — Bureau territorial du Gouvernement, Zone IV"
-tipo: "Circulaire aux organismes publics du territoire (signée par le préfet Alessandro)"
+tipo: "Circulaire aux organismes publics du territoire"
 numero: "Prot. n. 0054335 del 28/09/2026"
 date: 2026-09-28
 temi: [Accesso alla procedura, Regime transitorio, Accoglienza]
@@ -35,7 +35,7 @@ permis de séjour pour demande d'asile ».
 
 ## L'ancien permis de séjour ne peut plus être exigé
 
-Le préfet demande aux services de reconnaître et d'accepter la nouvelle documentation en lieu et place de
+La *Prefettura* demande aux services de reconnaître et d'accepter la nouvelle documentation en lieu et place de
 l'ancien permis de séjour pour demande d'asile : « l'absence de présentation de l'ancien permis de séjour pour demande d'asile ne peut, en soi, constituer un obstacle
 à l'accès aux services, aux prestations et aux procédures administratives auxquels le demandeur a
 droit en vertu de la législation en vigueur, lorsque l'intéressé est en possession de la
