@@ -22,9 +22,10 @@ module.exports = {
         ],
       },
       {
-        label: 'Strumenti interattivi',
-        href: '/diagramma.html',
+        label: 'Guide e test interattivi',
+        href: '/guida-asilo.html',
         items: [
+          { label: "Guida all'asilo: prima e dopo il Patto", href: '/guida-asilo.html', badge: 'Nuovo' },
           { label: 'Diagramma procedure', href: '/diagramma.html' },
           { label: 'Test interattivi', href: 'https://app.sospatto.it', external: true },
         ],
@@ -68,9 +69,10 @@ module.exports = {
         ],
       },
       {
-        label: 'Interactive tools',
-        href: '/diagramma.html',
+        label: 'Guides and interactive tests',
+        href: '/en/guida-asilo.html',
         items: [
+          { label: 'Asylum guide: before and after the Pact', href: '/en/guida-asilo.html', badge: 'New' },
           { label: 'Procedure diagram (IT)', href: '/diagramma.html' },
           { label: 'Interactive tests (IT)', href: 'https://app.sospatto.it', external: true },
         ],
@@ -114,9 +116,10 @@ module.exports = {
         ],
       },
       {
-        label: 'Outils interactifs',
-        href: '/diagramma.html',
+        label: 'Guides et tests interactifs',
+        href: '/fr/guida-asilo.html',
         items: [
+          { label: "Guide de l'asile : avant et après le Pacte", href: '/fr/guida-asilo.html', badge: 'Nouveau' },
           { label: 'Diagramme des procédures (IT)', href: '/diagramma.html' },
           { label: 'Tests interactifs (IT)', href: 'https://app.sospatto.it', external: true },
         ],

@@ -1,0 +1,502 @@
+---
+layout: layouts/base.liquid
+title: "Guida all'asilo in Italia: prima e dopo il Patto UE | SOS Patto"
+lang: it
+description: "Guida alla protezione internazionale in Italia: quali regole valgono per te (prima o dopo il 12 giugno 2026), come funziona la domanda di asilo, il documento, il lavoro, il colloquio, la decisione e il ricorso."
+---
+
+<style>
+  .pi-updated { font-size: 0.9rem; color: var(--gray-medium); margin-top: 0.5rem; }
+  .pi-card { margin-bottom: 2rem; }
+  .pi-card h2 { margin-top: 0; }
+  .pi-card h3 { margin-top: 1.25rem; }
+
+  /* Quale regime? */
+  .pi-which { background: #E8F5FF; }
+  .pi-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+  .pi-choice {
+    display: block; text-align: start; font: inherit; color: var(--black); cursor: pointer;
+    background: var(--white); border: 2.5px solid var(--black);
+    border-radius: var(--radius-lg); box-shadow: 3px 3px 0 var(--black); padding: 1rem 1.1rem;
+    text-decoration: none; transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .pi-choice:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--black); color: var(--black); }
+  .pi-choice:focus-visible { outline: none; box-shadow: 3px 3px 0 var(--black), 0 0 0 3px #33B1FF; }
+  .pi-choice-date { display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; margin-bottom: 0.35rem; }
+  .pi-choice-go { display: inline-block; margin-top: 0.5rem; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* Schede */
+  .pi-tabs { scroll-margin-top: calc(var(--header-h, 80px) + 24px); display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin: 2.5rem 0 1.5rem; }
+  .pi-tabs .tab-badge { font-size: 0.85rem; min-height: 46px; white-space: normal; text-align: center; }
+  .pi-panel-title { text-align: center; margin-bottom: 0.25rem; }
+  .pi-panel-sub { text-align: center; color: var(--gray-medium); margin-bottom: 1.5rem; }
+  .pi-panel + .pi-panel { margin-top: 3rem; }
+  .js-tabs .pi-panel + .pi-panel { margin-top: 0; }
+
+  /* Passi */
+  .pi-step { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+  .pi-num {
+    display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+    border-radius: 50%; border: 2px solid var(--black); background: #33B1FF;
+    font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; box-shadow: 3px 3px 0 var(--black);
+  }
+  .pi-step h2 { font-size: 1.35rem; margin: 0.35rem 0 0.75rem; }
+
+  /* Tabelle termini */
+  .pi-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.97rem; }
+  .pi-table th, .pi-table td { text-align: start; padding: 0.6rem 0.5rem; border-bottom: 1.5px solid #D9D9D9; vertical-align: top; }
+  .pi-table th { font-family: var(--font-heading); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .pi-countries { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.4rem 1rem; margin: 1rem 0; padding: 0; list-style: none; }
+
+  @media (max-width: 640px) {
+    .pi-choices { grid-template-columns: 1fr; }
+    .pi-step { grid-template-columns: 1fr; gap: 0.25rem; }
+    .pi-table, .pi-table tbody, .pi-table tr, .pi-table td { display: block; width: 100%; }
+    .pi-table thead { display: none; }
+    .pi-table tr { border-bottom: 1.5px solid #D9D9D9; padding: 0.5rem 0; }
+    .pi-table td { border: 0; padding: 0.15rem 0; }
+    .pi-table td[data-label]::before { content: attr(data-label) ": "; font-weight: 700; }
+  }
+
+  /* componenti di sospermesso che il tema SOS Patto non ha */
+  .page-header { padding: 1rem 0; }
+  .page-icon { display: block; line-height: 1; margin-bottom: 0.5rem; }
+  .page-title { font-family: var(--font-heading); font-size: 2.2rem; margin: 0 0 0.5rem; }
+  .pi-origin { font-size: 0.9rem; max-width: 640px; margin: 0.75rem auto 0; }
+  .alert { align-items: flex-start; }
+  .alert-danger { background-color: #FFE5E5; color: #1A1A1A; }
+  .pi-step .alert, .pi-card .alert { font-weight: 400; }
+</style>
+
+  <section class="section bg-off-white">
+    <div class="container">
+      <div class="page-header text-center">
+        <span class="page-icon" style="font-size: 4rem;">🛡️</span>
+        <h1 class="page-title">Guida all'asilo in Italia</h1>
+        <p class="section-subtitle">Come si chiede la protezione internazionale, prima e dopo il Patto UE su migrazione e asilo</p>
+        <p class="pi-updated">Aggiornata al 9 ottobre 2026</p>
+        <p class="pi-origin">Guida scritta per le persone che chiedono asilo. È pubblicata anche su <a href="https://www.sospermesso.it/protezione-internazionale.html" target="_blank" rel="noopener">SOS Permesso</a>, tradotta in 11 lingue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+
+      <div class="card pi-card">
+        <p>Se nel tuo Paese sei in pericolo, in Italia puoi chiedere la <strong>protezione internazionale</strong> (cioè l'<strong>asilo</strong>).</p>
+        <p>Dal <strong>12 giugno 2026</strong> in tutta l'Unione europea valgono <strong>nuove regole</strong>: il <strong>Patto UE su migrazione e asilo</strong>. Chi aveva già chiesto asilo prima continua però, di regola, con le <strong>regole vecchie</strong>.</p>
+        <p>Per questo la guida ha <strong>due schede</strong>. Prima di tutto, scopri quale vale per te.</p>
+        <p>Ti possiamo dare solo informazioni generali: è importante che tu chieda <strong>aiuto legale qualificato</strong>.</p>
+      </div>
+
+      <!-- QUALE REGIME -->
+      <div class="card pi-card pi-which" id="quali-regole">
+        <h2>Quali regole valgono per te?</h2>
+        <p>Conta il giorno in cui hai <strong>detto per la prima volta</strong> alle autorità italiane (Questura, polizia di frontiera) che volevi chiedere asilo. Questo momento si chiama <strong>manifestazione della volontà</strong>.</p>
+
+        <div class="pi-choices">
+          <a class="pi-choice card-link" href="#pre-patto" data-tab="pre-patto">
+            <span class="pi-choice-date">Prima del 12 giugno 2026</span>
+            Hai chiesto asilo prima di questa data? Valgono le <strong>regole vecchie</strong>, fino alla fine della tua procedura, anche in tribunale.
+            <span class="pi-choice-go">Vai alla scheda pre-Patto →</span>
+          </a>
+          <a class="pi-choice card-link" href="#patto" data-tab="patto">
+            <span class="pi-choice-date">Dal 12 giugno 2026 in poi</span>
+            Hai chiesto asilo da questa data in poi? Valgono le <strong>nuove regole del Patto UE</strong>.
+            <span class="pi-choice-go">Vai alla scheda Patto UE →</span>
+          </a>
+        </div>
+
+        <h3>E se hai chiesto asilo prima, ma la Questura ti ha registrato dopo?</h3>
+        <p>Succede spesso: hai chiesto asilo (o un appuntamento) prima del 12 giugno, ma il modulo in Questura (il <strong>C3</strong> o la registrazione) è stato fatto <strong>dopo</strong>.</p>
+        <p>I tribunali non sono tutti d'accordo. <strong>Molti giudici</strong> dicono che valgono le <strong>regole vecchie</strong>, perché il ritardo dell'ufficio non può essere colpa tua. Altri guardano invece alla data del modulo.</p>
+        <p><strong>Cosa fare:</strong> conserva tutte le prove della data in cui hai chiesto asilo (ricevuta di prenotazione, PEC dell'avvocato alla Questura, ricevuta dell'associazione o dell'ente a cui ti sei rivolto, dichiarazioni del centro) e parlane con un avvocato.</p>
+
+        <h3>Hai fatto una nuova domanda dopo il 12 giugno?</h3>
+        <p>Se la tua prima domanda era vecchia ma ne hai presentata <strong>un'altra</strong> (domanda <strong>reiterata</strong>) dopo il 12 giugno 2026, di solito per la nuova domanda valgono le <strong>regole del Patto</strong>.</p>
+      </div>
+
+      <!-- SCHEDE -->
+      <div class="pi-tabs" role="tablist" aria-label="Regole applicabili" hidden>
+        <button type="button" class="tab-badge" role="tab" id="tab-pre-patto" aria-controls="pre-patto" aria-selected="false">Domanda prima del 12/6/2026</button>
+        <button type="button" class="tab-badge" role="tab" id="tab-patto" aria-controls="patto" aria-selected="false">Domanda dal 12/6/2026 · Patto UE</button>
+      </div>
+
+      <!-- ===================== PRE-PATTO ===================== -->
+      <div class="pi-panel" id="pre-patto" role="tabpanel" aria-labelledby="tab-pre-patto">
+        <h2 class="pi-panel-title">Regole vecchie (pre-Patto)</h2>
+        <p class="pi-panel-sub">Per chi ha chiesto asilo prima del 12 giugno 2026</p>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">1</span>
+          <div>
+            <h2>La domanda in Questura</h2>
+            <p>Hai presentato la domanda <strong>di persona in Questura</strong> (o alla polizia di frontiera).</p>
+            <p>Ti hanno preso le <strong>impronte digitali</strong> e ti hanno fatto alcune domande su di te, la tua famiglia e il viaggio. Il modulo si chiama <strong>C3</strong>.</p>
+            <p>Se hai un <strong>passaporto</strong>, la Questura lo tiene per tutta la procedura.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">2</span>
+          <div>
+            <h2>Il permesso per richiesta asilo</h2>
+            <p>Ricevi un <a href="https://www.sospermesso.it/permesso-richiesta-asilo.html" target="_blank" rel="noopener"><strong>permesso di soggiorno per richiesta asilo</strong></a>. Dura <strong>6 mesi</strong> e si rinnova fino alla decisione. All'inizio, la ricevuta della Questura vale come permesso provvisorio.</p>
+            <p>Con questo permesso puoi studiare, iscriverti all'anagrafe, avere un medico di base e prendere la patente.</p>
+            <p>Puoi <strong>lavorare</strong> dopo <strong>60 giorni</strong> dalla domanda, se la Commissione non ha ancora deciso.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>Non puoi viaggiare fuori dall'Italia</strong> finché la procedura non è finita, e questo permesso <strong>non si può convertire</strong> in permesso per lavoro.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">3</span>
+          <div>
+            <h2>Il colloquio in Commissione</h2>
+            <p>Vieni chiamato per l'<strong>audizione</strong> davanti alla <strong>Commissione territoriale</strong>. È il momento in cui racconti la tua storia e spieghi perché <strong>non puoi tornare nel tuo Paese</strong>.</p>
+            <p>Non è un interrogatorio, ma una conversazione. Cerca di essere <strong>chiaro e preciso</strong> e porta i documenti che hai.</p>
+            <p>Se vieni da un <strong>Paese considerato "sicuro"</strong> o sei trattenuto, la procedura può essere <strong>accelerata</strong>: colloquio e decisione arrivano in pochi giorni. Minori non accompagnati e persone vulnerabili non vanno in procedura accelerata.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">4</span>
+          <div>
+            <h2>La decisione</h2>
+            <p>La decisione ti arriva al <strong>centro di accoglienza</strong> o all'<strong>indirizzo</strong> che hai dato alla Questura. Comunica sempre ogni cambio di indirizzo, o rischi di non ricevere la decisione e di perdere il tempo per fare ricorso.</p>
+            <p>Le possibili risposte sono spiegate più sotto, in <a href="#esiti">"Che risposte puoi ricevere"</a>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">5</span>
+          <div>
+            <h2>Il ricorso se la risposta è negativa</h2>
+            <p>Puoi fare <strong>ricorso al tribunale</strong>, ma ti serve un <strong>avvocato</strong>. I tempi sono brevi: contattalo <strong>subito</strong>.</p>
+            <table class="pi-table">
+              <thead><tr><th>Caso</th><th>Tempo per il ricorso</th><th>Puoi restare in Italia?</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Caso">Procedura normale</td><td data-label="Tempo">30 giorni</td><td data-label="Restare">Sì, automaticamente</td></tr>
+                <tr><td data-label="Caso">Procedura accelerata o persona trattenuta</td><td data-label="Tempo">15 giorni</td><td data-label="Restare">Spesso non automaticamente</td></tr>
+                <tr><td data-label="Caso">Procedura di frontiera</td><td data-label="Tempo">7 giorni</td><td data-label="Restare">Non automaticamente</td></tr>
+              </tbody>
+            </table>
+            <p>Quando il ricorso <strong>non</strong> ti protegge automaticamente (per esempio se la domanda è stata giudicata "manifestamente infondata"), l'avvocato deve chiedere al giudice la <strong>sospensione</strong> insieme al ricorso.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== PATTO UE ===================== -->
+      <div class="pi-panel" id="patto" role="tabpanel" aria-labelledby="tab-patto">
+        <h2 class="pi-panel-title">Nuove regole del Patto UE</h2>
+        <p class="pi-panel-sub">Per chi ha chiesto asilo dal 12 giugno 2026 in poi</p>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">1</span>
+          <div>
+            <h2>I primi controlli ("accertamenti")</h2>
+            <p>Se sei <strong>arrivato via mare</strong> dopo un soccorso, alla <strong>frontiera</strong> senza documenti validi, o vieni trovato in Italia dopo un ingresso irregolare, prima passi dagli <strong>accertamenti</strong> (in inglese <em>screening</em>).</p>
+            <p>Durano al massimo <strong>7 giorni</strong> alla frontiera e <strong>3 giorni</strong> se sei già in Italia. Comprendono:</p>
+            <ul>
+              <li>un <strong>controllo medico</strong> e un controllo delle <strong>vulnerabilità</strong>;</li>
+              <li>l'<strong>identificazione</strong> e le <strong>impronte digitali</strong>;</li>
+              <li>un controllo di sicurezza.</li>
+            </ul>
+            <p>Se hai problemi di salute, sei minorenne o hai subito violenze, <strong>dillo subito</strong>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">2</span>
+          <div>
+            <h2>Dire che vuoi chiedere asilo</h2>
+            <p>Il primo passo è dire alle autorità che vuoi chiedere protezione. È la <strong>manifestazione della volontà</strong>.</p>
+            <p>Per ora, e almeno fino al <strong>30 aprile 2027</strong>, in Italia la ricevono la <strong>Questura</strong> e la <strong>polizia di frontiera</strong>. Ci sono anche altri modi:</p>
+            <ul>
+              <li><strong>Con un avvocato, via PEC</strong> (posta elettronica certificata): l'avvocato scrive alla Questura che vuoi chiedere asilo. Spesso è una <strong>buona idea</strong>, perché così hai una <strong>prova sicura della data</strong> in cui hai chiesto asilo.</li>
+              <li><strong>Tramite un ente</strong>: in alcune città la manifestazione va comunicata a un'associazione, a un CAF, all'ufficio stranieri del Comune o a un altro ente indicato dalla Questura.</li>
+            </ul>
+            <div class="alert alert-info" style="margin: 1rem 0;">
+              <span class="alert-icon">🏛️</span>
+              <div><strong>Ogni città fa a modo suo.</strong> Prima di andare, chiedi informazioni su come funziona nella <strong>tua città</strong> a un'associazione, a uno sportello legale o a un avvocato. <a href="https://www.sospermesso.it/aiuto-legale.html" target="_blank" rel="noopener">Trova aiuto legale gratuito</a>.</div>
+            </div>
+            <p>Da questo momento hai diritto all'<a href="#accoglienza">accoglienza</a>, se non hai soldi per mantenerti.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">3</span>
+          <div>
+            <h2>La registrazione e il documento</h2>
+            <p>La Questura deve <strong>registrare</strong> la tua domanda entro <strong>5 giorni</strong> (fino a 15 se arrivano moltissime persone). Ti prende i dati e ti dà un <strong>opuscolo informativo</strong>.</p>
+            <p>Per ora, in Italia, la registrazione in Questura <strong>vale anche come "formalizzazione"</strong> della domanda: non devi fare un altro passaggio.</p>
+            <p>Ricevi un <strong>documento nominativo</strong> con la tua foto. <strong>Non è un permesso di soggiorno</strong>: con il Patto il "permesso di soggiorno per richiesta asilo" non esiste più. Questo documento dimostra solo che puoi <strong>restare in Italia</strong> durante la procedura. Vale <strong>un anno</strong> e si può rinnovare.</p>
+            <p>Devi dichiarare il tuo <strong>domicilio</strong>, e anche un telefono o un'email.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>Il documento non è un documento di viaggio:</strong> non puoi usarlo per andare in altri Paesi.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">4</span>
+          <div>
+            <h2>Lavorare</h2>
+            <p>Puoi <strong>lavorare</strong> dopo <strong>90 giorni</strong> dalla domanda, se la Commissione non ha ancora deciso e il ritardo non è colpa tua.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>Non puoi convertirlo in un permesso per lavoro.</strong> Il documento da richiedente asilo non è un permesso di soggiorno, quindi non si può "cambiare" in un altro permesso, nemmeno se hai un contratto di lavoro.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">5</span>
+          <div>
+            <h2>Quale procedura: normale, accelerata o di frontiera</h2>
+            <p>La <strong>Commissione territoriale</strong> decide quale procedura usare e te lo comunica.</p>
+            <table class="pi-table">
+              <thead><tr><th>Procedura</th><th>Quando</th><th>Tempi della decisione</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Procedura"><strong>Normale</strong></td><td data-label="Quando">Nella maggior parte dei casi</td><td data-label="Tempi">6 mesi (prorogabili)</td></tr>
+                <tr><td data-label="Procedura"><strong>Accelerata</strong></td><td data-label="Quando">Per esempio: vieni da un <a href="#paesi-sicuri">Paese "sicuro"</a>; nel tuo Paese le domande accolte in Europa sono poche (il 20% o meno); racconti cose che non c'entrano o che si contraddicono; hai mentito sulla tua identità; hai chiesto asilo tardi</td><td data-label="Tempi">3 mesi</td></tr>
+                <tr><td data-label="Procedura"><strong>Di frontiera</strong></td><td data-label="Quando">Se hai chiesto asilo alla frontiera o dopo uno sbarco, senza documenti per entrare, e sei in uno dei casi della procedura accelerata</td><td data-label="Tempi">12 settimane in tutto, ricorso compreso</td></tr>
+              </tbody>
+            </table>
+            <p>Nella <strong>procedura di frontiera</strong> devi vivere in un <strong>luogo indicato</strong> dalle autorità, e in alcuni casi puoi essere <strong>trattenuto</strong> in un centro.</p>
+            <p>I <strong>minori non accompagnati</strong> vanno in procedura di frontiera solo per motivi di sicurezza. Le persone <strong>vulnerabili</strong> non ci vanno se non possono avere il sostegno di cui hanno bisogno.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">6</span>
+          <div>
+            <h2>Il colloquio in Commissione</h2>
+            <p>Il <strong>colloquio personale</strong> è obbligatorio: è il momento per raccontare la tua storia e spiegare perché non puoi tornare nel tuo Paese.</p>
+            <p>Prima del colloquio hai diritto a un <strong>orientamento legale gratuito</strong>: una persona che ti spiega la procedura. <strong>Chiedilo</strong>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">7</span>
+          <div>
+            <h2>Restare reperibile: è un obbligo</h2>
+            <p>Con il Patto i tuoi obblighi sono più severi. Devi:</p>
+            <ul>
+              <li><strong>collaborare</strong> e consegnare i documenti che hai;</li>
+              <li><strong>presentarti</strong> al colloquio e agli appuntamenti;</li>
+              <li><strong>comunicare subito</strong> ogni cambio di indirizzo, telefono o email;</li>
+              <li><strong>restare in Italia</strong> e non spostarti in un altro Paese europeo.</li>
+            </ul>
+            <div class="alert alert-danger" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>Se non lo fai</strong>, la Commissione può considerare la tua domanda <strong>ritirata</strong> e chiudere la procedura. Il ricorso contro questa decisione va fatto in soli <strong>7 giorni</strong>.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">8</span>
+          <div>
+            <h2>La decisione</h2>
+            <p>La decisione ti arriva al <strong>centro di accoglienza</strong> o all'ultimo <strong>indirizzo</strong> che hai comunicato. Le possibili risposte sono spiegate più sotto, in <a href="#esiti">"Che risposte puoi ricevere"</a>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">9</span>
+          <div>
+            <h2>Il ricorso se la risposta è negativa</h2>
+            <p>Puoi fare <strong>ricorso al tribunale</strong> con un <strong>avvocato</strong>. Con il Patto i tempi sono <strong>ancora più brevi</strong>: contattalo il giorno stesso in cui ricevi la decisione.</p>
+            <table class="pi-table">
+              <thead><tr><th>Caso</th><th>Tempo per il ricorso</th><th>Puoi restare in Italia?</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Caso">Procedura normale</td><td data-label="Tempo">30 giorni</td><td data-label="Restare">Sì, automaticamente</td></tr>
+                <tr><td data-label="Caso">Procedura accelerata, domanda inammissibile o ritirata</td><td data-label="Tempo">7 giorni</td><td data-label="Restare">Non automaticamente</td></tr>
+                <tr><td data-label="Caso">Procedura di frontiera</td><td data-label="Tempo">5 giorni</td><td data-label="Restare">Non automaticamente (sì per i minori non accompagnati)</td></tr>
+              </tbody>
+            </table>
+            <p>Quando il ricorso non ti protegge automaticamente, l'avvocato deve chiedere al giudice, <strong>insieme al ricorso</strong>, l'<strong>autorizzazione a rimanere</strong> in Italia. Il giudice decide in circa 10 giorni e, mentre decide, di regola non puoi essere allontanato.</p>
+          </div>
+        </div>
+
+        <p style="text-align: center;">
+          <a href="/testi.html" class="btn btn-outline">Leggi le norme del Patto articolo per articolo</a>
+        </p>
+      </div>
+
+      <!-- ===================== PER TUTTI ===================== -->
+      <h2 class="text-center" style="margin: 3.5rem 0 1.5rem;">Da sapere in ogni caso</h2>
+
+      <div class="card pi-card" id="esiti">
+        <h2>Che risposte puoi ricevere</h2>
+        <p>Valgono sia con le regole vecchie sia con il Patto. La Commissione può darti:</p>
+        <ul>
+          <li><a href="https://www.sospermesso.it/permesso-asilo-status-rifugiato.html" target="_blank" rel="noopener"><strong>Status di rifugiato</strong></a> (il cosiddetto "asilo politico"): permesso di <strong>5 anni</strong>;</li>
+          <li><a href="https://www.sospermesso.it/permesso-protezione-sussidiaria.html" target="_blank" rel="noopener"><strong>Protezione sussidiaria</strong></a>: permesso di <strong>5 anni</strong>;</li>
+          <li><a href="https://www.sospermesso.it/permesso-protezione-speciale.html" target="_blank" rel="noopener"><strong>Protezione speciale</strong></a>: permesso di <strong>2 anni</strong>, rinnovabile, con cui puoi lavorare;</li>
+          <li><a href="https://www.sospermesso.it/permesso-cure-mediche-per-persona-gravemente-malata-che-si-trova-gia-in-italia.html" target="_blank" rel="noopener"><strong>Permesso per cure mediche</strong></a>, se sei gravemente malato.</li>
+        </ul>
+        <p>Se la Commissione pensa che non hai diritto a nessuna di queste protezioni, la risposta è <strong>negativa</strong>: puoi fare ricorso nei tempi indicati nella tua scheda.</p>
+      </div>
+
+      <div class="card pi-card" id="paesi-sicuri" style="background-color: #FFF3E0;">
+        <h2>Paesi considerati "sicuri"</h2>
+        <p>Se vieni da un Paese che l'Italia considera <strong>sicuro</strong>, la tua domanda viene esaminata <strong>più in fretta</strong> e hai meno tempo per il ricorso. Oggi la lista italiana comprende:</p>
+        <ul class="pi-countries">
+          <li>Albania</li><li>Algeria</li><li>Bangladesh</li><li>Bosnia-Erzegovina</li><li>Capo Verde</li>
+          <li>Costa d'Avorio</li><li>Egitto</li><li>Gambia</li><li>Georgia</li><li>Ghana</li>
+          <li>Kosovo</li><li>Macedonia del Nord</li><li>Marocco</li><li>Montenegro</li><li>Perù</li>
+          <li>Senegal</li><li>Serbia</li><li>Sri Lanka</li><li>Tunisia</li>
+        </ul>
+        <p>Con il Patto (domande dal 12 giugno 2026) c'è anche una <strong>lista dell'Unione europea</strong>, che vale in tutti i Paesi UE:</p>
+        <ul class="pi-countries">
+          <li>Bangladesh</li><li>Colombia</li><li>Egitto</li><li>India</li><li>Kosovo</li><li>Marocco</li><li>Tunisia</li>
+        </ul>
+        <p>Sono considerati sicuri anche i <strong>Paesi candidati a entrare nell'Unione europea</strong> (per esempio Albania, Serbia, Turchia, Georgia), salvo eccezioni: per esempio se nel Paese c'è una guerra.</p>
+        <p>In più, va in procedura accelerata anche chi viene da un Paese per cui in Europa le domande accolte sono <strong>il 20% o meno</strong>.</p>
+        <p>Venire da un Paese "sicuro" <strong>non vuol dire</strong> che la domanda verrà rifiutata. Se nella tua situazione personale ci sono pericoli <strong>gravi e specifici</strong>, devi spiegarli bene fin dall'inizio.</p>
+      </div>
+
+      <div class="card pi-card">
+        <h2>Situazioni particolari</h2>
+        <p>Se sei:</p>
+        <ul>
+          <li>minorenne, soprattutto se sei in Italia senza genitori;</li>
+          <li>una donna sola o in gravidanza;</li>
+          <li>una persona con disabilità o con una malattia grave;</li>
+          <li>una persona con problemi di salute mentale;</li>
+          <li>vittima di violenza, tortura, tratta o mutilazioni genitali;</li>
+        </ul>
+        <p>… hai diritto a <strong>garanzie particolari</strong> e a un'accoglienza adatta, anche se vieni da un Paese "sicuro". Dillo il prima possibile: alla Questura, nel centro, alla Commissione.</p>
+        <p>I <strong>minori non accompagnati</strong> hanno diritto a un <strong>tutore</strong> e non possono essere respinti alla frontiera.</p>
+      </div>
+
+      <div class="card pi-card">
+        <h2>Se hai chiesto asilo in un altro Paese europeo (Dublino)</h2>
+        <p>Se hai <strong>già chiesto asilo in un altro Paese europeo</strong>, o ti hanno preso le <strong>impronte digitali</strong> lì, può darsi che <strong>non sia l'Italia</strong> a dover esaminare la tua domanda. In questo caso potresti essere <strong>trasferito</strong> in quel Paese.</p>
+        <p>Per le domande registrate fino al 30 giugno 2026 valgono le regole del vecchio <strong>Regolamento Dublino</strong>; per quelle registrate dal 1° luglio 2026 valgono le nuove regole del Patto.</p>
+        <p><strong>Cosa fare:</strong> chiedi subito aiuto a un avvocato o a un operatore esperto.</p>
+      </div>
+
+      <div class="card pi-card" id="accoglienza">
+        <h2>Il diritto all'accoglienza</h2>
+        <p>Se chiedi asilo e <strong>non hai abbastanza soldi per mantenerti</strong>, hai diritto a un posto in un <strong>centro di accoglienza</strong>.</p>
+        <ul>
+          <li>Inizia dal momento in cui <strong>dici di voler chiedere asilo</strong>.</li>
+          <li>Dura per tutta la procedura in Commissione, fino alla scadenza del tempo per il ricorso e, se il ricorso ti permette di restare, anche durante il ricorso.</li>
+        </ul>
+        <p>Puoi <strong>perdere l'accoglienza</strong> se lasci il centro, se non vai al colloquio o se hai abbastanza soldi.</p>
+        <p>Con il Patto, le autorità possono anche obbligarti a <strong>vivere in un luogo preciso</strong> (sempre, nella procedura di frontiera). Se ti sposti, puoi perdere l'accoglienza.</p>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">⚖️</span>
+        <div>
+          <strong>La tua storia è unica.</strong> Non è uguale a quella dei tuoi amici o parenti, e queste regole sono nuove: anche i tribunali le stanno ancora interpretando. Se il tuo reddito è inferiore a <strong>13.600 euro all'anno</strong>, puoi avere un avvocato <strong>gratis</strong> (gratuito patrocinio).
+          <a href="https://www.sospermesso.it/aiuto-legale.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-left: 0; margin-top: 0.5rem;">
+            Trova aiuto legale gratuito
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section bg-off-white">
+    <div class="container">
+      <h2 class="text-center mb-lg">Potrebbero interessarti anche</h2>
+      <div class="grid grid-3">
+        <a href="https://www.sospermesso.it/permesso-richiesta-asilo.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">📄</span>
+          <h3 class="card-title">Permesso richiesta asilo</h3>
+        </a>
+        <a href="https://www.sospermesso.it/permesso-asilo-status-rifugiato.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">🛡️</span>
+          <h3 class="card-title">Status di rifugiato</h3>
+        </a>
+        <a href="https://www.sospermesso.it/permesso-protezione-sussidiaria.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">ℹ️</span>
+          <h3 class="card-title">Protezione sussidiaria</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="text-center mb-lg">Vedi anche: altri permessi per protezione</h2>
+      <div class="card">
+        <ul style="line-height: 1.85; margin: 0; padding-left: 1.25rem;">
+          <li><a href="https://www.sospermesso.it/permesso-protezione-sociale-vittime-di-tratta.html" target="_blank" rel="noopener">Permesso per vittime di tratta</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-protezione-sociale-vittime-di-violenza-domestica.html" target="_blank" rel="noopener">Permesso per vittime di violenza domestica</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-sfruttamento-lavorativo.html" target="_blank" rel="noopener">Permesso per sfruttamento lavorativo</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-minore-eta-per-msna.html" target="_blank" rel="noopener">Permesso per minori non accompagnati (MSNA)</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-integrazione-prosieguo-amministrativo.html" target="_blank" rel="noopener">Permesso per integrazione – prosieguo amministrativo</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-calamita-naturale.html" target="_blank" rel="noopener">Permesso per calamità naturale</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-famigliari-di-persone-con-status-di-rifugiato-o-protezione-sussidiaria.html" target="_blank" rel="noopener">Permesso per familiari di rifugiati e titolari di protezione sussidiaria</a></li>
+          <li><a href="https://www.sospermesso.it/permesso-apolidia.html" target="_blank" rel="noopener">Permesso per apolidia</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<script>
+  // Due schede (pre-Patto / Patto). Senza JS restano entrambe visibili una sotto l'altra.
+  (function () {
+    var tablist = document.querySelector('.pi-tabs');
+    var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+    function select(id, focus) {
+      tabs.forEach(function (t, i) {
+        var on = t.getAttribute('aria-controls') === id;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        t.classList.toggle('active', on);
+        panels[i].hidden = !on;
+        if (on && focus) t.focus();
+      });
+    }
+
+    document.body.classList.add('js-tabs');
+    tablist.hidden = false;
+    var start = location.hash.slice(1) === 'pre-patto' ? 'pre-patto' : 'patto';
+    select(start);
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () {
+        var id = t.getAttribute('aria-controls');
+        select(id);
+        history.replaceState(null, '', '#' + id);
+      });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        if (document.dir === 'rtl') d = -d;
+        var next = tabs[(i + d + tabs.length) % tabs.length];
+        select(next.getAttribute('aria-controls'), true);
+      });
+    });
+
+    document.querySelectorAll('.pi-choice').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = a.getAttribute('data-tab');
+        select(id);
+        history.replaceState(null, '', '#' + id);
+        tablist.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    window.addEventListener('hashchange', function () {
+      var h = location.hash.slice(1);
+      if (h === 'pre-patto' || h === 'patto') select(h);
+    });
+  })();
+</script>

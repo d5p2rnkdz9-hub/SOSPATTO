@@ -1,0 +1,502 @@
+---
+layout: layouts/base.liquid
+title: "Guide to asylum in Italy: before and after the EU Pact | SOS Patto"
+lang: en
+description: "Guide to international protection in Italy: which rules apply to you (before or after 12 June 2026), how the asylum application works, your document, work, the interview, the decision and the appeal."
+---
+
+<style>
+  .pi-updated { font-size: 0.9rem; color: var(--gray-medium); margin-top: 0.5rem; }
+  .pi-card { margin-bottom: 2rem; }
+  .pi-card h2 { margin-top: 0; }
+  .pi-card h3 { margin-top: 1.25rem; }
+
+  /* Quale regime? */
+  .pi-which { background: #E8F5FF; }
+  .pi-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.25rem 0; }
+  .pi-choice {
+    display: block; text-align: start; font: inherit; color: var(--black); cursor: pointer;
+    background: var(--white); border: 2.5px solid var(--black);
+    border-radius: var(--radius-lg); box-shadow: 3px 3px 0 var(--black); padding: 1rem 1.1rem;
+    text-decoration: none; transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .pi-choice:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--black); color: var(--black); }
+  .pi-choice:focus-visible { outline: none; box-shadow: 3px 3px 0 var(--black), 0 0 0 3px #33B1FF; }
+  .pi-choice-date { display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; margin-bottom: 0.35rem; }
+  .pi-choice-go { display: inline-block; margin-top: 0.5rem; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* Schede */
+  .pi-tabs { scroll-margin-top: calc(var(--header-h, 80px) + 24px); display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin: 2.5rem 0 1.5rem; }
+  .pi-tabs .tab-badge { font-size: 0.85rem; min-height: 46px; white-space: normal; text-align: center; }
+  .pi-panel-title { text-align: center; margin-bottom: 0.25rem; }
+  .pi-panel-sub { text-align: center; color: var(--gray-medium); margin-bottom: 1.5rem; }
+  .pi-panel + .pi-panel { margin-top: 3rem; }
+  .js-tabs .pi-panel + .pi-panel { margin-top: 0; }
+
+  /* Passi */
+  .pi-step { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+  .pi-num {
+    display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+    border-radius: 50%; border: 2px solid var(--black); background: #33B1FF;
+    font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; box-shadow: 3px 3px 0 var(--black);
+  }
+  .pi-step h2 { font-size: 1.35rem; margin: 0.35rem 0 0.75rem; }
+
+  /* Tabelle termini */
+  .pi-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.97rem; }
+  .pi-table th, .pi-table td { text-align: start; padding: 0.6rem 0.5rem; border-bottom: 1.5px solid #D9D9D9; vertical-align: top; }
+  .pi-table th { font-family: var(--font-heading); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .pi-countries { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.4rem 1rem; margin: 1rem 0; padding: 0; list-style: none; }
+
+  @media (max-width: 640px) {
+    .pi-choices { grid-template-columns: 1fr; }
+    .pi-step { grid-template-columns: 1fr; gap: 0.25rem; }
+    .pi-table, .pi-table tbody, .pi-table tr, .pi-table td { display: block; width: 100%; }
+    .pi-table thead { display: none; }
+    .pi-table tr { border-bottom: 1.5px solid #D9D9D9; padding: 0.5rem 0; }
+    .pi-table td { border: 0; padding: 0.15rem 0; }
+    .pi-table td[data-label]::before { content: attr(data-label) ": "; font-weight: 700; }
+  }
+
+  /* componenti di sospermesso che il tema SOS Patto non ha */
+  .page-header { padding: 1rem 0; }
+  .page-icon { display: block; line-height: 1; margin-bottom: 0.5rem; }
+  .page-title { font-family: var(--font-heading); font-size: 2.2rem; margin: 0 0 0.5rem; }
+  .pi-origin { font-size: 0.9rem; max-width: 640px; margin: 0.75rem auto 0; }
+  .alert { align-items: flex-start; }
+  .alert-danger { background-color: #FFE5E5; color: #1A1A1A; }
+  .pi-step .alert, .pi-card .alert { font-weight: 400; }
+</style>
+
+  <section class="section bg-off-white">
+    <div class="container">
+      <div class="page-header text-center">
+        <span class="page-icon" style="font-size: 4rem;">🛡️</span>
+        <h1 class="page-title">Guide to asylum in Italy</h1>
+        <p class="section-subtitle">How to apply for international protection, before and after the EU Pact on Migration and Asylum</p>
+        <p class="pi-updated">Updated on 9 October 2026</p>
+        <p class="pi-origin">A guide written for people seeking asylum. It is also published on <a href="https://www.sospermesso.it/en/protezione-internazionale.html" target="_blank" rel="noopener">SOS Permesso</a>, translated into 11 languages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+
+      <div class="card pi-card">
+        <p>If you are in danger in your country, in Italy you can apply for <strong>international protection</strong> (that is, <strong>asylum</strong>).</p>
+        <p>Since <strong>12 June 2026</strong>, <strong>new rules</strong> apply in the whole European Union: the <strong>EU Pact on Migration and Asylum</strong>. However, people who had already applied for asylum before that date usually continue with the <strong>old rules</strong>.</p>
+        <p>This is why this guide has <strong>two tabs</strong>. First of all, find out which one applies to you.</p>
+        <p>We can only give you general information: it is important that you get <strong>qualified legal help</strong>.</p>
+      </div>
+
+      <!-- QUALE REGIME -->
+      <div class="card pi-card pi-which" id="quali-regole">
+        <h2>Which rules apply to you?</h2>
+        <p>What matters is the day when you <strong>first told</strong> the Italian authorities (the Questura – the police immigration office – or the border police) that you wanted to apply for asylum. This moment is called <strong>making the application</strong>: telling the authorities that you want asylum (in Italian, <em>manifestazione della volontà</em>).</p>
+
+        <div class="pi-choices">
+          <a class="pi-choice card-link" href="#pre-patto" data-tab="pre-patto">
+            <span class="pi-choice-date">Before 12 June 2026</span>
+            Did you apply for asylum before this date? The <strong>old rules</strong> apply, until the end of your procedure, including in court.
+            <span class="pi-choice-go">Go to the pre-Pact tab →</span>
+          </a>
+          <a class="pi-choice card-link" href="#patto" data-tab="patto">
+            <span class="pi-choice-date">From 12 June 2026 onwards</span>
+            Did you apply for asylum on or after this date? The <strong>new rules of the EU Pact</strong> apply.
+            <span class="pi-choice-go">Go to the EU Pact tab →</span>
+          </a>
+        </div>
+
+        <h3>What if you applied for asylum before, but the Questura registered you after?</h3>
+        <p>This happens often: you asked for asylum (or for an appointment) before 12 June, but the form at the Questura (the <strong>C3</strong> or the registration) was done <strong>later</strong>.</p>
+        <p>The courts do not all agree. <strong>Many judges</strong> say that the <strong>old rules</strong> apply, because the office's delay cannot be your fault. Others look instead at the date of the form.</p>
+        <p><strong>What to do:</strong> keep all the proof of the date when you asked for asylum (booking receipt, PEC from your lawyer to the Questura, receipt from the association or organisation you went to, statements from your reception centre) and talk to a lawyer about it.</p>
+
+        <h3>Did you make a new application after 12 June?</h3>
+        <p>If your first application was under the old rules but you made <strong>another one</strong> (a <strong>subsequent</strong> application, in Italian <em>domanda reiterata</em>) after 12 June 2026, the <strong>Pact rules</strong> usually apply to the new application.</p>
+      </div>
+
+      <!-- SCHEDE -->
+      <div class="pi-tabs" role="tablist" aria-label="Applicable rules" hidden>
+        <button type="button" class="tab-badge" role="tab" id="tab-pre-patto" aria-controls="pre-patto" aria-selected="false">Applied before 12 June 2026</button>
+        <button type="button" class="tab-badge" role="tab" id="tab-patto" aria-controls="patto" aria-selected="false">Applied from 12 June 2026 · EU Pact</button>
+      </div>
+
+      <!-- ===================== PRE-PATTO ===================== -->
+      <div class="pi-panel" id="pre-patto" role="tabpanel" aria-labelledby="tab-pre-patto">
+        <h2 class="pi-panel-title">Old rules (pre-Pact)</h2>
+        <p class="pi-panel-sub">For people who applied for asylum before 12 June 2026</p>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">1</span>
+          <div>
+            <h2>The application at the Questura</h2>
+            <p>You made your application <strong>in person at the Questura</strong> (or to the border police).</p>
+            <p>They took your <strong>fingerprints</strong> and asked you some questions about yourself, your family and your journey. The form is called <strong>C3</strong>.</p>
+            <p>If you have a <strong>passport</strong>, the Questura keeps it for the whole procedure.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">2</span>
+          <div>
+            <h2>The asylum seeker's permit</h2>
+            <p>You receive a <a href="https://www.sospermesso.it/en/permesso-richiesta-asilo.html" target="_blank" rel="noopener"><strong>residence permit for asylum seekers</strong></a>. It lasts <strong>6 months</strong> and is renewed until the decision. At the beginning, the receipt from the Questura counts as a temporary permit.</p>
+            <p>With this permit you can study, register with the anagrafe (population register), have a family doctor and get a driving licence.</p>
+            <p>You can <strong>work</strong> <strong>60 days</strong> after your application, if the Commission has not decided yet.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>You cannot travel outside Italy</strong> until the procedure is over, and this permit <strong>cannot be converted</strong> into a work permit.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">3</span>
+          <div>
+            <h2>The interview at the Commission</h2>
+            <p>You are called for the <strong>interview</strong> before the <strong>Commissione Territoriale</strong> (the Territorial Commission, the office that decides on asylum applications). This is when you tell your story and explain why <strong>you cannot go back to your country</strong>.</p>
+            <p>It is not an interrogation, but a conversation. Try to be <strong>clear and precise</strong>, and bring the documents you have.</p>
+            <p>If you come from a <strong>country considered "safe"</strong> or you are detained, the procedure can be <strong>accelerated</strong>: the interview and the decision come within a few days. Unaccompanied minors and vulnerable people do not go into the accelerated procedure.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">4</span>
+          <div>
+            <h2>The decision</h2>
+            <p>The decision is sent to your <strong>reception centre</strong> or to the <strong>address</strong> you gave to the Questura. Always tell them about every change of address, or you risk not receiving the decision and losing the time to appeal.</p>
+            <p>The possible answers are explained further down, in <a href="#esiti">"What answers you can receive"</a>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">5</span>
+          <div>
+            <h2>The appeal if the answer is negative</h2>
+            <p>You can <strong>appeal to the court</strong>, but you need a <strong>lawyer</strong>. The deadlines are short: contact one <strong>immediately</strong>.</p>
+            <table class="pi-table">
+              <thead><tr><th>Case</th><th>Time to appeal</th><th>Can you stay in Italy?</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Case">Normal procedure</td><td data-label="Time">30 days</td><td data-label="Stay">Yes, automatically</td></tr>
+                <tr><td data-label="Case">Accelerated procedure or detained person</td><td data-label="Time">15 days</td><td data-label="Stay">Often not automatically</td></tr>
+                <tr><td data-label="Case">Border procedure</td><td data-label="Time">7 days</td><td data-label="Stay">Not automatically</td></tr>
+              </tbody>
+            </table>
+            <p>When the appeal does <strong>not</strong> protect you automatically (for example if the application was judged "manifestly unfounded"), the lawyer must ask the judge for a <strong>suspension</strong> together with the appeal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== PATTO UE ===================== -->
+      <div class="pi-panel" id="patto" role="tabpanel" aria-labelledby="tab-patto">
+        <h2 class="pi-panel-title">New rules of the EU Pact</h2>
+        <p class="pi-panel-sub">For people who applied for asylum from 12 June 2026 onwards</p>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">1</span>
+          <div>
+            <h2>The first checks ("screening")</h2>
+            <p>If you <strong>arrived by sea</strong> after a rescue, at the <strong>border</strong> without valid documents, or you are found in Italy after entering irregularly, you first go through <strong>screening</strong> (in Italian, <em>accertamenti</em>).</p>
+            <p>It lasts at most <strong>7 days</strong> at the border and <strong>3 days</strong> if you are already in Italy. It includes:</p>
+            <ul>
+              <li>a <strong>medical check</strong> and a check of your <strong>vulnerabilities</strong>;</li>
+              <li><strong>identification</strong> and <strong>fingerprints</strong>;</li>
+              <li>a security check.</li>
+            </ul>
+            <p>If you have health problems, are a minor or have suffered violence, <strong>say so straight away</strong>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">2</span>
+          <div>
+            <h2>Saying that you want to apply for asylum</h2>
+            <p>The first step is to tell the authorities that you want to ask for protection. This is called <strong>making the application</strong> (in Italian, <em>manifestazione della volontà</em>).</p>
+            <p>For now, and at least until <strong>30 April 2027</strong>, in Italy it is received by the <strong>Questura</strong> (the police immigration office) and the <strong>border police</strong>. There are also other ways:</p>
+            <ul>
+              <li><strong>With a lawyer, by PEC</strong> (certified email): the lawyer writes to the Questura that you want to apply for asylum. This is often a <strong>good idea</strong>, because this way you have <strong>solid proof of the date</strong> when you asked for asylum.</li>
+              <li><strong>Through an organisation</strong>: in some cities you must make the application through an association, a CAF (tax assistance centre), the foreigners' office of the Comune (municipality) or another organisation chosen by the Questura.</li>
+            </ul>
+            <div class="alert alert-info" style="margin: 1rem 0;">
+              <span class="alert-icon">🏛️</span>
+              <div><strong>Every city does it differently.</strong> Before you go, ask an association, a legal help desk or a lawyer how it works in <strong>your city</strong>. <a href="https://www.sospermesso.it/en/aiuto-legale.html" target="_blank" rel="noopener">Find free legal help</a>.</div>
+            </div>
+            <p>From this moment you have the right to <a href="#accoglienza">reception</a>, if you do not have the money to support yourself.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">3</span>
+          <div>
+            <h2>Registration and your document</h2>
+            <p>The Questura must <strong>register</strong> your application within <strong>5 days</strong> (up to 15 if very many people arrive). They take your details and give you an <strong>information leaflet</strong>.</p>
+            <p>For now, in Italy, registration at the Questura <strong>also counts as "lodging"</strong> of the application (in Italian, <em>formalizzazione</em>): you do not have to do another step.</p>
+            <p>You receive a <strong>personal document</strong> with your name and photo. <strong>It is not a residence permit</strong>: with the Pact, the "residence permit for asylum seekers" no longer exists. This document only proves that you can <strong>stay in Italy</strong> during the procedure. It is valid for <strong>one year</strong> and can be renewed.</p>
+            <p>You must declare your <strong>address</strong> (domicile), and also a phone number or an email address.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>This document is not a travel document:</strong> you cannot use it to go to other countries.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">4</span>
+          <div>
+            <h2>Working</h2>
+            <p>You can <strong>work</strong> <strong>90 days</strong> after your application, if the Commission has not decided yet and the delay is not your fault.</p>
+            <div class="alert alert-warning" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>You cannot convert it into a work permit.</strong> The asylum seeker's document is not a residence permit, so it cannot be "changed" into another permit, not even if you have an employment contract.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">5</span>
+          <div>
+            <h2>Which procedure: normal, accelerated or border</h2>
+            <p>The <strong>Commissione Territoriale</strong> (the Territorial Commission, the office that decides on asylum applications) decides which procedure to use and tells you.</p>
+            <table class="pi-table">
+              <thead><tr><th>Procedure</th><th>When</th><th>Time for the decision</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Procedure"><strong>Normal</strong></td><td data-label="When">In most cases</td><td data-label="Time">6 months (can be extended)</td></tr>
+                <tr><td data-label="Procedure"><strong>Accelerated</strong></td><td data-label="When">For example: you come from a <a href="#paesi-sicuri">"safe" country</a>; few applications from your country are accepted in Europe (20% or less); you say things that are not relevant or that contradict each other; you lied about your identity; you applied for asylum late</td><td data-label="Time">3 months</td></tr>
+                <tr><td data-label="Procedure"><strong>Border</strong></td><td data-label="When">If you applied for asylum at the border or after a landing, without documents to enter, and you are in one of the cases of the accelerated procedure</td><td data-label="Time">12 weeks in total, appeal included</td></tr>
+              </tbody>
+            </table>
+            <p>In the <strong>border procedure</strong> you must live in a <strong>place chosen</strong> by the authorities, and in some cases you can be <strong>detained</strong> in a centre.</p>
+            <p><strong>Unaccompanied minors</strong> go into the border procedure only for security reasons. <strong>Vulnerable</strong> people do not go into it if they cannot get the support they need.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">6</span>
+          <div>
+            <h2>The interview at the Commission</h2>
+            <p>The <strong>personal interview</strong> is compulsory: it is the moment to tell your story and explain why you cannot go back to your country.</p>
+            <p>Before the interview you have the right to <strong>free legal counselling</strong>: a person who explains the procedure to you. <strong>Ask for it</strong>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">7</span>
+          <div>
+            <h2>Staying reachable: it is an obligation</h2>
+            <p>With the Pact your obligations are stricter. You must:</p>
+            <ul>
+              <li><strong>cooperate</strong> and hand over the documents you have;</li>
+              <li><strong>attend</strong> the interview and your appointments;</li>
+              <li><strong>immediately report</strong> any change of address, phone number or email;</li>
+              <li><strong>stay in Italy</strong> and not move to another European country.</li>
+            </ul>
+            <div class="alert alert-danger" style="margin: 1rem 0 0;">
+              <span class="alert-icon">⚠️</span>
+              <div><strong>If you do not do this</strong>, the Commission can consider your application <strong>withdrawn</strong> and close the procedure. You have only <strong>7 days</strong> to appeal against this decision.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">8</span>
+          <div>
+            <h2>The decision</h2>
+            <p>The decision is sent to your <strong>reception centre</strong> or to the last <strong>address</strong> you reported. The possible answers are explained further down, in <a href="#esiti">"What answers you can receive"</a>.</p>
+          </div>
+        </div>
+
+        <div class="card pi-card pi-step">
+          <span class="pi-num">9</span>
+          <div>
+            <h2>The appeal if the answer is negative</h2>
+            <p>You can <strong>appeal to the court</strong> with a <strong>lawyer</strong>. With the Pact the deadlines are <strong>even shorter</strong>: contact a lawyer on the same day you receive the decision.</p>
+            <table class="pi-table">
+              <thead><tr><th>Case</th><th>Time to appeal</th><th>Can you stay in Italy?</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Case">Normal procedure</td><td data-label="Time">30 days</td><td data-label="Stay">Yes, automatically</td></tr>
+                <tr><td data-label="Case">Accelerated procedure, inadmissible or withdrawn application</td><td data-label="Time">7 days</td><td data-label="Stay">Not automatically</td></tr>
+                <tr><td data-label="Case">Border procedure</td><td data-label="Time">5 days</td><td data-label="Stay">Not automatically (yes for unaccompanied minors)</td></tr>
+              </tbody>
+            </table>
+            <p>When the appeal does not protect you automatically, the lawyer must ask the judge, <strong>together with the appeal</strong>, for <strong>authorisation to remain</strong> in Italy. The judge decides in about 10 days and, while the judge is deciding, as a rule you cannot be removed.</p>
+          </div>
+        </div>
+
+        <p style="text-align: center;">
+          <a href="/en/testi.html" class="btn btn-outline">Read the Pact rules article by article</a>
+        </p>
+      </div>
+
+      <!-- ===================== PER TUTTI ===================== -->
+      <h2 class="text-center" style="margin: 3.5rem 0 1.5rem;">Good to know in any case</h2>
+
+      <div class="card pi-card" id="esiti">
+        <h2>What answers you can receive</h2>
+        <p>These apply both under the old rules and under the Pact. The Commission can give you:</p>
+        <ul>
+          <li><a href="https://www.sospermesso.it/en/permesso-asilo-status-rifugiato.html" target="_blank" rel="noopener"><strong>Refugee status</strong></a> (so-called "political asylum"): a <strong>5-year</strong> permit;</li>
+          <li><a href="https://www.sospermesso.it/en/permesso-protezione-sussidiaria.html" target="_blank" rel="noopener"><strong>Subsidiary protection</strong></a>: a <strong>5-year</strong> permit;</li>
+          <li><a href="https://www.sospermesso.it/en/permesso-protezione-speciale.html" target="_blank" rel="noopener"><strong>Special protection</strong></a>: a <strong>2-year</strong> permit, renewable, with which you can work;</li>
+          <li><a href="https://www.sospermesso.it/en/permesso-cure-mediche-per-persona-gravemente-malata-che-si-trova-gia-in-italia.html" target="_blank" rel="noopener"><strong>Permit for medical treatment</strong></a>, if you are seriously ill.</li>
+        </ul>
+        <p>If the Commission thinks you are not entitled to any of these forms of protection, the answer is <strong>negative</strong>: you can appeal within the deadlines shown in your tab.</p>
+      </div>
+
+      <div class="card pi-card" id="paesi-sicuri" style="background-color: #FFF3E0;">
+        <h2>Countries considered "safe"</h2>
+        <p>If you come from a country that Italy considers <strong>safe</strong>, your application is examined <strong>more quickly</strong> and you have less time to appeal. Today the Italian list includes:</p>
+        <ul class="pi-countries">
+          <li>Albania</li><li>Algeria</li><li>Bangladesh</li><li>Bosnia and Herzegovina</li><li>Cape Verde</li>
+          <li>Ivory Coast</li><li>Egypt</li><li>Gambia</li><li>Georgia</li><li>Ghana</li>
+          <li>Kosovo</li><li>North Macedonia</li><li>Morocco</li><li>Montenegro</li><li>Peru</li>
+          <li>Senegal</li><li>Serbia</li><li>Sri Lanka</li><li>Tunisia</li>
+        </ul>
+        <p>With the Pact (applications from 12 June 2026) there is also a <strong>European Union list</strong>, which applies in all EU countries:</p>
+        <ul class="pi-countries">
+          <li>Bangladesh</li><li>Colombia</li><li>Egypt</li><li>India</li><li>Kosovo</li><li>Morocco</li><li>Tunisia</li>
+        </ul>
+        <p><strong>Countries that are candidates to join the European Union</strong> (for example Albania, Serbia, Turkey, Georgia) are also considered safe, with some exceptions: for example, if there is a war in the country.</p>
+        <p>In addition, people from a country whose applications are accepted in Europe in <strong>20% of cases or less</strong> also go into the accelerated procedure.</p>
+        <p>Coming from a "safe" country <strong>does not mean</strong> that your application will be refused. If there are <strong>serious and specific</strong> dangers in your personal situation, you must explain them well right from the start.</p>
+      </div>
+
+      <div class="card pi-card">
+        <h2>Special situations</h2>
+        <p>If you are:</p>
+        <ul>
+          <li>a minor, especially if you are in Italy without your parents;</li>
+          <li>a woman alone or a pregnant woman;</li>
+          <li>a person with a disability or a serious illness;</li>
+          <li>a person with mental health problems;</li>
+          <li>a victim of violence, torture, trafficking or genital mutilation;</li>
+        </ul>
+        <p>… you have the right to <strong>special guarantees</strong> and to suitable reception, even if you come from a "safe" country. Say so as soon as possible: to the Questura, at the centre, to the Commission.</p>
+        <p><strong>Unaccompanied minors</strong> have the right to a <strong>guardian</strong> and cannot be turned away at the border.</p>
+      </div>
+
+      <div class="card pi-card">
+        <h2>If you applied for asylum in another European country (Dublin)</h2>
+        <p>If you have <strong>already applied for asylum in another European country</strong>, or your <strong>fingerprints</strong> were taken there, it may be that <strong>Italy is not</strong> the country that must examine your application. In this case you could be <strong>transferred</strong> to that country.</p>
+        <p>For applications registered up to 30 June 2026 the rules of the old <strong>Dublin Regulation</strong> apply; for those registered from 1 July 2026 the new Pact rules apply.</p>
+        <p><strong>What to do:</strong> ask a lawyer or an experienced support worker for help straight away.</p>
+      </div>
+
+      <div class="card pi-card" id="accoglienza">
+        <h2>The right to reception</h2>
+        <p>If you apply for asylum and <strong>do not have enough money to support yourself</strong>, you have the right to a place in a <strong>reception centre</strong>.</p>
+        <ul>
+          <li>It starts from the moment you <strong>say you want to apply for asylum</strong>.</li>
+          <li>It lasts for the whole procedure before the Commission, until the time limit for appealing runs out and, if your appeal allows you to stay, also during the appeal.</li>
+        </ul>
+        <p>You can <strong>lose your place in reception</strong> if you leave the centre, if you do not go to the interview or if you have enough money.</p>
+        <p>With the Pact, the authorities can also require you to <strong>live in a specific place</strong> (always, in the border procedure). If you move, you can lose your place in reception.</p>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icon">⚖️</span>
+        <div>
+          <strong>Your story is unique.</strong> It is not the same as your friends' or relatives' stories, and these rules are new: even the courts are still interpreting them. If your income is below <strong>13,600 euros a year</strong>, you can have a lawyer <strong>for free</strong> (free legal aid, in Italian <em>gratuito patrocinio</em>).
+          <a href="https://www.sospermesso.it/en/aiuto-legale.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-left: 0; margin-top: 0.5rem;">
+            Find free legal help
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section bg-off-white">
+    <div class="container">
+      <h2 class="text-center mb-lg">You might also be interested in</h2>
+      <div class="grid grid-3">
+        <a href="https://www.sospermesso.it/en/permesso-richiesta-asilo.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">📄</span>
+          <h3 class="card-title">Asylum application permit</h3>
+        </a>
+        <a href="https://www.sospermesso.it/en/permesso-asilo-status-rifugiato.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">🛡️</span>
+          <h3 class="card-title">Refugee status</h3>
+        </a>
+        <a href="https://www.sospermesso.it/en/permesso-protezione-sussidiaria.html" target="_blank" rel="noopener" class="card card-link card-compact">
+          <span class="card-icon">ℹ️</span>
+          <h3 class="card-title">Subsidiary protection</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <h2 class="text-center mb-lg">See also: other protection permits</h2>
+      <div class="card">
+        <ul style="line-height: 1.85; margin: 0; padding-left: 1.25rem;">
+          <li><a href="https://www.sospermesso.it/en/permesso-protezione-sociale-vittime-di-tratta.html" target="_blank" rel="noopener">Permit for victims of trafficking</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-protezione-sociale-vittime-di-violenza-domestica.html" target="_blank" rel="noopener">Permit for victims of domestic violence</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-sfruttamento-lavorativo.html" target="_blank" rel="noopener">Permit for victims of labour exploitation</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-minore-eta-per-msna.html" target="_blank" rel="noopener">Permit for unaccompanied minors (in Italian, MSNA)</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-integrazione-prosieguo-amministrativo.html" target="_blank" rel="noopener">Integration permit – administrative continuation (prosieguo amministrativo)</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-calamita-naturale.html" target="_blank" rel="noopener">Natural disaster permit</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-famigliari-di-persone-con-status-di-rifugiato-o-protezione-sussidiaria.html" target="_blank" rel="noopener">Permit for family members of refugees and holders of subsidiary protection</a></li>
+          <li><a href="https://www.sospermesso.it/en/permesso-apolidia.html" target="_blank" rel="noopener">Statelessness permit</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<script>
+  // Due schede (pre-Patto / Patto). Senza JS restano entrambe visibili una sotto l'altra.
+  (function () {
+    var tablist = document.querySelector('.pi-tabs');
+    var tabs = Array.prototype.slice.call(tablist.querySelectorAll('[role="tab"]'));
+    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+    function select(id, focus) {
+      tabs.forEach(function (t, i) {
+        var on = t.getAttribute('aria-controls') === id;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        t.classList.toggle('active', on);
+        panels[i].hidden = !on;
+        if (on && focus) t.focus();
+      });
+    }
+
+    document.body.classList.add('js-tabs');
+    tablist.hidden = false;
+    var start = location.hash.slice(1) === 'pre-patto' ? 'pre-patto' : 'patto';
+    select(start);
+
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () {
+        var id = t.getAttribute('aria-controls');
+        select(id);
+        history.replaceState(null, '', '#' + id);
+      });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        if (document.dir === 'rtl') d = -d;
+        var next = tabs[(i + d + tabs.length) % tabs.length];
+        select(next.getAttribute('aria-controls'), true);
+      });
+    });
+
+    document.querySelectorAll('.pi-choice').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = a.getAttribute('data-tab');
+        select(id);
+        history.replaceState(null, '', '#' + id);
+        tablist.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    window.addEventListener('hashchange', function () {
+      var h = location.hash.slice(1);
+      if (h === 'pre-patto' || h === 'patto') select(h);
+    });
+  })();
+</script>
