@@ -4,7 +4,7 @@
   "description": "SOS Patto — il Patto UE su migrazione e asilo, spiegato: testi interattivi, diagrammi, giurisprudenza e circolari.",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "node scripts/check_temi.js && node scripts/check_collocazione.js && npx @11ty/eleventy",
+    "build": "node scripts/check_temi.js && node scripts/check_collocazione.js && node scripts/check_firmatari.js && npx @11ty/eleventy",
     "temi-check": "node scripts/check_temi.js",
     "norme-check": "node scripts/norme-check.js",
     "retheme": "python3 scripts/retheme_blue.py",
@@ -12,6 +12,7 @@
     "logo": "python3 scripts/inject_bundle_logo.py",
     "traduzioni": "node scripts/traduzioni.js",
     "collocazione-check": "node scripts/check_collocazione.js",
+    "firmatari-check": "node scripts/check_firmatari.js",
     "testi": "python3 tools/testi-interattivi/assemble.py && npm run retheme && npm run seo && npm run logo",
     "testi-copia": "python3 tools/testi-interattivi/assemble.py --no-build && npm run retheme && npm run seo && npm run logo",
     "kb": "python3 tools/kb/build_kb.py",
@@ -23,6 +24,7 @@
     "@11ty/eleventy": "^3.1.2"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
     "markdown-it": "^14.1.1"
   }
 }
